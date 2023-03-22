@@ -1,0 +1,33 @@
+Metodologia:
+
+Aulas expositivas sobre o conteúdo programático.
+
+Atividades Avaliativas: Atividades individuais práticas que podem ser avaliadas com entrevistas ou testes durante as aulas.
+
+Leituras recomendadas: leitura de textos técnicos com a finalidade de proporcionar ao discente a oportunidade de consulta e desenvolvimento de sua capacidade de análise, síntese e crítica de uma bibliografia específica.
+
+Exame Especial: Os alunos que tiverem pelo menos 75% de frequência (mínimo para aprovação) e média inferior a seis pontos poderão fazer o Exame Especial ou o Exame Especial Parcial. Este
+exames consistira no desenvolvimento de uma monografia de próprio punho pelo aluno durante o tempo de aplicação do exame. 
+
+Atividades avaliativas:
+
+Entregas parciais de partes da monografia no valor de 10 pontos.
+
+Monografia, no valor de 10 pontos.
+
+Nota final = 0.75 * Monografia + 0.25 * Média(Entregas parciais)
+
+
+Semanas & Conteúdo
+1 e 2 & Introdução e Estilos de Pesquisa
+3 & Escolhendo um tema de pesquisa
+4 e 5 & Revisão bibliográfica
+5 e 6 & Fundamentos
+7 e 8 & Projeto Experimental
+9 e 10 & Execução dos experimentos 
+11 e 12 & Discussão e Conclusão
+13 e 14 & Elaboração da monografia
+15 & Elaboração da monografia
+16 & Correção da monografia
+17 & Correção da monografia
+(31/08) & Exame especial
