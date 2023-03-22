@@ -6,8 +6,7 @@ Atividades Avaliativas: Atividades individuais práticas que podem ser avaliadas
 
 Leituras recomendadas: leitura de textos técnicos com a finalidade de proporcionar ao discente a oportunidade de consulta e desenvolvimento de sua capacidade de análise, síntese e crítica de uma bibliografia específica.
 
-Exame Especial: Os alunos que tiverem pelo menos 75% de frequência (mínimo para aprovação) e média inferior a seis pontos poderão fazer o Exame Especial ou o Exame Especial Parcial. Este
-exames consistira no desenvolvimento de uma monografia de próprio punho pelo aluno durante o tempo de aplicação do exame. 
+Exame Especial: Os alunos que tiverem pelo menos 75% de frequência (mínimo para aprovação) e média inferior a seis pontos poderão fazer o Exame Especial ou o Exame Especial Parcial. Este exames consistirá no desenvolvimento de uma monografia de próprio punho pelo aluno durante o tempo de aplicação do exame. 
 
 Atividades avaliativas:
 
@@ -18,7 +17,7 @@ Monografia, no valor de 10 pontos.
 Nota final = 0.75 * Monografia + 0.25 * Média(Entregas parciais)
 
 
-Semanas & Conteúdo
+Semanas & Conteúdo:
 1 e 2 & Introdução e Estilos de Pesquisa
 3 & Escolhendo um tema de pesquisa
 4 e 5 & Revisão bibliográfica
