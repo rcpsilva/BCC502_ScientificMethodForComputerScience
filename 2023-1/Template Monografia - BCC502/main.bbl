@@ -16,5 +16,44 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{WinNT}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=358d71ab15e1e4d5ae7feecdc4b0f69d}{%
+           family={LLC},
+           familyi={L\bibinitperiod},
+           given={MultiMedia},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{fullhash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{bibnamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authorbibnamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authornamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authorfullhash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{MS Windows NT} Kernel Description}
+      \field{urlday}{30}
+      \field{urlmonth}{9}
+      \field{urlyear}{2010}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm
+      \endverb
+      \verb{url}
+      \verb http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
