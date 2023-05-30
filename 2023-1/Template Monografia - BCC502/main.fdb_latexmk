@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1684873185 "main.bcf" "main.bbl" "main" 1684873227 0
-  "./referencias.bib" 1683654181 750 38e35a24a6f7c36933992e01978c2d32 ""
-  "main.bcf" 1684873224 112728 ca445d961ee9e547de7c6cfd3b2ed5fe "pdflatex"
+["biber main"] 1685480225 "main.bcf" "main.bbl" "main" 1685480256 0
+  "./referencias.bib" 1685480149 469 63dca5b3e3d386101dbefd4981d7f015 ""
+  "main.bcf" 1685480254 112802 b982c80167e835c21d93f0d7b074a4bb "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1684873215 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Template Monografia - BCC502/main.tex" "main.pdf" "main" 1684873227 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Template Monografia - BCC502/main.tex" 1684873154 759 42bfc997a41c65e81241b99acbab93ed ""
+["pdflatex"] 1685480249 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Template Monografia - BCC502/main.tex" "main.pdf" "main" 1685480256 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Template Monografia - BCC502/main.tex" 1685480134 786 0904bc081597e056fbca9fdb81c3ce62 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1679353348 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1679353891 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -279,11 +279,11 @@
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
   "decom-logo.png" 1683654181 7790 67fe339de739ef24fe899c5d246b306f ""
-  "main.aux" 1684873224 1037 2d9a8bd16152bdf29af2da8fbc815c57 "pdflatex"
-  "main.bbl" 1684873190 1978 7ae7a1cf9e695df249ecfd7a57123995 "biber main"
-  "main.out" 1684873224 144 8e633bbd8ef07c0763c30c1f67603690 "pdflatex"
-  "main.run.xml" 1684873224 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
-  "main.tex" 1684873154 759 42bfc997a41c65e81241b99acbab93ed ""
+  "main.aux" 1685480254 1234 5de91c16cff15adb69444f3b468f8777 "pdflatex"
+  "main.bbl" 1685480230 3440 c8c73a95d333cb22bd68fb2eabc160ca "biber main"
+  "main.out" 1685480254 144 8e633bbd8ef07c0763c30c1f67603690 "pdflatex"
+  "main.run.xml" 1685480254 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
+  "main.tex" 1685480134 786 0904bc081597e056fbca9fdb81c3ce62 ""
   "researchdiary_png.sty" 1683654181 3088 6f3c9a8af93e8cb51648ff4de05001d0 ""
   (generated)
   "main.aux"
