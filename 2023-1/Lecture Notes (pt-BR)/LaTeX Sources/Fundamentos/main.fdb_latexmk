@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1686087538 "main.bcf" "main.bbl" "main" 1686089149 0
+["biber main"] 1686087538 "main.bcf" "main.bbl" "main" 1686089203 0
   "./referencias.bib" 1683654181 750 38e35a24a6f7c36933992e01978c2d32 ""
-  "main.bcf" 1686089148 112668 87994e73a30234a166e514529103e64d "pdflatex"
+  "main.bcf" 1686089202 112668 87994e73a30234a166e514529103e64d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1686089144 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Lecture Notes (pt-BR)/LaTeX Sources/Fundamentos/main.tex" "main.pdf" "main" 1686089149 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Lecture Notes (pt-BR)/LaTeX Sources/Fundamentos/main.tex" 1686087690 3851 9c38112c09d7342e362648158b3ebf32 ""
+["pdflatex"] 1686089198 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Lecture Notes (pt-BR)/LaTeX Sources/Fundamentos/main.tex" "main.pdf" "main" 1686089203 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Lecture Notes (pt-BR)/LaTeX Sources/Fundamentos/main.tex" 1686089198 3848 7ede012c402994a606282ffc400ce40a ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1679353348 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1679353891 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -256,11 +256,11 @@
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
   "decom-logo.png" 1683654181 7790 67fe339de739ef24fe899c5d246b306f ""
-  "main.aux" 1686089148 1140 3563ac94bfa69914b123855e31f9ac93 "pdflatex"
+  "main.aux" 1686089202 1140 3563ac94bfa69914b123855e31f9ac93 "pdflatex"
   "main.bbl" 1686087540 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.out" 1686089148 570 5f65b04b86e28d2faf1287adfb54ddb7 "pdflatex"
-  "main.run.xml" 1686089148 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
-  "main.tex" 1686087690 3851 9c38112c09d7342e362648158b3ebf32 ""
+  "main.out" 1686089202 570 5f65b04b86e28d2faf1287adfb54ddb7 "pdflatex"
+  "main.run.xml" 1686089202 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
+  "main.tex" 1686089198 3848 7ede012c402994a606282ffc400ce40a ""
   "researchdiary_png.sty" 1686089091 3080 fde4a7a4ff31f1107dd69296fc10690b ""
   (generated)
   "main.aux"
