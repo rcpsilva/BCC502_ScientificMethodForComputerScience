@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1683654653 "main.bcf" "main.bbl" "main" 1684268910 0
+["biber main"] 1686683744 "main.bcf" "main.bbl" "main" 1686683757 0
   "./referencias.bib" 1683654181 750 38e35a24a6f7c36933992e01978c2d32 ""
-  "main.bcf" 1684268906 112668 87994e73a30234a166e514529103e64d "pdflatex"
+  "main.bcf" 1686683755 112890 4599bd9097af4c450cde0ecd9a7b424a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1684268891 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Templates/Template - Problem de Pesquisa/main.tex" "main.pdf" "main" 1684268910 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Templates/Template - Problem de Pesquisa/main.tex" 1684268889 777 9ef305a7f07e34935b9dca620c36fd60 ""
+["pdflatex"] 1686683751 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Templates/Template - Problem de Pesquisa/main.tex" "main.pdf" "main" 1686683757 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Templates/Template - Problem de Pesquisa/main.tex" 1686683745 834 c809ba5a6b4a4e5a5bdb19f9cf3f19ab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1679353348 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1679353891 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -19,6 +19,7 @@
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm" 1679353891 3584 3c76ccb63eda935a68ba65ba9da29f1a ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm" 1679353891 3072 8b5a64dc91775463bc95e2d818524028 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1679353327 1288 655e228510b4c2a1abe905c368440826 ""
+  "c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1679353349 140176 d0f50dba675c56d445f84a32c1f93a79 ""
   "c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb" 1679353349 139826 3796482349bae544f13f54da58f9706d ""
   "c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb" 1679353349 135938 1a19ff976dd71ec9a67855cdbfd83710 ""
   "c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb" 1679353349 108594 fbea9d43c079f7db25137aae98eddf7a ""
@@ -255,11 +256,11 @@
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
   "decom-logo.png" 1683654181 7790 67fe339de739ef24fe899c5d246b306f ""
-  "main.aux" 1684268906 883 ca7a287049f4a99c041fcf199fe33e3f "pdflatex"
-  "main.bbl" 1683654693 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.out" 1684268906 149 381f07c9afed0002fb9b745b5c3dbb3f "pdflatex"
-  "main.run.xml" 1684268906 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
-  "main.tex" 1684268889 777 9ef305a7f07e34935b9dca620c36fd60 ""
+  "main.aux" 1686683755 1258 7731ba7487637b5f1e43713f243215f9 "pdflatex"
+  "main.bbl" 1686683746 2045 c526f38d27d7dde09b839fdb35cba728 "biber main"
+  "main.out" 1686683755 149 381f07c9afed0002fb9b745b5c3dbb3f "pdflatex"
+  "main.run.xml" 1686683755 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
+  "main.tex" 1686683745 834 c809ba5a6b4a4e5a5bdb19f9cf3f19ab ""
   "researchdiary_png.sty" 1683654181 3088 6f3c9a8af93e8cb51648ff4de05001d0 ""
   (generated)
   "main.aux"

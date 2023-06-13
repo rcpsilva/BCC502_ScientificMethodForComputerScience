@@ -1484,6 +1484,7 @@ INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
