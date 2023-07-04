@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1688499203 "main.bcf" "main.bbl" "main" 1688499273 0
+["biber main"] 1687613806 "main.bcf" "main.bbl" "main" 1687806982 0
   "./referencias.bib" 1685480149 469 63dca5b3e3d386101dbefd4981d7f015 ""
-  "main.bcf" 1688499271 112668 87994e73a30234a166e514529103e64d "pdflatex"
+  "main.bcf" 1687806980 112668 87994e73a30234a166e514529103e64d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1688499265 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex" "main.pdf" "main" 1688499273 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex" 1688499260 3890 c8179380fc4df98f733962bffd4bff23 ""
+["pdflatex"] 1687806966 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex" "main.pdf" "main" 1687806982 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex" 1687806964 3473 7542794113894a9f092d56aa72861421 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1679353348 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1679353891 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -256,11 +256,11 @@
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
   "decom-logo.png" 1683654181 7790 67fe339de739ef24fe899c5d246b306f ""
-  "main.aux" 1688499271 766 832f2bf8dc1534c28b7b85d987570d41 "pdflatex"
-  "main.bbl" 1688499208 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.out" 1688499269 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1688499271 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
-  "main.tex" 1688499260 3890 c8179380fc4df98f733962bffd4bff23 ""
+  "main.aux" 1687806980 766 832f2bf8dc1534c28b7b85d987570d41 "pdflatex"
+  "main.bbl" 1687613811 486 ee04f40f768daeed26442158e95aba61 "biber main"
+  "main.out" 1687806978 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1687806980 2483 2d8f64f6e944ba7291da572943d6fd0c "pdflatex"
+  "main.tex" 1687806964 3473 7542794113894a9f092d56aa72861421 ""
   "researchdiary_png.sty" 1683654181 3088 6f3c9a8af93e8cb51648ff4de05001d0 ""
   (generated)
   "main.aux"
