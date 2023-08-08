@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.20)  26 JUN 2023 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.20)  8 AUG 2023 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex"
-(c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Fundamentos/main.tex
+**"c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Conclusão/main.tex"
+(c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-1/Problem sets (pt-BR)/Rubricas/Rubrica Conclusão/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -1229,12 +1229,12 @@ Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 
 
-LaTeX Warning: Empty bibliography on input line 79.
+LaTeX Warning: Empty bibliography on input line 58.
 
 <decom-logo.png, id=7, 255.95625pt x 197.73875pt>
 File: decom-logo.png Graphic file (type png)
 <use decom-logo.png>
-Package pdftex.def Info: decom-logo.png  used on input line 81.
+Package pdftex.def Info: decom-logo.png  used on input line 60.
 (pdftex.def)             Requested size: 58.04126pt x 44.8393pt.
 
 Package fancyhdr Warning: \headheight is too small (28.0pt): 
@@ -1275,18 +1275,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 15 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44883 strings out of 476024
- 1001058 string characters out of 5794016
- 2024952 words of memory out of 5000000
+ 44872 strings out of 476024
+ 1000982 string characters out of 5794016
+ 2018952 words of memory out of 5000000
  64560 multiletter control sequences out of 15000+600000
  518571 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,15n,152p,855b,7398s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,15n,152p,854b,7398s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (1 page, 121108 bytes).
+Output written on main.pdf (1 page, 113031 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
