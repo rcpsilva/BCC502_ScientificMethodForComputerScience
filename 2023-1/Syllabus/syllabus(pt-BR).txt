@@ -2,31 +2,48 @@ Metodologia:
 
 Aulas expositivas sobre o conteúdo programático.
 
-Atividades Avaliativas: Atividades individuais práticas que podem ser avaliadas com entrevistas ou testes durante as aulas.
+Estudos dirigidos: Atividades individuais que podem ser entrevistas ou testes feitos durante as aulas.
 
 Leituras recomendadas: leitura de textos técnicos com a finalidade de proporcionar ao discente a oportunidade de consulta e desenvolvimento de sua capacidade de análise, síntese e crítica de uma bibliografia específica.
+
+Produção de textos científicos.
+
+Apresentações dos trabalhos desenvolvidos pelos alunos. 
 
 Exame Especial: Os alunos que tiverem pelo menos 75% de frequência (mínimo para aprovação) e média inferior a seis pontos poderão fazer o Exame Especial ou o Exame Especial Parcial. Este exames consistirá no desenvolvimento de uma monografia de próprio punho pelo aluno durante o tempo de aplicação do exame. 
 
 Atividades avaliativas:
 
+Estudos dirigidos no valor de 10 pontos.
+
 Entregas parciais de partes da monografia no valor de 10 pontos.
 
 Monografia, no valor de 10 pontos.
+Apresentação da Monografia, no valor de 10 pontos
 
-Nota final = 0.75 * Monografia + 0.25 * Média(Entregas parciais)
+Nota final = 0.35 * Monografia + 0.35 * Apresentação + 0.2 * Média(Entregas parciais) + 0.1 * Média(Estudos Dirigidos) 
 
 
-Semanas & Conteúdo:
-1 e 2 & Introdução e Estilos de Pesquisa
-3 & Escolhendo um tema de pesquisa
-4 e 5 & Revisão bibliográfica
-5 e 6 & Fundamentos
-7 e 8 & Projeto Experimental
-9 e 10 & Execução dos experimentos 
-11 e 12 & Discussão e Conclusão
-13 e 14 & Elaboração da monografia
-15 & Elaboração da monografia
-16 & Correção da monografia
-17 & Correção da monografia
-(31/08) & Exame especial
+Semana &	Conteúdo
+26/09/2023 &	Estilos de pesquisa em computação
+03/10/2023 &	Estilos de pesquisa em computação
+10/10/2023 &	Tema de pesquisa e revisão bibliográfica
+17/10/2023 &	Tema de pesquisa e revisão bibliográfica
+24/10/2023 &	Apresentação dos Temas e Objetivos
+31/10/2023 & 	Apresentação dos Temas e Objetivos
+07/11/2023 &	Apresentação dos Temas e Objetivos
+14/11/2023 &	Revisão bibliográfica e fundamentos
+21/11/2023 &	Revisão bibliográfica e fundamentos
+28/11/2023 &	Método e Projeto Experimental (Entrega 1 )
+05/12/2023 &	Método e Projeto Experimental
+12/12/2023 &	Execução de Experimentos (Entrega 2)
+19/12/2023 &	Execução de Experimentos
+26/12/2023 &	Discussão e Conclusão
+02/01/2024 &	Discussão e Conclusão 
+09/01/2024 &	Revisão da Monografia (Entrega 3)
+16/01/2024 &	Revisão da Monografia
+23/01/2024 &	Apresentações
+30/01/2024 &	Apresentações
+06/02/2024 &	Apresentações
+13/02/2024 &	Carnaval
+20/02/2024 &	Exame Especial
