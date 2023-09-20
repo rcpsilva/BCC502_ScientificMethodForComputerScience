@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1695163827 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/BCC502 Lecture Notes - Indutivismo/main.tex" "main.pdf" "main" 1695163829 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/BCC502 Lecture Notes - Indutivismo/main.tex" 1695163824 2563 0f786a32f369f7a1cc217d97c70f6abf ""
+["pdflatex"] 1695184565 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/BCC502LectureNotes_CienciaFatosExperiencia/main.tex" "main.pdf" "main" 1695184567 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/BCC502LectureNotes_CienciaFatosExperiencia/main.tex" 1695184565 8261 bb1222242fb10e1dfabc0f3006ff362d ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679353348 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1679353891 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -86,9 +86,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1679359898 4662804 131178ccc9b2f4741a821427ce79dce1 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1695163829 771 1167408f6b0023269c05addf026465fc "pdflatex"
-  "main.out" 1695163829 197 7573f99725cf7344a7a2e14a3f199945 "pdflatex"
-  "main.tex" 1695163824 2563 0f786a32f369f7a1cc217d97c70f6abf ""
+  "main.aux" 1695184567 821 707b9c3e3635dce1ee76a35a6ff1e069 "pdflatex"
+  "main.out" 1695184567 464 5a0dbaf0184794ef84488dbea3b02663 "pdflatex"
+  "main.tex" 1695184565 8261 bb1222242fb10e1dfabc0f3006ff362d ""
   (generated)
   "main.aux"
   "main.log"
