@@ -1,0 +1,5 @@
+PWD c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/BCC502 Lecture Notes - Ciência  derivada dos fatos
+INPUT c:/texlive/2022/texmf.cnf
+INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
+OUTPUT texput.log
