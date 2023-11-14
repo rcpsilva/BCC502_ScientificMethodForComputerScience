@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1696264630 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/2_BCC502LectureNotes_ObservaçãoComoIntervenção/main.tex" "main.pdf" "main" 1696264632 0
+["pdflatex"] 1699993268 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/2_BCC502LectureNotes_ObservaçãoComoIntervenção/main.tex" "main.pdf" "main" 1699993274 0
   "Ponzo_Illusion.png" 1696263614 9461 bb02f4390db52b7f266875ac867dc2b1 ""
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/2_BCC502LectureNotes_ObservaçãoComoIntervenção/main.tex" 1696264627 1704 cf79e45d831b7698c1dae867f1dee0b6 ""
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2023-2/Lecture Notes/2_BCC502LectureNotes_ObservaçãoComoIntervenção/main.tex" 1699993259 1705 16e5f9fe87915261a5d95db993143330 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679353348 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1679353891 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -86,9 +86,9 @@
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
   "ilusao_ebin.png" 1696263373 3602 9b1ea05cf9806740cf96a38688dd7ae3 ""
-  "main.aux" 1696264632 1148 c7b90f03e46995f69310f9711581c3b5 "pdflatex"
-  "main.out" 1696264632 345 78221c440a972f4bfa088aa1fb73728d "pdflatex"
-  "main.tex" 1696264627 1704 cf79e45d831b7698c1dae867f1dee0b6 ""
+  "main.aux" 1699993273 1149 83f520fb1ad1848dccb4941c7e2b8526 "pdflatex"
+  "main.out" 1699993273 350 871a935b05478dcbbbaf6d486f46f590 "pdflatex"
+  "main.tex" 1699993259 1705 16e5f9fe87915261a5d95db993143330 ""
   (generated)
   "main.aux"
   "main.log"

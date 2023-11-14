@@ -1,8 +1,6 @@
 %%% Template para anotações de aula
 %%% Feito por Daniel Campos com base no template de Willian Chamma que fez com base no template de  Mikhail Klassen
 
-
-
 \documentclass[12pt,a4paper, brazil]{article}
 
 %%%%%%% INFORMAÇÕES DO CABEÇALHO
@@ -24,11 +22,66 @@
 
 %\section*{Resumo}
 
-\section{Problem de pesquisa}
+\section{Introdução}
 
+A Figura \ref{fig:logo_ufop} apresenta a logo da UFOP.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.2\textwidth]{ufop-logo.jpg}
+    \caption{Logo da ufop}
+    \label{fig:logo_ufop}
+\end{figure}
+
+A Tabela \ref{tab:tabx} apresenta .....
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{ |r|c|l| }
+        \hline
+         cell1 & cell2 & cell3mnmn \\
+         \hline
+         \hline 
+         cell4 & cell5mnmnm & cell6 \\
+         \hline
+         cell7mnmn & cell8 & cell9 \\
+         \hline   
+        \end{tabular}
+        \caption{Tabela X}
+        \label{tab:tabx}
+\end{table}
+
+
+\cite{bonawitz2019towards}
+
+\subsection{Objetivos}
+
+    % Objetivo geral e objetivos especificos
+
+    A Tabela \ref{tab:taby} apresenta ...... e a Tabela \ref{tab:tabx} apresenta ....
+
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{ |r|c|l| }
+            \hline
+             cell1 & cell2 & cell3mnmn \\
+             \hline
+             \hline 
+             cell4 & cell5mnmnm & cell6 \\
+             \hline
+             cell7mnmn & cell8 & cell9 \\
+             \hline   
+            \end{tabular}
+            \caption{Tabela Y}
+            \label{tab:taby}
+    \end{table}
+    
 \cite{WinNT}
 
 \cite{salahdine2019social}
+
+\section{Revisão Bibliográfica} \label{sec:revisao}
+
 
 %%% as referências devem estar em formato bibTeX no arquivo referencias.bib
 \printbibliography

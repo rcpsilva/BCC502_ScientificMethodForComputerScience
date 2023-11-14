@@ -19,6 +19,90 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{bonawitz2019towards}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=b5068fa6c52ad4193971201b160dfa57}{%
+           family={Bonawitz},
+           familyi={B\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ac971440ffbdf36c814fe9483719d2c}{%
+           family={Eichner},
+           familyi={E\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa4375df11f7aa6bc4cb33b7675b9c33}{%
+           family={Grieskamp},
+           familyi={G\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a131501bc22b926896c6721fcb81bb4b}{%
+           family={Huba},
+           familyi={H\bibinitperiod},
+           given={Dzmitry},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f671da1c06d634dd632f6643ef0c2a91}{%
+           family={Ingerman},
+           familyi={I\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c72a73cdab75ff72f0eb6bf5368d696}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9eaeb7b3421436d9a5e800679b1e4916}{%
+           family={Kiddon},
+           familyi={K\bibinitperiod},
+           given={Chloe},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cafc02b1aa854c2c49aaced921ed3d18}{%
+           family={Konecny},
+           familyi={K\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61d11b5e81f0b486c32ae8974821a6de}{%
+           family={Mazzocchi},
+           familyi={M\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be349ac63090285fa87303a55d511957}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cbf85280dc029346bb432bccdd7420fd}
+      \strng{fullhash}{8f8ee564f5ac42589bc656c0508a97d1}
+      \strng{bibnamehash}{cbf85280dc029346bb432bccdd7420fd}
+      \strng{authorbibnamehash}{cbf85280dc029346bb432bccdd7420fd}
+      \strng{authornamehash}{cbf85280dc029346bb432bccdd7420fd}
+      \strng{authorfullhash}{8f8ee564f5ac42589bc656c0508a97d1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of machine learning and systems}
+      \field{title}{Towards federated learning at scale: System design}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{pages}{374\bibrangedash 388}
+      \range{pages}{15}
+    \endentry
     \entry{WinNT}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=358d71ab15e1e4d5ae7feecdc4b0f69d}{%
