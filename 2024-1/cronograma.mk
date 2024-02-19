@@ -1,22 +1,22 @@
-| Semana      | Conteúdo                                          	|
-| ----------- | ---------------------------------------------------	|
-| 26/03/2024  | Computação e Classificação das Ciências				|
-| 02/04/2024  | Método Científico                  					|
-| 09/04/2024  | Método Científico								 	|
-| 16/04/2024  | Tipos de pesquisa								 	|
-| 23/04/2024  | Maturidade em pesquisa				             	|
-| 30/04/2024  | Elementos da pesquisa (I)							|
-| 07/05/2024  | Elementos da pesquisa (II)                     		|
-| 14/05/2024  | Revisão bibliográfica 		             			|
-| 21/05/2024  | Questões de Pesquisa					 			|
-| 28/05/2024  | Análise crítica de Propostas de Pesquisa (Início do desenvolvimento da proposta de pesquisa)          	|
-| 04/06/2024  | Ética acadêmica (Desenvolvimento da proposta de pesquisa )           							|
-| 11/06/2024  | Desenvolvimento da proposta de pesquisa             |
-| 18/06/2024  | Desenvolvimento da proposta de pesquisa             |
-| 25/06/2024  | Apresentação dos projetos               			|
-| 02/07/2024  | Apresentação dos projetos               			|
-| 09/07/2024  | Apresentação dos projetos               			|
-| 23/07/2024  | Exame Especial                            			|
+ Semana      & Conteúdo                                          	
+ ----------- &---------------------------------------------------	
+ 26/03/2024  & Computação e Classificação das Ciências				
+ 02/04/2024  & Método Científico                  					
+ 09/04/2024  & Método Científico								 	
+ 16/04/2024  & Tipos de pesquisa								 	
+ 23/04/2024  & Maturidade em pesquisa				             	
+ 30/04/2024  & Elementos da pesquisa (I)							
+ 07/05/2024  & Elementos da pesquisa (II)                     		
+ 14/05/2024  & Revisão bibliográfica 		             			
+ 21/05/2024  & Questões de Pesquisa					 			
+ 28/05/2024  & Análise crítica de Propostas de Pesquisa (Início do desenvolvimento da proposta de pesquisa)          	
+ 04/06/2024  & Ética acadêmica (Desenvolvimento da proposta de pesquisa )           							
+ 11/06/2024  & Desenvolvimento da proposta de pesquisa             
+ 18/06/2024  & Desenvolvimento da proposta de pesquisa             
+ 25/06/2024  & Apresentação dos projetos               			
+ 02/07/2024  & Apresentação dos projetos               			
+ 09/07/2024  & Apresentação dos projetos               			
+ 23/07/2024  & Exame Especial                            			
 
 Metodologia:
 
