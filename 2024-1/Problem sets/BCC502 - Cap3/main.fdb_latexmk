@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1709240201 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/BCC502 - Cap3/main.tex" "main.pdf" "main" 1709240203 0
-  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/BCC502 - Cap3/main.tex" 1709240200 1767 32e70dbd79122ba1a2775200da476962 ""
+["pdflatex"] 1709757501 "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/BCC502 - Cap3/main.tex" "main.pdf" "main" 1709757503 0
+  "c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/BCC502 - Cap3/main.tex" 1709757500 1769 2729b41c031bedb70a866a4f7deb26a7 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679353348 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1679354266 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1679353891 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -86,9 +86,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1679359898 4662804 131178ccc9b2f4741a821427ce79dce1 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1679360027 7883451 1906458788776f148e040852b775af01 ""
   "c:/texlive/2022/texmf.cnf" 1679359856 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1709240203 764 0bd4872e2be6e85fa2b9d50cfc128058 "pdflatex"
-  "main.out" 1709240203 164 773130dfdfd0ee99c375fa7a2c56e8df "pdflatex"
-  "main.tex" 1709240200 1767 32e70dbd79122ba1a2775200da476962 ""
+  "main.aux" 1709757502 764 0bd4872e2be6e85fa2b9d50cfc128058 "pdflatex"
+  "main.out" 1709757502 164 773130dfdfd0ee99c375fa7a2c56e8df "pdflatex"
+  "main.tex" 1709757500 1769 2729b41c031bedb70a866a4f7deb26a7 ""
   (generated)
   "main.aux"
   "main.log"
