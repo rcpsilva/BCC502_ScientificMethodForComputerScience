@@ -1,8 +1,8 @@
-PWD c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/LaTeX Source/BCC502 - Trabalho Final
+PWD c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/FinalProject/LatexSource
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/Problem sets/LaTeX Source/BCC502 - Trabalho Final/main.tex
+INPUT c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/FinalProject/LatexSource/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/article.cls

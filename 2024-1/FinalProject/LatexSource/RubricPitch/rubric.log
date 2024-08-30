@@ -1,0 +1,554 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.20)  30 AUG 2024 15:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/FinalProject/LatexSource/RubricPitch/rubric.tex
+(c:/Users/rcpsi/source/repos/BCC502_ScientificMethodForComputerScience/2024-1/FinalProject/LatexSource/RubricPitch/rubric.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks17
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen149
+\ar@mcellbox=\box51
+\extrarowheight=\dimen150
+\NC@list=\toks18
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box52
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count196
+\LTcapwidth=\dimen151
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@gbox=\box57
+\LT@cols=\count197
+\LT@rows=\count198
+\c@LT@tables=\count199
+\c@LT@chunks=\count266
+\LT@p@ftn=\toks19
+) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count267
+\l__pdf_internal_box=\box58
+) (./rubric.aux)
+\openout1 = `rubric.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 23--23
+[]|\OT1/cmr/bx/n/10 Excelente (9-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\OT1/cmr/bx/n/10 Satisfat^^Sorio
+ []
+
+
+Underfull \hbox (badness 6691) in paragraph at lines 23--23
+[]|\OT1/cmr/bx/n/10 Precisa Mel-
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 27--27
+[]|\OT1/cmr/bx/n/10 Excelente (9-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\OT1/cmr/bx/n/10 Satisfat^^Sorio
+ []
+
+
+Underfull \hbox (badness 6691) in paragraph at lines 27--27
+[]|\OT1/cmr/bx/n/10 Precisa Mel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\OT1/cmr/m/n/10 Clareza na
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 mente definido
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 e bem con-tex-
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 relev^ancia para
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\OT1/cmr/m/n/10 Problema
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 definido e con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 tex-tu-al-izado,
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 mais es-pec^^S^^Pfico
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 pouco claro,
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 mas carece de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 pro-fun-di-dade
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 con-tex-tu-al-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\OT1/cmr/m/n/10 Problema
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 n~ao ^^Se claro,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 mal definido
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\OT1/cmr/m/n/10 ou carece de
+ []
+
+
+Underfull \hbox (badness 7814) in paragraph at lines 36--36
+[]|\OT1/cmr/m/n/10 Objetivos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT1/cmr/m/n/10 Objetivos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 clara-mente
+ []
+
+
+Underfull \hbox (badness 7667) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 definidos, com
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 uma hip^^Sotese
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 bem jus-ti-fi-cada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT1/cmr/m/n/10 Objetivos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 hip^^Sotese s~ao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 claros, mas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 po-dem care-cer
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 de jus-ti-fica-tiva
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 com-pleta ou
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT1/cmr/m/n/10 Objetivos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 hip^^Sotese est~ao
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 pre-sentes, mas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 pode-riam ser
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 ou mel-hor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\OT1/cmr/m/n/10 Objetivos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 hip^^Sotese s~ao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 va-gos, pouco
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 36--36
+\OT1/cmr/m/n/10 claros ou n~ao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/10 Abordagem
+ []
+
+
+Overfull \hbox (1.42798pt too wide) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 Metodol^^Sogica| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/10 Procedimento
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 metodol^^Sogico ^^Se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 per-feita-mente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/10 Abordagem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 metodol^^Sogica
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 ^^Se clara e, na
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 maior parte,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 se al-inha aos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 ob-je-tivos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/10 Abordagem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 metodol^^Sogica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 ^^Se um pouco
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 care-cer de al-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 in-hamento ou
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\OT1/cmr/m/n/10 Abordagem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/m/n/10 metodol^^Sogica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/m/n/10 Persuas~ao
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 e En-ga-ja-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 per-sua-sivo,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 en-vol-vente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 e con-fi-ante;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 co-mu-nica efe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 ti-va-mente a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 im-port^ancia e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/m/n/10 Pitch ^^Se claro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 e en-vol-vente,
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 cer de al-guma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 per-suas~ao ou
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 40--40
+[]|\OT1/cmr/m/n/10 Pitch co-mu-nica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 a ideia, mas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 pode care-cer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 de en-er-gia,
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 40--40
+[]|\OT1/cmr/m/n/10 Pitch n~ao con-
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 ^^Se mal ap-re-sen-
+ []
+
+[1
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./rubric.aux) ) 
+Here is how much of TeX's memory you used:
+ 1235 strings out of 476024
+ 20926 string characters out of 5794016
+ 1866382 words of memory out of 5000000
+ 21734 multiletter control sequences out of 15000+600000
+ 515630 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,62p,542b,186s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on rubric.pdf (1 page, 48131 bytes).
+PDF statistics:
+ 23 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
