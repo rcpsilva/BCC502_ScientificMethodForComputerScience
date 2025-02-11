@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1735234101.27591 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Parte 1/main.tex" "main.pdf" "main" 1735234102.82781 0
-  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Parte 1/main.tex" 1735234098 1545 5784edc209950c6d19c23f0e002f1329 ""
+["pdflatex"] 1739310633.6588 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Entrega 4 - Hipótese e Justificativa/main.tex" "main.pdf" "main" 1739310635.11499 0
+  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Entrega 4 - Hipótese e Justificativa/main.tex" 1739310632 2580 39848390f622bf48a6cfd5026e3c22d1 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1730314164 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1730278933 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1730278933 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -83,9 +83,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730319856 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730320026 3325936 6e896a909b476ed009efbfbadbcd5207 ""
   "c:/texlive/2024/texmf.cnf" 1730319826 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1735234102 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "main.out" 1735234102 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1735234098 1545 5784edc209950c6d19c23f0e002f1329 ""
+  "main.aux" 1739310634 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "main.out" 1739310634 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1739310632 2580 39848390f622bf48a6cfd5026e3c22d1 ""
   (generated)
   "main.aux"
   "main.log"

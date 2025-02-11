@@ -1,8 +1,8 @@
-PWD c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Parte 1
+PWD c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Entrega 4 - Hipótese e Justificativa
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Parte 1/main.tex
+INPUT c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2024-2/ProblemSets/Entrega 4 - Hipótese e Justificativa/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
