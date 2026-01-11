@@ -1,0 +1,148 @@
+% !TEX program = lualatex
+\documentclass[9pt]{extarticle}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc} % se usar lualatex/xelatex, pode remover
+\usepackage[T1]{fontenc}
+
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=2.0cm,
+  right=2.0cm,
+  top=2.0cm,
+  bottom=2.0cm
+}
+
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\setlist[itemize]{topsep=2pt, itemsep=2pt, leftmargin=*}
+\setlist[enumerate]{topsep=2pt, itemsep=2pt, leftmargin=*}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
+}
+
+% (Opcional) cabeçalho simples no estilo de notas
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{Notas de Aula} --- Metodologia de Pesquisa (Computação)}
+\rhead{\textbf{Objetivos de Pesquisa}}
+\cfoot{\thepage}
+
+\title{\vspace{-1.2em}\textbf{Como formular objetivos de um trabalho de pesquisa (à luz de Wazlawick)}\vspace{-0.3em}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.0cm}
+
+\section{Ideia central}
+Em linhas gerais, Wazlawick recomenda que os \textbf{objetivos} sejam formulados de maneira \textbf{clara, específica e operacional}, isto é, descritos com \textbf{ações} e \textbf{resultados verificáveis}. Um bom objetivo funciona como um ``contrato'' do que o trabalho se compromete a entregar, com escopo delimitado e passível de avaliação ao final.
+
+\section{Critérios práticos para bons objetivos}
+Ao redigir objetivos (geral e específicos), verifique se eles atendem aos seguintes critérios:
+
+\begin{itemize}
+  \item \textbf{Clareza e especificidade}: o leitor entende o que será feito e em qual escopo?
+  \item \textbf{Ação + objeto + contexto}: o verbo indica uma ação concreta (p.ex., propor, desenvolver, avaliar) e o objeto está explicitado (modelo, método, sistema, protocolo, dataset etc.)?
+  \item \textbf{Verificabilidade}: ao final, é possível dizer objetivamente se foi alcançado?
+  \item \textbf{Viabilidade}: é compatível com tempo, dados e recursos disponíveis?
+  \item \textbf{Coerência com o problema de pesquisa}: contribui diretamente para responder a pergunta/problema?
+\end{itemize}
+
+\subsection*{Verbos: bons e ruins (em geral)}
+\textbf{Preferir} verbos que denotem entrega/ação verificável: \emph{propor, desenvolver, implementar, modelar, estimar, comparar, avaliar, validar, investigar, demonstrar, quantificar, caracterizar, analisar}.  
+
+\textbf{Evitar} verbos vagos sem operacionalização: \emph{estudar, entender, conhecer, explorar, abordar, discutir, refletir}.  
+\emph{Observação:} esses verbos podem aparecer se forem \textbf{operacionalizados} (p.ex., ``investigar'' \emph{por meio de} um experimento com métricas e testes definidos).
+
+\section{Estrutura recomendada: objetivo geral e objetivos específicos}
+\begin{itemize}
+  \item \textbf{Objetivo geral}: expressa a finalidade central do trabalho (uma frase).
+  \item \textbf{Objetivos específicos}: decomposição do objetivo geral em passos concretos, idealmente alinhados com: (i) construção/implementação, (ii) coleta/curadoria de dados, (iii) avaliação/comparação/validação, (iv) análise e discussão de resultados.
+\end{itemize}
+
+\section{Exemplos: como \emph{não} definir e como definir objetivos}
+A seguir, exemplos típicos (ruim vs.\ bom), destacando como tornar o objetivo operacional.
+
+\subsection{Exemplo 1: ``IA para trânsito'' (classificação de severidade)}
+\textbf{Não definir assim (vago):}
+\begin{itemize}
+  \item ``Estudar inteligência artificial aplicada a acidentes de trânsito.''
+  \item ``Entender os fatores que influenciam a severidade de acidentes.''
+\end{itemize}
+
+\textbf{Definir assim (operacional e verificável):}
+\begin{itemize}
+  \item \textbf{Objetivo geral:} Desenvolver e avaliar modelos preditivos e explicáveis para classificar a severidade de acidentes de trânsito a partir de variáveis ambientais, viárias e operacionais.
+  \item \textbf{Objetivos específicos:}
+    \begin{enumerate}
+      \item Construir uma matriz de projeto (design matrix) a partir do conjunto de dados, definindo tratamento de ausentes, codificação de categóricas e balanceamento de classes.
+      \item Ajustar um modelo de regressão logística (baseline) e estimar \textbf{efeitos marginais médios} (AME) para interpretar associações globais.
+      \item Treinar modelos baseados em árvores (Random Forest, XGBoost e/ou CatBoost) e estimar explicações via SHAP, reportando estabilidade e consistência das explicações.
+      \item Comparar modelos por métricas preditivas (p.ex., AUC, F1 macro, acurácia balanceada) e por critérios de interpretabilidade (p.ex., concordância de ranking de variáveis; sensibilidade a reamostragem).
+      \item Realizar análise de robustez (p.ex., validação cruzada, bootstrap) e documentar limitações e implicações.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Exemplo 2: ``previsão de série temporal''}
+\textbf{Não definir assim (sem entrega mensurável):}
+\begin{itemize}
+  \item ``Explorar modelos de previsão para uma série temporal industrial.''
+  \item ``Compreender como redes neurais funcionam para séries temporais.''
+\end{itemize}
+
+\textbf{Definir assim (com comparadores e critérios de sucesso):}
+\begin{itemize}
+  \item \textbf{Objetivo geral:} Propor e comparar uma abordagem de previsão de demanda (ou variável industrial) baseada em modelos de séries temporais, com avaliação por métricas e janelas temporais definidas.
+  \item \textbf{Objetivos específicos:}
+    \begin{enumerate}
+      \item Definir protocolo de validação temporal (p.ex., \emph{rolling window}) e métricas (p.ex., MAE, RMSE, MAPE).
+      \item Implementar baselines (p.ex., sazonal ingênuo, ARIMA/ETS) e modelos ML/DL (p.ex., XGBoost com \emph{lags}, LSTM/Transformer).
+      \item Otimizar hiperparâmetros sob um orçamento computacional definido e registrar reprodutibilidade (seeds, splits, versões).
+      \item Comparar desempenho por horizonte de previsão e analisar erros por regime (picos, rupturas, sazonalidade).
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Exemplo 3: ``federated learning'' (FL) e heterogeneidade}
+\textbf{Não definir assim (amplo demais):}
+\begin{itemize}
+  \item ``Pesquisar aprendizado federado e seus desafios.''
+  \item ``Estudar heterogeneidade de dados em FL.''
+\end{itemize}
+
+\textbf{Definir assim (escopo delimitado e avaliável):}
+\begin{itemize}
+  \item \textbf{Objetivo geral:} Avaliar o impacto de diferentes níveis de heterogeneidade (\emph{non-IID}) na performance e estabilidade de treinamento em aprendizado federado, comparando métodos sob um protocolo experimental reprodutível.
+  \item \textbf{Objetivos específicos:}
+    \begin{enumerate}
+      \item Construir partições \emph{non-IID} por Dirichlet com diferentes valores de $\alpha$ e documentar estatísticas (entropia, cobertura, dispersão).
+      \item Comparar algoritmos (p.ex., FedAvg vs.\ variantes) em ao menos dois conjuntos de dados, controlando número de clientes e comunicação.
+      \item Reportar métricas (acurácia global, variância interclientes, convergência por rodada) e conduzir análise de sensibilidade a seeds.
+      \item Investigar explicações/diagnósticos (p.ex., embeddings, medidas de prontidão) correlacionando com performance.
+    \end{enumerate}
+\end{itemize}
+
+\section{Checklist rápido (antes de finalizar os objetivos)}
+\begin{enumerate}
+  \item Cada objetivo começa com um \textbf{verbo de ação}?
+  \item Está claro \textbf{o que será produzido} (modelo, método, sistema, protocolo, análise, comparação)?
+  \item Existe critério de \textbf{avaliação/verificação} (métricas, testes, comparadores, cenários)?
+  \item O escopo está compatível com \textbf{tempo e recursos}?
+  \item Os objetivos específicos, em conjunto, \textbf{implicam o objetivo geral}?
+\end{enumerate}
+
+\section*{Observação bibliográfica}
+Os pontos acima seguem recomendações usuais em metodologia de pesquisa em Computação, alinhadas à forma como Wazlawick enfatiza clareza, operacionalização e verificabilidade na escrita de objetivos.
+
+\end{document}
