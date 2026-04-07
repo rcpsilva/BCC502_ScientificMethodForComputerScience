@@ -1,0 +1,17 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{1}{section.1}%
+\contentsline {section}{\numberline {2}Ciência: Concepção de \textit {senso comum}}{1}{section.2}%
+\contentsline {section}{\numberline {3}Indutivismo}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Indutivista ingênuo}{1}{subsection.3.1}%
+\contentsline {paragraph}{A ciência começa com a observação.}{1}{section*.2}%
+\contentsline {paragraph}{Proposições de observação}{2}{section*.3}%
+\contentsline {paragraph}{Tipos de afirmação}{2}{section*.4}%
+\contentsline {paragraph}{Resposta Indutivista}{2}{section*.5}%
+\contentsline {paragraph}{O Princípio Indutivista}{2}{section*.6}%
+\contentsline {subsection}{\numberline {3.2}Explicações e previsões}{2}{subsection.3.2}%
+\contentsline {paragraph}{Raciocínio Dedutivo}{2}{section*.7}%
+\contentsline {paragraph}{Padrão do raciocínio dedutivo}{3}{section*.8}%
+\contentsline {section}{\numberline {4}A atração do indutivismo ingênuo}{3}{section.4}%
+\contentsline {paragraph}{Poder de explicar e prever}{3}{section*.9}%
+\contentsline {paragraph}{Objetividade}{3}{section*.10}%
+\contentsline {paragraph}{Confiabilidade}{3}{section*.11}%

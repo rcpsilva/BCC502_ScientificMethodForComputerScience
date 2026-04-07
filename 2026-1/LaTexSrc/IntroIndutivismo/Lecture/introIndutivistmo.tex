@@ -1,0 +1,248 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+% ======================
+% Packages
+% ======================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+% ======================
+% Listings setup (Python)
+% ======================
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\lstset{
+    language=Python,
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red!70!black},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true,
+    inputencoding=utf8
+}
+
+% ======================
+% Document
+% ======================
+\begin{document}
+
+\title{Introdução \footnote{Material baseado em \citep{chalmers1993ciencia}}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+% ==============================================================
+\section{Introdução}
+% ==============================================================
+\begin{itemize}
+    \item O que é ciência?
+    \item O que queremos dizer quando usamos a palavra ``científica'' como adjetivo?
+    \begin{itemize}
+        \item Parece implicar algum tipo de mérito.
+        \item Algum tipo especial de confiabilidade.
+        \item Por quê?
+        \item Existe um ``método científico'' que atribui à ciência estas características? 
+    \end{itemize}
+    \item Este é o trabalho principal de um filósofo da ciência.
+    \item Vamos estudar os principais resultados da filosofia da ciência.
+    \begin{itemize}
+        \item Perspectiva histórica.
+        \item Começamos com as ideias mais rudimentares e vamos expandindo para as ideias mais complexas e modernas.
+    \end{itemize}
+\end{itemize}
+
+
+\section{Ciência: Concepção de \textit{senso comum}}
+
+\begin{itemize}
+    \item Conhecimento científico é conhecimento provado. 
+    \item As teorias científicas são derivadas de maneira rigorosa dos dados adquiridos por observação e experimentação.
+    \item A ciência é baseada no que podemos ver, ouvir, tocar, etc.
+    \item Opiniões ou preferências pessoais e suposições especulativas não têm lugar na ciência.
+    \item A ciência é objetiva.
+    \item O conhecimento científico é confiável porque é conhecimento provado objetivamente.
+\end{itemize}
+
+Esta concepção se tornou popular no século XVII como consequência da revolução científica da época (Galileu, Newton). 
+
+\begin{itemize}
+    \item ``Se quisermos compreender a natureza devemos, devemos consultar a natureza''.
+    \item É um erro utilizar obras dos antigos (Aristóteles, Bíblia, ....) como fonte de conhecimento.
+    \item A experiência é a fonte do conhecimento.
+    \item A ciência é uma estrutura construída sobre fatos.
+\end{itemize}
+
+``Não foram tanto as observações e experimentos de galileu que causaram a ruptura com a tradição, mas sua atitude em relação à eles. Para ele, os dados eram tratados como dados, e não relacionados a alguma ideia preconcebida... Os dados da observação poderiam ou não se adequar a um esquema conhecido do universo, mas a coisa mais importante, na opinião de Galileu, era aceitar os dados e construir a teoria para se adequar a eles.'' \citep{anthony1957science}
+
+\section{Indutivismo}
+
+Ciência como conhecimento derivado dos dados da experiência
+
+\subsection{Indutivista ingênuo}
+
+\paragraph{A ciência começa com a observação.}
+    \begin{itemize}
+        \item O observador científico deve ter órgãos sensitivos normais e inalterados e registra fielmente o que pode ver, ouvir, etc.
+        \item Sem preconceitos.
+        \item Afirmações (proposições) a respeito do estado do mundo, ou de alguma parte dele, podem ser justificadas de maneira direta pelo uso dos sentidos do observador não-preconceituoso. 
+        \item Proposições de observação formam a base a partir da qual leis e teorias científicas devem ser derivadas.
+    \end{itemize}
+
+
+\paragraph{Proposições de observação}
+        \begin{itemize}
+            \item Exemplos: (i) Hoje temos uma lua cheia. (ii) O sol nasceu no leste.
+            \item A verdade de tais observações deve ser estabelecida com cuidadosa observação.
+            \item Qualquer observador pode estabelecer ou conferir sua verdade pelo uso direto de seus sentidos.
+            \item Observadores podem ver por si mesmos. 
+        \end{itemize}
+
+\paragraph{Tipos de afirmação}
+    \begin{itemize}
+        \item \texttt{Afirmações singulares}: Referem-se a uma ocorrência específica ou a um estado de coisas num lugar específico, num tempo específico. \ntc{Proposições de afirmação são afirmações singulares.}
+        \item \texttt{Afirmações universais}: São informações gerais que afirmam coisas sobre as propriedades ou comportamento de algum aspecto do universo. 
+        \begin{itemize}
+            \item Se referem a todos os eventos de um tipo específico em todos os lugares em todos os tempos. Ex. O Sol nasce no leste.
+            \item \impt{As leis que constituem o conhecimento científico são sempre afirmações universais.}
+        \end{itemize}
+    \end{itemize}
+
+\texttt{Se a ciência é baseada na experiência, então por que meios é possível extrair das afirmações singulares, que resultam da observação, as afirmações universais, que constituem o conhecimento científico?}
+
+\paragraph{Resposta Indutivista}
+
+É legítimo generalizar afirmações universais a partir de obbservações afirmações singulares desde que as condições à seguir sejam satisfeitas:
+
+\begin{enumerate}
+    \item O número de proposições de observação (afirmações singulares) que forma a base da generalização dever ser grande;
+    \item As observações devem ser repetidas sob ampla variedade de condições. 
+    \item Nenhuma proposição de observação deve conflitar com a afirmação universal derivada.
+\end{enumerate}
+
+\paragraph{O Princípio Indutivista}
+
+Se um grande número de $A$s foi observado sob uma ampla variedade de condições, e se todos estes as $A$s observados possuiam sem exceção a propriedade $B$, então todos os $As$ têm a propriedade $B$. 
+
+\subsection{Explicações e previsões}
+
+Não basta para a ciência gerar afirmações universais é fundamental que a partir das afirmações universais se gerem explicações e previsões.
+
+O tipo de raciocínio envolvido neste tipo de derivação é o \ntc{raciocínio dedutivo}. 
+
+\paragraph{Raciocínio Dedutivo}
+
+Um argumento dedutivo é \textit{logicamente válido} se, supondo que as premissas  são verdadeiras, a conclusão é necessariamente verdadeira --- isto é, é impossível que as premissas sejam verdadeiras e a conclusão falsa. Note que validade não 
+garante que as premissas sejam de fato verdadeiras; um argumento válido com premissas verdadeiras é chamado de \textit{sólido} (\textit{sound}).
+
+\texttt{Exemplo 1}
+
+Premissas: 
+\begin{enumerate}
+    \item Água razoavemente pura congela a cerca de $0^o$
+    \item O radiador do meu carro contém água razoavelmente pura 
+\end{enumerate}
+
+Conclusão:
+\begin{itemize}
+    \item Se a temperatura cair abaixo de $0^o$, a água do radiador do meu carro vai congelar
+\end{itemize}
+
+
+\texttt{Exemplo 2}
+
+Premissas: 
+\begin{enumerate}
+    \item Todos os gatos têm 5 patas
+    \item Oswaldo é meu gato 
+\end{enumerate}
+
+Conclusão:
+\begin{itemize}
+    \item Oswaldo tem 5 patas
+\end{itemize}
+
+\paragraph{Padrão do raciocínio dedutivo}
+
+Premissas: 
+\begin{enumerate}
+    \item Leis e teorias
+    \item Condições iniciais 
+\end{enumerate}
+
+Conclusão:
+\begin{itemize}
+    \item Previsões e explicações
+\end{itemize}
+
+\impt{No indutivismo, leis, teorias e condições iniciais são obtidas por observação direta e indução. Então previsões e explicações podem ser deduzidas deles.}
+
+\section{A atração do indutivismo ingênuo}
+
+\begin{enumerate}
+    \item A maioria das pessoas vai achar a explicação indutivista da ciência adequada
+    \item Ela fornece uma explicação formalizada de algumas das impressões popularmente mantidas a respeito da ciência.
+    \begin{itemize}
+        \item Poder de explicação e previsão
+        \item Objetividade 
+        \item Confiabilidade superior
+    \end{itemize}
+\end{enumerate}
+
+\paragraph{Poder de explicar e prever}
+
+\begin{itemize}
+    \item Leis e teorias podem ser obtidos por indução a partir de afirmações singulares (proposições de observação).
+    \item Condições iniciais são proposições de afirmação e podem ser obtidas por observação direta.
+    \item Explicações e previsões podem ser obtidas por dedução.
+\end{itemize}
+
+\paragraph{Objetividade}
+
+\begin{itemize}
+    \item Observação e raciocínio indutivos são processos objetivos.
+    \item Proposições de observação podem ser averiguadas por qualquer observador pelo uso normal dos sentidos. Assim não podem depender do gosto, da opinião ou das esperanças do observador. 
+    \item As induções satisfazem ou não as condições prescritas, não é uma questão subjetiva.
+\end{itemize}
+
+\paragraph{Confiabilidade}
+
+\begin{enumerate}
+    \item Seguem das definições indutivistas sobre observação e indução. 
+    \item As proposições de afirmação formam a base da ciência e são seguras e confiáveis 
+    \item Essa confiabilidade é transmitida às leis e teorias derivadas, desde que as condições de indução sejam satisfeitas
+\end{enumerate}
+
+
+\bibliographystyle{apalike}   
+\bibliography{references}
+
+\end{document}
+
