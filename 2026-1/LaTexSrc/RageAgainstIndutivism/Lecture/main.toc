@@ -1,8 +1,15 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Recapitulando o Indutivismo}{1}{section.1}%
-\contentsline {section}{\numberline {2}O Problema da Indução}{1}{section.2}%
-\contentsline {section}{\numberline {3}Recuo para Probabilidade}{1}{section.3}%
-\contentsline {section}{\numberline {4}Respostas ao Problema da Indução}{1}{section.4}%
-\contentsline {section}{\numberline {5}A Dependência que a Observação tem da Teoria}{1}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Explicação Popular da Observação}{1}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}}{1}{subsection.5.2}%
+\contentsline {paragraph}{Indutivismo:}{1}{section*.2}%
+\contentsline {section}{\numberline {2}Como o princípio da indução pode ser justificado?}{1}{section.2}%
+\contentsline {paragraph}{Argumento Lógico}{1}{section*.3}%
+\contentsline {paragraph}{Agumento da Experiência}{1}{section*.4}%
+\contentsline {section}{\numberline {3}Outros problemas}{2}{section.3}%
+\contentsline {section}{\numberline {4}Recuo para Probabilidade}{2}{section.4}%
+\contentsline {paragraph}{A Reformulação Probabilística}{2}{section*.5}%
+\contentsline {section}{\numberline {5}Respostas ao Problema da Indução}{2}{section.5}%
+\contentsline {section}{\numberline {6}A Dependência que a Observação tem da Teoria}{3}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Experiências visuais não determinadas pelas imagens sobre a retina}{3}{subsection.6.1}%
+\contentsline {paragraph}{Conclusão:}{4}{section*.6}%
+\contentsline {subsection}{\numberline {6.2}Proposições de observação Pressupõem Teoria}{4}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Indutivismo não conclusivamente refutado}{5}{subsection.6.3}%

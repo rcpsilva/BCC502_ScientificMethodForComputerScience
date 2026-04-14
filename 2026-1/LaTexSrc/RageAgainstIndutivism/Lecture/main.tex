@@ -20,6 +20,7 @@
 \usepackage{microtype}
 \usepackage{csquotes}
 \usepackage{natbib}
+\usepackage{graphicx}
 
 \definecolor{important}{RGB}{255, 100, 100}
 \definecolor{notice}{RGB}{0, 102, 204}
@@ -52,7 +53,7 @@
 % ======================
 \begin{document}
 
-\title{Rage Against the Indutivism\footnote{Material baseado em \citep{chalmers1993ciencia}}}
+\title{Rage Against the Inductivism\footnote{Material baseado em \citep{chalmers1993ciencia}}}
 \author{BCC502 -- Metodologia Científica para Ciência da Computação}
 \date{\today}
 \maketitle
@@ -61,17 +62,219 @@
 
 \section{Recapitulando o Indutivismo}
 
-\section{O Problema da Indução}
+\begin{enumerate}
+    \item A ciência começa com observação
+    \item A observção fornece ma base segura sobre a qual o conhecimento científico é obtido pode ser construído
+    \item O conhecimento científico é obtido atravéves de proposições de observação por indução
+\end{enumerate}
+
+\paragraph{Indutivismo:} Se um grande número de $A$s foi observado sob uma ampla variedade de condições, e se todos esses $A$s observados possuíam sem execção a propriedade B, então todos os $A$s possuem a propriedade $B$.
+
+\section{Como o princípio da indução pode ser justificado?}
+
+\paragraph{Argumento Lógico}
+Se a premissa é verdadeira, então a conclusão deve ser verdadeira
+    \begin{itemize}
+        \item Argumentos dedutivos, possuem esse caráter.
+        \item Mas argumentos indutivos, não.
+        \item Argumentos indutivos não são logicamente válidos. 
+        \item É possível que a conclusão de um argumento indutivo ser falsa embora as premissas sejam verdadeiras e, ainda assim, não haver contradição. 
+        \item Exemplo: Corvos pretos. 
+        \begin{itemize}
+            \item Não há constradição em afrimar que:
+            \begin{itemize}
+                \item Todos os corvos observados se revelaram pretos
+                \item Nem todos os corvos são pretos
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+\paragraph{Agumento da Experiência}
+
+O princípio da indução funcionou, historicamente, em um grande número de ocasiões.
+\begin{itemize}
+    \item Leis da ótica
+    \item Leis do movimento planetário
+    \item etc...
+\end{itemize}
+
+Segundo David Hume (século XVIII), este agrumento é inaceitável pois é circular.
+
+O próprio argumento indutivo é empregado para validar o o argumento indutivo.
+
+\[\begin{aligned}
+ & \text{O argumento de indução foi bem sucedido no caso }x_1   \\
+ & \text{O argumento de indução foi bem sucedido no caso }x_2    \\
+ & ...  \\
+ & \text{O argumento de indução foi bem sucedido no caso }x_n   \\ 
+\text{Logo} & \\
+    & \text{O argumento de indução é sempre bem sucedido. }
+\end{aligned} \]
+
+O argumento indutivo não pode ser usado para jsutificar a indução. 
+
+\section{Outros problemas}
+
+As condições que devem ser satisfeitas para aceitarmos as generalizações são definidas de forma vaga.
+
+\begin{itemize}
+    \item Grande número de observações. Quantas?
+    \item Ampla variedade de circunstâncias. Quais?
+\end{itemize}
+
+Exemplo: Ponto de fervura da água. 
+\begin{itemize}
+    \item Pressão
+    \item Pureza da água 
+    \item Método de aquecimento
+    \item Cor do recipient
+\end{itemize}
+
+Isso indicaria que:
+\begin{itemize}
+    \item A escolha das circustâncias é baseda em conhecimento prévio? 
+    \item Isso não vem antes da observação? 
+    \item Dessa forma, o indutivismo não passa a ser subjetivo?
+\end{itemize}
 
 \section{Recuo para Probabilidade}
 
+
+Diante da impossibilidade de justificar logicamente a indução (problema de Hume), os indutivistas recuam e reformulam sua posição: em vez de afirmar que as leis científicas são \textit{provadas} pela observação, passam a dizer que são \textit{provavelmente verdadeiras}.
+
+\paragraph{A Reformulação Probabilística}
+
+A alegação passa a ser:
+\[
+\text{Observações repetidas} \;\Rightarrow\; \text{A lei é \textit{provavelmente} verdadeira}
+\]
+Ou seja, quanto maior o número de confirmações observacionais, maior a \textit{probabilidade} de a teoria ser verdadeira.
+
+Esse recuo não resolve o problema. O argumento é o seguinte:
+
+\begin{enumerate}
+    \item Uma afirmação universal se aplica a um número \textit{infinito} de casos possíveis.
+    \item O número de observações realizadas é sempre \textit{finito}.
+    \item Portanto, a probabilidade de uma lei universal ser verdadeira, com base em evidências finitas, é:
+    \[
+        P = \frac{\text{casos confirmados (finito)}}{\text{casos possíveis (infinito)}} = \frac{n}{\infty} \approx 0
+    \]
+    \item Logo, por mais observações que se acumulem, a probabilidade permanece \textit{próxima de zero}, e não aumenta de forma significativa.
+\end{enumerate}
+
+
+\begin{itemize}
+    \item O recuo para a probabilidade \textit{não salva} o indutivismo. A tentativa de substituir ``certeza'' por ``alta probabilidade'' fracassa porque, no quadro lógico-formal, enunciados universais continuam tendo probabilidade essencialmente nula com base em qualquer conjunto finito de observações.
+    
+    \item Nem a versão forte (``a indução prova leis'') nem a versão fraca (``a indução torna leis prováveis'') do indutivismo ingênuo se sustentam como justificação lógica do conhecimento científico.
+
+\end{itemize}
+
 \section{Respostas ao Problema da Indução}
+
+\begin{enumerate}
+    \item A ciência se baseia na indução, a indução não pode ser justificada racionalmente. A crença em leis e teorias científicas não passa disso, uma crença (posição de Hume).
+    \item Negar que a ciência seja baseada em indução. 
+\end{enumerate}
 
 \section{A Dependência que a Observação tem da Teoria}
 
-\subsection{Explicação Popular da Observação}
+Existem duas suposições importantes envolvidas na posição indutivista ingênua em relação à observação.
 
-\subsection{}
+\begin{enumerate}
+    \item ``A ciência começa na observação.''
+    \item ``A observação produz uma base segura  da qual o conhecimento pode ser derivado''
+\end{enumerate}
+
+Algumas premissas para este racioncínio são:
+\begin{enumerate}
+    \item O observador tem acesso mais ou menos direto a algumas propriedades do mundo externos por meio da visão.
+    \item Dois observadores normais vendo o mesmo objeto ou cena do mesmo lugar ``verão'' a mesma coisa.
+\end{enumerate}
+
+\subsection{Experiências visuais não determinadas pelas imagens sobre a retina}
+
+Há uma vasta quantidade de evidência para indicar que não é exatamento o caso dois observadores normais vendo o mesmo objeto do mesmo lugar sob as mesmas circunstâncias tenham a mesma experiência visual.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{oi2.jpeg}
+\end{figure}
+
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{oi3.jpeg}
+\end{figure}
+
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{oi1.jpeg}
+\end{figure}
+\pagebreak
+
+Alguém pode argumentar que as imagens anteriores foram produzidas para ludibriar a visão e que no mundo real não é bem assim. E o exemplo abaixo?
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.3\textwidth]{fore_arm_part1.jpg}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{forearm_colles_a1.jpg}
+\end{figure}
+
+\paragraph{Conclusão:}
+\begin{itemize}
+    \item A experiência que um observador tem ao ver um objeto ou cena não é determinada apenas pelas imagens sobre suas retinas
+    \item Dependem da experiência
+    \item Dependem do estado interno do observador
+    \item Nós vemos a mesma coisa mas as experiências perceptivas são diferentes
+\end{itemize}
+
+\subsection{Proposições de observação Pressupõem Teoria}
+
+\begin{itemize}
+    \item \textbf{Proposições de observação são sempre feitas na linguagem de uma teoria.}
+
+    Chalmers argumenta que toda observação já vem carregada de pressupostos teóricos. Não existe observação ``pura'' ou neutra. Alguns exemplos que ele utiliza:
+
+    \begin{itemize}
+        \item \textit{O exemplo do telescópio de Galileu:} Quando Galileu observou as luas de Júpiter pelo telescópio, ele já pressupunha uma teoria da óptica que garantisse que o telescópio produzia imagens confiáveis de objetos celestes, e não meros artefatos das lentes. Seus críticos aristotélicos, que não compartilhavam esses pressupostos, recusaram-se a aceitar as observações.
+
+        \item \textit{O exemplo do estudante de medicina:} Um estudante iniciante e um médico experiente, ao observarem a mesma lâmina de microscópio ou a mesma radiografia, ``veem'' coisas diferentes. O que cada um consegue observar depende do treinamento teórico que possui. A observação é, portanto, moldada pela teoria.
+
+        \item \textit{O exemplo dos circuitos elétricos:} Um novato em um laboratório de física, ao olhar para um circuito elétrico complicado, vê apenas fios e componentes; o físico treinado ``vê'' um amplificador ou um oscilador --- porque sua observação é estruturada por teoria.
+    \end{itemize}
+
+    \item \textbf{Proposições de observação são tão sujeitas a falha quanto as teorias que elas pressupõem.}
+
+    Se as observações dependem de teoria, então elas herdam a falibilidade dessas teorias. Chalmers ilustra:
+
+    \begin{itemize}
+        \item \textit{O exemplo da torre e a rotação da Terra:} Antes de Copérnico, a proposição de observação ``uma pedra solta do alto de uma torre cai em linha reta até a base'' era usada como evidência contra o movimento da Terra. Pressupunha-se (com base na física aristotélica) que, se a Terra se movesse, a pedra ficaria ``para trás''. Essa proposição de observação era falha precisamente porque a teoria que a sustentava (a física aristotélica do movimento) era falha. Com a mecânica de Galileu e Newton, a mesma observação passou a ser perfeitamente compatível com uma Terra em rotação.
+
+        \item \textit{O exemplo das varas parcialmente submersas:} A observação de que uma vara parece entortada quando parcialmente mergulhada em água é um exemplo clássico de como a observação direta pode ser enganadora. A proposição ``a vara está torta'' é falha porque pressupõe que a visão fornece acesso direto e infalível à realidade, ignorando a teoria da refração da luz.
+
+        \item \textit{O exemplo da astronomia pré-telescópica:} Observadores a olho nu registravam que os planetas ``vagavam'' pelo céu de forma errática. Essas proposições de observação carregavam pressupostos geocêntricos e eram formuladas em termos de uma cosmologia que se mostrou incorreta. Quando o quadro teórico mudou (de Ptolomeu para Copérnico), as mesmas observações foram reinterpretadas de forma radicalmente diferente.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Conclusão:} É falso que a ciência começa pela observação. Toda observação pressupõe um quadro teórico prévio, e a falibilidade das teorias contamina as próprias proposições de observação. Não há um ponto de partida observacional seguro e independente de teoria sobre o qual se possa construir o conhecimento científico por indução.
+
+\subsection{Indutivismo não conclusivamente refutado}
+
+\begin{itemize}
+    \item \textbf{Concessão dos indutivistas modernos:} Indutivistas modernos aceitam que a observação depende da teoria e, portanto, reconhecem que a ciência não começa pela observação pura. Esse ponto, levantado pelos críticos, é incorporado à posição indutivista revisada.
+
+    \item \textbf{Manutenção do núcleo indutivista:} Ainda assim, os indutivistas argumentam que, para avaliar a adequação de uma teoria, o princípio indutivista permanece válido: deve-se reunir um número grande de fatos relevantes, observados sob uma ampla variedade de condições. A quantidade e a diversidade das evidências continuam sendo critérios centrais para julgar o mérito de uma teoria.
+
+    \item \textbf{Vulnerabilidade compartilhada:} Chalmers observa que as abordagens rivais --- como o falsificacionismo de Popper, os paradigmas de Kuhn e os programas de pesquisa de Lakatos --- também estão sujeitas a críticas e objeções sérias. Nenhuma filosofia da ciência oferece uma resposta definitiva e livre de problemas.
+
+    \item \textbf{Conclusão prudente:} Diante disso, o indutivismo não deve ser completamente descartado. Embora suas versões ingênuas tenham sido refutadas, o apelo à evidência empírica acumulada como forma de avaliação de teorias permanece como um elemento presente na prática científica real. O indutivismo, em suas versões mais sofisticadas, sobrevive como uma posição filosófica legítima, ainda que imperfeita.
+\end{itemize}
 
 \bibliographystyle{apalike}   
 \bibliography{references}
