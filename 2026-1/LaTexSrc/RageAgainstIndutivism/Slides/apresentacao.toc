@@ -1,6 +1,8 @@
 \babel@toc {brazil}{}\relax 
-\beamer@sectionintoc {1}{Introdução}{3}{0}{1}
-\beamer@sectionintoc {2}{Ciência: Concepção de Senso Comum}{9}{0}{2}
-\beamer@sectionintoc {3}{Indutivismo}{12}{0}{3}
-\beamer@sectionintoc {4}{Explicações e Previsões}{24}{0}{4}
-\beamer@sectionintoc {5}{A Atração do Indutivismo Ingênuo}{30}{0}{5}
+\beamer@sectionintoc {1}{Recapitulando o Indutivismo}{3}{0}{1}
+\beamer@sectionintoc {2}{Justificação da Indução}{6}{0}{2}
+\beamer@sectionintoc {3}{Outros Problemas do Indutivismo}{12}{0}{3}
+\beamer@sectionintoc {4}{Recuo para Probabilidade}{14}{0}{4}
+\beamer@sectionintoc {5}{Respostas ao Problema da Indução}{20}{0}{5}
+\beamer@sectionintoc {6}{A Dependência da Observação em relação à Teoria}{22}{0}{6}
+\beamer@sectionintoc {7}{Indutivismo: Refutado ou Não?}{35}{0}{7}

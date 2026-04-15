@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  13 APR 2026 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  14 APR 2026 12:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -652,35 +652,35 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\footnote' on input line 103.
+(hyperref)                removing `\footnote' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 103.
+(hyperref)                removing `\begingroup' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 103.
+(hyperref)                removing `\let' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 103.
+(hyperref)                removing `\<let>-command' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 103.
+(hyperref)                removing `\NAT@ctype' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 103.
+(hyperref)                removing `\z@' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 103.
+(hyperref)                removing `\let' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 103.
+(hyperref)                removing `\new@ifnextchar' on input line 91.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -693,24 +693,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./apresentacao.aux)
 \openout1 = `apresentacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -765,64 +765,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 109.
+Package hyperref Info: Link coloring OFF on input line 94.
  (./apresentacao.out) (./apresentacao.out)
 \@outlinefile=\write5
 \openout5 = `apresentacao.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 109.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 109.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 94.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 109.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 109.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 94.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 109.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 109.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 109.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 94.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 109.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 109.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 109.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 94.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 109.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 109.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 109.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 94.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 109.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 109.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 109.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 94.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 109.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 109.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 109.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 109.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 109.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 109.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 109.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 94.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 94.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 109.
+(Font)              `pureletters' in the math version `normal' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 109.
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 94.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 109.
+(Font)              `pureletters' in the math version `bold' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 109.
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 94.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 109.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 94.
  (c:/texlive/2024/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (c:/texlive/2024/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -836,19 +836,19 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (c:/texlive/2024/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \microtypecontext on input line 109.
-Package microtype Info: Applying patch `item' on input line 109.
-Package microtype Info: Applying patch `toc' on input line 109.
-Package microtype Info: Applying patch `eqnum' on input line 109.
-Package microtype Info: Applying patch `footnote' on input line 109.
-Package microtype Info: Applying patch `verbatim' on input line 109.
+LaTeX Info: Redefining \microtypecontext on input line 94.
+Package microtype Info: Applying patch `item' on input line 94.
+Package microtype Info: Applying patch `toc' on input line 94.
+Package microtype Info: Applying patch `eqnum' on input line 94.
+Package microtype Info: Applying patch `footnote' on input line 94.
+Package microtype Info: Applying patch `verbatim' on input line 94.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 109.
+LaTeX Info: Redefining \showhyphens on input line 94.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -861,19 +861,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 114.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 114.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 114.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 97.
  (c:/texlive/2024/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
@@ -883,14 +883,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-Package natbib Warning: Citation `chalmers1993ciencia' on page 1 undefined on input line 114.
-
-
-
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./apresentacao.toc)
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 100--100
 [][][][][][]  
  []
 
@@ -899,7 +895,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 [2
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 [][][][][][]  
  []
 
@@ -908,7 +904,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [3
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 [][][][][][]  
  []
 
@@ -917,7 +913,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [4
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 [][][][][][]  
  []
 
@@ -926,7 +922,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [5
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 146--146
 [][][][][][]  
  []
 
@@ -935,7 +931,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [6
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 146--146
 [][][][][][]  
  []
 
@@ -944,7 +940,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [7
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 146--146
 [][][][][][]  
  []
 
@@ -953,7 +949,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 147--147
 [8
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 162--162
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 146--146
 [][][][][][]  
  []
 
@@ -962,8 +958,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 162--162
 [9
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 174--174
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 170--170
 [][][][][][]  
+ []
+
+
+Overfull \vbox (1.10991pt too high) detected at line 170
  []
 
 
@@ -971,12 +971,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 174--174
 [10
 
 ]
-
-Package natbib Warning: Citation `anthony1957science' on page 11 undefined on input line 182.
-
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 182--182
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 170--170
 [][][][][][]  
+ []
+
+
+Overfull \vbox (1.10991pt too high) detected at line 170
  []
 
 
@@ -984,7 +984,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 182--182
 [11
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 192--192
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 209--209
 [][][][][][]  
  []
 
@@ -993,7 +993,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 192--192
 [12
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 209--209
 [][][][][][]  
  []
 
@@ -1002,7 +1002,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
 [13
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [][][][][][]  
  []
 
@@ -1011,7 +1011,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
 [14
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [][][][][][]  
  []
 
@@ -1020,7 +1020,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
 [15
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 252--252
 [][][][][][]  
  []
 
@@ -1029,7 +1029,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
 [16
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 252--252
 [][][][][][]  
  []
 
@@ -1038,7 +1038,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
 [17
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 252--252
 [][][][][][]  
  []
 
@@ -1047,7 +1047,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
 [18
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 252--252
 [][][][][][]  
  []
 
@@ -1056,7 +1056,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [19
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
 [][][][][][]  
  []
 
@@ -1065,7 +1065,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [20
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
 [][][][][][]  
  []
 
@@ -1074,7 +1074,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [21
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 247--247
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 300--300
 [][][][][][]  
  []
 
@@ -1083,7 +1083,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 247--247
 [22
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 253--253
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 300--300
 [][][][][][]  
  []
 
@@ -1092,7 +1092,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 253--253
 [23
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 264--264
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 300--300
 [][][][][][]  
  []
 
@@ -1101,7 +1101,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 264--264
 [24
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 321--321
 [][][][][][]  
  []
 
@@ -1110,7 +1110,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
 [25
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 289--289
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 321--321
 [][][][][][]  
  []
 
@@ -1119,7 +1119,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 289--289
 [26
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 306--306
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
 [][][][][][]  
  []
 
@@ -1128,7 +1128,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 306--306
 [27
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 329--329
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
 [][][][][][]  
  []
 
@@ -1137,7 +1137,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 329--329
 [28
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 329--329
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
 [][][][][][]  
  []
 
@@ -1146,7 +1146,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 329--329
 [29
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 345--345
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
 [][][][][][]  
  []
 
@@ -1155,7 +1155,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 345--345
 [30
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 353--353
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 358--358
 [][][][][][]  
  []
 
@@ -1164,7 +1164,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 353--353
 [31
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 361--361
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 358--358
 [][][][][][]  
  []
 
@@ -1173,7 +1173,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 361--361
 [32
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 369--369
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 358--358
 [][][][][][]  
  []
 
@@ -1182,15 +1182,58 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 369--369
 [33
 
 ]
-No file apresentacao.bbl.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 375--375
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 358--358
 [][][][][][]  
  []
 
 
 
 [34
+
+]
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 378--378
+[][][][][][]  
+ []
+
+
+
+[35
+
+]
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 378--378
+[][][][][][]  
+ []
+
+
+
+[36
+
+]
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 378--378
+[][][][][][]  
+ []
+
+
+
+[37
+
+]
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 378--378
+[][][][][][]  
+ []
+
+
+
+[38
+
+] (./apresentacao.bbl)
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 384--384
+[][][][][][]  
+ []
+
+
+
+[39
 
 ]
 \tf@nav=\write6
@@ -1202,31 +1245,27 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 375--375
 \tf@snm=\write8
 \openout8 = `apresentacao.snm'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
-(./apresentacao.aux)
+ (./apresentacao.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
 Package rerunfilecheck Info: File `apresentacao.out' has not changed.
-(rerunfilecheck)             Checksum: DAEF6B76A4E71964D98F377F1019EE09;823.
+(rerunfilecheck)             Checksum: B65CDDAC4F7BB99A131C48AAE7C4A007;1575.
  ) 
 Here is how much of TeX's memory you used:
- 28828 strings out of 473577
- 554776 string characters out of 5732224
- 968768 words of memory out of 5000000
- 50979 multiletter control sequences out of 15000+600000
- 590413 words of font info for 163 fonts, out of 8000000 for 9000
+ 28873 strings out of 473577
+ 555787 string characters out of 5732224
+ 970924 words of memory out of 5000000
+ 51012 multiletter control sequences out of 15000+600000
+ 591904 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,1137b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfso1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
-Output written on apresentacao.pdf (34 pages, 288083 bytes).
+ 128i,15n,123p,1137b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
+Output written on apresentacao.pdf (39 pages, 256490 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
- 56915 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 59499 words of extra memory for PDF output out of 61914 (max. 10000000)
 

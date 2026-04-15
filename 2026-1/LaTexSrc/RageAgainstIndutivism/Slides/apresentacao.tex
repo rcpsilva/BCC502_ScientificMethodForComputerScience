@@ -1,8 +1,5 @@
 \documentclass[aspectratio=169]{beamer}
 
-% ======================
-% Packages
-% ======================
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
@@ -11,37 +8,36 @@
 \usepackage{csquotes}
 \usepackage{natbib}
 \usepackage{tikz}
+\usepackage{graphicx}
 
-% ======================
 % Colors
-% ======================
 \definecolor{mblack}{RGB}{20, 20, 20}
-\definecolor{mblue}{RGB}{0, 102, 204}
-\definecolor{morange}{RGB}{230, 100, 20}
+\definecolor{mprimary}{RGB}{83, 152, 190}
+\definecolor{maccent}{RGB}{222, 165, 75}
 \definecolor{mwhite}{RGB}{255, 255, 255}
-% ======================
-% Theme & Style
-% ======================
+
+% Theme
 \usetheme{default}
 \usecolortheme{default}
 \setbeamercolor{normal text}{fg=mblack, bg=white}
-\setbeamercolor{frametitle}{fg=white, bg=mblue}
+\setbeamercolor{frametitle}{fg=white, bg=mprimary}
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{author}{fg=white}
 \setbeamercolor{date}{fg=white}
-\setbeamercolor{itemize item}{fg=morange}
-\setbeamercolor{itemize subitem}{fg=mblue}
-\setbeamercolor{enumerate item}{fg=morange}
-\setbeamercolor{enumerate subitem}{fg=mblue}
-\setbeamercolor{block title}{fg=white, bg=mblue}
-\setbeamercolor{block body}{fg=mblack, bg=mblue!8}
-\setbeamercolor{alerted text}{fg=morange}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mprimary}
+\setbeamercolor{enumerate item}{fg=maccent}
+\setbeamercolor{enumerate subitem}{fg=mprimary}
+\setbeamercolor{block title}{fg=white, bg=mprimary}
+\setbeamercolor{block body}{fg=mblack, bg=mprimary!8}
+\setbeamercolor{block title alerted}{fg=white, bg=maccent}
+\setbeamercolor{block body alerted}{fg=mblack, bg=maccent!10}
+\setbeamercolor{alerted text}{fg=maccent}
 
 \setbeamerfont{frametitle}{series=\bfseries, size=\large}
 \setbeamerfont{title}{series=\bfseries, size=\LARGE}
 \setbeamerfont{block title}{series=\bfseries}
 
-% Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
 
 % Footer
@@ -57,318 +53,331 @@
   }%
 }
 
-% Frametitle with left orange accent bar
+% Frametitle with accent rule
 \setbeamertemplate{frametitle}{%
   \nointerlineskip%
   \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0.2cm, leftskip=0.5cm]{frametitle}%
     \usebeamerfont{frametitle}\insertframetitle%
   \end{beamercolorbox}%
   \vspace{-0.1cm}%
-  \textcolor{morange}{\rule{\paperwidth}{2pt}}%
+  \textcolor{maccent}{\rule{\paperwidth}{2pt}}%
 }
 
-% Title page colors
+% Title page: three-band layout
 \setbeamercolor{titlebar top}{bg=mwhite}
-\setbeamercolor{titlebar main}{bg=mblue}
-\setbeamercolor{titlebar bottom}{bg=morange}
+\setbeamercolor{titlebar main}{bg=mprimary}
+\setbeamercolor{titlebar bottom}{bg=maccent}
 
 \setbeamertemplate{title page}{%
   \vspace{0pt}%
-  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0pt]{titlebar top}%
-  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0pt]{titlebar top}\end{beamercolorbox}%
   \begin{beamercolorbox}[wd=\paperwidth, ht=3.8cm, dp=0pt, center]{titlebar main}%
     \vspace{0.6cm}
     {\usebeamerfont{title}\color{white}\inserttitle\par}%
-    \vspace{0.35cm}
-    {\color{white}\small\insertauthor\par}%
-    \vspace{0.15cm}
-    {\color{white}\footnotesize\insertdate\par}%
+    \vspace{0.35cm}{\color{white}\small\insertauthor\par}%
+    \vspace{0.15cm}{\color{white}\footnotesize\insertdate\par}%
     \vspace{0.25cm}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=\paperwidth, ht=1.3cm, dp=0pt]{titlebar bottom}%
-  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=1.3cm, dp=0pt]{titlebar bottom}\end{beamercolorbox}%
 }
 
-% Item spacing
 \setlength{\itemsep}{4pt}
 
-% Custom commands
-\newcommand{\impt}[1]{\textcolor{morange}{\textbf{#1}}}
-\newcommand{\ntc}[1]{\textcolor{mblue}{#1}}
+% Highlight commands
+\newcommand{\impt}[1]{\textcolor{maccent}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{mprimary}{#1}}
 
-% ======================
-% Document Info
-% ======================
 \title{BCC502 -- Metodologia Científica}
-\author{Introdução ao Indutivismo \footnote{Baseado em \citep{chalmers1993ciencia}}}
+\author{Rage Against the Inductivism\footnote{Baseado em \citep{chalmers1993ciencia}}}
 \date{\today}
 
-% ======================
-% Document
-% ======================
 \begin{document}
 
-% --- Title Slide ---
-\begin{frame}[plain]
-  \titlepage 
-\end{frame}
+% ==========================================
+\begin{frame}[plain]\titlepage\end{frame}
 
-% --- Table of Contents ---
-\begin{frame}{Sumário}
-  \tableofcontents
-\end{frame}
+% ==========================================
+\begin{frame}{Sumário}\tableofcontents\end{frame}
 
-% ==============================================================
-\section{Introdução}
-% ==============================================================
+% ==========================================
+\section{Recapitulando o Indutivismo}
+% ==========================================
 
-\begin{frame}{Introdução}
-  \begin{itemize}
-    \item O que é ciência?
+\begin{frame}{Recapitulando o Indutivismo}
+  \begin{enumerate}
+    \item A ciência começa com observação
     \pause
-    \item O que queremos dizer quando usamos a palavra \textit{``científica''} como adjetivo?
+    \item A observação fornece uma base segura sobre a qual o conhecimento científico pode ser construído
     \pause
-    \begin{itemize}
-      \item Parece implicar algum tipo de mérito.
-      \item Algum tipo especial de confiabilidade.
-      \item Por quê?
-      \item Existe um ``método científico'' que atribui à ciência estas características?
-    \end{itemize}
-    \pause
-    \item Este é o trabalho principal de um filósofo da ciência.
-    \pause
-    \item Vamos estudar os principais resultados da filosofia da ciência.
-    \pause
-    \begin{itemize}
-      \item Perspectiva histórica.
-      \item Começamos com as ideias mais rudimentares e vamos expandindo para as ideias mais complexas e modernas.
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-% ==============================================================
-\section{Ciência: Concepção de Senso Comum}
-% ==============================================================
-
-\begin{frame}{Ciência: Concepção de \textit{Senso Comum}}
-  \begin{itemize}
-    \item Conhecimento científico é conhecimento \textbf{provado}.
-    \item As teorias científicas são derivadas de maneira rigorosa dados adquiridos por observação e experimentação.
-    \item A ciência é baseada no que podemos ver, ouvir, tocar, etc.
-    \item Opiniões ou preferências pessoais e suposições especulativas \textbf{não têm lugar} na ciência.
-    \item A ciência é \textbf{objetiva}.
-    \item O conhecimento científico é confiável porque é conhecimento provado objetivamente.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Ciência: Concepção de \textit{Senso Comum}}
-  Esta concepção se tornou popular no século XVII como consequência da revolução científica da época (Galileu, Newton).
+    \item O conhecimento científico é obtido a partir de proposições de observação por \impt{indução}
+  \end{enumerate}
 
   \vspace{0.4cm}
-  \begin{itemize}
-    \item ``Se quisermos compreender a natureza, devemos consultar a natureza''.
-    \item É um erro utilizar obras dos antigos (Aristóteles, Bíblia, \ldots) como fonte de conhecimento.
-    \item A experiência é a fonte do conhecimento.
-    \item A ciência é uma estrutura construída sobre \textbf{fatos}.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Galileu e a Ruptura com a Tradição}
-  \begin{block}{Citação}
-    ``Não foram tanto as observações e experimentos de Galileu que causaram a ruptura com a tradição, mas sua atitude em relação a eles. Para ele, os dados eram tratados como dados, e não relacionados a alguma ideia preconcebida\ldots{} Os dados da observação poderiam ou não se adequar a um esquema conhecido do universo, mas a coisa mais importante, na opinião de Galileu, era aceitar os dados e construir a teoria para se adequar a eles.''
+  \begin{block}{Princípio da Indução}
+    Se um grande número de \(A\)s foi observado sob uma ampla variedade de condições, e se todos esses \(A\)s observados possuíam sem exceção a propriedade \(B\), então \impt{todos} os \(A\)s possuem a propriedade \(B\).
   \end{block}
-  \vspace{0.2cm}
-  \hfill\citep{anthony1957science}
 \end{frame}
 
-% ==============================================================
-\section{Indutivismo}
-% ==============================================================
+% ==========================================
+\section{Justificação da Indução}
+% ==========================================
 
-\begin{frame}{Indutivismo}
-  \begin{center}
-    \large\ntc{Ciência como conhecimento derivado dos dados da experiência}
-  \end{center}
-\end{frame}
+\begin{frame}{Argumento Lógico}
+  Se a premissa é verdadeira, a conclusão \textbf{deve} ser verdadeira?
 
-\begin{frame}{Indutivista Ingênuo}
-  A Ciência Começa com a Observação
+  \vspace{0.3cm}
   \begin{itemize}
-    \item O observador científico deve ter órgãos sensitivos normais e inalterados e registra fielmente o que pode ver, ouvir, etc.
+    \item Argumentos \ntc{dedutivos} possuem esse caráter
     \pause
-    \item \textbf{Sem preconceitos.}
+    \item Argumentos \ntc{indutivos}, \impt{não}
     \pause
-    \item Afirmações (proposições) a respeito do estado do mundo podem ser justificadas de maneira direta pelo uso dos sentidos do observador não-preconceituoso.
-    \pause
-    \item Proposições de observação formam a base a partir da qual leis e teorias científicas devem ser derivadas.
+    \item É possível que a conclusão de um argumento indutivo seja falsa embora as premissas sejam verdadeiras --- sem contradição
   \end{itemize}
-\end{frame}
 
-\begin{frame}{Proposições de Observação}
-  \begin{itemize}
-    \item \textbf{Exemplos:} (i) Hoje temos uma lua cheia. (ii) O sol nasceu no leste.
-    \pause
-    \item \textbf{Características}:
-    \begin{itemize}
-      \item A verdade de tais observações deve ser estabelecida com cuidadosa observação.
-      \item Qualquer observador pode estabelecer ou conferir sua verdade pelo uso direto de seus sentidos.
-      \item Observadores podem ver por si mesmos. 
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Tipos de Afirmação}
-  \begin{itemize}
-    \item \textbf{\ntc{Afirmações singulares}}: Referem-se a uma ocorrência específica ou a um estado de coisas num lugar específico, num tempo específico. \ntc{Proposições de observação são afirmações singulares.}
-    \pause
-    \vspace{0.3cm}
-    \item \textbf{\ntc{Afirmações universais}}: São informações gerais que afirmam coisas sobre as propriedades ou comportamento de algum aspecto do universo.
-    \begin{itemize}
-      \item Referem-se a todos os eventos de um tipo específico em todos os lugares em todos os tempos. Ex.: \textit{O Sol nasce no leste.}
-      \item \impt{As leis que constituem o conhecimento científico são sempre afirmações universais.}
-    \end{itemize}
-  \end{itemize}
+  \vspace{0.3cm}
   \pause
-  \vspace{0.3cm}
-  \begin{alertblock}{Questão central}
-    Se a ciência é baseada na experiência, então por que meios é possível extrair das afirmações singulares, que resultam da observação, as afirmações universais, que constituem o conhecimento científico?
+  \begin{alertblock}{Exemplo: Corvos Pretos}
+    Não há contradição em afirmar simultaneamente:
+    \begin{itemize}
+      \item Todos os corvos observados se revelaram pretos
+      \item Nem todos os corvos são pretos
+    \end{itemize}
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Resposta Indutivista}
-  É legítimo generalizar afirmações universais a partir de observações e afirmações singulares desde que as condições a seguir sejam satisfeitas:
-
-  \vspace{0.3cm}
-  \begin{enumerate}
-    \item O número de proposições de observação (afirmações singulares) que forma a base da generalização deve ser \textbf{grande};
-    \item As observações devem ser repetidas sob \textbf{ampla variedade de condições};
-    \item \textbf{Nenhuma} proposição de observação deve conflitar com a afirmação universal derivada.
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}{O Princípio Indutivista}
-  \begin{block}{Princípio}
-    Se um grande número de $A$s foi observado sob uma ampla variedade de condições, e se todos os $A$s observados possuíam sem exceção a propriedade $B$, então todos os $A$s têm a propriedade $B$.
-  \end{block}
-\end{frame}
-
-% ==============================================================
-\section{Explicações e Previsões}
-% ==============================================================
-
-\begin{frame}{Explicações e Previsões}
-  Não basta para a ciência gerar afirmações universais --- é fundamental que a partir das afirmações universais se gerem \textbf{explicações} e \textbf{previsões}.
+\begin{frame}{Argumento da Experiência}
+  O princípio da indução \textit{funcionou} historicamente em muitos casos:
+  \begin{itemize}
+    \item Leis da ótica
+    \item Leis do movimento planetário
+    \item etc.
+  \end{itemize}
 
   \vspace{0.4cm}
-  O tipo de raciocínio envolvido neste tipo de derivação é o \ntc{raciocínio dedutivo}.
-\end{frame}
-
-\begin{frame}{Raciocínio Dedutivo}
-  \begin{block}{Definição}
-    Um argumento dedutivo é \textit{logicamente válido} se, supondo que as premissas são verdadeiras, a conclusão é necessariamente verdadeira --- isto é, é impossível que as premissas sejam verdadeiras e a conclusão falsa.
-  \end{block}
-
-  \vspace{0.3cm}
-  \begin{alertblock}{Atenção}
-    Validade \textbf{não} garante que as premissas sejam de fato verdadeiras. Um argumento válido com premissas verdadeiras é chamado de \textit{sólido} (\textit{sound}).
+  \pause
+  \begin{alertblock}{Circularidade (David Hume, séc. XVIII)}
+    O próprio argumento indutivo é empregado para validar a indução:
+    \[
+    \begin{aligned}
+     & \text{A indução foi bem sucedida no caso }x_1   \\
+     & \text{A indução foi bem sucedida no caso }x_2    \\
+     & \cdots  \\
+     & \text{A indução foi bem sucedida no caso }x_n   \\
+    \Rightarrow \; & \text{A indução é \impt{sempre} bem sucedida}
+    \end{aligned}
+    \]
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Raciocínio Dedutivo: Exemplo 1}
-  \textbf{Premissas:}
-  \begin{enumerate}
-    \item Água razoavelmente pura congela a cerca de $0^\circ$C.
-    \item O radiador do meu carro contém água razoavelmente pura.
-  \end{enumerate}
+% ==========================================
+\section{Outros Problemas do Indutivismo}
+% ==========================================
 
-  \vspace{0.4cm}
-  \textbf{Conclusão:}
-  \begin{itemize}
-    \item[\(\Rightarrow\)] Se a temperatura cair abaixo de $0^\circ$C, a água do radiador do meu carro vai congelar.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Raciocínio Dedutivo: Exemplo 2}
-  \textbf{Premissas:}
-  \begin{enumerate}
-    \item Todos os gatos têm 5 patas.
-    \item Oswaldo é meu gato.
-  \end{enumerate}
-
-  \vspace{0.4cm}
-  \textbf{Conclusão:}
-  \begin{itemize}
-    \item[\(\Rightarrow\)] Oswaldo tem 5 patas.
-  \end{itemize}
+\begin{frame}{Vagueza das Condições}
+  As condições para aceitar generalizações são definidas de forma vaga:
 
   \vspace{0.3cm}
-  \textit{\small Argumento válido, mas \impt{não sólido} --- a premissa 1 é falsa.}
-\end{frame}
-
-\begin{frame}{Padrão do Raciocínio Dedutivo}
-  \begin{columns}
-    \begin{column}{0.48\textwidth}
-      \textbf{Premissas:}
-      \begin{enumerate}
-        \item Leis e teorias
-        \item Condições iniciais
-      \end{enumerate}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \begin{alertblock}{Perguntas sem resposta}
+        \begin{itemize}
+          \item ``Grande número'' de observações --- \impt{quantas?}
+          \item ``Ampla variedade'' de circunstâncias --- \impt{quais?}
+        \end{itemize}
+      \end{alertblock}
     \end{column}
-    \begin{column}{0.48\textwidth}
-      \textbf{Conclusão:}
-      \begin{itemize}
-        \item[\(\Rightarrow\)] Previsões e explicações
-      \end{itemize}
+    \begin{column}{0.50\textwidth}
+      \begin{block}{Exemplo: Ponto de fervura da água}
+        Circunstâncias relevantes:
+        \begin{itemize}
+          \item Pressão atmosférica
+          \item Pureza da água
+          \item Método de aquecimento
+          \item Cor do recipiente (?)
+        \end{itemize}
+      \end{block}
     \end{column}
   \end{columns}
+
+  \vspace{0.3cm}
   \pause
-  \vspace{0.5cm}
-  \begin{alertblock}{Síntese do Indutivismo}
-    No indutivismo, leis, teorias e condições iniciais são obtidas por observação direta e indução. Então previsões e explicações podem ser deduzidas deles.
+  \begin{itemize}
+    \item A escolha das circunstâncias é baseada em \impt{conhecimento prévio}?
+    \item Isso não vem \textbf{antes} da observação?
+    \item O indutivismo não se torna \impt{subjetivo}?
+  \end{itemize}
+\end{frame}
+
+% ==========================================
+\section{Recuo para Probabilidade}
+% ==========================================
+
+\begin{frame}{A Reformulação Probabilística}
+  Diante do problema de Hume, os indutivistas recuam:
+
+  \vspace{0.2cm}
+  \[
+    \text{Observações repetidas} \;\Rightarrow\; \text{A lei é \textit{provavelmente} verdadeira}
+  \]
+
+  \vspace{0.3cm}
+  \pause
+  \begin{alertblock}{Por que isso não funciona?}
+    \begin{enumerate}
+      \item Uma afirmação universal se aplica a \impt{infinitos} casos possíveis
+      \item O número de observações realizadas é sempre \impt{finito}
+      \item Portanto:
+      \[
+        P = \frac{\text{casos confirmados (finito)}}{\text{casos possíveis (infinito)}} = \frac{n}{\infty} \approx 0
+      \]
+      \item A probabilidade permanece \impt{próxima de zero}, por mais observações que se acumulem
+    \end{enumerate}
   \end{alertblock}
 \end{frame}
 
-% ==============================================================
-\section{A Atração do Indutivismo Ingênuo}
-% ==============================================================
+\begin{frame}{Consequências do Recuo Probabilístico}
+  \begin{itemize}
+    \item O recuo para a probabilidade \impt{não salva} o indutivismo
+    \pause
+    \item Substituir ``certeza'' por ``alta probabilidade'' fracassa no quadro lógico-formal
+    \pause
+    \item Enunciados universais continuam tendo probabilidade essencialmente \impt{nula} com base em qualquer conjunto finito de observações
+  \end{itemize}
 
-\begin{frame}{A Atração do Indutivismo Ingênuo}
+  \vspace{0.4cm}
+  \pause
+  \begin{block}{Conclusão}
+    Nem a versão forte (``a indução \textbf{prova} leis'') nem a versão fraca (``a indução torna leis \textbf{prováveis}'') se sustentam como justificação lógica do conhecimento científico.
+  \end{block}
+\end{frame}
+
+% ==========================================
+\section{Respostas ao Problema da Indução}
+% ==========================================
+
+\begin{frame}{Respostas ao Problema da Indução}
+  Duas saídas possíveis:
+
+  \vspace{0.4cm}
   \begin{enumerate}
-    \item A maioria das pessoas vai achar a explicação indutivista da ciência adequada.
-    \item Ela fornece uma explicação formalizada de algumas das impressões popularmente mantidas a respeito da ciência:
+    \item \textbf{Posição de Hume:} A ciência se baseia na indução, mas a indução não pode ser justificada racionalmente
     \begin{itemize}
-      \item Poder de explicação e previsão
-      \item Objetividade
-      \item Confiabilidade superior
+      \item A crença em leis científicas não passa disso --- uma \impt{crença}
+    \end{itemize}
+
+    \vspace{0.3cm}
+    \pause
+    \item \textbf{Negar a indução:} A ciência \impt{não} é baseada em indução
+    \begin{itemize}
+      \item Alternativas: falsificacionismo (Popper), paradigmas (Kuhn), programas de pesquisa (Lakatos)
     \end{itemize}
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Poder de Explicar e Prever}
+% ==========================================
+\section{A Dependência da Observação em relação à Teoria}
+% ==========================================
+
+\begin{frame}{Suposições do Indutivismo sobre Observação}
+  \begin{block}{Duas suposições centrais}
+    \begin{enumerate}
+      \item ``A ciência começa na observação''
+      \item ``A observação produz uma base segura da qual o conhecimento pode ser derivado''
+    \end{enumerate}
+  \end{block}
+
+  \vspace{0.3cm}
+  \pause
+  Premissas implícitas:
   \begin{itemize}
-    \item Leis e teorias podem ser obtidas por \textbf{indução} a partir de afirmações singulares (proposições de observação).
-    \item Condições iniciais são proposições de afirmação e podem ser obtidas por \textbf{observação direta}.
-    \item Explicações e previsões podem ser obtidas por \textbf{dedução}.
+    \item O observador tem acesso mais ou menos direto ao mundo externo pela visão
+    \item Dois observadores normais vendo o mesmo objeto ``verão'' a mesma coisa
+  \end{itemize}
+
+  \vspace{0.3cm}
+  \pause
+  \impt{Será que isso é verdade?}
+\end{frame}
+
+\begin{frame}{Experiências Visuais $\neq$ Imagens na Retina}
+  Há evidência abundante de que dois observadores normais, vendo o mesmo objeto, podem ter experiências visuais \impt{diferentes}.
+
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item Ilusões de ótica e figuras ambíguas
+    \item Radiografias: o que um estudante e um médico ``veem'' é diferente
+  \end{itemize}
+
+  \vspace{0.3cm}
+  \pause
+  \begin{block}{Conclusão}
+    A experiência visual:
+    \begin{itemize}
+      \item \impt{Não} é determinada apenas pelas imagens na retina
+      \item Depende da \textbf{experiência prévia} do observador
+      \item Depende do \textbf{estado interno} do observador
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Proposições de Observação Pressupõem Teoria}
+  \begin{block}{Tese de Chalmers}
+    Proposições de observação são \impt{sempre} feitas na linguagem de uma teoria. Não existe observação ``pura''.
+  \end{block}
+
+  \vspace{0.3cm}
+  \pause
+  \textbf{Exemplos:}
+  \begin{itemize}
+    \item \ntc{Telescópio de Galileu:} pressupunha uma teoria da ótica que garantisse imagens confiáveis
+    \pause
+    \item \ntc{Estudante de medicina:} um novato e um médico ``veem'' coisas diferentes na mesma radiografia
+    \pause
+    \item \ntc{Circuitos elétricos:} o novato vê fios; o físico ``vê'' um amplificador
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Objetividade}
+\begin{frame}{Observações Herdam a Falibilidade das Teorias}
+  Se as observações dependem de teoria, herdam sua \impt{falibilidade}.
+
+  \vspace{0.3cm}
+  \textbf{Exemplos:}
   \begin{itemize}
-    \item Observação e raciocínio indutivos são processos \textbf{objetivos}.
-    \item Proposições de observação podem ser averiguadas por qualquer observador pelo uso normal dos sentidos. Assim, não podem depender do gosto, da opinião ou das esperanças do observador.
-    \item As induções satisfazem ou não as condições prescritas --- não é uma questão \textbf{subjetiva}.
+    \item \ntc{Torre e a rotação da Terra:} a física aristotélica previa que a pedra ``ficaria para trás'' --- observação baseada em teoria falha
+    \pause
+    \item \ntc{Varas submersas:} ``a vara está torta'' pressupõe que a visão é infalível, ignorando a refração da luz
+    \pause
+    \item \ntc{Astronomia pré-telescópica:} planetas ``errantes'' descritos em termos geocêntricos --- reinterpretados com Copérnico
   \end{itemize}
+
+  \vspace{0.3cm}
+  \pause
+  \begin{alertblock}{Conclusão}
+    Toda observação pressupõe um quadro teórico prévio. Não há ponto de partida observacional seguro e independente de teoria.
+  \end{alertblock}
 \end{frame}
 
-\begin{frame}{Confiabilidade}
-  \begin{enumerate}
-    \item Seguem das definições indutivistas sobre observação e indução.
-    \item As proposições de afirmação formam a base da ciência e são \textbf{seguras e confiáveis}.
-    \item Essa confiabilidade é \textbf{transmitida} às leis e teorias derivadas, desde que as condições de indução sejam satisfeitas.
-  \end{enumerate}
+% ==========================================
+\section{Indutivismo: Refutado ou Não?}
+% ==========================================
+
+\begin{frame}{Indutivismo não Conclusivamente Refutado}
+  \begin{itemize}
+    \item \textbf{Concessão:} Indutivistas modernos aceitam que a observação depende da teoria
+    \pause
+    \item \textbf{Manutenção do núcleo:} Para \textit{avaliar} uma teoria, o princípio indutivista permanece: reunir fatos relevantes, sob ampla variedade de condições
+    \pause
+    \item \textbf{Vulnerabilidade compartilhada:} Alternativas (Popper, Kuhn, Lakatos) também estão sujeitas a críticas sérias
+  \end{itemize}
+
+  \vspace{0.4cm}
+  \pause
+  \begin{block}{Conclusão Prudente}
+    O indutivismo ingênuo foi refutado, mas o apelo à evidência empírica acumulada sobrevive como elemento da prática científica. O indutivismo, em versões mais sofisticadas, permanece como posição filosófica legítima --- ainda que \impt{imperfeita}.
+  \end{block}
 \end{frame}
 
-% --- References ---
+% ==========================================
 \begin{frame}[allowframebreaks]{Referências}
   \bibliographystyle{apalike}
   \bibliography{references}
