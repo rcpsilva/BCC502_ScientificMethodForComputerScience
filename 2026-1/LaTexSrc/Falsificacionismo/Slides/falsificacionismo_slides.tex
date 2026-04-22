@@ -1,0 +1,591 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage{tikz}
+
+% Colors
+\definecolor{mblack}{RGB}{20, 20, 20}
+\definecolor{mprimary}{RGB}{20, 40, 90}     % dark blue
+\definecolor{maccent}{RGB}{230, 120, 30}    % orange
+\definecolor{mwhite}{RGB}{255, 255, 255}
+
+% Theme
+\usetheme{default}
+\usecolortheme{default}
+\setbeamercolor{normal text}{fg=mblack, bg=white}
+\setbeamercolor{frametitle}{fg=white, bg=mprimary}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mprimary}
+\setbeamercolor{enumerate item}{fg=maccent}
+\setbeamercolor{enumerate subitem}{fg=mprimary}
+\setbeamercolor{block title}{fg=white, bg=mprimary}
+\setbeamercolor{block body}{fg=mblack, bg=mprimary!8}
+\setbeamercolor{block title alerted}{fg=white, bg=maccent}
+\setbeamercolor{block body alerted}{fg=mblack, bg=maccent!10}
+\setbeamercolor{alerted text}{fg=maccent}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+\setbeamerfont{title}{series=\bfseries, size=\LARGE}
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Footer
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.7\paperwidth, ht=2.25ex, dp=1ex, leftskip=0.3cm]{normal text}%
+      \tiny\color{mblack!50} Filosofia da Ciência -- Falsificacionismo
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.3\paperwidth, ht=2.25ex, dp=1ex, rightskip=0.3cm, right]{normal text}%
+      \tiny\color{mblack!50}\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+
+% Frametitle with accent rule
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0.2cm, leftskip=0.5cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+  \end{beamercolorbox}%
+  \vspace{-0.1cm}%
+  \textcolor{maccent}{\rule{\paperwidth}{2pt}}%
+}
+
+% Title page: three-band layout
+\setbeamercolor{titlebar top}{bg=mwhite}
+\setbeamercolor{titlebar main}{bg=mprimary}
+\setbeamercolor{titlebar bottom}{bg=maccent}
+
+\setbeamertemplate{title page}{%
+  \vspace{0pt}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0pt]{titlebar top}\end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=3.8cm, dp=0pt, center]{titlebar main}%
+    \vspace{0.6cm}
+    {\usebeamerfont{title}\color{white}\inserttitle\par}%
+    \vspace{0.35cm}{\color{white}\small\insertauthor\par}%
+    \vspace{0.15cm}{\color{white}\footnotesize\insertdate\par}%
+    \vspace{0.25cm}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=1.3cm, dp=0pt]{titlebar bottom}\end{beamercolorbox}%
+}
+
+\setlength{\itemsep}{4pt}
+
+% Highlight commands
+\newcommand{\impt}[1]{\textcolor{maccent}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{mprimary}{#1}}
+
+\title{Falsificacionismo}
+\author{Filosofia da Ciência\footnote{Baseado em \citet{chalmers1993}, caps.~IV, V e VI.}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[plain]\titlepage\end{frame}
+
+\begin{frame}{Sumário}\tableofcontents\end{frame}
+
+% =====================================================
+\section{Motivação}
+% =====================================================
+
+\begin{frame}{Por que o falsificacionismo?}
+O \impt{indutivismo} enfrentava dois problemas graves:
+\vspace{0.3cm}
+\begin{itemize}
+  \item Problema da \impt{indução} --- sem justificação lógica
+  \item Observação \impt{não é neutra} --- é carregada de teoria
+\end{itemize}
+\pause
+\vspace{0.5cm}
+\begin{block}{A proposta falsificacionista}
+Abandonar a pretensão de \emph{provar} teorias. \\
+A ciência avança por \impt{conjecturas ousadas} que a experiência pode \impt{refutar}.
+\end{block}
+\pause
+\vspace{0.3cm}
+\ntc{Principal representante:} Karl Popper.
+\end{frame}
+
+\begin{frame}{A ideia central}
+\begin{alertblock}{}
+A ciência não é um corpo de verdades provadas. \\
+É um conjunto de hipóteses \impt{conjecturais} submetidas a testes cada vez mais severos.
+\end{alertblock}
+\vspace{0.5cm}
+\pause
+Teorias não são \emph{confirmadas} --- no máximo, \impt{corroboradas}. \\
+Teorias podem ser \emph{refutadas}.
+\end{frame}
+
+% =====================================================
+\section{Falsificacionismo ingênuo (Cap.~IV)}
+% =====================================================
+
+\begin{frame}{A assimetria lógica}
+Considere: \emph{``Todos os corvos são pretos.''}
+\vspace{0.4cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Verificação}
+Nenhum número finito de corvos pretos \impt{prova} a lei. \\[0.2cm]
+O próximo pode ser branco.
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Falsificação}
+\impt{Um único} corvo não-preto \\
+\impt{refuta} a lei definitivamente.
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\ntc{Lógica por trás:}
+\[
+(T \rightarrow O) \wedge \neg O \;\vdash\; \neg T \qquad \text{(modus tollens)}
+\]
+Já $(T \rightarrow O) \wedge O$ \emph{não} implica $T$ (falácia de afirmar o consequente).
+\end{frame}
+
+\begin{frame}{Falseabilidade como critério de demarcação}
+\begin{block}{Definição}
+Uma teoria é \impt{falsificável} sse existe ao menos um enunciado observacional logicamente possível que é \emph{incompatível} com ela.
+\end{block}
+\pause
+\vspace{0.4cm}
+\ntc{Papel:} separa ciência de não-ciência.
+\pause
+\vspace{0.3cm}
+\begin{itemize}
+  \item Falsificável $\neq$ falso
+  \item Falsificável $=$ arrisca-se a estar errado
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplos --- falsificáveis}
+\begin{itemize}
+  \item ``Nunca chove às quartas-feiras.''
+  \pause
+  \item ``Todos os corpos em queda livre caem com $a \approx 9{,}8\,\mathrm{m/s^2}$.''
+  \pause
+  \item ``Os planetas descrevem órbitas elípticas em torno do Sol.''
+\end{itemize}
+\vspace{0.5cm}
+\pause
+\ntc{Cada uma proíbe algo.} \\
+Cada uma pode ser derrubada por uma observação.
+\end{frame}
+
+\begin{frame}{Exemplos --- não-falsificáveis}
+\begin{itemize}
+  \item ``Ou chove ou não chove.'' \hfill (tautologia)
+  \pause
+  \item ``Todos os pontos do círculo são equidistantes do centro.'' \hfill (definição)
+  \pause
+  \item ``Pode ou não chover amanhã.'' \hfill (compatível com tudo)
+\end{itemize}
+\vspace{0.5cm}
+\pause
+\begin{alertblock}{}
+Podem ser verdadeiras --- mas \impt{não dizem nada sobre o mundo}.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{A crítica às teorias ``explicam-tudo''}
+Popper dirige essa crítica a:
+\vspace{0.3cm}
+\begin{itemize}
+  \item Psicanálise freudiana
+  \item Certas formulações do marxismo
+  \item Astrologia
+\end{itemize}
+\pause
+\vspace{0.5cm}
+\begin{alertblock}{O defeito}
+Não é serem falsas. \\
+É serem \impt{compatíveis com qualquer observação}.
+\end{alertblock}
+\pause
+\vspace{0.3cm}
+\ntc{Uma teoria que não proíbe nada, não diz nada.}
+\end{frame}
+
+\begin{frame}{Graus de falseabilidade}
+Uma boa teoria não basta ser falsificável --- deve ser \impt{muito falsificável}.
+\vspace{0.4cm}
+\pause
+\begin{block}{Exemplo}
+\begin{itemize}
+  \item $T_1$: Marte move-se em órbita fechada ao redor do Sol.
+  \item $T_2$: Todos os planetas movem-se em órbitas fechadas.
+  \item $T_3$: Todos os planetas movem-se em órbitas \impt{elípticas}.
+\end{itemize}
+\end{block}
+\pause
+\vspace{0.3cm}
+\ntc{Ordem de falseabilidade:} \quad $T_3 > T_2 > T_1$
+\pause
+\vspace{0.3cm}
+\begin{itemize}
+  \item[$\rightarrow$] O falsificacionista prefere a teoria mais \impt{ousada}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clareza e precisão}
+Quanto mais \impt{precisa} a teoria, mais falsificável.
+\vspace{0.5cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Vago}
+``A Lua é mais ou menos esférica.''
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Preciso}
+``A Lua é uma esfera de raio $1737{,}4$\,km.''
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\begin{alertblock}{}
+Vagueza = \impt{escudo contra refutação}. \\
+Teorias vagas reinterpretam-se \emph{ad hoc} diante de qualquer resultado.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Falsificacionismo e progresso (ingênuo)}
+A história da ciência seria uma sucessão de:
+\vspace{0.3cm}
+\begin{enumerate}
+  \item Conjecturas ousadas
+  \pause
+  \item Refutações
+  \pause
+  \item Conjecturas ainda mais ousadas
+\end{enumerate}
+\pause
+\vspace{0.5cm}
+\begin{block}{Progresso científico}
+Não há acúmulo de verdades provadas. \\
+Há \impt{eliminação de erros}.
+\end{block}
+\end{frame}
+
+% =====================================================
+\section{Falsificacionismo sofisticado (Cap.~V)}
+% =====================================================
+
+\begin{frame}{Problema do falsificacionismo ingênuo}
+Muitas teorias importantes \impt{nasceram refutadas}.
+\vspace{0.5cm}
+\pause
+\begin{block}{Newton e a órbita da Lua}
+Primeiro cálculo de Newton discordava dos dados. \\
+Um falsificacionista rigoroso teria abandonado a gravitação. \\
+\pause
+\impt{Erro estava em um dado observacional} (diâmetro da Terra).
+\end{block}
+\pause
+\vspace{0.4cm}
+\ntc{Lição:} abandonar teorias ao primeiro tropeço seria desastroso.
+\end{frame}
+
+\begin{frame}{A reformulação sofisticada}
+\ntc{Deslocamento de foco:} de teorias isoladas para \impt{sequências de teorias}.
+\vspace{0.4cm}
+\pause
+\begin{block}{Critério sofisticado}
+$T'$ substitui legitimamente $T$ quando:
+\begin{enumerate}
+  \item $T'$ é \impt{mais falsificável} que $T$
+  \item $T'$ explica o sucesso prévio de $T$
+  \item $T'$ faz \impt{novas predições} --- e parte delas é \impt{corroborada}
+\end{enumerate}
+\end{block}
+\pause
+\vspace{0.3cm}
+\ntc{Formulação central:} Imre Lakatos.
+\end{frame}
+
+\begin{frame}{Novas predições e crescimento}
+O critério decisivo: \impt{predizer coisas novas}.
+\vspace{0.4cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Apenas acomodar fatos}
+Pode ser construção \emph{ad hoc}. \\
+\impt{Sem progresso genuíno.}
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Predizer algo novo}
+Se confirmado: a teoria \impt{captura algo real} sobre o mundo.
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Predições corroboradas --- exemplos}
+\begin{itemize}
+  \item \impt{Relatividade Geral}: curvatura da luz pelo Sol \\
+        \ntc{Confirmada:} eclipse de 1919 (Eddington)
+  \pause
+  \vspace{0.2cm}
+  \item \impt{Maxwell}: ondas eletromagnéticas à velocidade da luz \\
+        \ntc{Confirmada:} experimentos de Hertz
+  \pause
+  \vspace{0.2cm}
+  \item \impt{Teoria cinética dos gases}: movimento browniano \\
+        \ntc{Confirmado:} observação de Brown e Einstein
+\end{itemize}
+\pause
+\vspace{0.4cm}
+\begin{alertblock}{}
+Em todos os casos: a teoria predisse \emph{antes} de se conhecer o fenômeno.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Modificações \emph{ad hoc}}
+\begin{block}{Definição}
+Modificação feita \impt{só para salvar} a teoria da refutação, sem gerar novas consequências testáveis.
+\end{block}
+\pause
+\vspace{0.5cm}
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{alertblock}{\emph{Ad hoc} (ilegítima)}
+``Todos os corvos são pretos, exceto este.''
+\\[0.2cm]
+Não prediz nada novo.
+\end{alertblock}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Legítima}
+Irregularidade em Urano $\rightarrow$ novo planeta. \\
+\impt{Netuno descoberto em 1846.}
+\end{block}
+\end{columns}
+\pause
+\vspace{0.4cm}
+\ntc{Diferença crucial:} legítimas \impt{aumentam o conteúdo empírico}.
+\end{frame}
+
+\begin{frame}{Corroboração}
+\begin{block}{Definição}
+Uma teoria está \impt{corroborada} quando sobreviveu a testes severos.
+\end{block}
+\pause
+\vspace{0.5cm}
+\begin{alertblock}{Atenção}
+Corroboração \impt{não é prova}. \\
+Reflete o \emph{passado} da teoria, não sua probabilidade de ser verdadeira.
+\end{alertblock}
+\pause
+\vspace{0.4cm}
+\ntc{Popper resiste:} corroboração não deve ser lida como evidência indutiva.
+\end{frame}
+
+% =====================================================
+\section{Limitações do falsificacionismo (Cap.~VI)}
+% =====================================================
+
+\begin{frame}{Três grandes limitações}
+Mesmo na versão sofisticada, o falsificacionismo falha:
+\vspace{0.4cm}
+\pause
+\begin{enumerate}
+  \item \impt{Dependência} da observação em relação à teoria
+  \pause
+  \vspace{0.2cm}
+  \item Tese de \impt{Duhem--Quine} (holismo da confirmação)
+  \pause
+  \vspace{0.2cm}
+  \item Inadequação \impt{histórica}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{1. Observação carregada de teoria}
+Não existe observação \impt{neutra}. \\
+Todo enunciado observacional $O$ pressupõe alguma teoria $T^*$.
+\vspace{0.5cm}
+\pause
+\begin{block}{Consequência}
+O embate ``$T$ vs $O$'' não é teoria vs fato bruto. \\
+É um \impt{embate entre teorias}.
+\end{block}
+\pause
+\vspace{0.4cm}
+\ntc{Colapso:} enunciados observacionais são \impt{falíveis}. \\
+A falsificação perde seu privilégio lógico.
+\end{frame}
+
+\begin{frame}{2. A tese de Duhem--Quine}
+Teorias \impt{nunca} são testadas isoladamente.
+\vspace{0.3cm}
+\pause
+\[
+T \;\wedge\; H_1 \;\wedge\; H_2 \;\wedge\; \cdots \;\wedge\; H_n
+\]
+\vspace{0.1cm}
+$H_i$: hipóteses auxiliares (instrumentos, condições, teorias subsidiárias\ldots)
+\pause
+\vspace{0.4cm}
+\begin{alertblock}{Quando algo dá errado}
+\[
+\neg(T \wedge H_1 \wedge \cdots \wedge H_n) \equiv \neg T \vee \neg H_1 \vee \cdots \vee \neg H_n
+\]
+Sabemos que \impt{alguma} é falsa --- mas \impt{não qual}.
+\end{alertblock}
+\pause
+\vspace{0.3cm}
+\ntc{Resultado:} a falsificação \impt{nunca é conclusiva}.
+\end{frame}
+
+\begin{frame}{Urano vs. Mercúrio}
+Duas irregularidades, duas respostas opostas:
+\vspace{0.5cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Urano}
+Irregularidade $\rightarrow$ postula-se Netuno. \\
+\impt{Hipótese auxiliar revisada.} \\
+Newton \emph{sobrevive}.
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Mercúrio}
+Irregularidade $\rightarrow$ postula-se Vulcano. \\
+\impt{Planeta nunca encontrado.} \\
+Relatividade Geral \emph{substitui} Newton.
+\end{block}
+\end{columns}
+\pause
+\vspace{0.4cm}
+\ntc{A comunidade científica escolhe} onde localizar o erro.
+\end{frame}
+
+\begin{frame}{3. Complexidade das situações reais}
+Em experimentos reais, a rede de hipóteses auxiliares é \impt{vasta}:
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Teorias dos instrumentos
+  \item Correções estatísticas
+  \item Suposições sobre condições de fundo
+  \item Pressupostos matemáticos
+\end{itemize}
+\pause
+\vspace{0.5cm}
+\begin{alertblock}{}
+Decidir o que foi ``falsificado'' exige \impt{julgamento científico}. \\
+Não existe procedimento algorítmico.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{4. Inadequação histórica --- Copérnico}
+\begin{block}{A revolução copernicana}
+Ao nascer, o heliocentrismo era:
+\begin{itemize}
+  \item \impt{Menos preciso} que Ptolomeu (aperfeiçoado)
+  \item \impt{Contestado empiricamente} (sem paralaxe estelar)
+  \item \impt{Incompatível com a física} aristotélica aceita
+\end{itemize}
+\end{block}
+\pause
+\vspace{0.5cm}
+\ntc{Um falsificacionista rigoroso teria rejeitado Copérnico.}
+\pause
+\vspace{0.3cm}
+\begin{alertblock}{}
+A comunidade o manteve e desenvolveu --- \impt{e acertou}.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Balanço final}
+O falsificacionismo é valioso como:
+\vspace{0.2cm}
+\begin{itemize}
+  \item Antídoto contra dogmatismo
+  \item Crítica ao indutivismo ingênuo
+\end{itemize}
+\pause
+\vspace{0.4cm}
+Mas falha em três frentes:
+\vspace{0.2cm}
+\pause
+\begin{itemize}
+  \item \impt{Logicamente} --- Duhem--Quine impede falsificação estrita
+  \pause
+  \item \impt{Epistemologicamente} --- enunciados observacionais são falíveis
+  \pause
+  \item \impt{Historicamente} --- não descreve como a ciência de fato progride
+\end{itemize}
+\pause
+\vspace{0.4cm}
+\ntc{Próximos passos:} Lakatos (programas de pesquisa) e Kuhn (paradigmas).
+\end{frame}
+
+% =====================================================
+\section{Síntese}
+% =====================================================
+
+\begin{frame}{Síntese da aula}
+\begin{block}{Cap.~IV --- Falsificacionismo ingênuo}
+Assimetria lógica; falseabilidade como demarcação; teorias ousadas.
+\end{block}
+\pause
+\vspace{0.2cm}
+\begin{block}{Cap.~V --- Falsificacionismo sofisticado}
+Sequências de teorias; novas predições; rejeição de modificações \emph{ad hoc}.
+\end{block}
+\pause
+\vspace{0.2cm}
+\begin{alertblock}{Cap.~VI --- Limitações}
+Observação carregada de teoria; Duhem--Quine; inadequação histórica.
+\end{alertblock}
+\pause
+\vspace{0.4cm}
+\ntc{Lição geral:} critérios lógicos, por si sós, não explicam a ciência. \\
+A ciência é atividade \impt{humana, histórica e social}.
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Referências}
+\small
+\begin{thebibliography}{9}
+\bibitem[Chalmers(1993)]{chalmers1993}
+Chalmers, A.\ F. (1993).
+\newblock \emph{O que é ciência afinal?}.
+\newblock São Paulo: Brasiliense.
+
+\bibitem[Popper(1972)]{popper1972}
+Popper, K.\ R. (1972).
+\newblock \emph{A lógica da pesquisa científica}.
+\newblock São Paulo: Cultrix.
+
+\bibitem[Lakatos(1978)]{lakatos1978}
+Lakatos, I. (1978).
+\newblock \emph{The methodology of scientific research programmes}.
+\newblock Cambridge: Cambridge University Press.
+\end{thebibliography}
+\end{frame}
+
+\end{document}

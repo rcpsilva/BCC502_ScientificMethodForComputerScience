@@ -1,0 +1,299 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{remark}{Observação}[section]
+
+\title{Falsificacionismo\footnote{Material baseado em \citet{chalmers1993}, capítulos IV, V e VI.}}
+\author{Filosofia da Ciência}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\bigskip
+
+\section{Introdução: por que o falsificacionismo?}
+
+O falsificacionismo surge como resposta às limitações do indutivismo. Como vimos, o indutivista sustenta que a ciência começa da observação neutra, generaliza por indução e culmina em leis e teorias justificadas pela experiência. Essa visão enfrenta dois problemas graves: o \impt{problema da indução} (não há justificação lógica para passar de enunciados singulares a enunciados universais) e a \impt{dependência da observação em relação à teoria} (não existe observação neutra, pré-teórica).
+
+O falsificacionista --- cujo principal representante é Karl Popper --- aceita esses problemas como genuínos e propõe uma saída: abandonar a pretensão de \emph{provar} ou \emph{justificar} teorias pela experiência e reconhecer que a ciência avança por \impt{conjecturas ousadas} que a experiência pode \impt{refutar}, mas nunca confirmar definitivamente.
+
+\ntc{Ideia-chave:} a ciência não é um corpo de verdades provadas, mas um conjunto de hipóteses conjecturais submetidas a testes cada vez mais severos.
+
+\section{O falsificacionismo (Cap.~IV)}
+
+\subsection{A assimetria lógica entre verificação e falsificação}
+
+O ponto de partida do falsificacionismo é uma observação lógica elementar. Considere a lei universal:
+\[
+\text{Todos os corvos são pretos.}
+\]
+Nenhuma quantidade finita de observações de corvos pretos prova essa afirmação --- afinal, o próximo corvo poderia ser branco. Entretanto, \impt{um único} corvo não-preto é suficiente para refutá-la.
+
+\begin{definition}[Assimetria lógica]
+Enunciados universais não podem ser logicamente derivados de enunciados singulares, mas podem ser logicamente contraditos por eles. A falsificação é dedutivamente válida; a verificação, não.
+\end{definition}
+
+Formalmente, se $T$ implica o enunciado observacional $O$, então:
+\[
+(T \rightarrow O) \wedge \neg O \;\vdash\; \neg T \qquad \text{(modus tollens)}.
+\]
+Mas $(T \rightarrow O) \wedge O$ \emph{não} implica $T$ (isso seria a falácia de afirmar o consequente).
+
+\ntc{Consequência:} a falsificação tem um estatuto lógico privilegiado que a verificação não tem. Popper constrói toda a sua filosofia da ciência sobre essa assimetria.
+
+\subsection{Falseabilidade como critério de demarcação}
+
+O falsificacionista exige que uma teoria científica seja \impt{falsificável}. Isto é, deve haver \emph{enunciados observacionais} --- chamados por Popper de \ntc{falsificadores potenciais} --- que, caso fossem verdadeiros, refutariam a teoria.
+
+\begin{definition}[Falseabilidade]
+Uma teoria é \impt{falsificável} se e somente se existe ao menos um enunciado observacional logicamente possível que é incompatível com ela.
+\end{definition}
+
+\begin{example}[Enunciados falsificáveis]
+\begin{itemize}
+  \item ``Nunca chove às quartas-feiras'' --- falsificável (basta uma quarta chuvosa).
+  \item ``Todos os objetos em queda livre próximos à Terra caem com aceleração aproximada de $9{,}8\,\mathrm{m/s^2}$'' --- falsificável.
+  \item ``Os planetas se movem em órbitas elípticas em torno do Sol'' --- falsificável (uma órbita claramente não-elíptica a refutaria).
+\end{itemize}
+\end{example}
+
+\begin{example}[Enunciados não-falsificáveis]
+\begin{itemize}
+  \item ``Ou está chovendo ou não está chovendo.'' (tautologia)
+  \item ``Todos os pontos de um círculo euclidiano são equidistantes do centro.'' (definição)
+  \item ``Pode ou não chover amanhã.'' (nenhuma observação a contradiz)
+\end{itemize}
+\end{example}
+
+Estes enunciados, embora possam ser verdadeiros, \impt{não dizem nada sobre o mundo}: são compatíveis com qualquer estado de coisas. Por isso o falsificacionista os rejeita como não-científicos.
+
+\paragraph{A crítica a teorias ``explicam-tudo''.}
+Popper dirigiu essa crítica a teorias como a psicanálise freudiana, o marxismo em certas formulações e a astrologia. Seu defeito, segundo ele, não é serem falsas, mas serem \impt{compatíveis com qualquer observação} --- qualquer comportamento pode ser explicado, qualquer fracasso pode ser racionalizado. Essa aparente força explicativa é, de fato, uma fraqueza: uma teoria que não proíbe nada, não diz nada.
+
+\subsection{Condições para uma boa teoria científica}
+
+Não basta que a teoria seja falsificável; o falsificacionista quer teorias \impt{altamente falsificáveis}. Uma boa teoria, para o falsificacionista, é aquela que:
+
+\begin{enumerate}
+  \item faz afirmações amplas sobre o mundo;
+  \item é consequentemente muito falsificável;
+  \item resiste à falsificação sempre que é testada.
+\end{enumerate}
+
+\paragraph{Grau de falseabilidade.}
+Uma teoria é \impt{mais falsificável} que outra quando a classe de seus falsificadores potenciais é maior --- isto é, quando ela \emph{proíbe mais} estados de coisas.
+
+\begin{example}[Graus de falseabilidade]
+Considere as três afirmações:
+\begin{itemize}
+  \item $T_1$: ``Marte move-se em uma órbita fechada em torno do Sol.''
+  \item $T_2$: ``Todos os planetas movem-se em órbitas fechadas em torno do Sol.''
+  \item $T_3$: ``Todos os planetas movem-se em \emph{órbitas elípticas} em torno do Sol.''
+\end{itemize}
+$T_3$ é mais falsificável que $T_2$, que é mais falsificável que $T_1$. Cada teoria sucessiva proíbe mais: $T_3$ exclui órbitas circulares não-elípticas, ovais, etc.
+\end{example}
+
+\ntc{Princípio:} o falsificacionista \emph{prefere} a teoria mais ousada, aquela que mais se arrisca a estar errada. A ciência progride por conjecturas cada vez mais improváveis que sobrevivem a testes cada vez mais severos.
+
+\subsection{Clareza e precisão}
+
+Quanto mais \impt{precisa} for a formulação de uma teoria, mais falsificável ela é. ``A Lua é mais ou menos esférica'' proíbe menos do que ``a Lua é uma esfera de raio $1737{,}4$\,km''. A segunda pode ser falsificada por medições que a primeira toleraria.
+
+Do mesmo modo, teorias vagas ou ambíguas são suspeitas: a vagueza pode funcionar como um \impt{escudo contra refutação}, permitindo reinterpretações \emph{ad hoc} diante de resultados desfavoráveis.
+
+\subsection{Falsificacionismo e progresso}
+
+Para o falsificacionista (ingênuo), a história da ciência é uma sucessão de \impt{conjecturas ousadas} seguidas de \impt{refutações} que levam a novas conjecturas ainda mais ousadas. A ciência não se aproxima progressivamente da verdade por acúmulo de verificações, mas por eliminação de erros.
+
+\begin{remark}
+Popper enfatiza que mesmo teorias bem-sucedidas, como a mecânica de Newton, devem ser consideradas \impt{conjecturais}. Elas não são provadas; são apenas hipóteses que ainda não foram refutadas. O sucesso prolongado não converte uma conjectura em verdade estabelecida.
+\end{remark}
+
+\section{Falsificacionismo sofisticado (Cap.~V)}
+
+\subsection{Por que o falsificacionismo ingênuo é insuficiente}
+
+O falsificacionismo ingênuo, tal como formulado até aqui, enfrenta dificuldades sérias quando confrontado com a prática científica real. O principal problema é que, na história da ciência, \impt{teorias importantes enfrentaram aparentes refutações logo no seu nascimento} e ainda assim foram mantidas --- e corretamente mantidas.
+
+\begin{example}[Newton e a órbita da Lua]
+Quando Newton aplicou sua teoria da gravitação ao cálculo da órbita lunar, o resultado discordou dos dados observacionais. Se os cientistas da época tivessem agido como falsificacionistas ingênuos, teriam abandonado a teoria. Em vez disso, mantiveram-na --- e anos depois descobriu-se que o problema estava em um dado observacional incorreto sobre o diâmetro da Terra.
+\end{example}
+
+A lição é clara: abandonar uma teoria ao primeiro sinal de desacordo com a experiência seria desastroso. Mas então, o que distingue o cientista legítimo do dogmático que se recusa a abandonar sua teoria favorita?
+
+\subsection{A reformulação sofisticada}
+
+O falsificacionista sofisticado --- cuja formulação mais influente é a de Imre Lakatos --- desloca o foco de teorias individuais para \impt{sequências de teorias}. O que se avalia não é uma teoria isolada, mas se a \emph{transição} de uma teoria para sua sucessora representa um progresso.
+
+\begin{definition}[Critério sofisticado]
+Uma nova teoria $T'$ substitui legitimamente uma teoria $T$ quando:
+\begin{enumerate}
+  \item $T'$ é \impt{mais falsificável} que $T$;
+  \item $T'$ explica o sucesso prévio de $T$ (conserva seu conteúdo corroborado);
+  \item $T'$ faz \impt{novas predições} que $T$ não fazia, e parte dessas predições é \impt{corroborada}.
+\end{enumerate}
+\end{definition}
+
+\ntc{Mudança de ênfase:} o que importa não é se uma teoria é falsificável, mas se sua sucessora \emph{prediz mais e acerta em território novo}. A ciência progride quando novas teorias abrem janelas para fenômenos antes insuspeitos.
+
+\subsection{Novas predições e o crescimento da ciência}
+
+O critério das novas predições é central. Uma teoria que apenas \impt{acomoda} os fatos já conhecidos não representa progresso genuíno --- ela pode ser construída \emph{ad hoc} para encaixar os dados. Mas uma teoria que \impt{prediz algo novo e inesperado}, que se confirma experimentalmente, demonstra ter capturado algo real sobre o mundo.
+
+\begin{example}[Predições corroboradas]
+\begin{itemize}
+  \item \impt{Relatividade Geral} prediz a curvatura da luz pelo Sol, confirmada no eclipse de 1919 por Eddington.
+  \item \impt{Maxwell} prediz a existência de ondas eletromagnéticas se propagando à velocidade da luz --- confirmado por Hertz.
+  \item \impt{Teoria cinética dos gases} prediz o movimento browniano observado.
+\end{itemize}
+Em todos os casos, a teoria não foi construída para dar conta dos fenômenos citados: ela os previu \emph{antes} de serem conhecidos.
+\end{example}
+
+\subsection{Modificações \emph{ad hoc}}
+
+Modificações feitas para salvar uma teoria de uma refutação, sem produzir novas consequências testáveis, são chamadas \impt{\emph{ad hoc}} e são consideradas ilegítimas.
+
+\begin{example}[Modificação \emph{ad hoc}]
+Suponha que, diante da observação de um corvo branco, alguém diga: ``Todos os corvos são pretos, exceto este.'' A modificação salva a teoria do enunciado original, mas não gera nenhuma predição nova testável --- é \emph{ad hoc}.
+\end{example}
+
+\begin{example}[Modificação legítima]
+A descoberta de irregularidades na órbita de Urano levou Le Verrier a propor a existência de um novo planeta perturbando-a. Essa modificação --- um acréscimo conjectural à mecânica newtoniana aplicada ao sistema solar --- era falsificável e, de fato, conduziu à descoberta de Netuno em 1846.
+\end{example}
+
+A diferença é crucial: modificações legítimas \impt{aumentam o conteúdo empírico} da teoria; modificações \emph{ad hoc} apenas a blindam contra refutação.
+
+\subsection{Confirmações, corroborações e a corroboração como guia}
+
+Embora o falsificacionismo insista que teorias não podem ser provadas, ele reconhece que \impt{confirmações importam} --- desde que sejam confirmações de predições arriscadas. O termo técnico usado é \impt{corroboração}.
+
+\begin{definition}[Corroboração]
+Uma teoria está \impt{corroborada} quando sobreviveu a testes severos. Corroboração não é prova: apenas indica que, até o momento, a teoria resistiu.
+\end{definition}
+
+\ntc{Importante:} o grau de corroboração reflete o \emph{passado} da teoria, não sua probabilidade de ser verdadeira. Uma teoria altamente corroborada ontem pode ser refutada amanhã. Popper resiste explicitamente à tentação de interpretar corroboração como evidência indutiva.
+
+\section{As limitações do falsificacionismo (Cap.~VI)}
+
+O capítulo VI é crítico: Chalmers mostra que o falsificacionismo, mesmo em sua versão sofisticada, enfrenta dificuldades sérias que o tornam \impt{inadequado} como descrição e prescrição da atividade científica.
+
+\subsection{A dependência da observação em relação à teoria}
+
+Já vimos que não existe observação neutra: toda observação é \impt{carregada de teoria}. Isso tem uma consequência devastadora para o falsificacionismo. Se o enunciado observacional $O$ que supostamente falsifica a teoria $T$ só pode ser formulado e reconhecido à luz de alguma teoria $T^*$, então o embate entre $T$ e $O$ não é um embate entre teoria e fato bruto: é um embate entre duas teorias.
+
+\ntc{Consequência:} enunciados observacionais são \impt{falíveis}. Podemos estar errados sobre o que observamos. E se um enunciado observacional pode ser falso, a falsificação perde seu estatuto lógico privilegiado --- ela se torna tão revisável quanto a teoria que supostamente falsifica.
+
+\begin{example}
+Ao ``observar'' uma trajetória de partícula em uma câmara de bolhas, o físico usa toda a teoria eletromagnética, hidrodinâmica e ótica. Se a trajetória contradiz uma teoria nuclear, não está claro a priori qual dos corpos teóricos deve ceder.
+\end{example}
+
+\subsection{A tese de Duhem--Quine}
+
+A segunda limitação, talvez a mais grave, é conhecida como a \impt{tese de Duhem--Quine} ou \impt{holismo da confirmação}.
+
+\begin{definition}[Tese de Duhem--Quine]
+Teorias científicas não são testadas isoladamente. Quando um experimento produz um resultado $O$ que supostamente falsifica uma teoria $T$, o que está sendo testado é, na verdade, uma \impt{conjunção}:
+\[
+T \;\wedge\; H_1 \;\wedge\; H_2 \;\wedge\; \cdots \;\wedge\; H_n
+\]
+onde $H_i$ são hipóteses auxiliares (sobre instrumentos, condições iniciais, teorias subsidiárias, etc.). Quando a conjunção falha, o modus tollens nos diz apenas que \impt{ao menos uma} das conjuntas é falsa --- mas não qual.
+\end{definition}
+
+\ntc{Consequência lógica:}
+\[
+\neg (T \wedge H_1 \wedge \cdots \wedge H_n) \equiv (\neg T) \vee (\neg H_1) \vee \cdots \vee (\neg H_n).
+\]
+
+Diante de uma refutação aparente, o cientista sempre pode, em princípio, preservar $T$ rejeitando alguma das hipóteses auxiliares. \impt{A falsificação nunca é conclusiva.}
+
+\begin{example}[Urano e Mercúrio]
+A irregularidade observada na órbita de Urano poderia ter sido tomada como refutação da mecânica newtoniana. Em vez disso, foi atribuída a uma hipótese auxiliar falsa (``não há planetas além de Urano''): postulou-se Netuno e a previsão foi confirmada. Já a irregularidade na órbita de Mercúrio resistiu a tentativas análogas (o planeta Vulcano nunca foi encontrado) e acabou sendo explicada pela Relatividade Geral. Nos dois casos, a comunidade científica \emph{escolheu} onde localizar o erro.
+\end{example}
+
+\subsection{A complexidade das situações de teste reais}
+
+Em situações reais de experimentação, a rede de hipóteses auxiliares é vasta: teorias dos instrumentos, correções estatísticas, suposições sobre condições de fundo, pressupostos matemáticos, e assim por diante. O falsificacionismo idealiza essa situação supondo um confronto limpo entre teoria e experimento --- idealização que a prática desmente.
+
+\ntc{Implicação:} decidir o que uma experiência ``falsificou'' exige \impt{julgamento científico}, não apenas lógica. Não há procedimento algorítmico que, dado um resultado experimental negativo, identifique univocamente qual proposição teórica deve ser abandonada.
+
+\subsection{O falsificacionismo é inadequado à história da ciência}
+
+A crítica mais contundente de Chalmers é \impt{histórica}. Se tomarmos a sério o falsificacionismo (mesmo o sofisticado), boa parte dos episódios mais importantes da história da ciência teriam de ser considerados irracionais.
+
+\begin{example}[A revolução copernicana]
+Quando Copérnico propôs o heliocentrismo, sua teoria era, em diversos aspectos, \impt{menos precisa} que o sistema ptolomaico aperfeiçoado. Enfrentava objeções empíricas sérias (por exemplo, a ausência de paralaxe estelar detectável) e dificuldades físicas graves (uma Terra em movimento era incompatível com a física aristotélica aceita). Um falsificacionista rigoroso teria rejeitado o copernicanismo. A comunidade científica, porém, o manteve e desenvolveu --- e a história lhes deu razão.
+\end{example}
+
+\begin{example}[A teoria atômica]
+A hipótese atômica foi desenvolvida durante séculos enfrentando dificuldades e sem evidência direta. Até o início do século XX, seu estatuto era contestado. Sua persistência contra aparentes refutações foi, em retrospecto, cientificamente produtiva.
+\end{example}
+
+\paragraph{A conclusão de Chalmers.}
+O falsificacionismo é valioso como \impt{antídoto contra dogmatismo} e como crítica ao indutivismo ingênuo. Mas como modelo adequado da ciência, ele falha em três frentes:
+\begin{enumerate}
+  \item \impt{Logicamente} --- a tese de Duhem--Quine mostra que a falsificação estrita é impossível;
+  \item \impt{Epistemologicamente} --- a dependência da observação em relação à teoria torna enunciados observacionais falíveis;
+  \item \impt{Historicamente} --- o falsificacionismo não descreve adequadamente como a ciência de fato progride.
+\end{enumerate}
+
+Isso aponta para a necessidade de modelos mais ricos --- como os \impt{programas de pesquisa} de Lakatos e os \impt{paradigmas} de Kuhn --- que serão discutidos nos capítulos seguintes.
+
+\section{Síntese}
+
+Para fixar:
+
+\begin{itemize}
+  \item O \ntc{falsificacionismo ingênuo} (Cap.~IV) baseia-se na assimetria lógica entre verificação e falsificação, propõe a falseabilidade como critério de demarcação e valoriza teorias ousadas.
+  \item O \ntc{falsificacionismo sofisticado} (Cap.~V) avalia sequências de teorias em termos de progresso, exige novas predições corroboradas e rejeita modificações \emph{ad hoc}.
+  \item O \ntc{falsificacionismo, ingênuo ou sofisticado, encontra limites} (Cap.~VI): a dependência da observação em relação à teoria, a tese de Duhem--Quine e a evidência histórica mostram que a falsificação não é o mecanismo simples e conclusivo que Popper imaginava.
+\end{itemize}
+
+\impt{Lição geral:} critérios lógicos nunca bastam, por si sós, para explicar como a ciência funciona. A ciência é uma atividade humana, histórica e social --- e qualquer filosofia adequada da ciência precisa dar conta disso.
+
+\begin{thebibliography}{9}
+\bibitem[Chalmers(1993)]{chalmers1993}
+Chalmers, A.\ F. (1993).
+\newblock \emph{O que é ciência afinal?}.
+\newblock São Paulo: Brasiliense.
+
+\bibitem[Popper(1972)]{popper1972}
+Popper, K.\ R. (1972).
+\newblock \emph{A lógica da pesquisa científica}.
+\newblock São Paulo: Cultrix.
+
+\bibitem[Lakatos(1978)]{lakatos1978}
+Lakatos, I. (1978).
+\newblock \emph{The methodology of scientific research programmes}.
+\newblock Cambridge: Cambridge University Press.
+\end{thebibliography}
+
+\end{document}
