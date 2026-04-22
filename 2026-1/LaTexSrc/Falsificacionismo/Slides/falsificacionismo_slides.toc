@@ -1,0 +1,6 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Motivação}{3}{0}{1}
+\beamer@sectionintoc {2}{Falsificacionismo ingênuo (Cap.~IV)}{8}{0}{2}
+\beamer@sectionintoc {3}{Falsificacionismo sofisticado (Cap.~V)}{62}{0}{3}
+\beamer@sectionintoc {4}{Limitações do falsificacionismo (Cap.~VI)}{101}{0}{4}
+\beamer@sectionintoc {5}{Síntese}{141}{0}{5}
