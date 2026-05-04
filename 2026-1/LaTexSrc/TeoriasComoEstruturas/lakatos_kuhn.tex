@@ -1,0 +1,332 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{remark}{Observação}[section]
+
+\title{Teorias com estrutura: Lakatos e Kuhn\footnote{Material baseado em \citet{chalmers1993}, capítulos VII e VIII.}}
+\author{Filosofia da Ciência}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\bigskip
+
+\section{Recapitulação: do indutivismo ao falsificacionismo}
+
+Antes de avançar, vale recolocar onde estamos. Vimos duas grandes tentativas de explicar o que torna a ciência uma forma especial de conhecimento, e ambas tropeçaram em obstáculos parecidos.
+
+\paragraph{O indutivismo.}
+A primeira concepção que examinamos --- o indutivismo --- sustenta que a ciência \impt{começa pela observação}, que generaliza por \impt{indução} a partir de afirmações singulares e produz, no final, leis e teorias universais justificadas pela experiência. Da observação repetida de cisnes brancos sob variadas condições, conclui-se que ``todos os cisnes são brancos''. Da observação de pedras caindo, conclui-se a lei da gravidade. As explicações e previsões científicas seriam então deduzidas dessas leis universais.
+
+A atração do indutivismo é evidente: ele parece capturar a objetividade, a confiabilidade e o poder explicativo da ciência. Mas vimos que essa imagem desmorona em dois pontos. Primeiro, o \impt{problema da indução}: não há justificação lógica para inferir um enunciado universal a partir de uma coleção finita de enunciados singulares. Justificar a indução pelos seus sucessos passados é circular --- usa indução para justificar indução. Segundo, a \impt{dependência da observação em relação à teoria}: não existe observação neutra, pré-teórica. O que se ``vê'' depende do quadro conceitual em que se está inserido. As ``afirmações singulares'' que serviriam de base segura à ciência já carregam comprometimentos teóricos.
+
+\paragraph{O falsificacionismo.}
+A segunda concepção --- o falsificacionismo de Popper --- aceita esses problemas e tenta contorná-los pela \impt{assimetria lógica} entre verificação e falsificação. Nenhum número finito de observações prova uma lei universal, mas uma única observação contrária a refuta. Daí a proposta: a ciência não \emph{prova} teorias, ela as \impt{conjectura ousadamente} e tenta refutá-las. Uma teoria é científica se for \impt{falsificável} --- se houver enunciados observacionais possíveis que a contradigam.
+
+A reformulação \impt{sofisticada} (Lakatos a anuncia, embora suas ideias o levem além) avalia \impt{sequências de teorias}: $T'$ substitui $T$ legitimamente quando é mais falsificável, conserva o conteúdo corroborado de $T$ e faz novas predições corroboradas. Modificações \emph{ad hoc} --- que apenas blindam a teoria contra refutação sem gerar conteúdo novo --- são proibidas.
+
+\paragraph{Por que o falsificacionismo também não basta.}
+Vimos no capítulo VI que o falsificacionismo, mesmo sofisticado, enfrenta três limitações graves:
+
+\begin{enumerate}
+  \item A \impt{dependência da observação em relação à teoria} torna enunciados observacionais falíveis: quando $O$ contradiz $T$, podemos estar errados sobre $O$, não sobre $T$.
+  \item A \impt{tese de Duhem--Quine} mostra que teorias nunca são testadas isoladamente. Toda predição depende de uma rede de hipóteses auxiliares ($T \wedge H_1 \wedge \cdots \wedge H_n$). Quando o teste falha, a lógica nos diz apenas que \emph{alguma} conjunta é falsa --- não qual.
+  \item Historicamente, episódios cruciais da ciência (Copérnico, teoria atômica, Newton e a órbita lunar) seriam \impt{irracionais} sob o critério falsificacionista --- teorias importantes nasceram com aparentes refutações e foram corretamente mantidas.
+\end{enumerate}
+
+\section{O gancho: por que precisamos de teorias com estrutura}
+
+A lição central do capítulo VI é que critérios \impt{puramente lógicos} aplicados a \impt{teorias isoladas} não bastam para explicar como a ciência funciona. Os três problemas acima apontam todos na mesma direção: o que importa não é o destino de uma teoria solitária diante de um experimento solitário; o que importa é como uma \impt{estrutura teórica articulada} se desenvolve no tempo, em uma comunidade científica, integrando experimentos, instrumentos, suposições de fundo e tradições de prática.
+
+\ntc{Mudança de perspectiva:} a unidade de análise da filosofia da ciência \impt{não é a teoria isolada, é a estrutura teórica}. Lakatos e Kuhn, cada um a seu modo, propõem modelos em que a ciência é descrita em termos de unidades maiores, dotadas de \impt{estrutura interna}, \impt{história} e \impt{dimensão social}.
+
+\begin{itemize}
+  \item \impt{Lakatos} chama essa unidade de \emph{programa de pesquisa}: um núcleo de comprometimentos teóricos cercado por uma camada protetora de hipóteses revisáveis, mais uma metodologia que orienta o trabalho.
+  \item \impt{Kuhn} chama essa unidade de \emph{paradigma}: um conjunto compartilhado de teorias, técnicas, exemplares e valores que guia a prática de uma comunidade científica.
+\end{itemize}
+
+Ambos respondem à mesma pergunta --- ``o que tem estrutura na ciência?'' --- e ambos fornecem respostas que tornam compreensíveis episódios que os modelos anteriores deixavam como anomalias. Vamos examiná-los em ordem.
+
+\section{Os programas de pesquisa de Lakatos (Cap.~VII)}
+
+\subsection{Motivação: o falsificacionismo herdado e seus limites}
+
+Imre Lakatos foi aluno e seguidor crítico de Popper. Ele aceita a ideia central do falsificacionismo --- a ciência avança por testes severos e correção de erros --- mas reconhece que \impt{teorias isoladas não são abandonadas pela primeira refutação} e que isso é \emph{cientificamente correto}, não um desvio a ser explicado.
+
+A solução de Lakatos é deslocar o objeto de avaliação. Não se julga teorias isoladas; julga-se \impt{programas de pesquisa}, entendidos como sequências articuladas de teorias compartilhando um núcleo comum. A racionalidade da ciência se manifesta na \impt{trajetória} do programa, não no veredicto sobre uma versão particular dele.
+
+\subsection{Anatomia de um programa de pesquisa}
+
+Um programa de pesquisa, para Lakatos, tem três componentes estruturais:
+
+\begin{definition}[Componentes de um programa de pesquisa]
+  \\
+\begin{itemize}
+  \item \impt{Núcleo firme} (\emph{hard core}): conjunto de hipóteses fundamentais que definem o programa. \ntc{Por convenção metodológica, o núcleo é tratado como irrefutável} --- abandoná-lo significa abandonar o programa.
+  \item \impt{Cinturão protetor} (\emph{protective belt}): conjunto de hipóteses auxiliares, condições iniciais e teorias subsidiárias que cercam o núcleo. É no cinturão que a falsificação opera --- ele absorve os impactos das refutações empíricas.
+  \item \impt{Heurística}: regras metodológicas que orientam o desenvolvimento do programa. Divide-se em \impt{heurística negativa} (``não modifique o núcleo'') e \impt{heurística positiva} (``modifique o cinturão deste e daquele modo, prossiga o programa nesta direção'').
+\end{itemize}
+\end{definition}
+
+\begin{example}[O programa newtoniano]
+No programa de pesquisa da mecânica newtoniana:
+\begin{itemize}
+  \item \impt{Núcleo firme:} as três leis do movimento e a lei da gravitação universal.
+  \item \impt{Cinturão protetor:} hipóteses sobre a distribuição de massas no sistema solar, condições iniciais, modelos de atrito, aproximações, teorias dos instrumentos de medição.
+  \item \impt{Heurística positiva:} ``aplique as leis a sistemas crescentemente complexos --- primeiro um planeta isolado em torno do Sol, depois perturbações entre planetas, depois marés, depois rotação''.
+\end{itemize}
+Diante de uma anomalia (Urano não se comporta como previsto), o newtoniano não abandona $F=ma$ ou $F = G m_1 m_2 / r^2$; modifica o cinturão postulando, por exemplo, um planeta adicional. Foi assim que Netuno foi descoberto.
+\end{example}
+
+\paragraph{Por que o núcleo é ``irrefutável''.}
+A irrefutabilidade do núcleo \impt{não é um defeito} --- é uma decisão metodológica que torna o programa coerente e dirigível. Sem um núcleo estável, cada anomalia mandaria os cientistas reconstruir tudo do zero. Com um núcleo estável, a comunidade tem um problema bem definido: \emph{como ajustar o cinturão para acomodar este resultado?}
+
+\ntc{Atenção:} a estratégia é arriscada. Se o cinturão tiver de absorver demais, o programa começa a fazer ajustes \emph{ad hoc} --- e é aí que entra o critério de avaliação de Lakatos.
+
+\subsection{Programas progressivos e degenerativos}
+
+A pergunta-chave para Lakatos é: como \impt{avaliar} um programa de pesquisa? A resposta evita tanto o ingênuo (``abandone-o quando refutado'') quanto o relativista (``vale tudo''). Lakatos propõe um critério \impt{histórico} aplicado à sequência de teorias geradas pelo programa.
+
+\begin{definition}[Mudança progressiva de problema (\emph{progressive problemshift})]
+Uma série de teorias $T_1, T_2, T_3, \ldots$ dentro de um programa constitui uma mudança \impt{teoricamente progressiva} se cada $T_{i+1}$ \impt{prediz fatos novos} não previstos por $T_i$. É \impt{empiricamente progressiva} se algumas dessas predições novas são \impt{corroboradas}.
+\end{definition}
+
+\begin{definition}[Mudança degenerativa de problema (\emph{degenerative problemshift})]
+A mudança é \impt{degenerativa} quando as modificações sucessivas no cinturão protetor servem apenas para \impt{acomodar} fatos já conhecidos, sem gerar predições novas corroboradas. O programa, nesse caso, ``fica para trás dos fatos''.
+\end{definition}
+
+\begin{example}[Newton vs. teoria de Ptolomeu tardia]
+O sistema ptolomaico tardio respondia a anomalias adicionando epiciclos sobre epiciclos. Cada acréscimo acomodava uma observação específica, mas \impt{não predizia nada novo}. Era um programa em fase degenerativa. O programa copernicano-newtoniano, ao contrário, gerou uma sucessão de predições corroboradas (formato achatado da Terra, retorno de cometas, perturbações orbitais que levaram a Netuno).
+\end{example}
+
+\impt{Critério lakatosiano:} um programa pode ser provisoriamente preferido a outro se for \emph{progressivo} enquanto o rival é \emph{degenerativo}. Nenhuma refutação isolada decide a questão; a história do programa decide.
+
+\subsection{Comparação de programas rivais}
+
+Em qualquer momento, é possível haver vários programas de pesquisa concorrentes em uma mesma área. Lakatos sustenta que a comparação racional entre eles \impt{não pode ser feita instantaneamente} --- exige tempo. Um programa que parece estar perdendo pode reerguer-se; um programa em ascensão pode estagnar.
+
+\ntc{Implicação:} é \impt{racional} continuar a trabalhar em um programa em fase degenerativa, desde que se acredite que ele pode voltar a ser progressivo. A decisão de abandoná-lo é uma decisão de \impt{aposta científica}, não uma dedução lógica.
+
+\begin{remark}
+Essa visão tem uma consequência importante: a racionalidade científica, para Lakatos, é uma propriedade de \impt{séries históricas de decisões}, não de decisões pontuais. Ele preserva a ideia de progresso objetivo da ciência (contra o relativismo), mas paga o preço de tornar o veredicto sobre um programa sempre \emph{provisório} e \emph{retrospectivo}.
+\end{remark}
+
+\subsection{O que Lakatos resolve --- e o que ele deixa em aberto}
+
+Lakatos resolve várias dificuldades do falsificacionismo:
+
+\begin{itemize}
+  \item Explica por que cientistas \impt{não abandonam} teorias diante de anomalias: o cinturão é projetado para absorvê-las.
+  \item Distingue modificações legítimas (que tornam o programa progressivo) de modificações \emph{ad hoc} (que o tornam degenerativo).
+  \item Acomoda episódios históricos como o copernicanismo nascente: era racional perseguir o programa enquanto ele desenvolvia novas predições.
+  \item Mantém um critério \impt{objetivo} de progresso (predições novas corroboradas), preservando o realismo científico.
+\end{itemize}
+
+Mas várias questões permanecem abertas. \ntc{Quando} um programa é claramente degenerativo? Lakatos é cauteloso: nunca há um momento decisivo. \ntc{Como} se decide entre dois programas que oscilam? A história do confronto pode levar décadas. E principalmente: o modelo de Lakatos é primariamente \impt{prescritivo} (como \emph{deve} ser avaliada a ciência), não tanto \impt{descritivo} (como ela de fato funciona). A descrição empírica da prática científica, com sua dimensão comunitária e histórica, foi proposta de modo mais radical por Thomas Kuhn.
+
+\section{Os paradigmas de Kuhn (Cap.~VIII)}
+
+\subsection{Motivação: a ciência como prática histórica e comunitária}
+
+Thomas Kuhn parte de uma observação distinta. Ele é antes de tudo um \impt{historiador da ciência}, e o que o impressiona ao estudar grandes episódios --- a astronomia copernicana, a química lavoisierana, a relatividade einsteiniana --- é que \impt{a ciência madura não se parece com o que filósofos como Popper descrevem}. Os cientistas, em geral, não passam o tempo tentando refutar suas teorias fundamentais. Ao contrário: passam a maior parte do tempo \impt{trabalhando dentro} de uma estrutura aceita, resolvendo problemas técnicos, refinando medições, estendendo aplicações.
+
+A grande mudança ocorre apenas em momentos raros, traumáticos, em que uma estrutura aceita é substituída por outra. Esses momentos são as \impt{revoluções científicas}. Entre eles, o que se faz é \impt{ciência normal}.
+
+\subsection{O que é um paradigma}
+
+A noção central do modelo de Kuhn é o \impt{paradigma}. O termo é notoriamente ambíguo na obra de Kuhn (críticos identificaram mais de vinte sentidos diferentes), mas dois sentidos principais podem ser destacados.
+
+\begin{definition}[Paradigma --- sentido amplo: matriz disciplinar]
+Conjunto compartilhado de comprometimentos por uma comunidade científica:
+\begin{itemize}
+  \item \impt{Generalizações simbólicas}: leis e princípios fundamentais (ex.: $F = ma$).
+  \item \impt{Modelos e analogias}: imagens fundamentais sobre o que existe e como funciona (ex.: o átomo como sistema solar em miniatura).
+  \item \impt{Valores}: critérios de avaliação --- precisão, simplicidade, fecundidade, consistência.
+  \item \impt{Exemplares}: soluções concretas de problemas paradigmáticas, aprendidas pelos estudantes durante a formação, que servem de modelo para resolver novos problemas.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Paradigma --- sentido estrito: exemplar]
+Solução-modelo de um problema científico que serve de \impt{padrão} para resolver problemas semelhantes. É aprendendo a resolver \emph{exemplares} (e não decorando regras explícitas) que cientistas em formação internalizam um paradigma.
+\end{definition}
+
+\paragraph{Comparação com Lakatos.}
+Há paralelos óbvios entre paradigma e programa de pesquisa: ambos são estruturas maiores que teorias isoladas, ambos têm um componente estável (núcleo firme / generalizações simbólicas) e um componente revisável (cinturão protetor / aplicações específicas). Mas \impt{a ênfase de Kuhn é diferente}: o paradigma é antes de tudo um fenômeno \impt{sociológico} --- ele existe enquanto uma comunidade o partilha. A dimensão tácita (exemplares, valores compartilhados, prática treinada) é central. Lakatos é mais lógico-metodológico; Kuhn é mais histórico-sociológico.
+
+\subsection{O ciclo da ciência}
+
+O modelo de Kuhn descreve a ciência como um ciclo de fases:
+\[
+\text{pré-ciência} \rightarrow \text{ciência normal} \rightarrow \text{crise} \rightarrow \text{revolução} \rightarrow \text{nova ciência normal} \rightarrow \cdots
+\]
+
+\paragraph{Pré-ciência.}
+Nas fases iniciais de uma disciplina, há \impt{múltiplas escolas} competindo, cada uma com sua própria abordagem fundamental, sem acordo sobre o que conta como problema legítimo, método aceitável ou explicação adequada. \ntc{Não há um paradigma compartilhado.} O trabalho em cada escola começa do zero a cada geração; pouco se acumula.
+
+\begin{example}[Ótica antes de Newton]
+Antes da \emph{Optics} de Newton (1704), a ótica era um campo fragmentado: havia escolas baseadas em Aristóteles, em Descartes, em Hooke, em Huygens, cada qual com pressupostos incompatíveis sobre a natureza da luz. Após Newton, a comunidade convergiu (por algumas gerações) para um paradigma corpuscular.
+\end{example}
+
+\paragraph{Ciência normal.}
+Estabelecido um paradigma, a comunidade entra em fase de \impt{ciência normal}: trabalho técnico, especializado, articulando o paradigma e estendendo suas aplicações. Kuhn descreve esse trabalho como \impt{resolução de quebra-cabeças} (\emph{puzzle-solving}): o cientista normal toma o paradigma como dado e tenta encaixar a natureza nele.
+
+\begin{itemize}
+  \item Determinação de fatos relevantes do paradigma com maior precisão.
+  \item Comparação detalhada de fato e teoria.
+  \item Articulação da teoria --- extensão a novos casos, refinamento de constantes, formulações matemáticas mais elegantes.
+\end{itemize}
+
+\ntc{Importante:} na ciência normal, o paradigma \impt{não está sob teste}. O que está sob teste é a \emph{habilidade do cientista} de fazer a natureza encaixar nele. Se um quebra-cabeça resiste, a falha é atribuída ao cientista, não ao paradigma.
+
+\paragraph{Anomalias e crise.}
+Apesar do esforço, alguns quebra-cabeças resistem persistentemente. Tornam-se \impt{anomalias}. Inicialmente, anomalias são toleradas: nenhum paradigma jamais resolve tudo, e a comunidade tem confiança de que recursos eventualmente serão encontrados. Mas se uma anomalia: \emph{(i)} ataca pressupostos centrais do paradigma, \emph{(ii)} resiste a esforços prolongados de resolução, \emph{(iii)} bloqueia aplicações práticas importantes --- ela pode gerar uma \impt{crise}.
+
+Em uma crise, a confiança no paradigma se enfraquece. Surgem versões alternativas, propostas heterodoxas começam a ser ouvidas, e a fronteira do que conta como ``problema legítimo'' se borra.
+
+\begin{example}[A crise da física no fim do século XIX]
+O paradigma da mecânica clássica enfrentou anomalias graves no fim do século XIX: o resultado nulo do experimento de Michelson--Morley, a catástrofe do ultravioleta na radiação de corpo negro, a estabilidade dos átomos. Cada uma resistiu a tentativas internas de solução. O conjunto dessas anomalias preparou o terreno para revoluções: a relatividade e a mecânica quântica.
+\end{example}
+
+\paragraph{Revolução científica.}
+A crise é resolvida por uma \impt{revolução}: a substituição do paradigma antigo por um novo. A revolução não é um processo de ajuste contínuo --- é uma \impt{descontinuidade}. Conceitos básicos mudam de sentido (massa, espaço, tempo na transição newton-Einstein); o que era problema legítimo deixa de ser; novas técnicas e novos exemplares passam a definir o trabalho aceitável.
+
+\paragraph{Nova ciência normal.}
+Estabelecido o novo paradigma, a comunidade volta à atividade tranquila de resolver quebra-cabeças --- agora dentro da nova matriz disciplinar. O ciclo recomeça.
+
+\subsection{Incomensurabilidade}
+
+A tese mais polêmica de Kuhn é a \impt{incomensurabilidade} entre paradigmas rivais. Ela tem várias dimensões:
+
+\begin{definition}[Incomensurabilidade]
+Dois paradigmas rivais são \impt{incomensuráveis} no sentido de que:
+\begin{enumerate}
+  \item \impt{Semântica:} termos centrais (massa, espécie, elemento) recebem significados diferentes nos dois paradigmas. ``Massa'' newtoniana e ``massa'' relativística não significam exatamente a mesma coisa.
+  \item \impt{Metodológica:} paradigmas diferem sobre o que conta como problema legítimo, método aceitável, explicação satisfatória.
+  \item \impt{Perceptual:} cientistas treinados em paradigmas diferentes \impt{veem o mundo de modos diferentes}. A famosa frase de Kuhn: ``após uma revolução, os cientistas trabalham em um mundo diferente''.
+\end{enumerate}
+\end{definition}
+
+\ntc{Atenção:} incomensurabilidade não significa \emph{incomparabilidade total}. Cientistas de paradigmas rivais podem se entender e debater. Mas não há linguagem neutra a partir da qual se possa avaliar os dois paradigmas com critérios comuns e decisivos.
+
+\begin{example}[Massa newtoniana e massa relativística]
+Em mecânica clássica, massa é uma propriedade intrínseca do corpo, conservada e independente da velocidade. Em relatividade, ``massa'' (no sentido relativístico) varia com a velocidade, e a massa de repouso é um caso particular. As equações newtonianas são uma aproximação das relativísticas para baixas velocidades, mas \impt{os conceitos não se traduzem perfeitamente}.
+\end{example}
+
+\subsection{Como se escolhe entre paradigmas?}
+
+Se paradigmas são incomensuráveis, como cientistas decidem qual adotar? Esta é a questão crítica. A resposta de Kuhn é deliberadamente \impt{não algorítmica}:
+
+\begin{itemize}
+  \item Não há um experimento decisivo que resolva a disputa.
+  \item Não há um critério lógico universal.
+  \item Cientistas avaliam usando \impt{valores compartilhados} --- precisão, simplicidade, fecundidade, alcance, consistência interna --- mas esses valores podem ser \impt{ponderados de modo diferente} por cientistas diferentes, e são frequentemente \impt{ambíguos} na aplicação.
+  \item Fatores \impt{extracientíficos} podem entrar: estética, intuição, considerações filosóficas, contexto sociológico.
+\end{itemize}
+
+A escolha de paradigma envolve, portanto, algo análogo a uma \impt{conversão}: uma mudança de gestalt em como se vê o domínio inteiro. Por isso revoluções são frequentemente lideradas por \impt{cientistas jovens} ou por estranhos ao campo --- gente menos comprometida com o paradigma vigente.
+
+\subsection{Relativismo? Os limites da leitura radical}
+
+A obra de Kuhn foi imediatamente lida por muitos como uma defesa do \impt{relativismo} --- a ideia de que paradigmas científicos são apenas pontos de vista igualmente válidos, e que a ciência não converge a uma realidade objetiva. Kuhn resistiu a essa leitura, embora seu texto frequentemente a sugira.
+
+\ntc{Pontos a sustentar contra a leitura relativista:}
+\begin{itemize}
+  \item Kuhn afirma que há \impt{progresso} dentro da ciência normal e mesmo entre paradigmas (em termos de \emph{capacidade de resolver problemas} e \emph{precisão}).
+  \item Os valores compartilhados (precisão, alcance, fecundidade) fornecem alguma base de comparação, mesmo que não decisiva.
+  \item Revoluções não são \impt{arbitrárias}: elas respondem a anomalias acumuladas e a crises reais.
+\end{itemize}
+
+\ntc{Pontos que o aproximam do relativismo:}
+\begin{itemize}
+  \item A ausência de critérios neutros e algorítmicos para escolha entre paradigmas.
+  \item A tese da incomensurabilidade.
+  \item A ênfase em fatores comunitários, históricos e até estéticos na decisão científica.
+\end{itemize}
+
+A leitura adequada de Kuhn é provavelmente intermediária: ele \emph{não é} um relativista no sentido forte, mas rompe com a imagem tradicional de uma ciência que converge cumulativamente para uma única descrição correta da natureza.
+
+\subsection{O que Kuhn resolve --- e o que ele deixa em aberto}
+
+A contribuição de Kuhn é monumental:
+
+\begin{itemize}
+  \item Mostra que a \impt{ciência normal} é a atividade científica predominante, e que sua existência é \emph{constitutiva} da ciência madura. O retrato falsificacionista de uma ciência permanentemente em busca de refutação é historicamente equivocado.
+  \item Reconhece a dimensão \impt{comunitária e tácita} do conhecimento científico (exemplares, valores, treinamento).
+  \item Explica revoluções científicas como \impt{descontinuidades estruturais}, não como acumulação suave.
+  \item Reabilita a história da ciência como recurso filosófico essencial.
+\end{itemize}
+
+As perguntas que Kuhn deixa abertas --- ou que críticos lhe colocam --- são igualmente importantes:
+
+\begin{itemize}
+  \item Se paradigmas são incomensuráveis, como se sustenta a tese de \impt{progresso} ao longo de revoluções?
+  \item Como distinguir uma escolha racional entre paradigmas de uma simples \emph{conversão} ideológica?
+  \item Em que medida a categoria ``paradigma'' é clara o bastante para fazer trabalho explanatório real (a ambiguidade do termo é um problema)?
+  \item O modelo se aplica bem às ciências físicas maduras, mas é menos claro para ciências sociais, biologia, computação, e disciplinas em formação.
+\end{itemize}
+
+\section{Síntese e tensões}
+
+Lakatos e Kuhn dividem um diagnóstico --- \impt{a unidade de análise da ciência não é a teoria isolada, é a estrutura} --- mas divergem sobre como caracterizá-la.
+
+\begin{itemize}
+  \item \ntc{Lakatos:} estrutura entendida como \impt{programa de pesquisa} (núcleo firme + cinturão + heurística). Avaliação \impt{lógico-metodológica}: o programa é progressivo se gera predições novas corroboradas. Continuidade entre paradigmas; comparações são possíveis (embora exijam tempo).
+  \item \ntc{Kuhn:} estrutura entendida como \impt{paradigma} (matriz disciplinar + exemplares). Avaliação \impt{histórica e comunitária}: paradigmas são adotados ou abandonados em processos parcialmente sociológicos. Descontinuidade revolucionária; incomensurabilidade entre paradigmas.
+\end{itemize}
+
+\impt{Tensão central:} Lakatos quer preservar a racionalidade objetiva da ciência reformulando-a em termos diacrônicos (a história do programa decide); Kuhn descreve a prática científica em termos que parecem comprometer essa racionalidade objetiva --- ou ao menos torná-la dependente de processos comunitários e de valores não algorítmicos.
+
+\ntc{Lição geral:} ambos forçam a filosofia da ciência a ir \impt{além da lógica} --- considerar história, comunidade, prática, formação. Onde o falsificacionismo via apenas teoria e experimento, Lakatos vê programas e Kuhn vê paradigmas. Os capítulos seguintes (sobre o método científico de Feyerabend, o realismo e o anti-realismo, etc.) prosseguem nessa direção.
+
+\begin{thebibliography}{9}
+\bibitem[Chalmers(1993)]{chalmers1993}
+Chalmers, A.\ F. (1993).
+\newblock \emph{O que é ciência afinal?} (2ª ed.).
+\newblock São Paulo: Brasiliense.
+
+\bibitem[Kuhn(1962)]{kuhn1962}
+Kuhn, T.\ S. (1962).
+\newblock \emph{The structure of scientific revolutions}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem[Lakatos(1978)]{lakatos1978}
+Lakatos, I. (1978).
+\newblock \emph{The methodology of scientific research programmes}.
+\newblock Cambridge: Cambridge University Press.
+
+\bibitem[Popper(1972)]{popper1972}
+Popper, K.\ R. (1972).
+\newblock \emph{A lógica da pesquisa científica}.
+\newblock São Paulo: Cultrix.
+\end{thebibliography}
+
+\end{document}
