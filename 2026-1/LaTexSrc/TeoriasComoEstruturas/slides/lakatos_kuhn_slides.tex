@@ -1,0 +1,781 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+% Colors
+\definecolor{mblack}{RGB}{20, 20, 20}
+\definecolor{mprimary}{RGB}{44, 7, 53}     % dark blue
+\definecolor{maccent}{RGB}{133, 138, 227}    % orange
+\definecolor{mwhite}{RGB}{255, 255, 255}
+
+% Theme
+\usetheme{default}
+\usecolortheme{default}
+\setbeamercolor{normal text}{fg=mblack, bg=white}
+\setbeamercolor{frametitle}{fg=white, bg=mprimary}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mprimary}
+\setbeamercolor{enumerate item}{fg=maccent}
+\setbeamercolor{enumerate subitem}{fg=mprimary}
+\setbeamercolor{block title}{fg=white, bg=mprimary}
+\setbeamercolor{block body}{fg=mblack, bg=mprimary!8}
+\setbeamercolor{block title alerted}{fg=white, bg=maccent}
+\setbeamercolor{block body alerted}{fg=mblack, bg=maccent!10}
+\setbeamercolor{alerted text}{fg=maccent}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+\setbeamerfont{title}{series=\bfseries, size=\LARGE}
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Footer
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.7\paperwidth, ht=2.25ex, dp=1ex, leftskip=0.3cm]{normal text}%
+      \tiny\color{mblack!50} Filosofia da Ciência -- Lakatos e Kuhn
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.3\paperwidth, ht=2.25ex, dp=1ex, rightskip=0.3cm, right]{normal text}%
+      \tiny\color{mblack!50}\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+
+% Frametitle with accent rule
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0.2cm, leftskip=0.5cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+  \end{beamercolorbox}%
+  \vspace{-0.1cm}%
+  \textcolor{maccent}{\rule{\paperwidth}{2pt}}%
+}
+
+% Title page: three-band layout
+\setbeamercolor{titlebar top}{bg=mwhite}
+\setbeamercolor{titlebar main}{bg=mprimary}
+\setbeamercolor{titlebar bottom}{bg=maccent}
+
+\setbeamertemplate{title page}{%
+  \vspace{0pt}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0pt]{titlebar top}\end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=3.8cm, dp=0pt, center]{titlebar main}%
+    \vspace{0.6cm}
+    {\usebeamerfont{title}\color{white}\inserttitle\par}%
+    \vspace{0.35cm}{\color{white}\small\insertauthor\par}%
+    \vspace{0.15cm}{\color{white}\footnotesize\insertdate\par}%
+    \vspace{0.25cm}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=1.3cm, dp=0pt]{titlebar bottom}\end{beamercolorbox}%
+}
+
+\setlength{\itemsep}{4pt}
+
+% Highlight commands
+\newcommand{\impt}[1]{\textcolor{maccent}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{mprimary}{#1}}
+
+\title{Teorias com estrutura: Lakatos e Kuhn}
+\author{Filosofia da Ciência\footnote{Baseado em \citet{chalmers1993}, caps.~VII e VIII.}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[plain]\titlepage\end{frame}
+
+\begin{frame}{Sumário}\tableofcontents\end{frame}
+
+% =====================================================
+\section{Recapitulação}
+% =====================================================
+
+\begin{frame}{Onde estamos}
+Duas tentativas de explicar a ciência --- ambas com problemas:
+\vspace{0.4cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Indutivismo}
+Ciência \impt{começa pela observação}. \\[0.15cm]
+Generaliza por \impt{indução}. \\[0.15cm]
+Produz leis \impt{justificadas} pela experiência.
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Falsificacionismo}
+Ciência \impt{conjectura ousadamente}. \\[0.15cm]
+Submete a \impt{testes severos}. \\[0.15cm]
+Refuta --- nunca prova.
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Indutivismo: os dois golpes}
+\begin{itemize}
+  \item \impt{Problema da indução}
+  \begin{itemize}
+    \item Sem justificação lógica para passar de singular a universal
+    \item Justificar indução pela indução --- circular
+  \end{itemize}
+  \pause
+  \vspace{0.3cm}
+  \item \impt{Observação não é neutra}
+  \begin{itemize}
+    \item Carregada de teoria
+    \item Não há ``afirmações singulares'' pré-teóricas
+  \end{itemize}
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\ntc{O que sobra da imagem indutivista?} Pouco.
+\end{frame}
+
+\begin{frame}{Falsificacionismo: a saída de Popper}
+A \impt{assimetria lógica}:
+\vspace{0.3cm}
+\[
+(T \rightarrow O) \wedge \neg O \;\vdash\; \neg T \qquad \text{(modus tollens)}
+\]
+\pause
+\vspace{0.4cm}
+\begin{itemize}
+  \item Falsificação tem estatuto lógico privilegiado
+  \item Critério de demarcação: \impt{falseabilidade}
+  \item Versão sofisticada (Lakatos): predições novas corroboradas
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mas o falsificacionismo também falha}
+Três limitações graves (Cap.~VI):
+\vspace{0.3cm}
+\pause
+\begin{enumerate}
+  \item \impt{Observação carregada de teoria} \\
+  Enunciados observacionais são \emph{falíveis}
+  \pause
+  \vspace{0.2cm}
+  \item \impt{Tese de Duhem--Quine} \\
+  $T \wedge H_1 \wedge \cdots \wedge H_n$ --- a falsificação não é conclusiva
+  \pause
+  \vspace{0.2cm}
+  \item \impt{Inadequação histórica} \\
+  Copérnico, atomismo, Newton e a Lua --- aparentes refutações \emph{ignoradas}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Teorias como Estruturas}
+\begin{alertblock}{Mudança de perspectiva}
+A unidade de análise da filosofia da ciência \\
+\impt{não é a teoria isolada} --- é a \impt{estrutura teórica}.
+\end{alertblock}
+\vspace{0.4cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Lakatos}
+Programa de pesquisa \\[0.1cm]
+\ntc{Lógico-metodológico}
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Kuhn}
+Paradigma \\[0.1cm]
+\ntc{Histórico-sociológico}
+\end{block}
+\end{columns}
+\end{frame}
+
+% =====================================================
+\section{Programas de pesquisa de Lakatos (Cap.~VII)}
+% =====================================================
+
+\begin{frame}{O ponto de partida}
+Imre Lakatos: aluno e crítico de Popper.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Aceita: ciência avança por testes severos
+  \pause
+  \item Reconhece: cientistas \impt{não} abandonam teorias diante da primeira refutação
+  \pause
+  \item Conclusão: o objeto de avaliação não é a teoria isolada
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{}
+Avalia-se um \impt{programa de pesquisa} --- uma sequência articulada de teorias.
+\end{block}
+\end{frame}
+
+\begin{frame}{Anatomia de um programa}
+\begin{block}{Núcleo firme (\emph{hard core})}
+Hipóteses fundamentais. \\
+\ntc{Convencionalmente irrefutável} --- abandoná-lo é abandonar o programa.
+\end{block}
+\pause
+\begin{block}{Cinturão protetor (\emph{protective belt})}
+Hipóteses auxiliares, condições iniciais, teorias subsidiárias. \\
+\ntc{Absorve} as refutações empíricas.
+\end{block}
+\pause
+\begin{block}{Heurística}
+\impt{Negativa:} ``não modifique o núcleo''. \\
+\impt{Positiva:} ``modifique o cinturão neste e naquele sentido''.
+\end{block}
+\end{frame}
+
+\begin{frame}{Exemplo: o programa newtoniano}
+\begin{itemize}
+  \item \impt{Núcleo:} as três leis do movimento $+$ lei da gravitação universal
+  \pause
+  \item \impt{Cinturão:} distribuição de massas, condições iniciais, atrito, instrumentos
+  \pause
+  \item \impt{Heurística positiva:} aplique a sistemas crescentemente complexos
+  \begin{itemize}
+    \item planeta isolado em torno do Sol
+    \item perturbações entre planetas
+    \item marés, rotação, \ldots
+  \end{itemize}
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\ntc{Anomalia em Urano?} Não se mexe em $F=ma$. \\
+Postula-se um novo planeta: \impt{Netuno} (1846).
+\end{frame}
+
+\begin{frame}{Por que o núcleo é ``irrefutável''}
+\begin{alertblock}{Não é defeito --- é decisão metodológica}
+Sem núcleo estável, cada anomalia obriga a reconstruir tudo. \\
+Com núcleo estável, há um problema bem definido: \\
+\emph{como ajustar o cinturão para acomodar isto?}
+\end{alertblock}
+\pause
+\vspace{0.4cm}
+\ntc{Mas atenção:} se o cinturão tem de absorver demais, o programa começa a fazer ajustes \emph{ad hoc}. \\[0.2cm]
+É aí que entra o critério de avaliação.
+\end{frame}
+
+\begin{frame}{Programas progressivos}
+\begin{block}{Mudança progressiva (\emph{progressive problemshift})}
+A sequência $T_1, T_2, T_3, \ldots$ é \impt{teoricamente progressiva} se cada $T_{i+1}$ \impt{prediz fatos novos}. \\[0.15cm]
+É \impt{empiricamente progressiva} se algumas dessas predições são \impt{corroboradas}.
+\end{block}
+\pause
+\vspace{0.4cm}
+\ntc{Critério positivo:} o programa \emph{abre janelas} para fenômenos antes insuspeitos.
+\end{frame}
+
+\begin{frame}{Programas degenerativos}
+\begin{block}{Mudança degenerativa (\emph{degenerative problemshift})}
+Modificações sucessivas no cinturão apenas \impt{acomodam} fatos já conhecidos. \\[0.15cm]
+Sem predições novas corroboradas. \\[0.15cm]
+O programa \emph{fica para trás dos fatos}.
+\end{block}
+\pause
+\vspace{0.4cm}
+\ntc{Sintoma:} epiciclos sobre epiciclos. \\
+Cada acréscimo salva um caso. Nada novo é predito.
+\end{frame}
+
+\begin{frame}{Newton vs.\ Ptolomeu tardio}
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Ptolomeu tardio}
+Cada anomalia $\Rightarrow$ novo epiciclo \\[0.15cm]
+\impt{Acomoda}, mas não prediz. \\[0.15cm]
+\ntc{Degenerativo.}
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Copérnico--Newton}
+Achatamento da Terra \\
+Retorno de cometas \\
+Perturbações $\Rightarrow$ Netuno \\[0.15cm]
+\ntc{Progressivo.}
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\impt{Critério lakatosiano:} um programa pode ser preferido a outro se for progressivo enquanto o rival é degenerativo.
+\end{frame}
+
+\begin{frame}{Comparação racional exige tempo}
+A comparação entre programas rivais \impt{não é instantânea}.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Um programa em queda pode reerguer-se
+  \pause
+  \item Um programa em ascensão pode estagnar
+  \pause
+  \item É racional persistir em fase degenerativa --- por um tempo
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{alertblock}{}
+Abandonar um programa é uma \impt{aposta científica} --- não uma dedução lógica.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{O que Lakatos resolve}
+\begin{itemize}
+  \item Por que cientistas não abandonam teorias diante de anomalias \\
+  \ntc{O cinturão é projetado para isto.}
+  \pause
+  \item Distingue modificação legítima de modificação \emph{ad hoc} \\
+  \ntc{Pelo critério de progresso.}
+  \pause
+  \item Acomoda episódios como o copernicanismo nascente \\
+  \ntc{Era racional perseguir o programa.}
+  \pause
+  \item Mantém critério \impt{objetivo} de progresso \\
+  \ntc{Predições novas corroboradas.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O que Lakatos deixa em aberto}
+\begin{itemize}
+  \item \emph{Quando} um programa é claramente degenerativo? \\
+  \ntc{Nunca há momento decisivo.}
+  \pause
+  \vspace{0.2cm}
+  \item Como decidir entre programas que oscilam? \\
+  \ntc{Pode levar décadas.}
+  \pause
+  \vspace{0.2cm}
+  \item O modelo é \impt{prescritivo}, não tanto \impt{descritivo} \\
+  \ntc{Como \emph{deve} ser avaliada a ciência --- não como ela funciona.}
+\end{itemize}
+\vspace{0.4cm}
+\pause
+A descrição empírica da prática científica foi proposta de modo mais radical por \impt{Kuhn}.
+\end{frame}
+
+% =====================================================
+\section{Paradigmas de Kuhn (Cap.~VIII)}
+% =====================================================
+
+\begin{frame}{O olhar do historiador}
+Thomas Kuhn é antes de tudo \impt{historiador da ciência}.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Estuda Copérnico, Lavoisier, Einstein
+  \pause
+  \item O que vê \impt{não se parece} com Popper
+  \pause
+  \item Cientistas \impt{não} passam o tempo tentando refutar suas teorias
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{}
+A maior parte do tempo, cientistas \impt{trabalham dentro} de uma estrutura aceita, resolvendo problemas técnicos.
+\end{block}
+\end{frame}
+
+\begin{frame}{Os dois sentidos de paradigma}
+\begin{block}{Sentido amplo --- matriz disciplinar}
+Comprometimentos compartilhados por uma comunidade:
+\begin{itemize}
+  \item \impt{Generalizações simbólicas} --- $F = ma$
+  \item \impt{Modelos e analogias} --- átomo como sistema solar
+  \item \impt{Valores} --- precisão, simplicidade, fecundidade
+  \item \impt{Exemplares} --- soluções-modelo
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{Sentido estrito --- exemplar}
+Solução-modelo de um problema. \\
+Aprendendo a resolver \impt{exemplares}, o estudante \emph{internaliza} um paradigma.
+\end{block}
+\end{frame}
+
+\begin{frame}{Paradigma vs.\ programa de pesquisa}
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Lakatos: programa}
+Núcleo + cinturão + heurística \\[0.2cm]
+\ntc{Ênfase:} lógica e metodologia \\
+\ntc{Pergunta:} é progressivo?
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Kuhn: paradigma}
+Matriz disciplinar + exemplares \\[0.2cm]
+\ntc{Ênfase:} comunidade e prática \\
+\ntc{Pergunta:} resolve quebra-cabeças?
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\impt{Componente tácito} (treinamento, exemplares, valores compartilhados) é central em Kuhn.
+\end{frame}
+
+\begin{frame}{O ciclo da ciência}
+\vspace{0.3cm}
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.5cm,
+  every node/.style={draw, rounded corners, fill=mprimary!10, draw=mprimary, minimum height=0.9cm, font=\small\bfseries, align=center},
+  arrow/.style={-{Stealth[length=2.5mm]}, thick, draw=maccent}
+]
+\node (pre) {pré-ciência};
+\node[right=of pre] (cn1) {ciência\\normal};
+\node[right=of cn1] (crise) {crise};
+\node[right=of crise] (rev) {revolução};
+\node[right=of rev] (cn2) {nova ciência\\normal};
+
+\draw[arrow] (pre) -- (cn1);
+\draw[arrow] (cn1) -- (crise);
+\draw[arrow] (crise) -- (rev);
+\draw[arrow] (rev) -- (cn2);
+\draw[arrow, dashed] (cn2.south) to[out=-90, in=-90] (crise.south);
+\end{tikzpicture}
+\end{center}
+\vspace{0.3cm}
+\pause
+\ntc{O ciclo se repete.} Cada paradigma novo abre uma fase de ciência normal --- até a próxima crise.
+\end{frame}
+
+\begin{frame}{Pré-ciência}
+\begin{itemize}
+  \item Múltiplas escolas competindo
+  \item Sem acordo sobre problemas legítimos
+  \item Sem acordo sobre métodos
+  \item Cada geração começa do zero
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{Exemplo: ótica antes de Newton}
+Aristotélicos, cartesianos, Hooke, Huygens --- pressupostos incompatíveis sobre a luz. \\
+Após Newton: convergência (por algumas gerações) ao paradigma corpuscular.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ciência normal}
+Estabelecido um paradigma: \impt{resolução de quebra-cabeças}.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Determinação precisa de fatos do paradigma
+  \pause
+  \item Comparação detalhada entre fato e teoria
+  \pause
+  \item Articulação --- novos casos, refinamentos, formulações elegantes
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{alertblock}{Crucial}
+O paradigma \impt{não está sob teste}. \\
+Sob teste está a \emph{habilidade do cientista} de fazer a natureza encaixar nele.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Anomalias}
+Alguns quebra-cabeças resistem. Tornam-se \impt{anomalias}.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Inicialmente, \ntc{toleradas} --- nenhum paradigma resolve tudo
+  \pause
+  \item Tornam-se ameaça quando:
+  \begin{itemize}
+    \item atacam pressupostos centrais
+    \item resistem a esforços prolongados
+    \item bloqueiam aplicações importantes
+  \end{itemize}
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{}
+Acumulando anomalias graves: \impt{crise}.
+\end{block}
+\end{frame}
+
+\begin{frame}{Crise}
+\begin{itemize}
+  \item Confiança no paradigma se enfraquece
+  \pause
+  \item Surgem versões alternativas
+  \pause
+  \item Propostas heterodoxas começam a ser ouvidas
+  \pause
+  \item A fronteira do ``problema legítimo'' se borra
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{Exemplo: física no fim do século XIX}
+Michelson--Morley. Catástrofe do ultravioleta. Estabilidade dos átomos. \\[0.15cm]
+Cada anomalia resistiu. O conjunto preparou \impt{relatividade} e \impt{quântica}.
+\end{block}
+\end{frame}
+
+\begin{frame}{Revolução científica}
+A crise é resolvida pela \impt{substituição} do paradigma.
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Não é ajuste contínuo --- é \impt{descontinuidade}
+  \pause
+  \item Conceitos básicos \impt{mudam de sentido} (massa, espaço, tempo)
+  \pause
+  \item O que era problema legítimo deixa de ser
+  \pause
+  \item Novos exemplares e técnicas passam a definir o trabalho aceitável
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\ntc{Depois:} nova ciência normal. O ciclo recomeça.
+\end{frame}
+
+\begin{frame}{Incomensurabilidade}
+\begin{block}{Tese da incomensurabilidade}
+Paradigmas rivais não podem ser comparados ponto a ponto por critérios neutros.
+\end{block}
+\pause
+\vspace{0.4cm}
+Três dimensões:
+\begin{enumerate}
+  \pause
+  \item \impt{Semântica:} termos centrais mudam de sentido
+  \pause
+  \item \impt{Metodológica:} mudam os critérios do que conta como problema, método, explicação
+  \pause
+  \item \impt{Perceptual:} cientistas ``\emph{veem}'' o mundo de modos diferentes
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Massa newtoniana e massa relativística}
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Newton}
+Massa --- propriedade intrínseca \\
+Conservada \\
+Independe da velocidade
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Einstein}
+``Massa'' varia com velocidade \\
+Massa de repouso é caso particular \\
+$E = mc^2$
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+Newton é \emph{aproximação} de Einstein para baixas velocidades.
+\vspace{0.2cm}
+\pause
+\begin{alertblock}{}
+Mas \impt{os conceitos não se traduzem perfeitamente}.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Atenção: incomensurável $\neq$ incomparável}
+\begin{itemize}
+  \item Cientistas de paradigmas rivais \impt{podem se entender}
+  \pause
+  \item Podem debater
+  \pause
+  \item Mas: não há \impt{linguagem neutra} a partir da qual avaliar os dois com critérios decisivos
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\ntc{Não é caos.} É ausência de algoritmo de decisão.
+\end{frame}
+
+\begin{frame}{Como se escolhe entre paradigmas?}
+A resposta de Kuhn é deliberadamente \impt{não algorítmica}:
+\vspace{0.3cm}
+\pause
+\begin{itemize}
+  \item Não há experimento decisivo
+  \pause
+  \item Não há critério lógico universal
+  \pause
+  \item Valores compartilhados (precisão, simplicidade, fecundidade) \\
+  \ntc{podem ser ponderados de modo diferente}
+  \pause
+  \item Fatores \impt{extracientíficos} entram --- estética, intuição, contexto
+\end{itemize}
+\vspace{0.4cm}
+\pause
+\begin{block}{}
+A escolha tem algo de \impt{conversão} --- mudança de gestalt sobre o domínio inteiro.
+\end{block}
+\end{frame}
+
+\begin{frame}{Por que jovens lideram revoluções}
+\begin{alertblock}{}
+Revoluções são frequentemente lideradas por \impt{cientistas jovens} \\
+ou por estranhos ao campo.
+\end{alertblock}
+\vspace{0.4cm}
+\pause
+\ntc{Razão:} estão menos comprometidos com o paradigma vigente. \\[0.3cm]
+Não internalizaram décadas de exemplares.
+\end{frame}
+
+\begin{frame}{Kuhn é relativista?}
+Lido por muitos como tal. Ele resistiu.
+\vspace{0.3cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Contra o relativismo}
+Há \impt{progresso} dentro da ciência normal \\[0.1cm]
+Valores compartilhados \\[0.1cm]
+Revoluções não são arbitrárias
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{A favor do relativismo}
+Sem critérios neutros decisivos \\[0.1cm]
+Incomensurabilidade \\[0.1cm]
+Fatores comunitários e estéticos
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\ntc{Leitura adequada:} intermediária. Rompe com a imagem da ciência convergindo cumulativamente para a verdade --- mas \emph{não} é relativismo radical.
+\end{frame}
+
+\begin{frame}{O que Kuhn resolve}
+\begin{itemize}
+  \item A \impt{ciência normal} é a atividade científica predominante
+  \pause
+  \item Revoluções são \impt{descontinuidades estruturais}, não acumulação suave
+  \pause
+  \item Reabilita a \impt{história} da ciência como recurso filosófico
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O que Kuhn deixa em aberto}
+\begin{itemize}
+  \item Se paradigmas são incomensuráveis, em que sentido há \impt{progresso}?
+  \pause
+  \vspace{0.2cm}
+  \item Como distinguir escolha racional de mera \impt{conversão} ideológica?
+  \pause
+  \vspace{0.2cm}
+  \item A categoria ``paradigma'' é clara o bastante? \\
+  \ntc{Críticos identificaram mais de 20 sentidos.}
+  \pause
+  \vspace{0.2cm}
+  \item Funciona bem para física madura --- e para ciências sociais? Computação?
+\end{itemize}
+\end{frame}
+
+% =====================================================
+\section{Síntese}
+% =====================================================
+
+\begin{frame}{Lakatos vs.\ Kuhn}
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Lakatos --- Programa}
+Núcleo + cinturão + heurística \\[0.15cm]
+\impt{Lógico-metodológico} \\[0.15cm]
+Critério: progressivo? \\[0.15cm]
+\ntc{Continuidade} entre programas
+\end{block}
+
+\column{0.48\textwidth}
+\begin{block}{Kuhn --- Paradigma}
+Matriz disciplinar + exemplares \\[0.15cm]
+\impt{Histórico-sociológico} \\[0.15cm]
+Critério: resolve quebra-cabeças? \\[0.15cm]
+\ntc{Descontinuidade} revolucionária
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\impt{Diagnóstico comum:} a unidade de análise é a estrutura, não a teoria isolada.
+\end{frame}
+
+\begin{frame}{Tensão central}
+A unidade de análise é a mesma --- a estrutura, não a teoria isolada. \\
+A pergunta filosófica é: \impt{a ciência ainda é racional e objetiva?}
+\vspace{0.1cm}
+\pause
+\begin{columns}[t]
+\column{0.48\textwidth}
+\begin{block}{Lakatos diz: sim}
+A racionalidade está na \impt{história} do programa. \\[0.2cm]
+\ntc{Preserva} a objetividade --- só relocaliza-a no tempo. \\[0.2cm]
+Critério: predições novas corroboradas.
+\end{block}
+
+\column{0.48\textwidth}
+\pause
+\begin{block}{Kuhn diz: depende}
+A escolha entre paradigmas envolve \impt{julgamento comunitário}. \\[0.2cm]
+\ntc{Compromete} a imagem de uma decisão puramente lógica. \\[0.2cm]
+Sem algoritmo de decisão.
+\end{block}
+\end{columns}
+\vspace{0.5cm}
+\pause
+\begin{alertblock}{}
+\centering
+A pergunta de fundo: \impt{a ciência converge à verdade}, ou apenas \impt{resolve mais problemas}?
+\end{alertblock}
+\end{frame}
+\begin{frame}{Lição geral}
+Ambos forçam a filosofia da ciência a ir \impt{além da lógica}.
+\vspace{0.4cm}
+\pause
+Onde o falsificacionismo via \emph{teoria $\times$ experimento}:
+\vspace{0.2cm}
+\begin{itemize}
+  \item Lakatos vê \impt{programas}
+  \item Kuhn vê \impt{paradigmas}
+\end{itemize}
+\pause
+\ntc{Considerar:} história, comunidade, prática, formação. \\[0.3cm]
+A ciência é uma atividade humana --- e qualquer filosofia adequada precisa dar conta disso.
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Referências}
+\begin{thebibliography}{9}
+\bibitem[Chalmers(1993)]{chalmers1993}
+Chalmers, A.\ F. (1993).
+\newblock \emph{O que é ciência afinal?} (2ª ed.).
+\newblock São Paulo: Brasiliense.
+
+\bibitem[Kuhn(1962)]{kuhn1962}
+Kuhn, T.\ S. (1962).
+\newblock \emph{The structure of scientific revolutions}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem[Lakatos(1978)]{lakatos1978}
+Lakatos, I. (1978).
+\newblock \emph{The methodology of scientific research programmes}.
+\newblock Cambridge: Cambridge University Press.
+
+\bibitem[Popper(1972)]{popper1972}
+Popper, K.\ R. (1972).
+\newblock \emph{A lógica da pesquisa científica}.
+\newblock São Paulo: Cultrix.
+\end{thebibliography}
+\end{frame}
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  4 MAY 2026 10:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  4 MAY 2026 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -454,6 +454,7 @@ LaTeX Font Info:    ... okay on input line 37.
 \everyMPtoPDFconversion=\toks39
 )
 Package hyperref Info: Link coloring OFF on input line 37.
+ (./lakatos_kuhn.out) (./lakatos_kuhn.out)
 \@outlinefile=\write3
 \openout3 = `lakatos_kuhn.out'.
 
@@ -487,11 +488,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-
-Package natbib Warning: Citation `chalmers1993' on page 1 undefined on input line 39.
-
-No file lakatos_kuhn.toc.
+) (./lakatos_kuhn.toc)
 \tf@toc=\write4
 \openout4 = `lakatos_kuhn.toc'.
 
@@ -501,20 +498,6 @@ No file lakatos_kuhn.toc.
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/TeoriasComoEstruturas/lakatos_kuhn.tex:93: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \begin
-           {itemize}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-
 [2]
 
 [3]
@@ -523,43 +506,27 @@ or  <return>  to continue without it.
 
 [5]
 
-Package natbib Warning: There were undefined citations.
-
-
-
-[6] (./lakatos_kuhn.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+[6] (./lakatos_kuhn.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
-
-
-Package rerunfilecheck Warning: File `lakatos_kuhn.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `lakatos_kuhn.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A35A7EADF639CA4499988E36EF255AA2;4452.
+Package rerunfilecheck Info: File `lakatos_kuhn.out' has not changed.
+(rerunfilecheck)             Checksum: A35A7EADF639CA4499988E36EF255AA2;4452.
  ) 
 Here is how much of TeX's memory you used:
- 15327 strings out of 473577
- 240133 string characters out of 5732224
- 710195 words of memory out of 5000000
- 37792 multiletter control sequences out of 15000+600000
- 583262 words of font info for 177 fonts, out of 8000000 for 9000
+ 15346 strings out of 473577
+ 240455 string characters out of 5732224
+ 713378 words of memory out of 5000000
+ 37810 multiletter control sequences out of 15000+600000
+ 582329 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,79p,1130b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb>
-Output written on lakatos_kuhn.pdf (6 pages, 284585 bytes).
+ 69i,6n,79p,1130b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb>
+Output written on lakatos_kuhn.pdf (6 pages, 280249 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
  58 named destinations out of 1000 (max. 500000)
- 47105 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 45193 words of extra memory for PDF output out of 51595 (max. 10000000)
 

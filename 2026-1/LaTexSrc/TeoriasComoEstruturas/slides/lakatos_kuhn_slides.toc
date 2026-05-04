@@ -1,0 +1,5 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Recapitulação}{3}{0}{1}
+\beamer@sectionintoc {2}{Programas de pesquisa de Lakatos (Cap.~VII)}{18}{0}{2}
+\beamer@sectionintoc {3}{Paradigmas de Kuhn (Cap.~VIII)}{52}{0}{3}
+\beamer@sectionintoc {4}{Síntese}{118}{0}{4}
