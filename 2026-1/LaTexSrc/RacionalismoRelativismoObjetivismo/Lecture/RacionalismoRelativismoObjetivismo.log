@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  13 MAY 2026 17:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  13 MAY 2026 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/IntroIndutivismo/Lecture/introIndutivistmo.tex
-(c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/IntroIndutivismo/Lecture/introIndutivistmo.tex
+**c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/RacionalismoRelativismoObjetivismo/Lecture/RacionalismoRelativismoObjetivismo.tex
+(c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/RacionalismoRelativismoObjetivismo/Lecture/RacionalismoRelativismoObjetivismo.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
 (c:/texlive/2024/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -406,8 +406,8 @@ Package csquotes Info: Redefining alias 'default' -> 'brazil'.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count321
 \l__pdf_internal_box=\box60
-) (./introIndutivistmo.aux)
-\openout1 = `introIndutivistmo.aux'.
+) (./RacionalismoRelativismoObjetivismo.aux)
+\openout1 = `RacionalismoRelativismoObjetivismo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
@@ -478,9 +478,9 @@ LaTeX Font Info:    ... okay on input line 53.
 \everyMPtoPDFconversion=\toks40
 )
 Package hyperref Info: Link coloring OFF on input line 53.
- (./introIndutivistmo.out) (./introIndutivistmo.out)
+ (./RacionalismoRelativismoObjetivismo.out) (./RacionalismoRelativismoObjetivismo.out)
 \@outlinefile=\write3
-\openout3 = `introIndutivistmo.out'.
+\openout3 = `RacionalismoRelativismoObjetivismo.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 53.
 Package microtype Info: Applying patch `item' on input line 53.
@@ -512,16 +512,20 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (./introIndutivistmo.toc)
+)
+
+Package natbib Warning: Citation `chalmers1993ciencia' on page 1 undefined on input line 59.
+
+(./RacionalismoRelativismoObjetivismo.toc)
 \tf@toc=\write4
-\openout4 = `introIndutivistmo.toc'.
+\openout4 = `RacionalismoRelativismoObjetivismo.toc'.
 
 
 
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 130.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 106.
  (c:/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -530,35 +534,97 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (5.22124pt too wide) in paragraph at lines 138--139
-[]\T1/cmtt/m/n/9 Se a ciência é baseada na experiência, então por que meios é possível extrair das afirmações singulares,
+Overfull \hbox (7.58316pt too wide) in paragraph at lines 106--107
+[]\T1/cmtt/m/n/9 Conclusão: a ciência não pode ser caracterizada como conhecimento provado a partir de fatos. É preciso
+ []
+
+
+Overfull \hbox (9.94508pt too wide) in paragraph at lines 162--163
+[]\T1/cmtt/m/n/9 Estes limites motivam concepções mais estruturadas, em que a unidade de avaliação não é a teoria isolada,
  []
 
 
 
-[2] (./introIndutivistmo.bbl)
+[2]
+Overfull \hbox (21.7547pt too wide) in paragraph at lines 206--207
+[]\T1/cmtt/m/n/9 Um programa degenerativo pode, em princípio, voltar a ser progressivo. Por isso, abandoná-lo é uma decisão
+ []
 
-[3] (./introIndutivistmo.aux)
+
+
+[3]
+Overfull \hbox (21.7547pt too wide) in paragraph at lines 268--269
+[]\T1/cmtt/m/n/9 Lakatos e Kuhn convergem em rejeitar o falsificacionismo ingênuo, mas divergem na ênfase: Lakatos preserva
+ []
+
+
+Overfull \hbox (45.37393pt too wide) in paragraph at lines 268--269
+\T1/cmtt/m/n/9 uma racionalidade metodológica avaliando programas pela sua progressividade; Kuhn enfatiza o papel da comunidade
+ []
+
+
+Overfull \hbox (0.63219pt too wide) in paragraph at lines 274--275
+\T1/cmtt/m/n/9 que permita decidir, racionalmente, entre teorias científicas rivais? \T1/cmr/m/n/9 (-20) As res-pos-tas a essa per-gunta organizam-
+ []
+
+
+
+[4]
+
+[5]
+Overfull \hbox (7.34697pt too wide) in paragraph at lines 400--401
+[]\T1/cmtt/m/n/9 A questão de fundo permanece em aberto: é possível uma teoria da ciência que seja, ao mesmo tempo, fiel
+ []
+
+
+Overfull \hbox (35.92624pt too wide) in paragraph at lines 421--422
+[]\T1/cmtt/m/n/9 Exemplo: a teoria de Maxwell tem como consequência a existência de ondas eletromagnéticas. Essa consequência
+ []
+
+
+Overfull \hbox (26.47855pt too wide) in paragraph at lines 421--422
+\T1/cmtt/m/n/9 estava ``na teoria'' antes que Maxwell --- ou qualquer outra pessoa --- a percebesse. Hertz a descobriu décadas
+ []
+
+
+
+[6]
+Overfull \hbox (21.7547pt too wide) in paragraph at lines 478--479
+[]\T1/cmtt/m/n/9 O objetivismo oferece uma resposta possível à tensão entre racionalismo e relativismo: separar a avaliação
+ []
+
+
+Overfull \hbox (2.85931pt too wide) in paragraph at lines 478--479
+\T1/cmtt/m/n/9 lógica das teorias --- que é objetiva --- da história sociológica de sua aceitação --- que envolve fatores
+ []
+
+No file RacionalismoRelativismoObjetivismo.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+
+
+[7] (./RacionalismoRelativismoObjetivismo.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
-Package rerunfilecheck Info: File `introIndutivistmo.out' has not changed.
-(rerunfilecheck)             Checksum: 623927D95126D3A8BB24362E6FA3908D;995.
+Package rerunfilecheck Info: File `RacionalismoRelativismoObjetivismo.out' has not changed.
+(rerunfilecheck)             Checksum: 96C947D1D1BF5FF19AC8F8D0F91ECFBA;5702.
  ) 
 Here is how much of TeX's memory you used:
- 16630 strings out of 473577
- 259759 string characters out of 5732224
- 909883 words of memory out of 5000000
- 39162 multiletter control sequences out of 15000+600000
- 580766 words of font info for 141 fonts, out of 8000000 for 9000
+ 16719 strings out of 473577
+ 261217 string characters out of 5732224
+ 915934 words of memory out of 5000000
+ 39174 multiletter control sequences out of 15000+600000
+ 583352 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,79p,1138b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on introIndutivistmo.pdf (3 pages, 283098 bytes).
+ 69i,11n,79p,1173b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on RacionalismoRelativismoObjetivismo.pdf (7 pages, 347186 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 47665 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 49897 words of extra memory for PDF output out of 51595 (max. 10000000)
 

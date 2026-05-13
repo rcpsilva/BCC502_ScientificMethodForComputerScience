@@ -1,0 +1,484 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+% ======================
+% Packages
+% ======================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+% ======================
+% Listings setup (Python)
+% ======================
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\lstset{
+    language=Python,
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red!70!black},
+    showstringspaces=false,
+    frame=single,
+    breaklines=true,
+    inputencoding=utf8
+}
+
+% ======================
+% Document
+% ======================
+\begin{document}
+
+\title{Introdução \footnote{Material baseado em \citep{chalmers1993ciencia}}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+% ==============================================================
+\section{Indutivismo}
+
+\subsection{Revisão da posição indutivista}
+
+\begin{itemize}
+    \item \ntc{Tese central}: o conhecimento científico é \emph{conhecimento provado}, derivado dos fatos da experiência por meio de \impt{generalização indutiva}.
+    \item A ciência parte de proposições de observação (afirmações singulares) e ascende a leis e teorias (afirmações universais) pela indução.
+    \item A partir de leis e teorias, previsões e explicações são obtidas por \ntc{dedução}.
+    \item A indução é o que distingue a ciência de meras opiniões: a generalização só é legítima quando há (i) muitas observações, (ii) sob ampla variedade de condições, (iii) sem contraexemplo.
+\end{itemize}
+
+\paragraph{Esquema do método indutivo}
+
+\[
+\underbrace{\text{Fatos adquiridos por observação}}_{\text{afirmações singulares}}
+\;\xrightarrow{\text{indução}}\;
+\underbrace{\text{Leis e teorias}}_{\text{afirmações universais}}
+\;\xrightarrow{\text{dedução}}\;
+\underbrace{\text{Previsões e explicações}}_{\text{afirmações singulares}}
+\]
+
+\subsection{Problemas do indutivismo}
+
+\paragraph{O problema da indução (Hume)}
+\begin{itemize}
+    \item Não há justificação \emph{lógica} para a inferência indutiva: a verdade das premissas não garante a verdade da conclusão.
+    \item Justificar a indução pelo seu sucesso passado é circular --- usa-se indução para justificar a indução.
+    \item Portanto, \impt{leis e teorias científicas não são, em sentido estrito, ``provadas'' pelos fatos}.
+\end{itemize}
+
+\paragraph{O problema da base observacional}
+\begin{itemize}
+    \item \impt{A observação não é neutra}: o que se observa depende do conhecimento prévio, das expectativas e do quadro teórico do observador.
+    \item Dois observadores diante do mesmo objeto não necessariamente registram a mesma proposição de observação.
+    \item Logo, a ideia de uma base de fatos puros, anterior e independente da teoria, é insustentável.
+\end{itemize}
+
+\paragraph{Imprecisão das condições indutivas}
+\begin{itemize}
+    \item Quantas observações são ``muitas''? Quais condições contam como ``variadas''?
+    \item Sem uma teoria que selecione as variáveis relevantes, a exigência de variedade é vazia.
+\end{itemize}
+
+\texttt{Conclusão: a ciência não pode ser caracterizada como conhecimento provado a partir de fatos. É preciso outra concepção de método científico.}
+
+% ==============================================================
+\section{Falsificacionismo}
+% ==============================================================
+
+\subsection{A virada popperiana}
+
+\begin{itemize}
+    \item \ntc{Tese central (Popper)}: o que distingue a ciência não é a possibilidade de \emph{provar} suas teorias, mas a de \impt{refutá-las}.
+    \item A assimetria lógica entre verificação e refutação é a chave: nenhum número finito de observações prova uma afirmação universal, mas \impt{uma única observação contrária basta para refutá-la}.
+    \item \ntc{Critério de demarcação}: uma teoria é científica se, e somente se, for \impt{falsificável} --- isto é, se existirem proposições de observação possíveis que, se verdadeiras, a refutariam.
+\end{itemize}
+
+\paragraph{Forma lógica da falsificação}
+
+\begin{itemize}
+    \item Premissa 1 (teoria): \(\forall x\,(A(x) \rightarrow B(x))\)
+    \item Premissa 2 (observação): \(A(a) \land \lnot B(a)\)
+    \item Conclusão: a teoria é falsa.
+\end{itemize}
+
+Esta inferência é \ntc{dedutivamente válida} (\textit{modus tollens}), ao contrário da inferência indutiva.
+
+\subsection{Graus de falsificabilidade}
+
+\begin{itemize}
+    \item Teorias melhores são as \impt{mais falsificáveis} --- aquelas que proíbem mais.
+    \item Uma teoria é tanto mais informativa quanto mais arriscadas forem suas previsões.
+    \item Exemplo: ``Os planetas se movem em órbitas elípticas em torno do Sol'' é mais falsificável (e mais científica) do que ``Os planetas se movem em curvas fechadas''.
+\end{itemize}
+
+\paragraph{Ciência como conjecturas e refutações}
+
+\begin{itemize}
+    \item As teorias são \impt{conjecturas ousadas}, não generalizações cautelosas.
+    \item A ciência progride por tentativas de refutação: propõe-se uma hipótese, deduzem-se previsões arriscadas, testam-se.
+    \item \ntc{Corroboração} não é prova: uma teoria que resiste a testes severos é apenas \emph{provisoriamente aceita}.
+\end{itemize}
+
+\subsection{Limites do falsificacionismo}
+
+\paragraph{A tese de Duhem--Quine}
+\begin{itemize}
+    \item Teorias não são testadas isoladamente: junto com a hipótese principal estão sempre hipóteses auxiliares, condições iniciais e teorias instrumentais.
+    \item Diante de uma observação contrária, é sempre possível \impt{salvar a teoria revisando uma hipótese auxiliar}.
+    \item Portanto, a falsificação conclusiva é, na prática, impossível.
+\end{itemize}
+
+\paragraph{O problema histórico}
+\begin{itemize}
+    \item Cientistas raramente abandonam uma teoria diante do primeiro contraexemplo.
+    \item Muitas teorias hoje bem-sucedidas (Newton, Bohr) \emph{nasceram refutadas} por evidências disponíveis.
+    \item Um falsificacionismo ingênuo descartaria essas teorias --- e estaria errado em fazê-lo.
+\end{itemize}
+
+\texttt{Estes limites motivam concepções mais estruturadas, em que a unidade de avaliação não é a teoria isolada, mas conjuntos articulados de teorias ao longo do tempo.}
+
+% ==============================================================
+\section{Programas de Pesquisa Científica (Lakatos)}
+% ==============================================================
+
+\subsection{A proposta de Lakatos}
+
+\begin{itemize}
+    \item Lakatos busca preservar o que há de correto no falsificacionismo sem ignorar a história real da ciência.
+    \item \ntc{Tese central}: a unidade de avaliação não é uma teoria isolada, mas um \impt{programa de pesquisa} --- uma sequência historicamente desenvolvida de teorias.
+    \item Um programa não é refutado por uma anomalia: é \emph{abandonado} quando deixa de produzir resultados, em favor de um programa rival mais promissor.
+\end{itemize}
+
+\subsection{Estrutura de um programa de pesquisa}
+
+\paragraph{Núcleo duro (\textit{hard core})}
+\begin{itemize}
+    \item Conjunto de hipóteses fundamentais que definem o programa.
+    \item Tomado por decisão metodológica como \impt{irrefutável}: anomalias nunca são direcionadas ao núcleo.
+    \item Exemplo: as três leis do movimento e a lei da gravitação no programa newtoniano.
+\end{itemize}
+
+\paragraph{Cinturão protetor (\textit{protective belt})}
+\begin{itemize}
+    \item Conjunto de hipóteses auxiliares, condições iniciais e teorias observacionais que cercam o núcleo.
+    \item \impt{Recebe o impacto das refutações}: é onde se fazem ajustes diante das anomalias.
+    \item É modificado, refinado e até substituído ao longo do desenvolvimento do programa.
+\end{itemize}
+
+\paragraph{Heurísticas}
+\begin{itemize}
+    \item \ntc{Heurística negativa}: regra metodológica que proíbe dirigir o \textit{modus tollens} contra o núcleo.
+    \item \ntc{Heurística positiva}: programa de trabalho que orienta como desenvolver e modificar o cinturão protetor --- quais modelos construir, quais aproximações relaxar, em que ordem atacar os problemas.
+\end{itemize}
+
+\subsection{Programas progressivos e degenerativos}
+
+\begin{itemize}
+    \item \impt{Progressivo}: modificações no cinturão protetor são \emph{teoricamente progressivas} (preveem fatos novos) e \emph{empiricamente progressivas} (parte dessas previsões é corroborada).
+    \item \impt{Degenerativo}: modificações são \textit{ad hoc} --- servem apenas para acomodar anomalias já conhecidas, sem prever nada novo.
+    \item A escolha entre programas rivais não se faz por um experimento crucial isolado, mas pela \ntc{avaliação comparativa, ao longo do tempo}, de sua produtividade.
+\end{itemize}
+
+\texttt{Um programa degenerativo pode, em princípio, voltar a ser progressivo. Por isso, abandoná-lo é uma decisão metodológica, não uma refutação lógica.}
+
+% ==============================================================
+\section{Paradigmas de Pesquisa (Kuhn)}
+% ==============================================================
+
+\subsection{A proposta de Kuhn}
+
+\begin{itemize}
+    \item Kuhn parte de uma análise \impt{histórica e sociológica} da prática científica, não de uma reconstrução lógica.
+    \item \ntc{Tese central}: a ciência madura é organizada em torno de \impt{paradigmas} --- realizações científicas universalmente reconhecidas que, por algum tempo, fornecem problemas e soluções modelares para uma comunidade.
+    \item O desenvolvimento científico não é cumulativo: alterna períodos de estabilidade com rupturas profundas.
+\end{itemize}
+
+\subsection{O ciclo kuhniano}
+
+\paragraph{Pré-ciência}
+\begin{itemize}
+    \item Atividade desorganizada, com escolas rivais e desacordo sobre fundamentos.
+    \item Não há ainda um paradigma compartilhado.
+\end{itemize}
+
+\paragraph{Ciência normal}
+\begin{itemize}
+    \item Pesquisa firmemente baseada num paradigma aceito pela comunidade.
+    \item Consiste em \impt{resolução de quebra-cabeças} (\textit{puzzle-solving}): aplicar e articular o paradigma, não testá-lo.
+    \item Anomalias não são vistas como refutações, mas como problemas a serem resolvidos dentro do paradigma.
+\end{itemize}
+
+\paragraph{Crise}
+\begin{itemize}
+    \item Acúmulo de anomalias persistentes e resistentes a soluções dentro do paradigma.
+    \item Confiança da comunidade enfraquece; tentativas \textit{ad hoc} se multiplicam; surgem candidatos a paradigma alternativo.
+\end{itemize}
+
+\paragraph{Revolução científica}
+\begin{itemize}
+    \item Substituição do paradigma antigo por um novo.
+    \item Não é uma escolha puramente lógica: envolve fatores estéticos, pragmáticos, sociológicos e geracionais.
+\end{itemize}
+
+\paragraph{Nova ciência normal} 
+
+Reinicia-se o ciclo sob o novo paradigma.
+
+\subsection{O conceito de paradigma}
+
+\begin{itemize}
+    \item Um paradigma é mais do que uma teoria: inclui leis, princípios, técnicas experimentais, padrões de aplicação, valores epistêmicos e exemplares (problemas-modelo).
+    \item Define, para a comunidade, \impt{o que conta como problema legítimo, método aceitável e solução adequada}.
+    \item Funciona simultaneamente como \ntc{matriz disciplinar} (compromissos compartilhados) e \ntc{exemplar} (soluções concretas que servem de modelo).
+\end{itemize}
+
+\subsection{Incomensurabilidade}
+
+\begin{itemize}
+    \item \impt{Tese da incomensurabilidade}: paradigmas rivais não compartilham inteiramente vocabulário, problemas ou critérios de avaliação.
+    \item Não há uma linguagem observacional neutra que permita compará-los ponto a ponto.
+    \item Adotar um novo paradigma se assemelha mais a uma \ntc{conversão} do que a uma decisão por evidência decisiva.
+    \item Isto não implica irracionalismo: a comunidade científica decide com base em critérios partilhados (precisão, alcance, simplicidade, fecundidade), mas estes critérios não determinam univocamente a escolha.
+\end{itemize}
+
+\texttt{Lakatos e Kuhn convergem em rejeitar o falsificacionismo ingênuo, mas divergem na ênfase: Lakatos preserva uma racionalidade metodológica avaliando programas pela sua progressividade; Kuhn enfatiza o papel da comunidade e dos fatores extra-lógicos nas mudanças de paradigma.}
+
+% ==============================================================
+\section{Racionalismo e Relativismo}
+% ==============================================================
+
+A discussão sobre Lakatos e Kuhn nos leva a uma questão mais profunda: \texttt{existe um critério universal e atemporal que permita decidir, racionalmente, entre teorias científicas rivais?} As respostas a essa pergunta organizam-se em dois polos --- o racionalismo e o relativismo.
+
+\subsection{Racionalismo}
+
+\begin{itemize}
+    \item \ntc{Tese central}: existe um \impt{critério universal, atemporal e impessoal} que permite avaliar os méritos relativos de teorias rivais.
+    \item Esse critério é \emph{independente do contexto} --- não depende da época, da cultura, dos interesses ou dos valores da comunidade que avalia.
+    \item Filósofos e cientistas, enquanto racionais, devem aceitar ou rejeitar teorias conforme esse critério se aplica.
+\end{itemize}
+
+\paragraph{Implicações do racionalismo}
+\begin{itemize}
+    \item \impt{Demarcação clara}: o critério separa o que é ciência do que não é.
+    \item \impt{Progresso objetivo}: faz sentido dizer que a ciência avança em direção à verdade (ou a teorias melhores) num sentido absoluto.
+    \item As decisões científicas, quando bem feitas, não dependem de fatores sociológicos, psicológicos ou históricos.
+\end{itemize}
+
+\paragraph{Exemplos de critérios racionalistas}
+\begin{itemize}
+    \item \ntc{Indutivismo}: aceite teorias que tenham sido suficientemente confirmadas pela indução a partir dos fatos.
+    \item \ntc{Falsificacionismo (Popper)}: aceite (provisoriamente) teorias que sejam altamente falsificáveis e que tenham resistido a tentativas severas de refutação.
+\end{itemize}
+
+\subsection{Relativismo}
+
+\begin{itemize}
+    \item \ntc{Tese central}: \impt{não existe um critério universal e atemporal} para avaliar teorias. O que conta como conhecimento, método válido e boa teoria \emph{depende} do indivíduo ou da comunidade que avalia.
+    \item Padrões de avaliação são \emph{internos} a uma cultura, época, paradigma ou tradição --- e variam com eles.
+    \item Não há um ponto de vista privilegiado, fora de toda tradição, a partir do qual julgar as tradições.
+\end{itemize}
+
+\paragraph{Implicações do relativismo}
+\begin{itemize}
+    \item \impt{Não há demarcação absoluta} entre ciência e não-ciência; a distinção é convencional e historicamente situada.
+    \item Falar em ``progresso'' só faz sentido \emph{dentro} de uma tradição --- não há progresso absoluto rumo à verdade.
+    \item Mudanças teóricas profundas envolvem necessariamente fatores que vão além da lógica e da evidência: valores comunitários, formação, persuasão, contexto histórico.
+\end{itemize}
+
+\paragraph{Uma distinção importante}
+
+Relativismo não equivale a dizer que ``vale tudo''. Dentro de uma tradição, há critérios rigorosos, debate racional e decisões fundamentadas. O que o relativista nega é que esses critérios sejam \impt{universais} --- isto é, que valham igualmente para toda comunidade, em toda época.
+
+\subsection{Resumo do contraste}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} l X X @{}}
+\toprule
+ & \textbf{Racionalismo} & \textbf{Relativismo} \\
+\midrule
+Critério de avaliação & Universal, atemporal, impessoal & Interno a uma comunidade ou tradição \\
+Demarcação ciência/não-ciência & Possível e bem definida & Convencional, dependente do contexto \\
+Progresso científico & Objetivo, rumo à verdade & Definido apenas dentro de uma tradição \\
+Mudança teórica & Decidida por lógica e evidência & Envolve também fatores sociológicos e históricos \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\texttt{Onde se situam Lakatos e Kuhn nesse espectro?}
+
+% ==============================================================
+\section{Lakatos e Kuhn diante do Racionalismo e do Relativismo}
+% ==============================================================
+
+\subsection{Lakatos: um racionalismo sofisticado}
+
+\begin{itemize}
+    \item Lakatos é \impt{explicitamente racionalista}: sua metodologia dos programas de pesquisa pretende oferecer um critério universal para avaliar a ciência.
+    \item Esse critério, no entanto, \ntc{não se aplica a teorias isoladas}, mas a programas de pesquisa avaliados ao longo do tempo.
+    \item O critério é a distinção entre programas \impt{progressivos} e \impt{degenerativos}: programas que preveem fatos novos e os corroboram são racionalmente preferíveis àqueles que apenas absorvem anomalias \textit{ad hoc}.
+\end{itemize}
+
+\paragraph{Por que é racionalismo}
+\begin{itemize}
+    \item O critério (progressivo vs.\ degenerativo) é proposto como \emph{universal}: aplica-se em qualquer época, qualquer área, qualquer comunidade.
+    \item A escolha entre programas rivais é, em princípio, uma decisão \emph{racional}, fundamentada na produtividade comparada.
+    \item Fatores sociológicos podem explicar por que de fato cientistas se comportam de certa maneira, mas não justificam \emph{racionalmente} essa escolha.
+\end{itemize}
+
+\paragraph{Por que é \emph{sofisticado}}
+\begin{itemize}
+    \item Diferentemente do falsificacionismo ingênuo, Lakatos reconhece que (i) teorias nascem cercadas de anomalias, (ii) a falsificação conclusiva é impossível, (iii) a avaliação requer tempo e perspectiva histórica.
+    \item Ele admite uma \ntc{tolerância racional} ao erro: um programa pode ser legitimamente mantido mesmo com anomalias, desde que continue a produzir previsões bem-sucedidas.
+\end{itemize}
+
+\subsection{Kuhn: leituras racionalistas e leituras relativistas}
+
+A posição de Kuhn é mais ambígua e foi objeto de longa controvérsia. Há elementos de sua obra que puxam para o relativismo e outros que recuam dele.
+
+\paragraph{Elementos relativistas em Kuhn}
+\begin{itemize}
+    \item A \impt{tese da incomensurabilidade}: paradigmas rivais não compartilham inteiramente vocabulário, problemas ou critérios. Logo, não há um ponto de vista neutro a partir do qual compará-los.
+    \item Adotar um novo paradigma se assemelha a uma \ntc{conversão}: envolve fatores estéticos, geracionais e sociológicos, não apenas evidência.
+    \item O que conta como problema legítimo, método aceitável e boa solução é definido \emph{internamente} pelo paradigma. Não há um critério externo de cientificidade.
+    \item Não faz sentido falar em ``aproximação da verdade'' ao longo do desenvolvimento histórico da ciência.
+\end{itemize}
+
+\paragraph{Elementos racionalistas em Kuhn}
+\begin{itemize}
+    \item Kuhn insiste que a escolha entre paradigmas \emph{não é arbitrária}.
+    \item Há \impt{valores epistêmicos compartilhados} pela comunidade científica: precisão, alcance, simplicidade, consistência, fecundidade.
+    \item Esses valores não determinam univocamente a escolha (cientistas razoáveis podem, com base neles, preferir paradigmas diferentes), mas a restringem.
+    \item Kuhn rejeitou expressamente o rótulo de relativista em escritos posteriores e procurou esclarecer que a incomensurabilidade é \emph{local} e \emph{linguística}, não uma incomunicabilidade total.
+\end{itemize}
+
+\paragraph{A controvérsia}
+\begin{itemize}
+    \item Críticos (notadamente o próprio Lakatos) leram Kuhn como reduzindo a mudança científica a \emph{psicologia das multidões} --- um relativismo disfarçado.
+    \item Defensores leem Kuhn como descrevendo a racionalidade científica \emph{realmente praticada}, que é mais rica e situada do que a racionalidade abstrata dos filósofos.
+\end{itemize}
+
+\subsection{Resumo do contraste}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} l X X @{}}
+\toprule
+ & \textbf{Lakatos} & \textbf{Kuhn} \\
+\midrule
+Posição declarada & Racionalismo (sofisticado) & Rejeita o rótulo, mas leitura ambígua \\
+Unidade de avaliação & Programa de pesquisa & Paradigma / comunidade científica \\
+Critério de avaliação & Progressivo vs.\ degenerativo (universal) & Valores epistêmicos compartilhados (locais) \\
+Fatores extra-lógicos & Explicam, mas não justificam & Constitutivos da prática científica \\
+Progresso & Objetivo: programas progressivos avançam & Há progresso \emph{a partir} de onde se está, não \emph{em direção a} uma verdade \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\texttt{A questão de fundo permanece em aberto: é possível uma teoria da ciência que seja, ao mesmo tempo, fiel à história real da prática científica e capaz de justificar racionalmente as escolhas teóricas?}
+
+% ==============================================================
+\section{Objetivismo (O que é uma teoria?)} 
+% ==============================================================
+
+\subsection{Posição central}
+
+\begin{itemize}
+    \item \ntc{Tese central}: o conhecimento científico tem propriedades que \impt{não dependem das crenças, intenções ou estados mentais dos indivíduos} que o produzem ou utilizam.
+    \item Uma vez formulado, o conhecimento ``ganha vida própria'': pode ter consequências, implicações e propriedades que ninguém ainda percebeu.
+    \item O foco filosófico recai sobre o conhecimento como \emph{produto} --- proposições, teorias, problemas, métodos --- e não sobre os \emph{processos mentais} que levaram a ele.
+\end{itemize}
+
+\paragraph{Contraste fundamental}
+
+\begin{itemize}
+    \item \ntc{Individualismo (ou subjetivismo)}: o conhecimento é antes de tudo um \impt{estado mental} de indivíduos. Falar em conhecimento científico é falar no que cientistas \emph{acreditam}, \emph{percebem} ou \emph{entendem}.
+    \item \ntc{Objetivismo}: o conhecimento é uma \impt{estrutura}, com propriedades próprias, situada fora das mentes individuais. Cientistas trabalham \emph{sobre} essa estrutura, mas ela não se reduz a eles.
+\end{itemize}
+
+\texttt{Exemplo: a teoria de Maxwell tem como consequência a existência de ondas eletromagnéticas. Essa consequência estava ``na teoria'' antes que Maxwell --- ou qualquer outra pessoa --- a percebesse. Hertz a descobriu décadas depois.}
+
+\subsection{Argumentos a favor do objetivismo}
+
+\paragraph{Consequências não percebidas}
+\begin{itemize}
+    \item Teorias têm implicações lógicas que excedem em muito o que seus autores tinham em mente.
+    \item Essas implicações \impt{existem na estrutura da teoria}, à espera de serem extraídas.
+    \item Se o conhecimento fosse apenas estado mental, falar de ``consequências ainda não percebidas'' seria contraditório.
+\end{itemize}
+
+\paragraph{Conhecimento como bem público}
+\begin{itemize}
+    \item Teorias podem ser registradas em livros, criticadas, testadas, refinadas e ensinadas \emph{independentemente} do estado psicológico de quem as formulou.
+    \item Uma teoria continua existindo, com suas propriedades, mesmo após a morte de seu autor.
+    \item A ciência é, nesse sentido, uma \impt{atividade pública} cujos resultados transcendem indivíduos.
+\end{itemize}
+
+\paragraph{Problemas situados em teorias, não em mentes}
+\begin{itemize}
+    \item Quando uma teoria é proposta, certos \ntc{problemas surgem objetivamente} dela --- tensões internas, anomalias, lacunas --- sem que ninguém precise tê-los notado.
+    \item Esses problemas são propriedades da estrutura da teoria, não invenções psicológicas.
+    \item A pesquisa científica é, em larga medida, o trabalho de localizar e atacar esses problemas.
+\end{itemize}
+
+\subsection{Implicações para a filosofia da ciência}
+
+\paragraph{O foco da análise muda}
+\begin{itemize}
+    \item Para o individualista, perguntas centrais são: \emph{em que o cientista acreditava?}, \emph{como ele chegou a essa ideia?}, \emph{que processo psicológico produziu a descoberta?}
+    \item Para o objetivista, as perguntas centrais são: \emph{quais são as propriedades lógicas e estruturais da teoria?}, \emph{que problemas ela enfrenta?}, \emph{que consequências ela tem?}, \emph{como se compara a teorias rivais?}
+    \item \impt{A psicologia da descoberta é separada da avaliação lógica do produto.}
+\end{itemize}
+
+\paragraph{Relação com as outras concepções estudadas}
+\begin{itemize}
+    \item \ntc{Falsificacionismo de Popper}: fortemente objetivista. As teorias são avaliadas por sua estrutura lógica (grau de falsificabilidade, conteúdo empírico), não pela confiança subjetiva de quem as defende.
+    \item \ntc{Programas de pesquisa de Lakatos}: também objetivista. Um programa é progressivo ou degenerativo por propriedades \emph{suas} --- da sequência de teorias e suas previsões ---, não pelo entusiasmo da comunidade que o adota.
+    \item \ntc{Paradigmas de Kuhn}: aqui surge uma tensão. Como o paradigma envolve crenças compartilhadas, formação, valores da comunidade, a posição de Kuhn é frequentemente lida como menos objetivista. A escolha entre paradigmas envolve elementos que parecem inseparáveis dos estados mentais da comunidade científica.
+\end{itemize}
+
+\subsection{Objeções ao objetivismo}
+
+\paragraph{Conhecimento sem sujeitos?}
+\begin{itemize}
+    \item Críticos argumentam que faz pouco sentido falar em conhecimento sem alguém que \emph{conheça}.
+    \item Teorias só se realizam como conhecimento quando alguém as compreende, aplica, contesta.
+    \item Resposta objetivista: o conhecimento \emph{em potência} existe na estrutura, ainda que precise de mentes para ser ativado --- assim como uma partitura é música em potência mesmo quando ninguém a executa.
+\end{itemize}
+
+\paragraph{A história sugere o oposto}
+\begin{itemize}
+    \item Pesquisas em história e sociologia da ciência mostram que decisões científicas \emph{de fato} envolvem fortes componentes psicológicos, institucionais e sociais.
+    \item Um objetivismo radical correria o risco de descrever uma ciência idealizada, distante da praticada.
+    \item Resposta objetivista: descrever como cientistas \emph{de fato} agem (descritivo) é diferente de avaliar a \emph{qualidade epistêmica} do que produzem (normativo). O objetivismo é uma tese sobre o segundo, não sobre o primeiro.
+\end{itemize}
+
+\texttt{O objetivismo oferece uma resposta possível à tensão entre racionalismo e relativismo: separar a avaliação lógica das teorias --- que é objetiva --- da história sociológica de sua aceitação --- que envolve fatores contingentes. Saber se essa separação é sustentável é uma questão filosófica em aberto.}
+
+\bibliographystyle{apalike}   
+\bibliography{references}
+
+\end{document}
+
