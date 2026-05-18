@@ -1,0 +1,817 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Colors
+\definecolor{mblack}{RGB}{20, 20, 20}
+\definecolor{mprimary}{RGB}{26, 83, 93}     % azul escuro
+\definecolor{maccent}{RGB}{255,107,107}    % laranja
+\definecolor{mwhite}{RGB}{255, 255, 255}
+
+% Theme
+\usetheme{default}
+\usecolortheme{default}
+\setbeamercolor{normal text}{fg=mblack, bg=white}
+\setbeamercolor{frametitle}{fg=white, bg=mprimary}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mprimary}
+\setbeamercolor{enumerate item}{fg=maccent}
+\setbeamercolor{enumerate subitem}{fg=mprimary}
+\setbeamercolor{block title}{fg=white, bg=mprimary}
+\setbeamercolor{block body}{fg=mblack, bg=mprimary!8}
+\setbeamercolor{block title alerted}{fg=white, bg=maccent}
+\setbeamercolor{block body alerted}{fg=mblack, bg=maccent!8}
+\setbeamercolor{alerted text}{fg=maccent}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+\setbeamerfont{title}{series=\bfseries, size=\LARGE}
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Footer
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.7\paperwidth, ht=2.25ex, dp=1ex, leftskip=0.3cm]{normal text}%
+      \tiny\color{mblack!50} BCC502 -- Metodologia Cient\'ifica para Ci\^encia da Computa\c c\~ao
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.3\paperwidth, ht=2.25ex, dp=1ex, rightskip=0.3cm, right]{normal text}%
+      \tiny\color{mblack!50}\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+
+% Frametitle with accent rule
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0.2cm, leftskip=0.5cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+  \end{beamercolorbox}%
+  \vspace{-0.1cm}%
+  \textcolor{maccent}{\rule{\paperwidth}{2pt}}%
+}
+
+% Title page: three-band layout
+\setbeamercolor{titlebar top}{bg=mwhite}
+\setbeamercolor{titlebar main}{bg=mprimary}
+\setbeamercolor{titlebar bottom}{bg=maccent}
+
+\setbeamertemplate{title page}{%
+  \vspace{0pt}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=0.55cm, dp=0pt]{titlebar top}\end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=3.8cm, dp=0pt, center]{titlebar main}%
+    \vspace{0.6cm}
+    {\usebeamerfont{title}\color{white}\inserttitle\par}%
+    \vspace{0.35cm}{\color{white}\small\insertauthor\par}%
+    \vspace{0.15cm}{\color{white}\footnotesize\insertdate\par}%
+    \vspace{0.25cm}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=1.3cm, dp=0pt]{titlebar bottom}\end{beamercolorbox}%
+}
+
+\setlength{\itemsep}{4pt}
+
+% Highlight commands
+\newcommand{\impt}[1]{\textcolor{maccent}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{mprimary}{#1}}
+
+\title{Filosofia da Ci\^encia}
+\author{Racionalismo x Relativismo | Objetivismo x Invidualismo \\
+BCC502 -- Metodologia Cient\'ifica para Ci\^encia da Computa\c c\~ao\footnote{Baseado em \citep{chalmers1993ciencia}}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[plain]\titlepage\end{frame}
+
+\begin{frame}{Sum\'ario}\tableofcontents\end{frame}
+
+% ==============================================================
+\section{Indutivismo}
+% ==============================================================
+
+\begin{frame}{Indutivismo: tese central}
+\begin{block}{}
+Conhecimento cient\'ifico \'e \impt{conhecimento provado}, derivado dos fatos da experi\^encia por \impt{generaliza\c c\~ao indutiva}.
+\end{block}
+\vspace{0.2cm}
+\begin{itemize}
+    \item A ci\^encia parte de \ntc{proposi\c c\~oes de observa\c c\~ao} (afirma\c c\~oes singulares).
+    \item Ascende a \ntc{leis e teorias} (afirma\c c\~oes universais) pela indu\c c\~ao.
+    \item De leis e teorias, previs\~oes e explica\c c\~oes seguem por \ntc{dedu\c c\~ao}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O esquema do m\'etodo indutivo}
+\begin{center}
+\vspace{0.3cm}
+\begin{tikzpicture}[node distance=1.6cm, every node/.style={align=center, font=\small}]
+    \node[draw, rounded corners, fill=mprimary!10, minimum width=3.2cm, minimum height=1.2cm] (obs) {Fatos\\(afirma\c c\~oes singulares)};
+    \node[draw, rounded corners, fill=maccent!15, minimum width=3.2cm, minimum height=1.2cm, right=2cm of obs] (teor) {Leis e teorias\\(afirma\c c\~oes universais)};
+    \node[draw, rounded corners, fill=mprimary!10, minimum width=3.2cm, minimum height=1.2cm, right=2cm of teor] (prev) {Previs\~oes\\e explica\c c\~oes};
+    \draw[->, thick, maccent] (obs) -- node[above]{\footnotesize\textbf{indu\c c\~ao}} (teor);
+    \draw[->, thick, mprimary] (teor) -- node[above]{\footnotesize\textbf{dedu\c c\~ao}} (prev);
+\end{tikzpicture}
+\end{center}
+\vspace{0.3cm}
+\impt{No indutivismo}: leis e teorias s\~ao obtidas por indu\c c\~ao a partir de fatos; previs\~oes e explica\c c\~oes s\~ao obtidas por dedu\c c\~ao a partir delas.
+\end{frame}
+
+\begin{frame}{O princ\'ipio indutivista}
+\begin{alertblock}{Condi\c c\~oes para indu\c c\~ao leg\'itima}
+\begin{enumerate}
+    \item O n\'umero de observa\c c\~oes deve ser grande.
+    \item As observa\c c\~oes devem ser feitas sob ampla \impt{variedade de condi\c c\~oes}.
+    \item Nenhuma observa\c c\~ao deve conflitar com a afirma\c c\~ao universal derivada.
+\end{enumerate}
+\end{alertblock}
+\vspace{0.3cm}
+\begin{block}{Princ\'ipio}
+Se um grande n\'umero de $A$s foi observado sob ampla variedade de condi\c c\~oes, e se todos os $A$s observados possu\'iam, sem exce\c c\~ao, a propriedade $B$, ent\~ao \impt{todos os $A$s t\^em a propriedade $B$}.
+\end{block}
+\end{frame}
+
+\begin{frame}{Problemas do indutivismo}
+\begin{itemize}
+    \item \impt{Problema da indu\c c\~ao (Hume)}: a verdade das premissas \emph{n\~ao garante} a verdade da conclus\~ao.
+    \begin{itemize}
+        \item Justificar a indu\c c\~ao por seu sucesso passado \'e \ntc{circular}.
+    \end{itemize}
+    \item \impt{A observa\c c\~ao n\~ao \'e neutra}: depende do conhecimento pr\'evio e do quadro te\'orico.
+    \begin{itemize}
+        \item Dois observadores podem registrar proposi\c c\~oes diferentes do mesmo objeto.
+    \end{itemize}
+    \item \impt{Imprecis\~ao das condi\c c\~oes}: quantas observa\c c\~oes s\~ao ``muitas''? Quais condi\c c\~oes contam como ``variadas''?
+\end{itemize}
+\vspace{0.3cm}
+\begin{block}{Conclus\~ao}
+A ci\^encia n\~ao pode ser caracterizada como \emph{conhecimento provado a partir de fatos}.
+\end{block}
+\end{frame}
+
+% ==============================================================
+\section{Falsificacionismo}
+% ==============================================================
+
+\begin{frame}{Falsificacionismo: a virada popperiana}
+\begin{block}{Tese central (Popper)}
+O que distingue a ci\^encia n\~ao \'e a possibilidade de \emph{provar} teorias, mas a de \impt{refut\'a-las}.
+\end{block}
+\vspace{0.2cm}
+\begin{itemize}
+    \item \ntc{Assimetria l\'ogica}: nenhum n\'umero finito de observa\c c\~oes prova uma afirma\c c\~ao universal, mas \impt{uma \'unica observa\c c\~ao contr\'aria basta para refut\'a-la}.
+    \item \ntc{Crit\'erio de demarca\c c\~ao}: uma teoria \'e cient\'ifica se, e somente se, for \impt{falsific\'avel}.
+    \item Existem proposi\c c\~oes de observa\c c\~ao poss\'iveis que, se verdadeiras, refutariam a teoria.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Forma l\'ogica da falsifica\c c\~ao}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{block}{Premissas}
+\begin{itemize}
+    \item[(1)] Teoria: $\forall x\,(A(x) \rightarrow B(x))$
+    \item[(2)] Observa\c c\~ao: $A(a) \land \lnot B(a)$
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Conclus\~ao}
+A teoria \'e falsa.
+\end{alertblock}
+\end{column}
+\end{columns}
+\vspace{0.4cm}
+\begin{center}
+A infer\^encia \'e \impt{dedutivamente v\'alida} (\textit{modus tollens}).
+\vspace{0.2cm}
+
+Diferente da indu\c c\~ao, n\~ao h\'a salto l\'ogico injustificado.
+\end{center}
+\end{frame}
+
+\begin{frame}{Graus de falsificabilidade}
+\begin{itemize}
+    \item Teorias melhores s\~ao as \impt{mais falsific\'aveis} --- as que pro\'ibem mais.
+    \item Uma teoria \'e tanto mais informativa quanto mais \ntc{arriscadas} forem suas previs\~oes.
+\end{itemize}
+\vspace{0.3cm}
+\begin{block}{Exemplo}
+``Os planetas se movem em \impt{\'orbitas el\'ipticas} em torno do Sol''
+
+\hspace{1cm}\'e mais falsific\'avel (e mais cient\'ifica) do que
+
+``Os planetas se movem em curvas fechadas''.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item \ntc{Ci\^encia como conjecturas e refuta\c c\~oes}: teorias s\~ao conjecturas ousadas, n\~ao generaliza\c c\~oes cautelosas.
+    \item \ntc{Corrobora\c c\~ao} n\~ao \'e prova: uma teoria que resiste a testes severos \'e apenas \emph{provisoriamente aceita}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Limites do falsificacionismo}
+\begin{block}{Tese de Duhem--Quine}
+Teorias n\~ao s\~ao testadas isoladamente. Diante de uma observa\c c\~ao contr\'aria, \'e sempre poss\'ivel \impt{salvar a teoria revisando uma hip\'otese auxiliar}.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Portanto, a falsifica\c c\~ao conclusiva \'e, na pr\'atica, \impt{imposs\'ivel}.
+    \item \ntc{Problema hist\'orico}: cientistas raramente abandonam teorias diante do primeiro contraexemplo.
+    \item Muitas teorias bem-sucedidas (Newton, Bohr) \emph{nasceram refutadas} por evid\^encias dispon\'iveis.
+    \item Um falsificacionismo ingenuo as descartaria --- e estaria errado.
+\end{itemize}
+\end{frame}
+
+% ==============================================================
+\section{Programas de Pesquisa (Lakatos)}
+% ==============================================================
+
+\begin{frame}{Lakatos: programas de pesquisa}
+\begin{block}{Tese central}
+A unidade de avalia\c c\~ao n\~ao \'e a teoria isolada, mas um \impt{programa de pesquisa} --- uma sequ\^encia hist\'orica de teorias.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Um programa n\~ao \'e refutado por uma anomalia.
+    \item \'E \emph{abandonado} quando deixa de produzir resultados, em favor de um programa rival mais promissor.
+    \item Preserva o que h\'a de correto no falsificacionismo, sem ignorar a \ntc{hist\'oria real} da ci\^encia.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Estrutura de um programa de pesquisa}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{block}{N\'ucleo duro}
+Hip\'oteses fundamentais. Por decis\~ao metodol\'ogica, tratadas como \impt{irrefut\'aveis}.
+\vspace{0.1cm}
+
+\textit{Ex.: leis de Newton + gravita\c c\~ao}.
+\end{block}
+\vspace{0.2cm}
+\begin{block}{Cintur\~ao protetor}
+Hip\'oteses auxiliares e condi\c c\~oes iniciais. \impt{Recebe o impacto das refuta\c c\~oes}: \'e onde se fazem os ajustes.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Heur\'istica negativa}
+Pro\'ibe dirigir o \textit{modus tollens} contra o n\'ucleo.
+\end{alertblock}
+\vspace{0.2cm}
+\begin{alertblock}{Heur\'istica positiva}
+Programa de trabalho: que modelos construir, quais aproxima\c c\~oes relaxar, em que ordem.
+\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Programas progressivos e degenerativos}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{block}{Progressivo}
+Modifica\c c\~oes no cintur\~ao protetor s\~ao:
+\begin{itemize}
+    \item \impt{teoricamente progressivas} --- preveem fatos novos;
+    \item \impt{empiricamente progressivas} --- parte dessas previs\~oes \'e corroborada.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Degenerativo}
+Modifica\c c\~oes s\~ao \impt{\textit{ad hoc}}: apenas acomodam anomalias j\'a conhecidas, sem prever nada novo.
+\end{alertblock}
+\end{column}
+\end{columns}
+\vspace{0.4cm}
+\begin{itemize}
+    \item Escolha entre programas n\~ao se faz por um experimento crucial isolado.
+    \item Faz-se pela \ntc{avalia\c c\~ao comparativa, ao longo do tempo}, de sua produtividade.
+    \item Um programa degenerativo pode, em princ\'ipio, voltar a ser progressivo --- abandon\'a-lo \'e decis\~ao metodol\'ogica, n\~ao refuta\c c\~ao l\'ogica.
+\end{itemize}
+\end{frame}
+
+% ==============================================================
+\section{Paradigmas (Kuhn)}
+% ==============================================================
+
+\begin{frame}{Kuhn: paradigmas de pesquisa}
+\begin{block}{Tese central}
+A ci\^encia madura organiza-se em torno de \impt{paradigmas} --- realiza\c c\~oes cient\'ificas universalmente reconhecidas que, por algum tempo, fornecem \impt{problemas e solu\c c\~oes modelares} para uma comunidade.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item An\'alise \impt{hist\'orica e sociol\'ogica}, n\~ao reconstru\c c\~ao l\'ogica.
+    \item O desenvolvimento cient\'ifico \emph{n\~ao} \'e cumulativo.
+    \item Alterna \ntc{per\'iodos de estabilidade} com \ntc{rupturas profundas}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O ciclo kuhniano}
+\begin{center}
+\begin{tikzpicture}[node distance=0.4cm, every node/.style={align=center, font=\footnotesize}]
+    \node[draw, rounded corners, fill=mprimary!10, minimum width=2.2cm, minimum height=0.9cm] (pre) {Pr\'e-ci\^encia};
+    \node[draw, rounded corners, fill=mprimary!20, minimum width=2.2cm, minimum height=0.9cm, right=0.5cm of pre] (norm) {Ci\^encia\\normal};
+    \node[draw, rounded corners, fill=maccent!20, minimum width=2.2cm, minimum height=0.9cm, right=0.5cm of norm] (cris) {Crise};
+    \node[draw, rounded corners, fill=maccent!30, minimum width=2.2cm, minimum height=0.9cm, right=0.5cm of cris] (rev) {Revolu\c c\~ao};
+    \node[draw, rounded corners, fill=mprimary!20, minimum width=2.2cm, minimum height=0.9cm, right=0.5cm of rev] (nova) {Nova ci\^encia\\normal};
+    \draw[->, thick, mprimary] (pre) -- (norm);
+    \draw[->, thick, mprimary] (norm) -- (cris);
+    \draw[->, thick, maccent] (cris) -- (rev);
+    \draw[->, thick, maccent] (rev) -- (nova);
+    \draw[->, thick, dashed, mprimary] (nova.south) .. controls +(0, -0.8) and +(0, -0.8) .. (cris.south);
+\end{tikzpicture}
+\end{center}
+\vspace{0.2cm}
+\begin{itemize}
+    \item \ntc{Ci\^encia normal}: resolu\c c\~ao de \impt{quebra-cabe\c cas} dentro do paradigma.
+    \item \ntc{Crise}: ac\'umulo de anomalias persistentes; multiplicam-se tentativas \emph{ad hoc}.
+    \item \ntc{Revolu\c c\~ao}: substitui\c c\~ao do paradigma --- envolve fatores est\'eticos, geracionais, sociol\'ogicos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O conceito de paradigma}
+\begin{block}{Mais do que uma teoria}
+Um paradigma inclui leis, princ\'ipios, t\'ecnicas experimentais, padr\~oes de aplica\c c\~ao, \impt{valores epist\^emicos} e exemplares (problemas-modelo).
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Define, para a comunidade, \impt{o que conta como problema leg\'itimo}, m\'etodo aceit\'avel e solu\c c\~ao adequada.
+    \item Funciona simultaneamente como:
+    \begin{itemize}
+        \item \ntc{matriz disciplinar} --- compromissos compartilhados;
+        \item \ntc{exemplar} --- solu\c c\~oes concretas que servem de modelo.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Incomensurabilidade}
+\begin{alertblock}{Tese da incomensurabilidade}
+Paradigmas rivais \impt{n\~ao compartilham inteiramente} vocabul\'ario, problemas ou crit\'erios de avalia\c c\~ao.
+\end{alertblock}
+\vspace{0.3cm}
+\begin{itemize}
+    \item N\~ao h\'a uma linguagem observacional neutra para compar\'a-los ponto a ponto.
+    \item Adotar um novo paradigma assemelha-se a uma \impt{convers\~ao}.
+    \item N\~ao implica irracionalismo: a comunidade decide com base em valores partilhados (\ntc{precis\~ao, alc\^ance, simplicidade, fecundidade, consist\^encia}).
+    \item Mas esses valores \emph{n\~ao determinam univocamente} a escolha.
+\end{itemize}
+\end{frame}
+
+% ==============================================================
+\section{Racionalismo e Relativismo}
+% ==============================================================
+
+\begin{frame}{Racionalismo}
+\begin{block}{Tese central}
+Existe um crit\'erio \impt{universal, atemporal e impessoal} para avaliar os m\'eritos relativos de teorias rivais.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item O crit\'erio \'e \emph{independente do contexto} --- n\~ao depende de \'epoca, cultura ou valores da comunidade.
+    \item \impt{Demarca\c c\~ao clara} entre ci\^encia e n\~ao-ci\^encia.
+    \item \impt{Progresso objetivo}: a ci\^encia avan\c ca em dire\c c\~ao a teorias melhores em sentido absoluto.
+\end{itemize}
+\vspace{0.2cm}
+\begin{itemize}
+    \item \ntc{Exemplos}: indutivismo (confirma\c c\~ao indutiva), falsificacionismo (falsificabilidade + corrobora\c c\~ao).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Relativismo}
+\begin{block}{Tese central}
+\impt{N\~ao existe} um crit\'erio universal e atemporal para avaliar teorias. O que conta como conhecimento depende da comunidade que avalia.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Padr\~oes s\~ao \emph{internos} a uma cultura, \'epoca, paradigma ou tradi\c c\~ao --- e variam com eles.
+    \item N\~ao h\'a \impt{demarca\c c\~ao absoluta} entre ci\^encia e n\~ao-ci\^encia.
+    \item Progresso s\'o faz sentido \emph{dentro} de uma tradi\c c\~ao.
+\end{itemize}
+\vspace{0.3cm}
+\begin{alertblock}{Aten\c c\~ao}
+Relativismo \impt{n\~ao} equivale a ``vale tudo''. Dentro de uma tradi\c c\~ao, h\'a crit\'erios e debate rigoroso. O que se nega \'e que esses crit\'erios sejam \emph{universais}.
+\end{alertblock}
+\end{frame}
+
+
+% ==============================================================
+\section{Lakatos e Kuhn diante do espectro}
+% ==============================================================
+
+\begin{frame}{Lakatos: racionalismo sofisticado}
+\begin{block}{Posi\c c\~ao}
+Lakatos \'e \impt{explicitamente racionalista}: a metodologia dos programas de pesquisa oferece um crit\'erio universal --- aplicado a programas, n\~ao a teorias isoladas.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Crit\'erio: \impt{progressivo \emph{vs.} degenerativo}. Universal e aplic\'avel em qualquer \'area.
+    \item Escolha entre programas \'e, em princ\'ipio, uma decis\~ao \ntc{racional}, fundamentada na produtividade comparada.
+    \item Fatores sociol\'ogicos podem \emph{explicar} a conduta de cientistas, mas n\~ao a \emph{justificam}.
+\end{itemize}
+\vspace{0.2cm}
+\begin{itemize}
+    \item \ntc{``Sofisticado''}: admite que teorias nascem cercadas de anomalias e que a falsifica\c c\~ao conclusiva \'e imposs\'ivel.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Kuhn: uma posi\c c\~ao amb\'igua}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Elementos relativistas}
+\begin{itemize}
+    \item Incomensurabilidade.
+    \item Mudan\c ca como \impt{convers\~ao}.
+    \item N\~ao h\'a ponto de vista externo neutro.
+    \item ``Aproxima\c c\~ao da verdade'' n\~ao faz sentido.
+\end{itemize}
+\end{alertblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Elementos racionalistas}
+\begin{itemize}
+    \item Escolha \emph{n\~ao} \'e arbitr\'aria.
+    \item \impt{Valores epist\^emicos} compartilhados.
+    \item Incomensurabilidade \'e \emph{local}, n\~ao total.
+    \item Kuhn rejeitou o r\'otulo de relativista.
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+\vspace{0.4cm}
+\begin{itemize}
+    \item Cr\'iticos (Lakatos): redu\c c\~ao a \emph{psicologia das multid\~oes}.
+    \item Defensores: descri\c c\~ao da racionalidade cient\'ifica \emph{realmente praticada}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Valores epist\^emicos (Kuhn, 1977)}
+\begin{block}{Cinco valores compartilhados}
+\begin{itemize}
+    \item \impt{Precis\~ao} --- concord\^ancia com resultados experimentais.
+    \item \impt{Consist\^encia} --- interna e com outras teorias estabelecidas.
+    \item \impt{Alc\^ance} --- consequ\^encias al\'em das observa\c c\~oes iniciais.
+    \item \impt{Simplicidade} --- ordem entre fen\^omenos antes confusos.
+    \item \impt{Fecundidade} --- revela\c c\~ao de novos fen\^omenos e rela\c c\~oes.
+\end{itemize}
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item S\~ao \ntc{valores}, n\~ao regras: imprecisos individualmente, conflitam entre si.
+    \item Aplica\c c\~ao requer \impt{ju\'izo} --- comporta desacordo razo\'avel entre cientistas competentes.
+    \item Por isso: \emph{racionalidade sem algoritmo}.
+\end{itemize}
+\end{frame}
+
+% ==============================================================
+\section{Feyerabend e o anarquismo epistemol\'ogico}
+% ==============================================================
+
+\begin{frame}{Onde Feyerabend se encaixa --- e por que n\~ao se encaixa}
+\begin{itemize}
+    \item Popper: m\'etodo \'unico (falsificacionismo).
+    \item Lakatos: m\'etodo aplicado a programas.
+    \item Kuhn: m\'etodo varia com o paradigma, mas h\'a \emph{valores epist\^emicos}.
+\end{itemize}
+\vspace{0.4cm}
+\begin{center}
+\itshape Cada um, \`a sua maneira, ainda tenta salvar \emph{algum} crit\'erio.
+\end{center}
+\vspace{0.4cm}
+\begin{alertblock}{Feyerabend}
+A hist\'oria da ci\^encia mostra que \impt{nenhuma regra metodol\'ogica sobreviveu intacta} ao confronto com algum epis\'odio importante.
+
+\vspace{0.15cm}
+O pr\'oprio progresso cient\'ifico exigiu, em momentos cr\'iticos, \emph{violar} as regras que se supunha govern\'a-lo.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Contra o m\'etodo}
+\begin{block}{Tese provocadora}
+A \'unica regra metodol\'ogica que sobrevive a um exame hist\'orico s\'erio \'e: \impt{vale tudo} (\emph{anything goes}).
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Toda regra metodol\'ogica plaus\'ivel foi violada com sucesso em algum momento decisivo.
+    \item Logo: insistir nela \emph{a priori} teria \ntc{travado} o progresso.
+\end{itemize}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Aten\c c\~ao: ``vale tudo'' \impt{n\~ao} \'e uma recomenda\c c\~ao positiva.
+    \item \'E uma \emph{reductio}: ``se voc\^e insiste em uma regra universal, eis a \'unica que sobra''.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{O caso de Galileu (1)}
+\begin{itemize}
+    \item Heliocentrismo no come\c co do s\'eculo XVII enfrentava \impt{evid\^encia observacional contra}.
+    \item Pelo crit\'erio popperiano (preserve s\'o teorias bem corroboradas), Galileu \ntc{deveria} ter abandonado Cop\'ernico.
+\end{itemize}
+\vspace{0.3cm}
+\begin{block}{Tr\^es objet\c c\~oes contempor\^aneas ao heliocentrismo}
+\begin{itemize}
+    \item \impt{Torre}: pedra solta no alto de uma torre cai a seus p\'es. Se a Terra girasse, cairia para tr\'as.
+    \item \impt{Paralaxe estelar}: estrelas deveriam mudar de posi\c c\~ao ao longo do ano. N\~ao mudavam (telesc\'opios da \'epoca).
+    \item \impt{Tamanho aparente de V\^enus}: a olho nu, parecia variar pouco --- inconsistente com \'orbita em torno do Sol.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{O caso de Galileu (2)}
+\begin{itemize}
+    \item Galileu \emph{n\~ao} respondeu com mais observa\c c\~oes neutras. Ele:
+\end{itemize}
+\vspace{0.2cm}
+\begin{enumerate}
+    \item \impt{Inventou} um princ\'ipio din\^amico novo (rela\c c\~ao do movimento) para neutralizar o argumento da torre.
+    \item \impt{Apelou} ao telesc\'opio --- instrumento \ntc{n\~ao validado} para uso astron\^omico, cujos artefatos \'opticos n\~ao eram entendidos.
+    \item Usou ret\'orica, propaganda e dispositivos persuasivos (di\'alogos, ironia) sistematicamente.
+\end{enumerate}
+\vspace{0.4cm}
+\begin{alertblock}{Leitura de Feyerabend}
+Galileu venceu porque \impt{violou} os c\^anones metodol\'ogicos da \'epoca --- e que ainda hoje endossar\'iamos. Se o tivessem obrigado a segui-los, o copernicanismo teria sido sufocado na inf\^ancia.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Princ\'ipio da contraindu\c c\~ao}
+\begin{itemize}
+    \item Norma metodol\'ogica padr\~ao: prefira a teoria \impt{coerente com os fatos estabelecidos}.
+    \item Feyerabend prop\~oe o oposto:
+\end{itemize}
+\vspace{0.3cm}
+\begin{block}{Contraindu\c c\~ao}
+\`As vezes, o progresso exige introduzir hip\'oteses que \impt{contradizem} teorias bem confirmadas ou ``fatos'' bem estabelecidos.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Por qu\^e? Porque os ``fatos'' s\~ao carregados de teoria.
+    \item Para ver o que est\'a errado com uma teoria dominante, \'e preciso \ntc{outra} teoria que reorganize a evid\^encia.
+    \item Pluralismo te\'orico n\~ao \'e um luxo --- \'e \emph{ferramenta cr\'itica}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A dimens\~ao pol\'itica}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\impt{Argumento de Feyerabend}
+
+\vspace{0.2cm}
+A ci\^encia ocupa, nas democracias ocidentais, uma posi\c c\~ao an\'aloga \`a que a Igreja ocupou na Europa medieval:
+
+\vspace{0.15cm}
+\begin{itemize}
+    \item financiamento p\'ublico privilegiado;
+    \item presen\c ca obrigat\'oria na educa\c c\~ao;
+    \item monop\'olio sobre o que conta como conhecimento leg\'itimo.
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\ntc{Consequ\^encia normativa}
+
+\vspace{0.2cm}
+Se n\~ao h\'a m\'etodo que distinga ci\^encia de outras formas de conhecer, esse privil\'egio \'e \impt{injustific\'avel}.
+
+\vspace{0.2cm}
+Feyerabend defende ent\~ao:
+\begin{itemize}
+    \item separa\c c\~ao entre ci\^encia e Estado;
+    \item pluralismo educacional;
+    \item respeito a tradi\c c\~oes n\~ao-cient\'ificas.
+\end{itemize}
+\end{column}
+\end{columns}
+\vspace{0.4cm}
+\begin{center}
+\itshape O argumento \'e \emph{liberal-radical}, n\~ao anti-cient\'ifico.
+\end{center}
+\end{frame}
+
+\begin{frame}{Cr\'iticas a Feyerabend}
+\begin{itemize}
+    \item \impt{Auto-refer\^encia}: se ``vale tudo'', vale tamb\'em a regra ``siga o m\'etodo''. A tese se neutraliza.
+    \item \impt{Caricatura met\'odologica}: ele combate uma vers\~ao r\'igida do m\'etodo que poucos defendiam (sobretudo ap\'os Lakatos).
+    \item \impt{Salto normativo}: do fato de que regras foram violadas, n\~ao se segue que \emph{toda regra} deva ser dispens\'avel.
+    \item \impt{Equival\^encia de tradi\c c\~oes}: tratar ci\^encia e astrologia como ``alternativas culturais'' ignora diferen\c cas \ntc{operacionais} reais (predi\c c\~ao, controle, falsea\c c\~ao parcial).
+\end{itemize}
+\vspace{0.3cm}
+\begin{center}
+\itshape Mesmo assim: o desafio hist\'orico de Feyerabend permanece. \\
+Que regra metodol\'ogica voc\^e defenderia que \emph{nunca} foi violada com sucesso?
+\end{center}
+\end{frame}
+
+% ==============================================================
+\section{Realismo, instrumentalismo e verdade}
+% ==============================================================
+
+\begin{frame}{Mudando a pergunta}
+\begin{itemize}
+    \item At\'e aqui: como se \emph{avalia} teorias? (m\'etodo, crit\'erio, racionalidade)
+    \item Agora, outra pergunta:
+\end{itemize}
+\vspace{0.4cm}
+\begin{center}
+\large\itshape Quando uma teoria \'e bem-sucedida, \\
+o que isso nos diz sobre o \impt{mundo}?
+\end{center}
+\vspace{0.4cm}
+\begin{itemize}
+    \item Os el\'etrons da teoria eletromagn\'etica \emph{existem}, ou s\~ao um \ntc{dispositivo de c\'alculo} \'util?
+    \item O gene mendeliano era uma entidade real, ou apenas um placeholder que funcionava?
+    \item ``Espa\c co curvo'' descreve uma propriedade da realidade, ou \'e uma \ntc{maneira de falar}?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tr\^es posi\c c\~oes-eixo}
+\begin{tikzpicture}[remember picture, overlay]
+\end{tikzpicture}
+\begin{center}
+\footnotesize
+\begin{tikzpicture}[node distance=2.5cm, every node/.style={align=center}]
+\node[draw=mprimary, very thick, rounded corners, fill=mprimary!10, minimum width=3.5cm, minimum height=1.8cm] (inst) {\textbf{Instrumentalismo}\\[0.1cm]\footnotesize Teorias s\~ao \\ instrumentos de \\ predi\c c\~ao};
+\node[draw=mprimary, very thick, rounded corners, fill=mprimary!10, minimum width=3.5cm, minimum height=1.8cm, right=1.2cm of inst] (real) {\textbf{Realismo do}\\\textbf{senso comum}\\[0.05cm]\footnotesize Teorias descrevem \\ o mundo \emph{como ele \'e}};
+\node[draw=maccent, very thick, rounded corners, fill=maccent!15, minimum width=3.5cm, minimum height=1.8cm, right=1.2cm of real] (nrep) {\textbf{Realismo}\\\textbf{n\~ao-representativo}\\[0.05cm]\footnotesize Teorias descrevem \\ \emph{estruturas} do mundo};
+\draw[->, very thick, mprimary] (inst) -- (real);
+\draw[->, very thick, mprimary] (real) -- (nrep);
+\end{tikzpicture}
+\end{center}
+\vspace{0.4cm}
+\begin{itemize}
+    \item Vamos examinar cada uma, suas atra\c c\~oes e seus problemas.
+    \item A posi\c c\~ao de Chalmers est\'a \`a direita --- mas com cuidado.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Instrumentalismo}
+\begin{block}{Tese}
+Teorias cient\'ificas s\~ao \impt{instrumentos para fazer predi\c c\~oes}. Os termos te\'oricos (el\'etron, campo, gene) n\~ao precisam corresponder a entidades reais.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Crit\'erio de qualidade: a teoria \emph{funciona}? Faz predi\c c\~oes \'uteis?
+    \item Termos n\~ao-observ\'aveis s\~ao \ntc{recursos formais}, n\~ao descri\c c\~oes.
+    \item Verdade da teoria $\neq$ exist\^encia das entidades que ela menciona.
+\end{itemize}
+\vspace{0.4cm}
+\impt{Atrativos:}
+\begin{itemize}
+    \item Modesto: n\~ao assume mais do que a evid\^encia suporta.
+    \item Resolve facilmente epis\'odios de mudan\c ca te\'orica (caloric, \'eter): n\~ao perdemos \emph{nada} ontologicamente, s\'o trocamos de ferramenta.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Problemas do instrumentalismo}
+\begin{itemize}
+    \item \impt{Distin\c c\~ao observ\'avel/n\~ao-observ\'avel \'e instavel.}
+
+    \vspace{0.1cm}
+    Bact\'erias eram ``n\~ao-observ\'aveis'' antes do microsc\'opio. V\'irus, antes do microsc\'opio eletr\^onico. Onde tra\c car a linha?
+
+    \vspace{0.3cm}
+    \item \impt{N\~ao explica o sucesso.}
+
+    \vspace{0.1cm}
+    Se el\'etrons n\~ao existem, por que tratar circuitos \emph{como se} eles existissem produz aparelhos que funcionam?
+
+    \vspace{0.3cm}
+    \item \impt{Pr\'atica cient\'ifica resiste.}
+
+    \vspace{0.1cm}
+    Cientistas \emph{intervir\^em} no mundo manipulando entidades te\'oricas. ``Pulverizamos el\'etrons sobre a placa'' (Hacking) --- a linguagem de uso n\~ao \'e instrumentalista.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Realismo do senso comum}
+\begin{block}{Tese}
+Teorias cient\'ificas bem-sucedidas s\~ao \impt{aproximadamente verdadeiras}. Os termos te\'oricos referem-se a entidades que existem no mundo.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item El\'etrons existem. Genes existem. Campos magn\'eticos existem.
+    \item O sucesso preditivo \'e \emph{evid\^encia} da verdade aproximada.
+    \item \ntc{Argumento do milagre} (Putnam): se as teorias n\~ao fossem ao menos aproximadamente verdadeiras, seu sucesso seria um milagre inexplic\'avel.
+\end{itemize}
+\vspace{0.3cm}
+\begin{center}
+\itshape Soa razo\'avel. Onde est\'a o problema?
+\end{center}
+\end{frame}
+
+\begin{frame}{O problema da verdade-como-correspond\^encia}
+\begin{itemize}
+    \item ``A teoria \'e verdadeira'' costuma significar: \impt{corresponde \`a realidade}.
+    \item Mas o que \'e ``correspond\^encia''?
+\end{itemize}
+\vspace{0.3cm}
+\begin{alertblock}{Dificuldades}
+\begin{itemize}
+    \item Para verificar a correspond\^encia, eu precisaria \ntc{comparar} a teoria com o mundo --- como se eu tivesse acesso ao mundo \emph{n\~ao-mediado} por teoria. N\~ao tenho.
+    \item Toda observa\c c\~ao \'e carregada de teoria. ``O mundo'' que eu acesso \emph{j\'a} \'e o mundo descrito por alguma teoria.
+\end{itemize}
+\end{alertblock}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Logo: a no\c c\~ao de correspond\^encia se torna \ntc{vazia} ou \ntc{circular}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A indu\c c\~ao pessimista}
+\begin{block}{Argumento (Laudan)}
+A hist\'oria da ci\^encia \'e um \impt{cemit\'erio} de teorias que foram empiricamente bem-sucedidas e que hoje consideramos \ntc{falsas}.
+\end{block}
+\vspace{0.2cm}
+\begin{itemize}
+    \item \'Eter luminoso, calor como fluido (cal\'orico), flogisto, esferas celestes, teoria humoral, \ldots
+    \item Cada uma delas funcionava em sua \'epoca. Cada uma postulava entidades que \emph{n\~ao existem}.
+\end{itemize}
+\vspace{0.4cm}
+\begin{center}
+\itshape Por indu\c c\~ao: nossas melhores teorias atuais provavelmente tamb\'em postulam \\ entidades que cientistas futuros considerar\~ao fic\c c\~oes.
+\end{center}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Conclus\~ao: sucesso emp\'irico \impt{n\~ao} \'e bom guia para verdade ontol\'ogica.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sa\'ida: realismo n\~ao-representativo}
+\begin{block}{Tese (Chalmers)}
+N\~ao precisamos abandonar o realismo --- precisamos abandonar uma vers\~ao \impt{ing\^enua} dele.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Teorias n\~ao s\~ao ``retratos'' do mundo.
+    \item Teorias capturam \impt{estruturas, rela\c c\~oes, capacidades causais} do mundo --- com sucesso vari\'avel.
+    \item O mundo p\~oe \ntc{restri\c c\~oes} sobre quais teorias funcionam. Esse \'e o ``realismo''.
+    \item Mas n\~ao h\'a correspond\^encia pictural termo-a-termo entre teoria e mundo. Esse \'e o ``n\~ao-representativo''.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Como funciona na pr\'atica}
+\begin{itemize}
+    \item N\~ao perguntamos: ``o el\'etron \emph{realmente} \'e uma part\'icula ou uma onda?''
+    \item Perguntamos: ``o sistema de pr\'aticas, equa\c c\~oes e manipula\c c\~oes que chamamos `teoria do el\'etron' \impt{captura algo} sobre o comportamento da mat\'eria carregada?''
+\end{itemize}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Resposta: sim, ela captura --- testemunho: aparelhos que funcionam, predi\c c\~oes que se confirmam, interven\c c\~oes que produzem os efeitos esperados.
+    \item O que ela captura \emph{exatamente} \'e uma quest\~ao em aberto, refinada por gera\c c\~oes sucessivas de teorias.
+\end{itemize}
+\vspace{0.4cm}
+\begin{alertblock}{Continuidade no descontinuum}
+Mesmo quando trocamos de teoria, \impt{o que funcionava continua funcionando}. Maxwell engole Coulomb como caso-limite. Einstein engole Newton. H\'a acumula\c c\~ao estrutural, mesmo sem acumula\c c\~ao ontol\'ogica.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Verdade, ent\~ao, fica onde?}
+\begin{itemize}
+    \item Para o realista do senso comum: \impt{verdade $=$ correspond\^encia} com o mundo. (Problem\'atico.)
+    \item Para o instrumentalista: \impt{verdade} \'e categoria dispens\'avel --- s\'o importa utilidade. (Empobrecedor.)
+    \item Para o realista n\~ao-representativo: verdade \'e \ntc{um ideal regulativo}.
+\end{itemize}
+\vspace{0.3cm}
+\begin{block}{Verdade como ideal regulativo}
+N\~ao \'e algo que se possui, mas algo em dire\c c\~ao ao qual a ci\^encia \emph{progride}. Mede-se por \impt{progressividade da pesquisa}, n\~ao por uma compara\c c\~ao final com a realidade.
+\end{block}
+\vspace{0.3cm}
+\begin{itemize}
+    \item Note a ressonancia com Lakatos: programas \emph{progressivos} se aproximam de algo, sem que se tenha de definir o ponto final.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fechando o curso}
+\begin{itemize}
+    \item Sa\'imos do indutivismo ing\^enuo e chegamos a uma posi\c c\~ao com v\'arias camadas:
+\end{itemize}
+\vspace{0.3cm}
+\begin{enumerate}
+    \item Observa\c c\~ao \'e \impt{carregada de teoria} (lec\c c\~ao de Hanson, Popper, Kuhn).
+    \item M\'etodo \'unico universal \'e \impt{insustent\'avel} historicamente (lec\c c\~ao de Kuhn, Feyerabend).
+    \item Ainda assim, h\'a \impt{racionalidade} --- com valores epist\^emicos (Kuhn) ou crit\'erios estruturais (Lakatos).
+    \item Sucesso cient\'ifico \emph{nos diz algo} sobre o mundo --- mas n\~ao um retrato.
+\end{enumerate}
+\vspace{0.4cm}
+\end{frame}
+
+
+% ==============================================================
+\begin{frame}[allowframebreaks]{Refer\^encias}
+  \bibliographystyle{apalike}
+  \bibliography{references}
+\end{frame}
+
+\end{document}

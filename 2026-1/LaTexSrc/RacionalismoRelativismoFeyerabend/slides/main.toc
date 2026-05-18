@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Indutivismo}{3}{0}{1}
+\beamer@sectionintoc {2}{Falsificacionismo}{7}{0}{2}
+\beamer@sectionintoc {3}{Programas de Pesquisa (Lakatos)}{11}{0}{3}
+\beamer@sectionintoc {4}{Paradigmas (Kuhn)}{14}{0}{4}
+\beamer@sectionintoc {5}{Racionalismo e Relativismo}{18}{0}{5}
+\beamer@sectionintoc {6}{Lakatos e Kuhn diante do espectro}{20}{0}{6}
+\beamer@sectionintoc {7}{Feyerabend e o anarquismo epistemol\'ogico}{23}{0}{7}
+\beamer@sectionintoc {8}{Realismo, instrumentalismo e verdade}{30}{0}{8}
