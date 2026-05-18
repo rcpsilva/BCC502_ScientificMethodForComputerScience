@@ -1,0 +1,581 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+% Marker para questões que exigem leitura do livro
+\newcommand{\livro}{\textcolor{notice}{$^{\dagger}$}}
+% Marker de dificuldade
+\newcommand{\difi}{$\star$}
+\newcommand{\difii}{$\star\star$}
+\newcommand{\difiii}{$\star\star\star$}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\title{Lista de Exercícios --- Filosofia da Ciência}
+\author{BCC502 --- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent\textit{Cobertura:} indutivismo, falsificacionismo, Lakatos, Kuhn, racionalismo/relativismo/objetivismo.
+
+\noindent\textit{Legenda:} \livro{} questões que exigem consulta ao Chalmers (1993), \emph{O que é ciência afinal?} \quad
+\difi{} acessível \quad \difii{} intermediário \quad \difiii{} difícil.
+
+\vspace{0.3cm}
+\hrule
+\vspace{0.3cm}
+
+% =============================================================
+\section*{Parte I --- Indutivismo e o problema da indução}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*]
+
+% --- Q1 ---
+\item \textbf{(\difi)} Um sistema de aprendizado de máquina foi treinado em $10^7$ imagens de gatos e classifica corretamente $99{,}8\%$ das imagens de teste. Um colega afirma:
+
+\begin{quote}
+\itshape ``Como o modelo viu uma quantidade enorme de gatos sob ampla variedade de condições e nenhum contraexemplo foi observado em teste, podemos concluir indutivamente que \emph{todos} os gatos serão classificados corretamente pelo sistema.''
+\end{quote}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Reconstrua o argumento dele explicitamente no formato do \impt{princípio indutivista} apresentado em aula.
+    \item Identifique \emph{exatamente quais} das três condições do princípio (número grande, variedade ampla, ausência de contraexemplo) estão sendo invocadas, e explique por que satisfazê-las ainda assim não basta para garantir a conclusão.
+    \item Que objeção de Hume se aplica diretamente aqui?
+\end{enumerate}
+
+% --- Q2 ---
+\item \textbf{(\difii)} O ``recuo para a probabilidade'' tenta salvar o indutivismo trocando a tese forte (``observações \emph{provam} a lei'') pela tese fraca (``observações tornam a lei \emph{provavelmente} verdadeira'').
+
+\begin{enumerate}[label=(\alph*)]
+    \item Reproduza o argumento de Chalmers que mostra por que esse recuo \emph{também} fracassa. Em particular, explique o papel da cardinalidade dos casos possíveis na conclusão $P \approx 0$.
+    \item Um aluno objeta: ``mas em estatística bayesiana atualizamos probabilidades a posteriori e funciona''. Por que essa objeção \emph{não} é uma refutação do argumento de Chalmers? (Pista: pense no que conta como o ``espaço amostral'' das hipóteses universais que Chalmers tem em mente.)
+\end{enumerate}
+
+% --- Q3 ---
+\item \textbf{(\difi)} \emph{Múltipla escolha.} Considere a afirmação ``a observação científica é objetiva porque qualquer observador, com sentidos normais, pode verificá-la diretamente''. Essa afirmação é defendida por:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Popper, em sua defesa do falsificacionismo;
+    \item o indutivista ingênuo;
+    \item Kuhn, ao caracterizar a ciência normal;
+    \item Lakatos, ao discutir o cinturão protetor;
+    \item nenhum dos autores estudados.
+\end{enumerate}
+
+Justifique sua escolha em uma frase.
+
+% --- Q4 ---
+\item \textbf{(\difii)} ``Toda observação é carregada de teoria.''
+
+\begin{enumerate}[label=(\alph*)]
+    \item Dê um exemplo \emph{tirado da sua área} (ciência da computação ou IA) em que duas pessoas, olhando para o mesmo objeto/saída, ``veem'' coisas diferentes por terem treinamentos teóricos distintos. Seja específico.
+    \item Esse fenômeno refuta o indutivismo \emph{ingênuo}, mas Chalmers argumenta que ele \emph{não} refuta conclusivamente o indutivismo em versões mais sofisticadas. Por quê?
+\end{enumerate}
+
+\end{enumerate}
+
+% =============================================================
+\section*{Parte II --- Falsificacionismo}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, start=5]
+
+% --- Q5 ---
+\item \textbf{(\difi)} Para cada uma das afirmações abaixo, diga se é \impt{falsificável} ou \impt{não-falsificável} no sentido popperiano. Se for falsificável, escreva \emph{um} falsificador potencial (um enunciado observacional que, se verdadeiro, refutaria a afirmação). Se não for, explique por quê.
+
+\begin{enumerate}[label=(\alph*)]
+    \item ``Todo algoritmo de ordenação por comparação tem complexidade de pior caso $\Omega(n \log n)$.''
+    \item ``Sistemas suficientemente complexos eventualmente exibem comportamento emergente.''
+    \item ``Modelos de linguagem grandes ou exibirão consciência, ou não exibirão.''
+    \item ``Para qualquer rede neural profunda treinada com SGD, existe uma combinação de hiperparâmetros que produz desempenho competitivo.''
+    \item ``Um classificador binário com AUC $> 0{,}9$ no conjunto de teste generaliza bem.''
+\end{enumerate}
+
+% --- Q6 ---
+\item \textbf{(\difii)} Popper acusou a psicanálise freudiana, o marxismo (em certas formulações) e a astrologia de não serem ciência. Note bem: a acusação \emph{não} é a de que sejam falsas.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Qual \emph{exatamente} é a acusação? Formule-a em uma frase.
+    \item Um defensor responde: ``mas a teoria psicanalítica faz sim predições --- só que sobre fenômenos complexos''. O que essa defesa precisaria mostrar para refutar a crítica popperiana? Não basta exibir \emph{uma} predição --- por quê?
+\end{enumerate}
+
+% --- Q7 ---
+\item \textbf{(\difii)} Considere as três afirmações ordenadas:
+
+\begin{quote}
+$T_1$: ``Existe ao menos uma vulnerabilidade no kernel Linux.'' \\
+$T_2$: ``O kernel Linux tem vulnerabilidades de \emph{buffer overflow}.'' \\
+$T_3$: ``O kernel Linux versão 6.5 tem exatamente 3 vulnerabilidades de \emph{buffer overflow} no subsistema de rede.''
+\end{quote}
+
+Ordene as três por grau de falseabilidade, do menos falsificável ao mais falsificável. Em seguida, comente o aparente paradoxo: \emph{a teoria mais arriscada de estar errada é, segundo Popper, a melhor cientificamente}. Como isso se reconcilia com a prática de engenharia de software, onde geralmente preferimos afirmações cautelosas?
+
+% --- Q8 ---
+\item \textbf{(\difiii)} Distinga, com base no Chalmers, as duas situações abaixo:
+
+\begin{itemize}
+    \item Diante de irregularidades na órbita de \impt{Urano} (séc.\ XIX), Le Verrier postulou a existência de um planeta perturbador. A predição foi confirmada com a descoberta de Netuno em 1846.
+    \item Diante de irregularidades na órbita de \impt{Mercúrio}, foi postulada a existência de um planeta intra-mercurial (``Vulcano''). Esse planeta nunca foi observado.
+\end{itemize}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Estruturalmente, as duas manobras são idênticas: ambas preservam a mecânica newtoniana postulando um novo corpo celeste. Por que, então, a primeira é considerada uma modificação \impt{legítima} e a segunda um candidato à modificação \impt{ad hoc}?
+    \item Por que o caso de Mercúrio acabou se tornando, na verdade, um problema sério para Newton --- e o que isso revela sobre a possibilidade de um critério \emph{a priori} para distinguir modificações legítimas de \emph{ad hoc}?
+\end{enumerate}
+
+% --- Q9 ---
+\item \textbf{(\difiii)} \emph{Análise de argumento.} Considere o seguinte raciocínio:
+
+\begin{quote}
+\itshape ``O falsificacionismo é refutado por si mesmo. Afinal, o falsificacionismo é uma teoria \emph{sobre} a ciência. Se ele se aplica a si mesmo, deveria ser falsificável. Mas a comunidade de cientistas vem ignorando refutações aparentes do falsificacionismo (como a tese de Duhem--Quine) há décadas, sem abandoná-lo. Logo, ou o falsificacionismo é falso, ou os falsificacionistas não o levam a sério.''
+\end{quote}
+
+\begin{enumerate}[label=(\alph*)]
+    \item O argumento contém ao menos dois deslizes conceituais sérios. Identifique-os.
+    \item Reformule a crítica de modo que ela faça sentido. (Há de fato uma dificuldade real escondida aqui, mas a versão acima não a captura.)
+\end{enumerate}
+
+% --- Q10 ---
+\item \textbf{(\difii)} \livro{} A tese de \impt{Duhem--Quine} afirma que toda hipótese é testada em conjunto com um conjunto de hipóteses auxiliares. Releia a apresentação dela no Chalmers e responda:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Por que essa tese não faz com que ``a ciência seja impossível'' (como alguns céticos sugerem), apesar de mostrar que a falsificação estrita não existe?
+    \item Que recursos \emph{além da lógica} o cientista de fato usa para decidir, na prática, onde localizar o erro diante de um resultado experimental negativo? Dê pelo menos três.
+\end{enumerate}
+
+\end{enumerate}
+
+% =============================================================
+\section*{Parte III --- Lakatos e Kuhn}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, start=11]
+
+% --- Q11 ---
+\item \textbf{(\difii)} Suponha que você queira modelar o ``aprendizado profundo supervisionado'' como um \impt{programa de pesquisa} no sentido de Lakatos.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Proponha um \emph{núcleo firme} plausível (3--5 hipóteses fundamentais que, se abandonadas, levariam ao fim do programa).
+    \item Proponha 3 elementos do \emph{cinturão protetor} (hipóteses auxiliares que se modificam para acomodar dificuldades).
+    \item Dê um exemplo histórico recente em que o cinturão foi modificado para absorver uma dificuldade empírica (por exemplo: o problema de gradientes que desaparecem, a fragilidade adversarial, alucinações em LLMs, etc.).
+    \item Em sua opinião, esse programa está atualmente em fase \impt{progressiva} ou \impt{degenerativa}? Justifique com critérios lakatosianos --- não apenas com sua impressão geral.
+\end{enumerate}
+
+% --- Q12 ---
+\item \textbf{(\difii)} ``Núcleo firme convencionalmente irrefutável.'' Essa expressão soa, à primeira vista, como uma traição ao espírito popperiano de submeter tudo ao teste.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Explique por que Lakatos considera o núcleo firme \emph{metodologicamente necessário}, e não uma concessão dogmática.
+    \item Um crítico ainda assim insiste: ``mas isso é apenas \emph{ad hoc} elevado a princípio''. Como Lakatos responderia? (Dica: onde fica, em Lakatos, a fronteira entre uma modificação legítima e uma modificação \emph{ad hoc}?)
+\end{enumerate}
+
+% --- Q13 ---
+\item \textbf{(\difi)} Para cada par de termos, diga se eles pertencem ao vocabulário de Lakatos, de Kuhn, ou de \emph{ambos}, e explique brevemente:
+
+\begin{enumerate}[label=(\alph*)]
+    \item heurística positiva / heurística negativa;
+    \item exemplar / matriz disciplinar;
+    \item ciência normal / quebra-cabeças;
+    \item mudança progressiva / mudança degenerativa;
+    \item incomensurabilidade.
+\end{enumerate}
+
+% --- Q14 ---
+\item \textbf{(\difiii)} Kuhn afirma que, durante a \impt{ciência normal}, ``o paradigma não está sob teste; sob teste está a habilidade do cientista de fazer a natureza encaixar nele''.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Essa afirmação parece justificar uma postura conservadora, quase dogmática. Por que Kuhn a defende mesmo assim --- isto é, que vantagem epistêmica ele atribui a esse ``dogmatismo''?
+    \item Quando, na sua análise, essa postura deixa de ser virtude e passa a ser vício? Use os conceitos de \emph{anomalia} e \emph{crise} para articular a resposta.
+\end{enumerate}
+
+% --- Q15 ---
+\item \textbf{(\difiii)} \livro{} A noção de \impt{paradigma} de Kuhn foi acusada por críticos (notadamente Margaret Masterman) de ser usada em mais de 20 sentidos diferentes em \emph{The Structure of Scientific Revolutions}. Releia a discussão dos dois sentidos principais no Chalmers (matriz disciplinar / exemplar) e responda:
+
+\begin{enumerate}[label=(\alph*)]
+    \item A distinção entre ``matriz disciplinar'' e ``exemplar'' resolve a ambiguidade apontada por Masterman?
+    \item Aplique a distinção: quando um aluno aprende \emph{backpropagation} resolvendo problemas de classificação no MNIST, qual dos dois sentidos de paradigma ele está absorvendo? E quando lê o livro do Bishop sobre teoria estatística do aprendizado?
+\end{enumerate}
+
+% --- Q16 ---
+\item \textbf{(\difii)} \emph{Estudo de caso.} A transição do reconhecimento de imagens via \emph{feature engineering} clássica (SIFT, HOG, etc.) para redes convolucionais (a partir de AlexNet em 2012).
+
+\begin{enumerate}[label=(\alph*)]
+    \item Descreva o episódio em termos \impt{lakatosianos} (programas rivais, progressividade, etc.).
+    \item Descreva-o em termos \impt{kuhnianos} (paradigma anterior em crise, anomalias, revolução, etc.).
+    \item As duas descrições destacam aspectos diferentes. Qual delas você considera mais fiel ao que de fato aconteceu, e por quê? Não há resposta única correta --- o que importa é a qualidade do argumento.
+\end{enumerate}
+
+\end{enumerate}
+
+% =============================================================
+\section*{Parte IV --- Racionalismo, relativismo, objetivismo}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, start=17]
+
+% --- Q17 ---
+\item \textbf{(\difii)} Quatro afirmações a classificar como \impt{racionalistas} ou \impt{relativistas}. Para cada uma, identifique e justifique em uma frase:
+
+\begin{enumerate}[label=(\alph*)]
+    \item ``A teoria da relatividade é superior à mecânica newtoniana porque faz predições mais precisas.''
+    \item ``A medicina ocidental e a medicina tradicional chinesa são duas tradições igualmente legítimas; não há ponto de vista externo a partir do qual julgá-las.''
+    \item ``Cada paradigma define seus próprios critérios de o que conta como uma boa explicação; comparar paradigmas usando os critérios de \emph{um deles} é injusto.''
+    \item ``Programas de pesquisa progressivos são objetivamente preferíveis a programas degenerativos, independentemente da comunidade que os avalia.''
+\end{enumerate}
+
+% --- Q18 ---
+\item \textbf{(\difiii)} \emph{Eixos independentes.} As distinções \emph{racionalismo/relativismo} e \emph{objetivismo/individualismo} são, segundo Chalmers, dois eixos independentes.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Explique, em poucas frases, qual é a pergunta característica de cada eixo. (Cuidado: não basta dizer ``um é sobre avaliação, o outro sobre o que são teorias''; explique \emph{em que sentido}.)
+    \item Construa um exemplo concreto de uma posição filosófica que seja \emph{relativista} mas \emph{objetivista}; e outra que seja \emph{racionalista} mas \emph{individualista}. (As duas combinações ``cruzadas'' raramente são discutidas --- pense por que.)
+\end{enumerate}
+
+% --- Q19 ---
+\item \textbf{(\difiii)} Considere o seguinte fato: a teoria de Maxwell tinha como consequência lógica a existência de ondas eletromagnéticas \emph{antes} que Maxwell ou qualquer outra pessoa tivesse pensado nisso. Hertz só veio a descobri-las empiricamente décadas depois.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Use esse fato para articular o argumento \impt{objetivista} sobre o conhecimento científico.
+    \item Um individualista (subjetivista) poderia replicar: ``isso é só uma forma de falar; uma teoria não \emph{tem} consequências, alguém \emph{deriva} consequências dela''. Avalie essa réplica. Ela é convincente? O que ela ignora?
+\end{enumerate}
+
+% --- Q20 ---
+\item \textbf{(\difiii)} \livro{} \emph{Questão de leitura.} Em Chalmers, Kuhn é descrito como uma figura ambígua em relação ao espectro racionalismo/relativismo. Ele \emph{negou} ser relativista; críticos como Lakatos o acusavam de reduzir a ciência a ``psicologia das multidões''.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Identifique \emph{dois elementos} da posição de Kuhn que sustentam uma leitura relativista.
+    \item Identifique \emph{dois elementos} que sustentam uma leitura racionalista (por exemplo: os cinco valores epistêmicos de 1977).
+    \item Onde, ao final, \emph{Chalmers} situa Kuhn? Sua resposta deve refletir o que está \emph{no livro}, não a sua opinião pessoal --- e deve identificar a página ou seção em que essa avaliação aparece.
+\end{enumerate}
+
+% --- Q21 (bônus) ---
+\item \textbf{(\difiii) Bônus.} \emph{Questão integradora.} Em 2023--2024, modelos de linguagem grandes (LLMs) passaram a exibir capacidades emergentes que seus próprios desenvolvedores não anteciparam (por exemplo: aritmética multi-dígito surgindo subitamente em torno de uma certa escala, raciocínio em cadeia de pensamento, etc.).
+
+Suponha que dois pesquisadores debatem o estatuto científico das ``capacidades emergentes em LLMs'':
+
+\begin{itemize}
+    \item Pesquisador A: ``Não é ciência. As ditas capacidades só aparecem porque escolhemos métricas descontínuas, e qualquer comportamento que apareça pode ser racionalizado \emph{post hoc} pela escala. Isso é o típico \emph{ad hoc} que Popper denunciou.''
+    \item Pesquisador B: ``É ciência saudável. Estamos no início de um programa de pesquisa novo, cujo núcleo (a hipótese da escala) gera predições novas sucessivas corroboradas. É progressivo no sentido lakatosiano.''
+\end{itemize}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Identifique \emph{qual escola filosófica} cada pesquisador está mobilizando.
+    \item Apresente uma terceira leitura --- \impt{kuhniana} --- do mesmo episódio. Que conceitos kuhnianos (paradigma, ciência normal, anomalia, revolução, incomensurabilidade) se aplicam? Quais não se aplicam, ou se aplicam mal?
+    \item Em sua opinião pessoal, qual das três leituras é mais útil para guiar a pesquisa? \emph{Útil} e \emph{verdadeira} são a mesma coisa? (Pergunta-armadilha: pense no que cada autor responderia.)
+\end{enumerate}
+
+\end{enumerate}
+
+% =============================================================
+\section*{Parte V --- Feyerabend e o anarquismo epistemológico}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, start=22]
+
+% --- Q22 ---
+\item \textbf{(\difii)} A tese mais famosa de Feyerabend é \impt{vale tudo} (\emph{anything goes}). Ela é frequentemente lida como uma defesa do relativismo irracionalista, e Feyerabend reclamava de essa leitura.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Reconstrua o argumento de Feyerabend mostrando por que ``vale tudo'' é, na sua versão original, uma \emph{reductio ad absurdum} contra a noção de método universal --- e não uma recomendação positiva.
+    \item Suponha que um colega diga: ``se vale tudo, então também vale fazer ciência seguindo o método --- a tese se autoneutraliza''. Essa é uma das críticas padrão a Feyerabend. Ela é fatal? Há alguma resposta possível em nome de Feyerabend?
+\end{enumerate}
+
+% --- Q23 ---
+\item \textbf{(\difiii)} \emph{Caso Galileu, ótica de Feyerabend.} Galileu defendeu o copernicanismo apesar de a teoria, na época, enfrentar três objeções observacionais sérias: o argumento da torre, a ausência de paralaxe estelar e o tamanho aparente de Vênus.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Para cada uma das três objeções, explique brevemente por que ela representava, à época, uma \emph{aparente refutação} do copernicanismo.
+    \item Feyerabend afirma que Galileu venceu o debate porque \impt{violou} os cânones metodológicos da época (e que ainda hoje endossaríamos). Identifique duas dessas violações concretamente.
+    \item Aqui está o ponto mais difícil: se aceitarmos a leitura de Feyerabend, isso prova que \emph{qualquer} cientista hoje, defendendo uma teoria refutada pelas evidências, está autorizado a fazer o mesmo? Por que sim ou por que não? (Cuidado com o salto normativo a partir de um caso histórico.)
+\end{enumerate}
+
+% --- Q24 ---
+\item \textbf{(\difii)} O princípio da \impt{contraindução} de Feyerabend recomenda, em certas circunstâncias, introduzir hipóteses que \emph{contradigam} teorias bem confirmadas ou ``fatos'' bem estabelecidos.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Qual é a justificativa epistemológica desse princípio? (Dica: relacione com a tese da carga teórica da observação.)
+    \item Dê um exemplo, retirado da história da computação ou da inteligência artificial, em que uma linha de pesquisa avançou justamente porque alguns pesquisadores insistiram em uma abordagem que ia contra os ``fatos estabelecidos'' do campo. Exemplos plausíveis: redes neurais nos anos 1980--2010, métodos simbólicos antes do \emph{deep learning}, computação quântica. Escolha um e desenvolva.
+    \item Em que esse princípio diverge da \impt{heurística positiva} de Lakatos? (Lakatos também admite que cientistas resistam a refutações --- mas em condições diferentes.)
+\end{enumerate}
+
+% --- Q25 ---
+\item \textbf{(\difiii)} \livro{} A \impt{dimensão política} do argumento de Feyerabend é frequentemente esquecida. Ele defende a separação entre ciência e Estado, o pluralismo educacional, e o respeito a tradições não-científicas. Releia o capítulo correspondente no Chalmers e responda:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Como o argumento epistemológico (não há método único) se conecta com o argumento normativo (a ciência não deve ter privilégio institucional)? Reconstrua a cadeia inferencial.
+    \item Aplique o argumento a um caso concreto: a alocação de recursos públicos brasileiros para pesquisa científica em detrimento de outras formas de produção de conhecimento (saberes tradicionais, medicina popular, etc.). O argumento de Feyerabend obriga a uma posição igualitária quanto a financiamento? Quais distinções \emph{operacionais} (e não metodológicas) poderiam ser invocadas para resistir a essa conclusão?
+\end{enumerate}
+
+\end{enumerate}
+
+% =============================================================
+\section*{Parte VI --- Realismo, instrumentalismo e verdade}
+% =============================================================
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, start=26]
+
+% --- Q26 ---
+\item \textbf{(\difii)} Em redes neurais profundas, falamos rotineiramente em ``características aprendidas'', ``representações latentes'', ``conceitos emergentes nos neurônios da camada $\ell$'', e assim por diante. Considere três posições possíveis sobre essas entidades:
+
+\begin{quote}
+\impt{Instrumentalista:} ``representações latentes'' são um modo conveniente de falar sobre vetores de ativação. Não há nada lá no sentido em que há elétrons --- são apenas dispositivos de cálculo.
+
+\impt{Realista do senso comum:} as representações latentes \emph{são} conceitos genuínos, e o modelo de fato ``aprendeu o conceito de gato'' quando classifica gatos corretamente.
+
+\impt{Realista não-representativo:} a rede \emph{captura algo} sobre a estrutura estatística do domínio --- algo que correlaciona com nossos conceitos, mas que não é redutível a eles.
+\end{quote}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Cada uma das três posições enfrenta dificuldades distintas. Identifique uma dificuldade específica para cada.
+    \item A \impt{interpretabilidade mecanística} (\emph{mechanistic interpretability}) --- linha de pesquisa que tenta identificar circuitos específicos em redes neurais que implementam computações reconhecíveis --- pressupõe, implicitamente, qual das três posições? Justifique.
+\end{enumerate}
+
+% --- Q27 ---
+\item \textbf{(\difii)} O argumento da \impt{indução pessimista} (Laudan): a história da ciência é um cemitério de teorias empiricamente bem-sucedidas cujas entidades centrais hoje consideramos inexistentes (flogisto, calórico, éter, etc.).
+
+\begin{enumerate}[label=(\alph*)]
+    \item Reconstrua o argumento explicitamente, indicando qual é a sua conclusão sobre o estatuto epistêmico do sucesso empírico atual.
+    \item O argumento contém um movimento autodestrutivo: ele \emph{usa} indução para argumentar contra a confiança em entidades teóricas. Isso é um problema real, ou pode ser dissolvido?
+    \item Suponha que aplicássemos o argumento à inteligência artificial: ``boa parte das arquiteturas e abstrações que pareceram fundamentais na história da IA (redes simbólicas dos anos 1980, máquinas de vetores de suporte nos 2000, LSTMs) foram em grande medida abandonadas''. O que se segue daí sobre as arquiteturas atuais (\emph{transformers}, \emph{attention})? E essa analogia é boa? (Pergunta de fundo: a história da IA é análoga à história da física no que importa?)
+\end{enumerate}
+
+% --- Q28 ---
+\item \textbf{(\difiii)} \livro{} O \impt{realismo não-representativo}, a posição final de Chalmers, é uma síntese delicada. Ele preserva o realismo (o mundo restringe quais teorias funcionam) e abandona a representação picturalmente termo-a-termo (teorias não são retratos do mundo).
+
+\begin{enumerate}[label=(\alph*)]
+    \item Releia a discussão do Chalmers sobre essa posição. Por que ela é descrita como uma resposta ao argumento da indução pessimista? Em que sentido ela ``salva o que sobrevive'' nas mudanças teóricas (Newton $\rightarrow$ Einstein, Coulomb $\rightarrow$ Maxwell)?
+    \item A noção de \impt{verdade como ideal regulativo} substitui a noção de verdade-como-correspondência. Em uma frase: o que muda na prática para um cientista que adota essa concepção?
+    \item Identifique uma dificuldade que a posição de Chalmers ainda enfrenta. (Uma resposta excelente nota: a noção de ``estrutura'' que sobreviveria às mudanças teóricas é, ela própria, formulada em alguma linguagem teórica --- e é difícil precisar o que conta como ``a mesma estrutura'' através de revoluções científicas.)
+\end{enumerate}
+
+\end{enumerate}
+
+%\newpage
+
+
+% % =============================================================
+% \section*{Gabarito comentado}
+% % =============================================================
+
+% \noindent\emph{Observação:} várias questões admitem múltiplas respostas razoáveis. O gabarito abaixo registra a resposta de referência e, quando relevante, indica o que conta como uma resposta adequada alternativa.
+
+% \begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*]
+
+% % Q1
+% \item \textbf{(Indutivismo: ML como argumento indutivo.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item ``Foram observados muitos gatos ($A$); sob ampla variedade de condições; todos os gatos observados foram classificados corretamente (propriedade $B$); logo, todos os gatos têm a propriedade $B$.''
+%     \item As três condições estão sendo invocadas. Não bastam: o conjunto de teste é \emph{finito}, e a conclusão é universal --- aplica-se a todos os gatos possíveis, inclusive os não amostrados. Há sempre a possibilidade de um gato sob condições nunca observadas (\emph{distribution shift}) ser mal classificado, e isso não envolve contradição.
+%     \item Hume: o argumento indutivo não pode ser justificado pela indução. Mostrar que ``ML funcionou em muitos casos'' não justifica a próxima generalização sem circularidade.
+% \end{enumerate}
+
+% % Q2
+% \item \textbf{(Recuo para a probabilidade.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Casos confirmados são finitos; casos possíveis aos quais uma lei universal se aplica são infinitos; logo $P = n/\infty \approx 0$. Acumular mais observações finitas não muda esse fato qualitativamente.
+%     \item A objeção bayesiana confunde dois quadros. Bayesianismo trabalha com hipóteses dentro de um espaço de hipóteses bem-definido e atualiza graus de crença sobre elas --- e seus apoiadores em geral admitem que isso é um modelo de \emph{racionalidade epistêmica}, não de \emph{prova lógica}. O argumento de Chalmers é sobre a estrutura formal do argumento indutivo clássico que pretende ir de evidência finita a verdade universal. Resposta excelente também observa: bayesianismo já \emph{abandonou} a pretensão indutivista forte; logo, não a salva.
+% \end{enumerate}
+
+% % Q3
+% \item \textbf{(b)} --- é a tese central do indutivista ingênuo. Popper a rejeita explicitamente (toda observação é carregada de teoria), Kuhn também (o paradigma estrutura a percepção), Lakatos idem.
+
+% % Q4
+% \item \textbf{(Observação carregada de teoria.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Exemplos válidos: dois engenheiros olhando para um \emph{stack trace} --- um vê ``ruído'', o outro vê a impressão digital de um \emph{race condition}; um leigo vê um gráfico de \emph{loss}, um especialista vê uma assinatura de \emph{overfitting}; um aluno vê os pesos de uma rede como ``números'', o especialista vê o mapa de atenção.
+%     \item Porque o indutivista sofisticado \emph{aceita} a tese da carga teórica e modifica sua posição: ainda há mérito em acumular evidência sob ampla variedade de condições, mesmo reconhecendo que essa evidência é teoricamente mediada. A refutação do indutivismo \emph{ingênuo} não derruba todos os indutivismos.
+% \end{enumerate}
+
+% % Q5
+% \item \textbf{(Falseabilidade.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Falsificável. Falsificador: ``existe um algoritmo de ordenação por comparação com pior caso $O(n)$.'' (Nota: é um teorema matemático, então a refutação seria via prova ou contraexemplo, não experimento --- discussão legítima sobre se enunciados matemáticos contam como ``empíricos'' em Popper.)
+%     \item Não-falsificável como está. ``Suficientemente complexos'' e ``eventualmente'' tornam compatível com qualquer observação. Falta precisão.
+%     \item Não-falsificável: é uma tautologia (princípio do terceiro excluído).
+%     \item Falsificável em princípio, mas com baixíssimo conteúdo proibitivo --- ``existe uma combinação'' é satisfeito por qualquer demonstração; falsificá-lo exigiria mostrar que \emph{nenhuma} combinação produz desempenho competitivo, o que é praticamente intratável. Análoga a uma afirmação existencial pura.
+%     \item Falsificável. Falsificador: ``existe um classificador com AUC $>0{,}9$ em teste que tem AUC $<0{,}6$ em produção'' (o que, aliás, é frequentemente observado --- a afirmação é falsificável e provavelmente falsa).
+% \end{enumerate}
+
+% % Q6
+% \item \textbf{(Psicanálise e demarcação.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item A acusação é a de \emph{infalsificabilidade}: não há observação concebível incompatível com a teoria. Qualquer comportamento se acomoda nela.
+%     \item Para refutar a crítica, é preciso identificar uma predição que \emph{proíba} estados de coisas observáveis --- e não apenas uma predição \emph{vaga} que se conforme a qualquer resultado. Uma única predição não basta porque a teoria, no conjunto, ainda pode ser compatível com qualquer observação se a maioria de suas predições for vacuosa.
+% \end{enumerate}
+
+% % Q7
+% \item \textbf{(Graus de falseabilidade.)} Ordem: $T_1 < T_2 < T_3$. $T_1$ é existencial pura e quase tautológica em contexto; $T_3$ prediz um número exato em um subsistema específico --- altamente proibitivo.
+
+% Sobre o paradoxo: Popper trata da \emph{ciência básica}, que avança ao se arriscar. A engenharia tem uma função distinta --- proteger contra riscos práticos --- e por isso valoriza afirmações cautelosas. Ambas são racionais em seus contextos. Uma boa resposta nota: confundir os contextos é o erro.
+
+% % Q8
+% \item \textbf{(Urano vs.\ Mercúrio.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item A diferença não está \emph{a priori} na estrutura da manobra, e sim no seu desfecho \emph{a posteriori}: a postulação de Netuno gerou uma predição nova testável (sua posição precisa) que foi corroborada; a postulação de Vulcano falhou em gerar corroboração. Lakatos diria: a manobra de Le Verrier para Urano foi parte de uma fase \emph{progressiva}; a manobra para Mercúrio iniciou uma fase \emph{degenerativa}.
+%     \item Mercúrio acabou requerendo a Relatividade Geral --- isto é, a substituição do núcleo. Isso mostra que não há critério \emph{a priori} para distinguir modificações legítimas de \emph{ad hoc}: o veredicto vem da fertilidade subsequente do programa, observada ao longo de décadas. É o problema central que Lakatos legou e nunca resolveu completamente.
+% \end{enumerate}
+
+% % Q9
+% \item \textbf{(Análise de argumento.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Deslizes: (1) confunde uma teoria \emph{filosófica} sobre a ciência com uma teoria \emph{científica} sobre o mundo --- não é evidente que falsificacionismo deva ser falsificável no mesmo sentido empírico; (2) confunde Duhem--Quine, uma \emph{tese sobre} falsificação, com uma falsificação \emph{do} falsificacionismo; (3) trata a comunidade de cientistas como autoridade epistemológica sobre teorias filosóficas, o que é uma confusão de níveis.
+%     \item Reformulação possível: ``o falsificacionismo, se aplicado à própria atividade científica, é desmentido pela história --- cientistas não tratam refutações isoladas como decisivas, conforme mostra a tese de Duhem--Quine. Logo, o falsificacionismo é uma má descrição da prática científica, mesmo que possa ser uma prescrição metodológica defensável.'' É essa, em essência, a crítica de Kuhn e Lakatos.
+% \end{enumerate}
+
+% % Q10
+% \item \textbf{(Duhem--Quine.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Porque o cientista, na prática, dispõe de recursos para localizar o erro com razoável segurança \emph{na maior parte} dos casos. Duhem--Quine mostra que a falsificação não é \emph{logicamente conclusiva} --- mas isso não significa que seja \emph{arbitrária}. Há fortíssimas restrições práticas e contextuais sobre onde localizar o erro.
+%     \item Pelo menos três (resposta esperada): (i) conhecimento prévio sobre a confiabilidade dos instrumentos; (ii) sucesso preditivo passado das hipóteses auxiliares; (iii) parcimônia (mexer em coisas menos centrais primeiro); (iv) consenso da comunidade; (v) custo experimental e teórico de cada hipótese alternativa.
+% \end{enumerate}
+
+% % Q11
+% \item \textbf{(Deep learning como programa lakatosiano.)} Várias respostas plausíveis. Núcleo plausível: ``redes neurais profundas com SGD podem aproximar funções complexas''; ``representações distribuídas hierárquicas são adequadas para domínios estruturados''; ``a otimização não-convexa via gradiente funciona em superfícies de perda reais (apesar da teoria não exigir)''. Cinturão: arquitetura específica, função de ativação, esquema de regularização, técnicas de inicialização. Exemplo de modificação: \emph{batch normalization} para domar gradientes; \emph{residual connections} para resolver desaparecimento. Sobre progressividade: a melhor resposta reconhece a tensão --- há predições novas constantemente confirmadas (capacidades emergentes), mas também acomodações \emph{post hoc} (alucinações, fragilidade adversarial). Resposta excelente recusa um veredicto definitivo e aplica os critérios lakatosianos com cuidado.
+
+% % Q12
+% \item \textbf{(Núcleo firme.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Sem um núcleo estável, cada anomalia desestabilizaria todo o trabalho. O programa não conseguiria amadurecer. O núcleo é o que permite uma \emph{divisão metodológica do trabalho}: aceitamos esses postulados para fazer progresso em outras direções.
+%     \item Resposta de Lakatos: a fronteira entre legítimo e \emph{ad hoc} não está nos atributos da modificação em si (todas modificações ``protegem o núcleo''), mas no \emph{efeito} da modificação sobre a sequência subsequente de teorias. Se a sequência prediz fatos novos corroborados, é progressiva; se apenas absorve anomalias passadas, é degenerativa. O crítico pede um critério \emph{a priori}; Lakatos só pode oferecer um critério \emph{histórico}.
+% \end{enumerate}
+
+% % Q13
+% \item
+% \begin{enumerate}[label=(\alph*)]
+%     \item Lakatos.
+%     \item Kuhn.
+%     \item Kuhn.
+%     \item Lakatos.
+%     \item Kuhn (mas Lakatos discutiu o conceito ao criticá-lo).
+% \end{enumerate}
+
+% % Q14
+% \item \textbf{(O dogmatismo da ciência normal.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Vantagem: permite a especialização e o aprofundamento técnico. Cientistas podem dedicar décadas a refinar instrumentos, técnicas, soluções de quebra-cabeças, em vez de discutir continuamente fundamentos. O paradigma libera energia para o trabalho detalhado.
+%     \item Vira vício quando as anomalias acumuladas tornam-se graves o suficiente para sinalizar que o paradigma é inadequado --- mas a comunidade, treinada para ver tudo como ``erro do cientista'', continua resistindo. A crise é precisamente o momento em que essa virtude se converte em obstáculo.
+% \end{enumerate}
+
+% % Q15
+% \item \textbf{(Os sentidos de paradigma.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Parcialmente. Atenua a ambiguidade ao reduzir os sentidos a dois agrupamentos coerentes, mas dentro de ``matriz disciplinar'' ainda cabem várias coisas heterogêneas (generalizações, valores, modelos, compromissos metafísicos). A crítica de Masterman não está completamente neutralizada.
+%     \item Aprendendo \emph{backprop} pelo MNIST, ele absorve \emph{exemplares} --- sabe ``como se resolve um problema desses''. Lendo Bishop, está absorvendo a \emph{matriz disciplinar} --- generalizações simbólicas, valores epistêmicos da estatística clássica. A boa formação envolve as duas faces.
+% \end{enumerate}
+
+% % Q16
+% \item \textbf{(Visão computacional pré- e pós-2012.)} Resposta aberta. Boa resposta lakatosiana: \emph{feature engineering} era um programa com núcleo (``características projetadas por humanos capturam invariantes relevantes'') que se tornou degenerativo --- cada novo conjunto de imagens exigia novas \emph{features}, sem predições novas corroboradas. Redes convolucionais constituem um programa cujo núcleo (``representações podem ser aprendidas end-to-end'') gerou predições novas corroboradas (transferência entre tarefas, propriedades emergentes). Boa resposta kuhniana: o período anterior tinha estrutura de ciência normal (refinamentos de SIFT/HOG/SURF), com anomalias acumulando (ImageNet difícil); AlexNet foi uma revolução com elementos clássicos: descontinuidade técnica, mudança de critérios sobre o que conta como progresso, êxodo geracional para o novo paradigma. Resposta excelente aponta as limitações de \emph{ambas} as descrições.
+
+% % Q17
+% \item
+% \begin{enumerate}[label=(\alph*)]
+%     \item Racionalismo: aplica critério universal (precisão preditiva).
+%     \item Relativismo: nega ponto de vista externo.
+%     \item Relativismo: critérios internos a cada paradigma.
+%     \item Racionalismo: critério objetivo independente da comunidade.
+% \end{enumerate}
+
+% % Q18
+% \item \textbf{(Eixos independentes.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Racionalismo/relativismo: existe um critério universal de avaliação de teorias, ou os critérios são internos a comunidades? Objetivismo/individualismo: o conhecimento científico existe como estrutura com propriedades próprias (objetivismo) ou se reduz a estados mentais de indivíduos (individualismo)?
+%     \item \emph{Relativista objetivista}: alguém que pensa que paradigmas têm propriedades estruturais objetivas (relações lógicas, consequências, problemas internos), mas que não há ponto de vista neutro a partir do qual avaliar paradigmas entre si. Algumas leituras de Kuhn caem aqui. \emph{Racionalista individualista}: alguém que aceita critérios universais de racionalidade, mas pensa que o conhecimento só existe ``na cabeça'' dos cientistas individuais. É posição rara porque os critérios racionais geralmente são pensados como propriedades de proposições/teorias --- entidades objetivas.
+% \end{enumerate}
+
+% % Q19
+% \item \textbf{(Maxwell e Hertz.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item As ondas eletromagnéticas estavam ``contidas'' na estrutura da teoria de Maxwell antes que qualquer mente humana as visse. Logo, a teoria tem consequências \emph{objetivas} que excedem o que seus autores tinham em mente. Conhecimento como estrutura, não como estado psicológico.
+%     \item A réplica individualista parece soar bem, mas ignora um ponto-chave: se as consequências \emph{só existem} quando alguém as deriva, então por que duas pessoas independentes derivam exatamente as mesmas? Por que algumas consequências resistem à derivação de quem as deseja contradizer? A estrutura da teoria impõe restrições objetivas sobre o que pode ser derivado dela. Resposta excelente nota que individualismo radical tem dificuldades com a \emph{intersubjetividade} da matemática e da lógica.
+% \end{enumerate}
+
+% % Q20
+% \item \textbf{(Kuhn no espectro.)} Resposta exige consulta ao Chalmers --- recompensar referência explícita aos capítulos sobre os limites do falsificacionismo, racionalismo/relativismo, e à seção sobre Kuhn. Elementos relativistas: incomensurabilidade, mudança como conversão, ausência de ponto neutro. Elementos racionalistas: valores epistêmicos compartilhados, escolha não-arbitrária, incomensurabilidade local. Chalmers, na maior parte do livro, lê Kuhn em chave intermediária, com leve inclinação para vê-lo como mais relativista do que ele próprio reconhecia --- mas a leitura específica de Chalmers depende da edição. Um aluno que apresenta referência de página/seção com discussão correta deve ser premiado mesmo se a opinião final do Chalmers nessa edição diferir.
+
+% % Q21
+% \item \textbf{(Emergência em LLMs --- bônus integrador.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Pesquisador A: falsificacionismo (acusação de \emph{ad hoc}, métricas escolhidas para confirmar). Pesquisador B: lakatosianismo (programa progressivo, predições novas corroboradas).
+%     \item Leitura kuhniana: ``escala como paradigma'' constitui matriz disciplinar emergente; capacidades inesperadas funcionam como ``anomalias positivas'' --- não invalidam o paradigma, mas o reforçam. Ausência de revolução: o paradigma de redes neurais profundas \emph{continua}, só foi reescalado. O que não se aplica bem: a noção kuhniana de incomensurabilidade não tem mordida aqui --- estamos dentro do mesmo paradigma.
+%     \item A resposta espera que o aluno reconheça que ``útil para guiar pesquisa'' e ``verdadeira'' são distinções diferentes, e que cada autor responderia diferentemente: Popper diria que utilidade não basta, Lakatos diria que utilidade prolongada \emph{é} o melhor critério disponível, Kuhn diria que ``útil'' é parasitário do paradigma vigente.
+% \end{enumerate}
+
+% % Q22
+% \item \textbf{(``Vale tudo'' como \emph{reductio}.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item A estrutura do argumento é: (i) Para toda regra metodológica $R$ que se proponha como universal, existe pelo menos um episódio histórico importante em que $R$ foi violada e a violação foi cientificamente produtiva. (ii) Logo, $R$ não pode ser universal. (iii) Como isso vale para \emph{qualquer} $R$ plausível, a única regra que sobrevive é a regra vazia ``vale tudo''. Mas vazia é precisamente o ponto: a tese conclui que a busca por regra universal está mal colocada, não que se deva agir aleatoriamente.
+%     \item A crítica da auto-neutralização não é fatal, embora seja embaraçosa. Resposta possível em nome de Feyerabend: a tese ``vale tudo'' não é uma prescrição (\emph{aja sem método}), é uma metalinguagem sobre prescrições (\emph{não há prescrição universal a se seguir}). Distingue-se nível-objeto de nível-meta. Outra defesa: Feyerabend admite que a tese é provocativa e que, dentro de tradições específicas, há, sim, critérios --- só nega que algum deles seja universal.
+% \end{enumerate}
+
+% % Q23
+% \item \textbf{(Caso Galileu pela ótica de Feyerabend.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item \emph{Torre:} a física aristotélica predizia que uma pedra solta cairia atrás da torre se a Terra girasse; a pedra caía aos pés da torre. \emph{Paralaxe:} se a Terra orbita o Sol, as estrelas fixas deveriam parecer se mover ao longo do ano; nenhum movimento era detectado. \emph{Vênus:} no modelo de Copérnico, Vênus deveria mostrar fases e grandes variações de tamanho; a olho nu, isso não se via.
+%     \item Violações: (i) inventou um princípio dinâmico novo (relatividade galileana) \emph{ad hoc} para neutralizar o argumento da torre; (ii) usou um instrumento (telescópio) cujos artefatos ópticos não eram entendidos, e cuja confiabilidade para uso astronômico não estava estabelecida; (iii) usou retórica, ironia, diálogos --- não apenas argumentação técnica. Qualquer um desses pontos é uma resposta adequada.
+%     \item Não se segue. O argumento de Feyerabend é \emph{histórico-descritivo} (nessas circunstâncias, violar foi produtivo); a conclusão que se quer extrair seria \emph{normativa-geral} (logo, sempre pode-se violar). É exatamente o salto normativo que os críticos identificam como falacioso. Resposta excelente nota: o caso Galileu mostra que regras rígidas \emph{a priori} podem inibir descobertas, mas não autoriza inferir simetricamente que toda violação é justificada. A diferença entre Galileu e um \emph{crank} contemporâneo é resolvida \emph{a posteriori}, pela fertilidade da resposta dada.
+% \end{enumerate}
+
+% % Q24
+% \item \textbf{(Contraindução.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item A justificativa é: se os fatos são carregados de teoria, então o que um quadro teórico apresenta como ``fatos estabelecidos'' \emph{já} reflete as escolhas teóricas desse quadro. Para enxergar suas limitações, é preciso outro quadro --- uma teoria rival --- que reorganize a evidência em outros padrões. O pluralismo teórico é, então, ferramenta epistêmica, não tolerância.
+%     \item Exemplos plausíveis. \emph{Redes neurais (1980--2010):} a maioria dos pesquisadores considerava treinar redes profundas inviável; teóricos como Bengio, Hinton, LeCun persistiram apesar das ``provas'' empíricas em contrário (gradiente desaparecendo, dificuldade de otimização). Quando GPUs e ImageNet entraram em cena, o quadro mudou. \emph{Computação quântica:} décadas insistindo em uma abordagem que parecia \emph{empiricamente} estéril --- com a comunidade dominante focando em otimizações clássicas --- abriu caminho ao que hoje começa a render. Outros exemplos válidos.
+%     \item Lakatos admite que cientistas resistam a refutações, mas \emph{dentro} de um programa cuja heurística positiva define o roteiro de trabalho; a resistência é racional por ainda haver previsões novas a serem corroboradas. Feyerabend é mais radical: a contraindução não pressupõe que o cientista esteja dentro de um programa progressivo --- ele pode estar defendendo uma teoria empiricamente refutada \emph{por entender que a evidência refutadora depende de teorias que precisam ser questionadas}. A diferença é: Lakatos respeita um quadro estrutural; Feyerabend dispensa-o.
+% \end{enumerate}
+
+% % Q25
+% \item \textbf{(Dimensão política.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Cadeia: (i) Se houvesse método científico universal, ele justificaria o estatuto epistêmico privilegiado da ciência. (ii) Não há tal método (Feyerabend o argumenta historicamente). (iii) Logo, o estatuto epistêmico da ciência não pode ser justificado por apelo a método. (iv) Sem essa justificação, o privilégio institucional (financiamento, presença na educação, monopólio sobre conhecimento legítimo) é injustificável. (v) Logo, separação ciência-Estado, pluralismo educacional, etc.
+%     \item O argumento não obriga necessariamente à posição igualitária ingênua. Resistências possíveis sem refutar Feyerabend: (i) distinções operacionais --- a ciência ocidental produz, de fato, predições reprodutíveis sob ampla variedade de condições, intervenções tecnológicas que funcionam, etc.; mesmo sem critério metodológico universal, há diferenças operacionais entre tradições; (ii) considerações pragmáticas --- recursos públicos podem ser alocados por critérios consequencialistas (impacto medicinal, tecnológico) sem necessidade de declarar uma tradição ``epistemicamente superior''; (iii) institucionais --- ciência é, em parte, uma tradição que se define pela autocrítica metódica e essa característica (não a verdade absoluta) pode ser o que merece financiamento. Resposta excelente reconhece que Feyerabend simpatizaria com saberes tradicionais brasileiros enquanto formas de produção de conhecimento, sem que isso obrigue à equivalência de financiamento.
+% \end{enumerate}
+
+% % Q26
+% \item \textbf{(Representações em DL.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Dificuldades. \emph{Instrumentalista:} não explica por que intervenções específicas em ativações latentes (e.g., ablação de neurônios, edição de circuitos) produzem efeitos comportamentais previsíveis --- o argumento de Hacking se aplica. \emph{Realista do senso comum:} a noção de ``conceito de gato'' é antropocêntrica; o modelo pode estar usando regularidades estatísticas que correlacionam com gatos sem ter qualquer representação isomorfa ao conceito humano. \emph{Realista não-representativo:} a noção de ``captura algo'' é vaga; falta um critério operacional para distinguir entre um modelo que ``captura estrutura'' e um modelo que apenas memoriza correlações superficiais.
+%     \item A interpretabilidade mecanística pressupõe pelo menos uma versão de realismo --- os circuitos identificados \emph{realmente} implementam computações reconhecíveis. Entre as duas variedades realistas, a mecanística tende a se posicionar próxima ao realismo do senso comum (existem circuitos genuínos lá), mas resposta excelente nota: na prática, os pesquisadores que mais avançam não fazem afirmações ontológicas fortes --- operam num registro próximo ao realismo não-representativo, ``capturamos uma estrutura computacional''.
+% \end{enumerate}
+
+% % Q27
+% \item \textbf{(Indução pessimista.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item Argumento: (i) Em muitos casos históricos, teorias empiricamente bem-sucedidas postularam entidades centrais cuja existência foi posteriormente abandonada. (ii) Nossas melhores teorias atuais são também empiricamente bem-sucedidas. (iii) Logo, por analogia indutiva com (i), é provável que entidades centrais das nossas teorias atuais venham a ser também abandonadas. Conclusão: sucesso empírico não é bom guia para verdade ontológica.
+%     \item A auto-aplicação é embaraçosa mas não fatal. A indução pessimista não pretende ser uma prova dedutiva; é um argumento abdutivo histórico que pretende minar o argumento do milagre (Putnam) --- argumento que também é abdutivo. Os dois ficam em pé de igualdade; é um padrão argumentativo legítimo. Outra leitura: o argumento não é ``nunca confie em entidades teóricas'' mas ``modere a confiança em entidades teóricas com base no padrão histórico''. Esse uso moderado evita o paradoxo autodestrutivo.
+%     \item Na IA, a observação se sustenta: \emph{perceptrons, sistemas especialistas, redes Bayesianas, SVMs, LSTMs} --- cada paradigma teve seu auge e foi parcialmente superado. Por indução: \emph{transformers} provavelmente também não serão o ponto final. Crítica à analogia: na IA, ``abandono'' é diferente de ``demonstração de inexistência'' --- SVMs continuam funcionando, só não são estado-da-arte. O padrão é de superação técnica, não de descoberta ontológica. Resposta excelente: a analogia com física é fraca porque, na IA, o objeto não tem natureza independente do método; em física, o flogisto era uma alegação sobre o que existe no mundo --- não uma técnica.
+% \end{enumerate}
+
+% % Q28
+% \item \textbf{(Realismo não-representativo, posição final de Chalmers.)}
+% \begin{enumerate}[label=(\alph*)]
+%     \item A indução pessimista mostra que \emph{ontologia} não sobrevive bem às mudanças teóricas (flogisto, éter), mas \emph{estrutura} sobrevive: Coulomb é caso-limite de Maxwell, Newton é caso-limite de Einstein. O realismo não-representativo se reposiciona: o que a ciência captura, e que sobrevive, são relações estruturais e capacidades causais --- não a identidade dos relata. Isso preserva o realismo (o mundo restringe) sem o ônus de defender que os termos teóricos têm referência fixa.
+%     \item Na prática: o cientista deixa de buscar ``a teoria verdadeira sobre o que X realmente é'' e busca ``a teoria mais progressiva sobre as relações em que X participa''. A pergunta ``o elétron é onda ou partícula?'' deixa de ser bem-posta; substitui-se por ``que rede de manipulações e predições captura o comportamento de matéria carregada?''.
+%     \item A dificuldade central: a noção de ``mesma estrutura'' através de revoluções científicas é, ela própria, formulada em alguma linguagem teórica. Quem decide o que conta como ``sobrevivência estrutural'' do programa? A própria identificação do que é estrutural é teoricamente carregada --- e isso reabre, em outro nível, o problema de Kuhn (incomensurabilidade). Outra dificuldade legítima: o realismo não-representativo pode ser acusado de ser quase indistinguível do instrumentalismo sofisticado --- a diferença entre ``capturar estrutura do mundo'' e ``ser instrumento útil que reflete restrições do mundo'' é sutil.
+% \end{enumerate}
+
+% \end{enumerate}
+
+\end{document}
