@@ -1,0 +1,115 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{mdframed}
+\usepackage{pgffor}
+\usepackage{tabto}
+
+\newcommand{\answerlines}[1]{%
+  \par\vspace{4pt}%
+  \foreach \n in {1,...,#1}{%
+    \noindent\makebox[\linewidth]{\dotfill}\\[6pt]%
+  }%
+}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+\definecolor{headerblue}{RGB}{152, 38, 73}
+\definecolor{accentblue}{RGB}{113, 162, 182}
+
+\newcommand{\impt}[1]{\textcolor{important}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2.5cm, top=1.5cm}
+
+\newmdenv[
+  linecolor=headerblue,
+  backgroundcolor=headerblue!6,
+  linewidth=1.2pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  skipabove=6pt,
+  skipbelow=6pt
+]{notebox}
+
+\newmdenv[
+  linecolor=accentblue,
+  backgroundcolor=accentblue!8,
+  linewidth=0.8pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  skipabove=6pt,
+  skipbelow=6pt
+]{casobox}
+
+\title{%
+  \vspace{-1cm}%
+  \textcolor{headerblue}{\textbf{Prova 1}}\\[4pt]
+  \large Metodologia Científica para Ciência da Computação --- BCC502/DECOM/UFOP \\
+  }
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.5cm}
+Nome:................................................................................................... Matrícula: ...................................
+
+% ==================================================================
+1. Considere o seguinte cenário, próximo do que vocês podem encontrar na prática:
+ 
+\begin{casobox}
+Um grupo de estudantes desenvolve um algoritmo que afirmam ser mais rápido que os algoritmos clássicos para um certo problema de ordenação. Publicam o resultado com testes em algumas entradas. Um colega aponta que as entradas escolhidas favorecem o método. Os autores publicam uma versão revisada: introduzem um pré-processamento ``essencial'' que melhora o tempo nos casos contestados. Outro grupo tenta reproduzir os resultados em sua própria máquina e obtém tempos piores que os clássicos; os autores respondem que faltou ajustar um parâmetro de cache específico do hardware deles. Um terceiro grupo testa o algoritmo em entradas novas, geradas aleatoriamente; o algoritmo é mais lento; os autores respondem que essas entradas têm uma ``estrutura atípica'' e que o método funciona bem para entradas ``realistas''. A cada nova dificuldade, o grupo original introduz uma modificação que protege a alegação original.
+\end{casobox}
+ 
+\ntc{Lembrete:} ao responder os itens abaixo, espera-se uso preciso de termos como \emph{cinturão protetor}, \emph{núcleo firme}, modificação \emph{ad hoc}, mudança progressiva/degenerativa, predição nova corroborada, predição arriscada, heurística posisitiva / negativa  --- onde se aplicarem.
+ 
+\vspace{0.2cm}
+ 
+\noindent\textbf{(a)} Sob a ótica de Popper (falsificacionismo sofisticado) e de Lakatos, há um \impt{vocabulário técnico} bastante específico (veja lembrete) para descrever o que está acontecendo. Use esse vocabulário e diga \impt{o que está dando errado} aqui --- sem usar a palavra ``ruim'' ou equivalentes vagos.
+ 
+\answerlines{26}
+ 
+\noindent\textbf{(b)} Um defensor do grupo pode responder: \emph{``vocês estão sendo falsificacionistas ingênuos --- a primeira refutação não derruba um programa''}. Essa defesa é \impt{legítima} à luz de Lakatos? Sob quais condições ela passaria a ser \impt{ilegítima}? Sua resposta deve identificar o critério lakatosiano envolvido, não apenas dizer ``depende''.
+ 
+\answerlines{18}
+ 
+\vspace{-0.5cm}
+\noindent\textbf{(c)} Agora mude de lente: descreva o mesmo episódio do ponto de vista de Kuhn. O que um kuhniano \impt{veria de diferente} que um lakatosiano não vê? Você pode usar conceitos como \emph{ciência normal}, \emph{quebra-cabeças}, \emph{exemplares}, \emph{valores compartilhados} --- mas só os que de fato se aplicam ao caso.
+ 
+\answerlines{18}
+
+% ==================================================================
+2. Cada uma das afirmações abaixo é uma \impt{distorção plausível} de uma ideia que estudamos --- o tipo de coisa que ``parece certo'' mas confunde dois conceitos próximos. Para cada uma, identifique a confusão e formule a versão correta. Não se prenda à definição do Chalmers; explique \impt{por que a distinção importa}.
+
+\begin{enumerate}[label=(\alph*), leftmargin=*]
+  \item \emph{``Como paradigmas rivais são incomensuráveis, não há como cientistas de paradigmas diferentes discutirem entre si --- eles literalmente não se entendem.''}
+  \answerlines{19}
+
+  \vspace{-0.3cm}
+  \item \emph{``O núcleo firme de um programa de pesquisa lakatosiano é, na prática, irrefutável --- ou seja, é tratado pelos cientistas como verdade estabelecida.''}
+  \answerlines{19}
+
+  \item \emph{``A diferença entre uma modificação legítima e uma modificação \emph{ad hoc} é que a primeira é introduzida por uma boa razão e a segunda apenas para salvar a teoria.''}
+  \answerlines{19}
+ \vspace{-0.3cm}
+  \item \emph{``Como toda observação é carregada de teoria, qualquer experimento pode ser interpretado de qualquer jeito --- a falsificação é, no fim, uma escolha sociológica.''}
+  \answerlines{19}
+\end{enumerate}
+
+\end{document}
