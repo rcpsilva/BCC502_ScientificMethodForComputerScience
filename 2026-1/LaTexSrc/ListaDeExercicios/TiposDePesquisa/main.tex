@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+\definecolor{accent}{RGB}{230, 120, 30}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\newtcolorbox{respbox}{
+  colback=notice!5,
+  colframe=notice!50,
+  boxrule=0.4pt,
+  arc=2pt,
+  left=4pt, right=4pt, top=3pt, bottom=3pt,
+  fontupper=\small
+}
+
+\title{Lista de Exercícios -- Tipos de Pesquisa\\
+\large Tipos de Pesquisa em Ciência da Computação\footnote{Baseado em Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item Apresente  as definições dos tipos de pesquisa abaixo de acordo com \texttt{Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.} 
+    
+\begin{enumerate}[label=(\alph*)]
+    \item Apresentação de um Produto
+    \item Apresentação de Algo Diferente
+    \item Apresentação de Algo Presumivelmente Melhor 
+    \item Apresentação de Algo Reconhecidamente Melhor
+    \item Apresentação de uma Prova
+\end{enumerate}
+
+  \item  Escolha um problema da sua área de interesse (ex.: aprendizado de máquina, segurança, engenharia de \textit{software}, sistemas, IHC, etc.). Para esse mesmo problema, proponha três projetos distintos, cada um pertencente a um tipo de contribuição diferente do exercício anterior. Em cada proposta, explicite:
+  \begin{enumerate}[label=(\alph*)]
+    \item A questão de pesquisa.
+    \item O tipo de contribuição.
+    \item O procedimento técnico predominante.
+    \item O critério que permitirá afirmar que o projeto produziu conhecimento novo.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}
