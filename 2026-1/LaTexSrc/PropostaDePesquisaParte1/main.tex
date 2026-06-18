@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+\definecolor{accent}{RGB}{230, 120, 30}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\newtcolorbox{respbox}{
+  colback=notice!5,
+  colframe=notice!50,
+  boxrule=0.4pt,
+  arc=2pt,
+  left=4pt, right=4pt, top=3pt, bottom=3pt,
+  fontupper=\small
+}
+
+\title{Lista de Exercícios -- Contextualização e Formulação da Pesquisa\\
+\large Construção do Problema, Objetivos e Hipótese de Trabalho\footnote{Baseado em Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instruções}
+
+Esta atividade tem como objetivo auxiliar na elaboração da proposta de pesquisa que será desenvolvida ao longo da disciplina. As respostas devem estar alinhadas com as recomendações apresentadas por Wazlawick (2020). \textbf{Leitura Sugerida:} Capítulos 6, 7, 8 e 9 de Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.
+
+\textbf{Entrega e apresentação da proposta.}
+
+As respostas desta atividade deverão ser submetidas no Moodle em formato PDF, elaboradas obrigatoriamente a partir do \textit{template} disponibilizado no repositório da disciplina no GitHub \url{}.
+
+Além disso, cada estudante deverá preparar uma breve apresentação de sua proposta de pesquisa, contendo entre \textbf{5 e 10 slides}, abordando pelo menos os seguintes tópicos:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Contextualização do problema;
+    \item Lacuna de pesquisa identificada;
+    \item Objetivo geral;
+    \item Objetivos específicos;
+    \item Hipótese de trabalho;
+    \item Estratégia preliminar para investigação ou validação da hipótese.
+\end{enumerate}
+
+A apresentação será realizada em sala de aula na data indicada pelo professor e o arquivo correspondente (em formato PDF ou equivalente) também deverá ser submetido no Moodle juntamente com o relatório da atividade.
+
+\section*{Atividades}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item Escolha o tema de pesquisa que pretende desenvolver durante a disciplina e produza uma breve contextualização (entre 1 e 2 páginas), contemplando os seguintes aspectos:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Descreva o domínio de aplicação ou área de pesquisa.
+    \item Apresente o problema que motiva a investigação.
+    \item Discuta por que esse problema é relevante do ponto de vista científico, tecnológico ou social.
+    \item Cite pelo menos três trabalhos relacionados que evidenciem o estado atual do conhecimento sobre o tema.
+    \item Explique quais limitações, lacunas ou oportunidades de pesquisa ainda permanecem em aberto.
+\end{enumerate}
+
+\item A partir da contextualização elaborada, defina os objetivos da sua proposta de pesquisa.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Escreva um objetivo geral, iniciando-o com um verbo no infinitivo.
+    \item Defina entre três e cinco objetivos específicos.
+    \item Explique brevemente como cada objetivo específico contribui para atingir o objetivo geral.
+\end{enumerate}
+
+\item Formule uma hipótese de trabalho para a sua proposta de pesquisa.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Escreva a hipótese em uma única frase declarativa.
+    \item Justifique por que essa hipótese é plausível à luz da literatura consultada.
+    \item Explique como a hipótese poderá ser investigada ou testada durante o desenvolvimento do trabalho.
+    \item Discuta quais evidências experimentais, analíticas ou empíricas seriam suficientes para aceitar ou rejeitar a hipótese proposta.
+\end{enumerate}
+
+\item Releia as respostas dos exercícios anteriores e verifique se existe coerência entre os seguintes elementos:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Problema de pesquisa;
+    \item Objetivo geral;
+    \item Objetivos específicos;
+    \item Hipótese de trabalho;
+    \item Estratégia de validação da hipótese.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
