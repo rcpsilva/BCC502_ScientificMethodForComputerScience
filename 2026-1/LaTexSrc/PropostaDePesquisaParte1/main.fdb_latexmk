@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1781808538.07831 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/PropostaDePesquisaParte1/main.tex" "main.pdf" "main" 1781808540.20807 0
-  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/PropostaDePesquisaParte1/main.tex" 1781808535 4768 18144b38d2fadd2cc7d2e2660df93131 ""
+["pdflatex"] 1781808676.21977 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/PropostaDePesquisaParte1/main.tex" "main.pdf" "main" 1781808678.31537 0
+  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/LaTexSrc/PropostaDePesquisaParte1/main.tex" 1781808675 4878 a8d77377442b6c087fa5af6d5db51c48 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1730312644 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1730312644 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1730314164 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -44,6 +44,7 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb" 1730312644 131438 c8884c67ccd7382f731c139fbb34a6cb ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb" 1730312644 187625 dd608ec2036f04ca9db473ad88d8ac35 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb" 1730312644 186554 2eb6bd25fc5e008c37b6575e4923fdc7 ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb" 1730312644 169201 651a6333c3213b38091f54d2ab2d2cd6 ""
   "c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1730316943 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1730311999 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "c:/texlive/2024/texmf-dist/tex/generic/babel-portuges/brazil.ldf" 1730312089 6591 308dec8ccec5a8d302be8a046d473dd3 ""
@@ -190,9 +191,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730319856 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730320026 3325936 6e896a909b476ed009efbfbadbcd5207 ""
   "c:/texlive/2024/texmf.cnf" 1730319826 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1781808539 299 bf63d000b925ee92740d37242342c6c4 "pdflatex"
-  "main.out" 1781808539 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1781808535 4768 18144b38d2fadd2cc7d2e2660df93131 ""
+  "main.aux" 1781808678 299 bf63d000b925ee92740d37242342c6c4 "pdflatex"
+  "main.out" 1781808677 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1781808675 4878 a8d77377442b6c087fa5af6d5db51c48 ""
   (generated)
   "main.aux"
   "main.log"
