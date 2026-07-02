@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+\definecolor{accent}{RGB}{230, 120, 30}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\newtcolorbox{respbox}{
+  colback=notice!5,
+  colframe=notice!50,
+  boxrule=0.4pt,
+  arc=2pt,
+  left=4pt, right=4pt, top=3pt, bottom=3pt,
+  fontupper=\small
+}
+
+\title{Atividade -- Contextualização e Formulação da Pesquisa\\
+\large Construção do Problema, Objetivos e Hipótese de Trabalho\footnote{Baseado em Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instruções}
+
+Esta atividade tem como objetivo continuar auxialiando na elaboração da proposta de pesquisa que será desenvolvida ao longo da disciplina. As respostas devem estar alinhadas com as recomendações apresentadas por Wazlawick (2020). \textbf{Leitura Sugerida:} Capítulos 6, 7, 8 e 9 de Wazlawick, R. S. \textit{Metodologia de Pesquisa para Ciência da Computação}, 3.ed. Elsevier, 2020.
+
+\ntc{\textbf{Importante -- natureza do texto esperado.}} Esta atividade não deve ser respondida no formato de lista de exercícios. O texto produzido aqui é, na prática, um primeiro rascunho dos capítulos do seu TCC/monografia, e deve ser escrito como tal: \impt{com exceção da seção de objetivos (item 2), todas as respostas devem ser redigidas em texto corrido, em prosa, sem uso de enumerações, tópicos ou marcadores}. Os itens (a), (b), (c)... listados dentro de cada exercício abaixo indicam apenas o \emph{roteiro} do que o texto deve contemplar -- eles não devem aparecer como subdivisões, cabeçalhos ou respostas separadas no seu documento final. A expectativa é que você integre esses aspectos em parágrafos articulados, como faria ao escrever a introdução de uma monografia.
+
+\textbf{Entrega e apresentação da proposta.}
+
+As respostas desta atividade deverão ser submetidas no Moodle em formato PDF, elaboradas obrigatoriamente a partir do \textit{template} disponibilizado no repositório da disciplina no GitHub \url{https://github.com/rcpsilva/BCC502_ScientificMethodForComputerScience/tree/main/2026-1/ModeloProposta}. \textcolor{red}{\textbf{Não utiliza o template implica em nota 0.}}
+
+Além disso, cada estudante deverá preparar uma breve apresentação de sua proposta de pesquisa, contendo entre \textbf{5 e 10 slides}, abordando pelo menos os seguintes tópicos:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Contextualização do problema;
+    \item Lacuna de pesquisa identificada;
+    \item Objetivo geral;
+    \item Objetivos específicos;
+    \item Hipótese de trabalho;
+    \item Estratégia preliminar para investigação ou validação da hipótese.
+    \item Limitações da estratégia de investigação
+    \item Utilização de IA
+\end{enumerate}
+
+A apresentação será realizada em sala de aula na data indicada pelo professor e o arquivo correspondente (em formato PDF) também deverá ser submetido no Moodle juntamente com o relatório da atividade.
+
+\section*{Atividades}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item Escolha o tema de pesquisa que pretende desenvolver durante a disciplina e produza um texto corrido (entre 1 e 2 páginas, sem subdivisão em tópicos) que apresente a contextualização da sua pesquisa. O texto deve integrar, de forma articulada: o domínio de aplicação ou área de pesquisa; o problema que motiva a investigação; a relevância desse problema do ponto de vista científico, tecnológico ou social; pelo menos três trabalhos relacionados que evidenciem o estado atual do conhecimento sobre o tema; e as limitações, lacunas ou oportunidades de pesquisa que ainda permanecem em aberto. Esses elementos devem se conectar como argumentação única -- do domínio geral até a lacuna específica que sua pesquisa pretende preencher -- e não como respostas isoladas a cada aspecto.
+
+\item A partir da contextualização elaborada, defina os objetivos da sua proposta de pesquisa. \ntc{Esta é a única seção da atividade em que a resposta pode ser apresentada em formato de lista, seguindo a convenção usual de propostas de TCC.}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Escreva um objetivo geral, iniciando-o com um verbo no infinitivo.
+    \item Defina entre três e cinco objetivos específicos, em lista numerada.
+    \item Em seguida, escreva um curto parágrafo (em texto corrido) explicando como os objetivos específicos, em conjunto, contribuem para atingir o objetivo geral.
+\end{enumerate}
+
+\item Formule uma hipótese de trabalho para a sua proposta de pesquisa e apresente-a em texto corrido, sem subdivisão em tópicos. O texto deve conter: a hipótese, redigida como uma única frase declarativa; a justificativa de sua plausibilidade à luz da literatura consultada; como ela poderá ser investigada ou testada durante o desenvolvimento do trabalho; e quais evidências experimentais, analíticas ou empíricas seriam suficientes para aceitá-la ou rejeitá-la. Assim como no item anterior, esses pontos devem compor um único parágrafo (ou sequência de parágrafos) argumentativo, e não uma lista de respostas.
+
+\item Releia o texto produzido nos itens anteriores e escreva um parágrafo de encerramento (também em texto corrido) evidenciando explicitamente a coerência entre o problema de pesquisa, o objetivo geral, os objetivos específicos, a hipótese de trabalho e a estratégia de validação -- mostrando como cada um desses elementos decorre logicamente do anterior, e não apenas listando-os lado a lado.
+
+\item \textbf{Utilização de IA.} Escreva, em texto corrido, uma seção relatando o uso de ferramentas de IA generativa na elaboração desta atividade -- mesmo que você não tenha utilizado nenhuma, isso deve ser declarado explicitamente. O texto deve deixar claro: o que foi pensado, redigido e decidido por você; o que foi produzido com apoio de IA; e como você avaliou, corrigiu ou validou o que a IA produziu antes de incorporá-lo ao texto final. Essa narrativa não deve ser uma lista de tarefas, mas uma explicação corrida do processo de elaboração do trabalho.
+
+Em seguida, reproduza integralmente, na ordem cronológica em que foram utilizados, todos os \emph{prompts} fornecidos à IA. Cada prompt deve ser apresentado em um bloco destacado (use o ambiente \texttt{respbox} do template), sem edição de conteúdo -- reproduza o texto exatamente como foi digitado, incluindo eventuais erros de digitação.
+
+\begin{respbox}
+\textbf{Prompt 1:} \textit{[cole aqui, sem alterações, o texto exato do primeiro prompt utilizado]}
+\end{respbox}
+
+\begin{respbox}
+\textbf{Prompt 2:} \textit{[cole aqui o segundo prompt, e assim por diante para cada prompt adicional]}
+\end{respbox}
+
+\end{enumerate}
+
+\end{document}

@@ -4,60 +4,145 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{csquotes}
 \usepackage{tcolorbox}
+\usepackage{natbib}
 
-\geometry{margin=2cm}
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+\definecolor{accent}{RGB}{230, 120, 30}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+% Comando para instruções de preenchimento -- REMOVA todas as ocorrências
+% de \guia{} antes de entregar o documento final.
+\newcommand{\guia}[1]{{\small\ntc{\textit{[Orientação -- remover antes de entregar: #1]}}}}
+
 \setlist{nosep}
-
-\definecolor{notice}{RGB}{0,102,204}
+\geometry{margin=2.5cm}
 
 \newtcolorbox{respbox}{
-    colback=notice!5,
-    colframe=notice!50,
-    boxrule=0.4pt,
-    arc=2pt,
-    left=4pt,right=4pt,top=3pt,bottom=3pt
+  colback=notice!5,
+  colframe=notice!50,
+  boxrule=0.4pt,
+  arc=2pt,
+  left=4pt, right=4pt, top=3pt, bottom=3pt,
+  fontupper=\small
 }
 
-\title{Entrega 2 -- Contextualização, Objetivos e Hipótese de Trabalho}
-\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\title{Proposta de Pesquisa\\ \large \guia{substitua pelo título do seu trabalho}}
+\author{\guia{Nome completo do(a) aluno(a)} \\ BCC502 -- Metodologia Científica para Ciência da Computação}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
+\begin{center}
+\ntc{\textit{Este documento é um template. Preencha cada seção conforme as instruções em cor azul,
+e apague todas as instruções (\guia{...}) antes da entrega final. Com exceção da seção de
+Objetivos, todo o texto deve ser redigido em prosa corrida -- não utilize enumerações ou
+tópicos para responder.}}
+\end{center}
 
+\section{Contextualização e Problema de Pesquisa}
 
-\textbf{Título Provisório do Trabalho:}  
-\\
-\textbf{Nome do Aluno:}
+\guia{Texto corrido, entre 1 e 2 páginas, sem subdivisão em tópicos. Apresente, de forma
+articulada, o domínio de aplicação ou área de pesquisa; o problema que motiva a investigação;
+a relevância desse problema do ponto de vista científico, tecnológico ou social; pelo menos
+três trabalhos relacionados que evidenciem o estado atual do conhecimento sobre o tema
+(cite-os com \textbackslash citep\{\}); e as limitações, lacunas ou oportunidades de pesquisa
+que ainda permanecem em aberto. O texto deve caminhar do domínio geral até a lacuna
+específica que esta pesquisa pretende preencher, como argumentação única.}
 
-
-\vspace{0.5cm}
-
-
-
-\section{Contextualização}
-
-\section{Hipótese de Trabalho}
+[Escreva aqui o texto de contextualização.]
 
 \section{Objetivos}
 
+\ntc{\guia{Esta é a única seção do documento em que a resposta pode ser apresentada em
+formato de lista.}}
+
 \subsection{Objetivo Geral}
+
+\guia{Uma única frase, iniciada com verbo no infinitivo, verificável ao final do trabalho.}
+
+[Escreva aqui o objetivo geral.]
 
 \subsection{Objetivos Específicos}
 
-\section{Estratégia de Verificação}
+\guia{Entre três e cinco objetivos, em lista numerada. Cada um deve ser um desdobramento
+mensurável do objetivo geral -- não descreva aqui etapas do método (ex.: "implementar o
+protótipo" não é um objetivo específico).}
+
+\begin{enumerate}[label=\textbf{OE\arabic*.}]
+    \item{} [Objetivo específico 1.]
+    \item{} [Objetivo específico 2.]
+    \item{} [Objetivo específico 3.]
+\end{enumerate}
+
+\guia{Feche a seção com um parágrafo corrido explicando como os objetivos específicos,
+em conjunto, contribuem para atingir o objetivo geral.}
+
+[Escreva aqui o parágrafo de articulação entre objetivos específicos e objetivo geral.]
+
+\section{Hipótese de Trabalho}
+
+\guia{Texto corrido, sem subdivisão em tópicos. Apresente a hipótese como uma única frase
+declarativa; justifique sua plausibilidade à luz da literatura consultada; explique como ela
+poderá ser investigada ou testada; e discuta quais evidências seriam suficientes para
+aceitá-la ou rejeitá-la.}
+
+[Escreva aqui o texto sobre a hipótese de trabalho.]
+
+\section{Estratégia de Investigação e Validação}
+
+\guia{Texto corrido descrevendo a estratégia preliminar para investigar ou validar a
+hipótese (dados, experimentos, protótipos, critérios de comparação) e, na sequência, as
+limitações dessa estratégia -- o que ela não é capaz de garantir ou controlar.}
+
+[Escreva aqui a estratégia de investigação/validação e suas limitações.]
+
+\section{Coerência da Proposta}
+
+\guia{Parágrafo de encerramento, em texto corrido, evidenciando explicitamente a coerência
+entre o problema de pesquisa, o objetivo geral, os objetivos específicos, a hipótese de
+trabalho e a estratégia de validação -- mostrando como cada elemento decorre logicamente do
+anterior, e não apenas listando-os lado a lado.}
+
+[Escreva aqui o parágrafo de coerência.]
 
 \section{Utilização de IA}
 
+\guia{Texto corrido relatando o uso de ferramentas de IA generativa na elaboração desta
+proposta -- mesmo que você não tenha utilizado nenhuma, declare isso explicitamente. Deixe
+claro o que foi pensado/redigido por você, o que foi produzido com apoio de IA, e como você
+validou ou corrigiu o que a IA produziu antes de incorporá-lo ao texto final.}
 
+[Escreva aqui o relato sobre o uso de IA.]
+
+\guia{Em seguida, reproduza integralmente, na ordem cronológica de uso, todos os prompts
+fornecidos à IA -- sem edição de conteúdo, incluindo eventuais erros de digitação. Use um
+bloco \texttt{respbox} por prompt. Duplique o bloco abaixo quantas vezes forem necessárias.}
+
+\begin{respbox}
+\textbf{Prompt 1:} [cole aqui, sem alterações, o texto exato do primeiro prompt utilizado]
+\end{respbox}
+
+\begin{respbox}
+\textbf{Prompt 2:} [cole aqui o segundo prompt]
+\end{respbox}
+
+%\bibliographystyle{apalike}
+%\bibliography{references}
 
 \end{document}
