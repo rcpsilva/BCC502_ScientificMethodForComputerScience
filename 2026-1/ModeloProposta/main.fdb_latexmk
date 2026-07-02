@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1782962760.57898 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/ModeloProposta/main.tex" "main.pdf" "main" 1782962762.63572 0
-  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/ModeloProposta/main.tex" 1782962759 1140 06b029c3508751cbe213ce6163c8645d ""
+["pdflatex"] 1782962800.84324 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/ModeloProposta/main.tex" "main.pdf" "main" 1782962802.75509 0
+  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-1/ModeloProposta/main.tex" 1782962799 1146 9316ea05229e8bc95a4be031d94482a5 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1730312644 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1730314164 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1730313526 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -170,9 +170,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730319856 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730320026 3325936 6e896a909b476ed009efbfbadbcd5207 ""
   "c:/texlive/2024/texmf.cnf" 1730319826 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1782962762 1128 4ddb22af1ce3882477e6995bb27586ba "pdflatex"
-  "main.out" 1782962762 985 2547979c1515faf9b4be2f748677269b "pdflatex"
-  "main.tex" 1782962759 1140 06b029c3508751cbe213ce6163c8645d ""
+  "main.aux" 1782962802 1128 4ddb22af1ce3882477e6995bb27586ba "pdflatex"
+  "main.out" 1782962802 985 2547979c1515faf9b4be2f748677269b "pdflatex"
+  "main.tex" 1782962799 1146 9316ea05229e8bc95a4be031d94482a5 ""
   (generated)
   "main.aux"
   "main.log"
