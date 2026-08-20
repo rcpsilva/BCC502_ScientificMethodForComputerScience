@@ -1,0 +1,97 @@
+\documentclass[10pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{darkblue}{RGB}{15,45,90}
+\definecolor{accentorange}{RGB}{220,120,30}
+
+\newcommand{\impt}[1]{\textcolor{darkblue}{\textbf{#1}}}
+\newcommand{\ntc}[1]{\textcolor{accentorange}{\textit{#1}}}
+
+\titleformat{\section}{\large\bfseries\color{darkblue}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{accentorange}}{\thesubsection}{0.5em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{BCC502 -- Metodologia Científica para Ciência da Computação}
+\fancyhead[R]{UFOP / DECOM}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\textcolor{darkblue}{\textbf{Prova -- Filosofia da Ciência}}\\[2mm]
+\large Baseada em A. Chalmers, \textit{O Que É Ciência Afinal?}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\begin{center}
+   \large Exame Especial - BCC502 - Metodologia Científica para Ciência da Computação
+\end{center}
+
+\vspace{2mm}
+
+\begin{enumerate}
+
+\item Chalmers apresenta o indutivismo ingênuo e, em seguida, expõe o \impt{problema da indução} de Hume, além dos problemas relativos à base observacional (a tese de que \emph{a observação é falível e depende de teoria}).
+
+\begin{enumerate}
+\item Explique por que o problema da indução não é resolvido simplesmente por se exigir um grande número de observações feitas em condições variadas (as chamadas ``condições do indutivismo'').
+\item Chalmers argumenta que os enunciados observacionais são \emph{falíveis} e \emph{dependentes de teoria}. Escolha um exemplo do seu próprio domínio de pesquisa (computação, aprendizado de máquina, dados) em que uma ``observação'' (uma métrica, um dado, um resultado experimental) só faz sentido à luz de pressupostos teóricos prévios. Explique.
+\end{enumerate}
+
+
+
+\item Distinga falseacionismo \impt{ingênuo} de falseacionismo \impt{sofisticado}, destacando o papel das hipóteses auxiliares e da tese de Duhem--Quine no segundo caso.
+\item Popper defende que uma teoria científica deve ser \impt{falseável}, e que quanto mais falseável (mais proibições sobre o mundo), melhor a teoria. Um crítico poderia dizer: ``então basta formular hipóteses extremamente arriscadas e fáceis de refutar para fazer ciência de qualidade''. Mostre, usando os critérios de Popper sobre grau de falseabilidade, conteúdo empírico e verossimilhança, por que essa objeção é equivocada.
+\item Segundo o falseacionismo sofisticado, uma nova teoria só deve ser aceita no lugar de outra se, além de resistir a testes, ela for \impt{independentemente testável} e tiver algum de seu excedente de conteúdo corroborado. Explique esse critério e discuta se ele resolve satisfatoriamente o problema de quando abandonar uma teoria frente a uma anomalia.
+
+
+
+
+
+\item Explique a estrutura de um programa de pesquisa lakatosiano: \impt{núcleo firme} (hard core), \impt{heurística negativa}, \impt{heurística positiva} e \impt{cinturão protetor} de hipóteses auxiliares.
+\item Lakatos propõe que um programa de pesquisa pode ser avaliado como \impt{progressivo} ou \impt{degenerativo}. Explique esse critério e argumente se ele é, de fato, uma solução melhor do que o falseacionismo popperiano para julgar o valor de uma linha de pesquisa ao longo do tempo, ou se apenas empurra o problema da decisão para outro nível (quando declarar um programa definitivamente degenerativo?).
+
+
+
+
+
+\item Defina \impt{paradigma}, \impt{ciência normal} e \impt{revolução científica} segundo Kuhn. Explique o papel dos \impt{quebra-cabeças} (puzzles) e das \impt{anomalias} na dinâmica da ciência normal.
+\item Um dos pontos mais controversos da tese de Kuhn é a noção de \impt{incomensurabilidade} entre paradigmas rivais. Explique o que essa tese afirma e por que ela levanta dificuldades para a ideia de progresso científico cumulativo. Chalmers aponta limitações dessa noção -- discuta pelo menos uma delas.
+
+
+
+
+
+\item Explique o princípio do \impt{anarquismo epistemológico} (``tudo vale'') de Feyerabend e seu argumento de que nenhuma regra metodológica fixa resiste ao exame da história da ciência.
+\item Chalmers é crítico da posição de Feyerabend. Apresente um argumento (do livro ou próprio, desde que fundamentado) contra a tese de que não existe nenhum critério racional geral para distinguir ciência de não-ciência.
+
+
+\item Descreva brevemente seu projeto de pesquisa (problema, hipótese ou objetivo central, método). Em seguida, argumente qual referencial epistemológico -- falseacionismo popperiano, programa de pesquisa lakatosiano, ciência normal/paradigma kuhniano, ou mesmo uma leitura feyerabendiana -- melhor descreve a forma como seu projeto vem sendo conduzido. Não escolha o referencial que ``sonha em seguir'', mas o que de fato descreve sua prática: como você trata anomalias, como reage a resultados negativos, o que está protegido de revisão (núcleo firme) e o que está aberto a ajuste.
+
+
+\item Considere a seguinte objeção, formulada por um colega:
+
+\begin{quote}
+``Seu projeto não é ciência falseável no sentido popperiano -- é apenas um cinturão protetor de hipóteses auxiliares sendo ajustado \emph{ad hoc} cada vez que o resultado não confirma o que você esperava. Isso é imunização da teoria contra a refutação, exatamente o que Popper condena.''
+\end{quote}
+
+Responda a essa objeção especificamente em relação ao referencial que você escolheu no item anterior. Sua defesa deve necessariamente: (i) reconhecer, com honestidade, algum ponto em que a crítica de fato se aplica ao seu projeto; (ii) argumentar, com base em Lakatos e/ou Kuhn, por que ajustes no cinturão protetor ou hipóteses auxiliares não são automaticamente um vício metodológico, desde que satisfaçam algum critério (ex.: testabilidade independente, geração de previsões novas, resolução de quebra-cabeças); e (iii) indicar um experimento, teste ou critério concreto que, se falhasse, faria você abandonar ou revisar substancialmente sua hipótese central -- mostrando que seu projeto não é irrefutável por princípio.
+
+
+\end{enumerate}
+
+\vspace{8mm}
+\hrule
+\vspace{2mm}
+
+\end{document}
