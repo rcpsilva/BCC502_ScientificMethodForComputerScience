@@ -9,15 +9,15 @@
  7 			& Introdução à filosofia da ciência: Racionalismo, relativismo e objetivismo
  8 			& Introdução à filosofia da ciência: Realismo, Instrumentalismo e Verdade  
  9 			& Prova (29/05/2026)
- 10 		& (Feriado) Corpus Christi 
- 11         & Tipos de Pesquisa em Ciência da Computação 
+ 10 			& (Feriado) Corpus Christi 
+ 11         		& Tipos de Pesquisa em Ciência da Computação 
  12			& Contextualização, Definição dos Objetivos e da Justificativa da Hipótese de Trabalho 
- 13 		& Apresentação da Entrega Parcial 1 (P1) (26/06/2026)
- 14 		& Definição do procedimento metodológico
- 15 		& Apresentação da Entrega Parcial 2 (P2) (17/07/2026)
+ 13 			& Apresentação da Entrega Parcial 1 (P1) (26/06/2026)
+ 14 			& Definição do procedimento metodológico
+ 15 			& Apresentação da Entrega Parcial 2 (P2) (17/07/2026)
  16			& Versão Final do Projeto de Pesquisa (20/07/2026)
- 17 		& Apreciação dos Projetos de Pesquisa 
- 18 		& Exame Especial (31/07/2026)                        			
+ 17 			& Apreciação dos Projetos de Pesquisa 
+ 18 			& Exame Especial (31/07/2026)                        			
 
 Metodologia:
 
