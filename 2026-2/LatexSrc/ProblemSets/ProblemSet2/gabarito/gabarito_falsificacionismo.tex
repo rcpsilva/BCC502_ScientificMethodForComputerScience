@@ -1,0 +1,245 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=notice,
+  citecolor=notice,
+  urlcolor=notice
+}
+
+\title{Gabarito -- Estudo Dirigido II -- Falsificacionismo\footnote{Respostas baseadas em \citep{chalmers1993}.}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+
+\vspace{-1cm}
+\maketitle
+
+\section*{Capítulo 4}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=10pt]
+
+\item \textbf{Qual é a visão do falsificacionista a respeito das observações e teorias?}
+\begin{itemize}
+  \item Aceita que a observação é orientada e pressuposta pela teoria, e não a considera neutra ou anterior a ela.
+  \item Rejeita a ideia de que teorias possam ser estabelecidas como verdadeiras ou provavelmente verdadeiras a partir da evidência observacional.
+  \item Vê as teorias como conjecturas especulativas, criadas livremente pelo intelecto humano para superar problemas deixados por teorias anteriores.
+  \item Exige que toda teoria proposta seja submetida a testes rigorosos e inexoráveis de observação e experimento.
+  \item Teorias que falham nesses testes devem ser eliminadas e substituídas por novas conjecturas.
+  \item Uma teoria nunca pode ser dita verdadeira; no máximo, pode-se dizer que é a melhor disponível até agora, por ter resistido mais do que as anteriores.
+\end{itemize}
+
+\item \textbf{Qual é a visão do falsificacionista em relação ao progresso da ciência?}
+\begin{itemize}
+  \item A ciência progride por tentativa e erro: por conjecturas e refutações.
+  \item Apenas as teorias mais bem adaptadas, isto é, as que resistem aos testes, sobrevivem.
+  \item Embora nunca se possa chamar uma teoria de verdadeira, pode-se dizer que a teoria vigente é melhor que qualquer outra proposta anteriormente.
+  \item O crescimento do conhecimento científico é o conceito central dessa explicação da ciência, detalhado no capítulo seguinte.
+\end{itemize}
+
+\item \textbf{Como o falsificacionismo pode ser justificado logicamente?}
+\begin{itemize}
+  \item Baseia-se numa assimetria lógica entre verificação e falsificação.
+  \item Não é logicamente possível derivar leis e teorias universais a partir de proposições de observação singulares (o problema da indução).
+  \item É logicamente possível, porém, deduzir a falsidade de leis e teorias universais a partir de proposições de observação singulares verdadeiras.
+  \item Exemplo do livro: da premissa \enquote{um corvo não preto foi observado no local $x$ no momento $n$} deduz-se validamente que \enquote{nem todos os corvos são pretos}.
+  \item É essa assimetria, dedução válida da falsidade mas não da verdade, que o falsificacionista explora ao máximo.
+\end{itemize}
+
+\item \textbf{O que é uma hipótese falsificável?}
+\begin{itemize}
+  \item É uma hipótese para a qual existe ao menos uma proposição de observação logicamente possível que, se estabelecida como verdadeira, a contradiria.
+  \item Não precisa ser falsa: basta que corra o risco lógico de sê-lo (exemplos do livro: \enquote{nunca chove às quartas-feiras}, \enquote{objetos pesados caem diretamente para baixo quando soltos}).
+  \item Não são falsificáveis as tautologias (\enquote{ou está chovendo ou não está}), as verdades por definição (\enquote{todos os pontos de um círculo euclidiano são equidistantes do centro}) e as afirmações vagas o suficiente para se ajustarem a qualquer resultado (horóscopos, e a caricatura que Chalmers faz da psicologia adleriana).
+  \item A falsificabilidade é exigida porque é o que dá conteúdo informativo a uma lei: uma afirmação infalsificável é compatível com qualquer comportamento do mundo e, por isso, nada informa sobre ele.
+\end{itemize}
+
+\item \textbf{Como se estabelece a preferência entre uma teoria e outra dentro do falsificacionismo?}
+\begin{itemize}
+  \item Prefere-se a teoria mais falsificável, isto é, a que faz afirmações mais amplas e arriscadas sobre o mundo, desde que ela ainda não tenha sido falsificada.
+  \item Compara-se o conjunto de \enquote{falsificadores potenciais} de cada teoria (as proposições de observação que a falsificariam): se os falsificadores potenciais de uma teoria formam um subconjunto dos de outra, esta última é mais falsificável.
+  \item Exemplos do livro: \enquote{todos os planetas se movem em elipses} é preferível a \enquote{Marte se move em elipse}; a teoria de Newton, com muito mais falsificadores potenciais que a de Kepler, é preferível a ela por ter resistido aos testes.
+  \item Teorias falsificadas devem ser rejeitadas inexoravelmente; entre as que resistem, vence a mais falsificável.
+\end{itemize}
+
+\item \textbf{Qual é a consequência atrativa que vem da exigência de que as teorias sejam altamente falsificáveis?}
+\begin{itemize}
+  \item A exigência de alta falsificabilidade obriga as teorias a serem formuladas com clareza e precisão.
+  \item Teorias vagas podem sempre ser reinterpretadas como compatíveis com qualquer resultado de teste, escapando assim à falsificação (exemplo do livro: a descrição vaga que Goethe faz da eletricidade).
+  \item Quanto mais precisa a formulação, mais falsificável a teoria: \enquote{os planetas movem-se em elipses em torno do Sol} é mais falsificável, e por isso preferível, a \enquote{os planetas movem-se em curvas fechadas em torno do Sol}.
+  \item Essa exigência impede manobras de proteção como as de políticos e videntes, que se resguardam com afirmações vagas demais para serem contrariadas por qualquer observação.
+\end{itemize}
+
+\item \textbf{Como se dá o progresso da ciência na visão do falsificacionista?}
+\begin{itemize}
+  \item A ciência começa com problemas, não com observação neutra: um fenômeno só é problemático à luz de alguma teoria já aceita.
+  \item Cientistas propõem hipóteses falsificáveis como soluções tentativas para o problema; essas hipóteses são criticadas e testadas.
+  \item Algumas hipóteses são rapidamente eliminadas; outras resistem e passam a ser submetidas a críticas e testes ainda mais rigorosos.
+  \item Quando uma hipótese bem testada é eventualmente falsificada, surge um novo problema, e o ciclo recomeça com novas conjecturas.
+  \item Exemplo simples do livro: o voo dos morcegos, com hipóteses sucessivas sendo testadas e falsificadas (visão, orelhas, ouvidos) até chegar à hipótese da ecolocalização pelos guinchos.
+  \item Exemplo mais amplo: a física de Aristóteles, falsificada e substituída pela de Newton, que por sua vez é falsificada (órbita de Mercúrio, massa dos elétrons) e substituída pela de Einstein.
+\end{itemize}
+
+\end{enumerate}
+
+\section*{Capítulo 5}
+\begin{enumerate}[resume, label=\textbf{\arabic*.}, itemsep=10pt]
+
+\item \textbf{Quais condições uma hipótese deve satisfazer?}
+\begin{itemize}
+  \item Deve ser falsificável: deve haver proposições de observação logicamente possíveis que a contradigam.
+  \item Quanto mais falsificável, melhor, pois maior é seu conteúdo informativo.
+  \item Não deve, até o momento, ter sido falsificada pelas provas disponíveis.
+  \item Para o falsificacionista mais sofisticado, ainda é preciso que a hipótese seja mais falsificável do que a teoria que pretende substituir, de modo a garantir o progresso da ciência.
+\end{itemize}
+
+\item \textbf{Qual é a explicação falsificacionista sofisticada da ciência?}
+\begin{itemize}
+  \item Desloca o foco dos méritos de uma teoria isolada para os méritos relativos entre teorias concorrentes: uma visão dinâmica, e não estática, da ciência.
+  \item A pergunta central deixa de ser \enquote{esta teoria é falsificável? quão falsificável? foi falsificada?} e passa a ser \enquote{esta nova teoria é um substituto viável para a teoria contestada?}
+  \item Uma teoria nova é aceita como digna de consideração se for mais falsificável que sua rival, sobretudo se prevê um novo tipo de fenômeno não tocado por ela.
+  \item Reconhece também um papel importante para a confirmação, e não apenas para a falsificação: a ciência avança tanto pela confirmação de conjecturas audaciosas quanto pela falsificação de conjecturas cautelosas.
+\end{itemize}
+
+\item \textbf{Qual é o problema técnico do falsificacionismo ingênuo? Como o falsificacionismo sofisticado o resolve?}
+\begin{itemize}
+  \item O problema: não é possível definir uma medida absoluta do grau de falsificabilidade de uma teoria isolada, pois o número de seus falsificadores potenciais é sempre infinito.
+  \item Não há, portanto, como responder objetivamente a uma pergunta como \enquote{quão falsificável é a lei da gravidade de Newton?}.
+  \item O falsificacionismo sofisticado resolve o problema abandonando a ideia de grau absoluto e adotando graus relativos de falsificabilidade.
+  \item Compara-se o conjunto de falsificadores potenciais de duas teorias: se os de uma formam um subconjunto dos de outra, esta última é mais falsificável.
+  \item A evolução histórica de uma ciência é então avaliada por essa comparação sucessiva, cada teoria da série sendo, idealmente, mais falsificável que sua predecessora.
+\end{itemize}
+
+\item \textbf{O que é uma modificação \emph{ad hoc}? Apresente um exemplo de uma modificação \emph{ad hoc} e um de uma modificação não \emph{ad hoc}.}
+\begin{itemize}
+  \item Modificação \emph{ad hoc}: alteração numa teoria (acréscimo ou mudança de postulado) que não leva a nenhuma consequência testável nova além das que a teoria já tinha; serve apenas para proteger a teoria de uma falsificação que a ameaça.
+  \item Exemplo de modificação \emph{ad hoc}: diante do envenenamento causado por um lote de pão numa aldeia francesa, restringir \enquote{todo pão alimenta} para \enquote{todo pão, exceto aquele lote específico, alimenta}, o que não abre nenhum teste além do próprio consumo do pão.
+  \item Outro exemplo do livro: a resposta do adversário aristotélico de Galileu à observação de crateras na Lua, postulando uma substância invisível e indetectável que preencheria as crateras e cobriria as montanhas.
+  \item Exemplo de modificação não \emph{ad hoc}: reformular a hipótese para \enquote{todo pão alimenta, exceto o feito de trigo contaminado por um fungo específico}, o que abre novos testes independentes (análise química do fungo, cultivo em trigo preparado, etc.).
+  \item Outro exemplo do livro: a hipótese de Leverrier e Adams sobre um planeta ainda não detectado perturbando a órbita de Urano, que levou a um novo teste independente (a observação telescópica de Galle) e culminou na descoberta de Netuno.
+\end{itemize}
+
+\item \textbf{De onde advêm as principais contribuições ao crescimento do conhecimento científico? Por quê?}
+\begin{itemize}
+  \item Advêm da confirmação de conjecturas audaciosas ou da falsificação de conjecturas cautelosas.
+  \item Ambos os casos são informativos: o primeiro assinala a descoberta de algo previamente desconhecido ou tido como improvável; o segundo revela que algo tido como certo é, na verdade, falso.
+  \item Exemplos de confirmação de conjectura audaciosa: a descoberta de Netuno, a detecção das ondas de rádio e a confirmação de Eddington da curvatura da luz prevista por Einstein.
+  \item Em contraste, a falsificação de uma conjectura audaciosa (a especulação de Kepler sobre os sólidos platônicos) ou a confirmação de uma conjectura cautelosa (mais uma amostra de aço que se expande ao ser aquecida) pouco acrescentam ao conhecimento científico.
+\end{itemize}
+
+\item \textbf{Qual é a meta da ciência no falsificacionismo?}
+\begin{itemize}
+  \item Falsificar teorias vigentes e substituí-las por teorias melhores, isto é, mais falsificáveis, com maior conteúdo informativo e testável.
+  \item As confirmações de teorias novas importam na medida em que demonstram que a nova teoria é um aperfeiçoamento em relação à teoria que está sendo substituída.
+  \item Uma teoria audaciosa recém-confirmada torna-se, por sua vez, o novo alvo a ser testado por conjecturas ulteriores ainda mais audaciosas, num processo sem fim.
+\end{itemize}
+
+\item \textbf{Como se diferem as visões indutivista e falsificacionista sobre o papel da observação?}
+\begin{itemize}
+  \item Para o indutivista, o valor de uma instância confirmadora depende só da relação lógica entre a proposição de observação e a teoria, independentemente do contexto histórico; quanto mais confirmações, maior o apoio indutivo e a probabilidade de a teoria ser verdadeira.
+  \item Para o falsificacionista sofisticado, o valor de uma confirmação é essencialmente histórico: só é significativa se resulta do teste de uma previsão nova, improvável à luz do conhecimento prévio da época.
+  \item Confirmações que são conclusões inevitáveis à luz do conhecimento já estabelecido são cientificamente insignificantes para o falsificacionista, embora sejam logicamente equivalentes a confirmações significativas.
+  \item Exemplo do livro: a detecção das ondas de rádio por Hertz foi uma confirmação historicamente relevante da teoria de Maxwell; ouvir rádio hoje é, logicamente, uma confirmação idêntica, mas sem nenhum valor científico.
+\end{itemize}
+
+\end{enumerate}
+
+\section*{Capítulo 6}
+\begin{enumerate}[resume, label=\textbf{\arabic*.}, itemsep=10pt]
+
+\item \textbf{Como se diferem o \enquote{falsificacionista ingênuo} e o \enquote{falsificacionista mais sofisticado}?}
+\begin{itemize}
+  \item O falsificacionista ingênuo concentra-se apenas nas tentativas de falsificar teorias, estabelecendo a verdade de proposições de observação inconsistentes com elas, e avalia cada teoria isoladamente perguntando apenas se ela é falsificável e se foi falsificada.
+  \item O falsificacionista sofisticado reconhece também a importância da confirmação de teorias especulativas e compara graus relativos de falsificabilidade entre teorias concorrentes, adotando uma visão dinâmica do progresso científico.
+  \item Ambos compartilham, porém, a suposição de que há uma diferença qualitativa entre confirmação (sempre provisória) e falsificação (potencialmente decisiva), suposição que Chalmers questiona neste capítulo.
+\end{itemize}
+
+\item \textbf{Justifique a afirmação a seguir: \enquote{Todas as proposições são falíveis}.}
+\begin{itemize}
+  \item Retoma o argumento do Capítulo III: a observação depende da teoria, e não existe uma base observacional pura e infalível.
+  \item Como toda proposição de observação pressupõe alguma teoria, ela pode ser posta em dúvida por desenvolvimentos teóricos posteriores.
+  \item Nada na lógica da situação exige que, diante de um choque entre teoria e observação, seja sempre a teoria (e não a proposição de observação) a ser rejeitada.
+  \item Exemplo do livro: a observação a olho nu de que Vênus não muda de tamanho apreciavelmente ao longo do ano foi tratada, a princípio, como inconsistente com a teoria de Copérnico; um século depois, essa proposição de observação foi revista e rejeitada graças a avanços na óptica, e a teoria de Copérnico foi mantida.
+  \item Consequência: se as proposições de observação são falíveis, falsificações conclusivas de teorias não são de fato alcançáveis.
+\end{itemize}
+
+\item \textbf{Quais são as objeções feitas ao falsificacionismo?}
+\begin{itemize}
+  \item A observação depende da teoria e é falível, de modo que falsificações nunca podem ser conclusivas.
+  \item A defesa que Popper oferece contra essa dificuldade não a resolve, pois as proposições de observação continuam falíveis (ver questão seguinte).
+  \item Situações reais de teste são complexas: uma teoria só é testada em conjunto com hipóteses auxiliares e condições iniciais, de modo que uma previsão falsa não indica sozinha qual premissa está errada.
+  \item O falsificacionismo é inadequado em bases históricas: teorias hoje consideradas exemplares da ciência foram mantidas por seus autores mesmo depois de terem sido, a rigor, falsificadas logo no início.
+  \item A Revolução Copernicana não pode ser explicada satisfatoriamente nem pelo indutivismo nem pelo falsificacionismo, dada a complexidade e a duração da mudança teórica envolvida.
+\end{itemize}
+
+\item \textbf{Como Popper defende o falsificacionismo dessas objeções? Por que essa defesa não salva o falsificacionismo? Dê exemplos.}
+\begin{itemize}
+  \item Popper distingue as proposições de observação públicas (as \enquote{afirmações básicas}, testáveis e formuladas em linguagem pública) das experiências perceptivas privadas dos observadores individuais, que apenas motivam, mas não estabelecem, a aceitação de uma proposição.
+  \item Uma afirmação básica é aceita ou rejeitada por decisão da comunidade científica, com base em sua capacidade de sobreviver a testes (ver também a questão seguinte).
+  \item Popper reconhece, com a metáfora das estacas fincadas num pântano em vez de sobre uma base rochosa sólida, que a base empírica da ciência não é absoluta.
+  \item Essa defesa não salva o falsificacionismo porque, mesmo assim, as proposições de observação continuam falíveis e sujeitas a revisão: uma falsificação aceita hoje pode ser desfeita amanhã por novos desenvolvimentos teóricos, de modo que falsificações conclusivas permanecem inatingíveis.
+  \item Exemplo do livro: a observação a olho nu do tamanho aparente constante de Vênus, tida como inconsistente com a teoria de Copérnico na época, foi revogada cerca de cem anos depois, graças a desenvolvimentos na óptica.
+\end{itemize}
+
+\item \textbf{Quando uma proposição de afirmação é aceitável?}
+\begin{itemize}
+  \item Na reformulação que Chalmers propõe para a posição de Popper, uma proposição de observação é aceitável, experimentalmente, se, num dado estágio do desenvolvimento de uma ciência, ela é capaz de passar por todos os testes tornados possíveis pelo estado de desenvolvimento da ciência naquele estágio.
+  \item Não depende, portanto, de uma percepção sensorial infalível de um indivíduo, mas de sua capacidade de resistir à crítica pública e aos testes disponíveis no momento.
+  \item Por isso, sua aceitação é sempre provisória: pode ser rejeitada mais tarde à luz de testes futuros, possibilitados por novos desenvolvimentos teóricos e técnicos.
+\end{itemize}
+
+\item \textbf{Por que a aplicação do falsificacionismo em situações de teste realistas é complexa? Dê exemplos.}
+\begin{itemize}
+  \item Uma teoria científica real não é uma afirmação isolada, mas um complexo de leis, acrescido de suposições auxiliares (por exemplo, as teorias sobre o funcionamento dos instrumentos usados) e de condições iniciais (a descrição do cenário experimental).
+  \item Quando uma previsão derivada desse conjunto de premissas falha, a lógica só garante que ao menos uma das premissas é falsa, sem indicar qual: pode ser a teoria em teste, uma suposição auxiliar ou as condições iniciais.
+  \item Exemplo: o desvio da órbita de Urano em relação à prevista pela teoria de Newton não indicava um erro na teoria, mas uma condição inicial incompleta, a existência, ainda desconhecida, do planeta Netuno.
+  \item Exemplo: Tycho Brahe julgou ter refutado a teoria copernicana por não detectar a paralaxe estelar prevista; na verdade, o erro estava em sua suposição sobre a distância das estrelas fixas, não na teoria de Copérnico.
+  \item Exemplo hipotético de Lakatos, citado por Chalmers: um físico defende a teoria de Newton de sucessivas aparentes refutações propondo, a cada vez, uma nova hipótese auxiliar (um planeta perturbador, depois uma nuvem de poeira cósmica, depois um campo magnético), mostrando como uma teoria pode sempre ser protegida desviando-se a falsificação para outra parte do conjunto de suposições.
+\end{itemize}
+
+\item \textbf{Quais são as evidências da inadequação histórica do falsificacionismo?}
+\begin{itemize}
+  \item Teorias hoje consideradas exemplares da ciência foram, a rigor, falsificadas logo que propostas, e mesmo assim os cientistas não as abandonaram, o que foi bom para a ciência.
+  \item A teoria gravitacional de Newton foi falsificada nos primeiros anos por observações da órbita lunar (a falsificação só foi atribuída a outra causa quase cinquenta anos depois) e, mais tarde, pelos detalhes da órbita de Mercúrio, sem nunca ter sido protegida de modo satisfatório.
+  \item A teoria atômica de Bohr era, em suas versões iniciais, inconsistente com a observação de que a matéria é estável por mais de cerca de $10^{-8}$ segundos.
+  \item A teoria cinética dos gases de Maxwell foi reconhecida como falsificada pelo próprio Maxwell, no mesmo artigo em que a apresentou, por causa das medições dos calores específicos dos gases; ainda assim, seus principais desenvolvimentos vieram depois dessa falsificação.
+  \item Um quarto exemplo, tratado à parte por sua importância, é a Revolução Copernicana (ver questão seguinte).
+\end{itemize}
+
+\item \textbf{Por que nem falsificacionismo nem indutivismo são compatíveis com a revolução copernicana?}
+\begin{itemize}
+  \item Em 1543, a teoria de Copérnico enfrentava fortes objeções mecânicas e astronômicas (o argumento da torre, o fato de objetos soltos não caírem da superfície da Terra em rotação, a ausência de paralaxe estelar, o tamanho aparente constante de Vênus e Marte a olho nu), e Copérnico não tinha resposta satisfatória a elas.
+  \item Mesmo assim, a teoria não foi abandonada: foi mantida e desenvolvida por cerca de um século e meio, com o trabalho de Galileu, Kepler e Newton, até ser incorporada a uma física abrangente.
+  \item Isso contraria o falsificacionismo, que exigiria a rejeição de uma teoria falsificada (ou, na versão sofisticada, sua substituição por uma alternativa já mais falsificável), não sua manutenção obstinada por gerações apesar de falsificações aparentes.
+  \item Isso também contraria o indutivismo, pois os novos conceitos de força e inércia não surgiram de observação e experimentação cuidadosas e cumulativas: foram concepções novas e incompletamente formuladas, mantidas por convicção teórica e só gradualmente articuladas.
+  \item Somente depois que o novo sistema newtoniano estava plenamente construído, processo que envolveu o trabalho de vários cientistas ao longo de séculos, a nova teoria pôde ser comparada em detalhe com os resultados de observação e experimento.
+  \item Conclusão de Chalmers: nenhuma explicação da ciência pode ser aceita como suficiente a menos que acomode episódios históricos como este, o que aponta para explicações mais estruturadas, como os programas de pesquisa de Lakatos e os paradigmas de Kuhn, tratadas nos capítulos seguintes do livro.
+\end{itemize}
+
+\end{enumerate}
+
+\bibliographystyle{apalike}
+\bibliography{ref}
+\end{document}

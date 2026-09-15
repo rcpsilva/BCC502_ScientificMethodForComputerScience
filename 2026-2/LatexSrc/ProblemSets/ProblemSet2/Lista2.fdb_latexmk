@@ -1,16 +1,16 @@
 # Fdb version 4
-["bibtex Lista2"] 1788359399.81477 "Lista2.aux" "Lista2.bbl" "Lista2" 1788359403.74301 0
+["bibtex Lista2"] 1788359399.81477 "Lista2.aux" "Lista2.bbl" "Lista2" 1789309916.06317 0
   "./ref.bib" 1787240477 226 07a4eb79864f61de0fd078e307a69859 ""
-  "Lista2.aux" 1788359402 406 166ada52a7d004b53f108d5f81a2e5e9 "pdflatex"
+  "Lista2.aux" 1789309914 406 166ada52a7d004b53f108d5f81a2e5e9 "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/apalike.bst" 1730312304 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   (generated)
   "Lista2.bbl"
   "Lista2.blg"
   (rewritten before read)
-["pdflatex"] 1788359400.51107 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/ProblemSets/ProblemSet2/Lista2.tex" "Lista2.pdf" "Lista2" 1788359403.74368 0
-  "Lista2.aux" 1788359402 406 166ada52a7d004b53f108d5f81a2e5e9 "pdflatex"
+["pdflatex"] 1789309912.18158 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/ProblemSets/ProblemSet2/Lista2.tex" "Lista2.pdf" "Lista2" 1789309916.06462 0
+  "Lista2.aux" 1789309914 406 166ada52a7d004b53f108d5f81a2e5e9 "pdflatex"
   "Lista2.bbl" 1788359400 226 ba737a334facf25cd902c5b2556c6472 "bibtex Lista2"
-  "Lista2.out" 1788359401 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Lista2.out" 1789309913 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "Lista2.tex" 1788359395 3306 563dab04e4b4ffecf5296b1635140e02 ""
   "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/ProblemSets/ProblemSet2/Lista2.tex" 1788359395 3306 563dab04e4b4ffecf5296b1635140e02 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1730312644 2971 def0b6c1f0b107b3b936def894055589 ""
