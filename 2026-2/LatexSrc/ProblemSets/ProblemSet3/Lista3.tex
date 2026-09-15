@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{natbib}
+
+\definecolor{important}{RGB}{255, 100, 100}
+\definecolor{notice}{RGB}{0, 102, 204}
+
+\newcommand{\impt}[1]{\textcolor{important}{#1}}
+\newcommand{\ntc}[1]{\textcolor{notice}{#1}}
+
+\setlist{nosep}
+\geometry{margin=2cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=notice,
+  citecolor=notice,
+  urlcolor=notice
+}
+
+\title{Estudo Dirigido III -- Teorias como Estruturas e o Debate Racionalismo versus Relativismo\footnote{Questões baseadas em \citep{chalmers1993}.}}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação}
+\date{\today}
+
+\begin{document}
+\vspace{-1cm}
+\maketitle
+
+\section*{Capítulo VII -- Teorias como Estruturas: Programas de Pesquisa}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=10pt]
+  \item Segundo Lakatos, uma teoria isolada não deve ser avaliada isoladamente, mas como parte de uma estrutura mais ampla. Explique os componentes de um programa de pesquisa (núcleo firme, heurística negativa, heurística positiva e cinturão protetor) e mostre como essa estrutura permite lidar com anomalias sem recorrer às modificações \emph{ad hoc} pejorativas criticadas no falsificacionismo.
+  \item Compare o critério de avaliação de um programa de pesquisa como \enquote{progressivo} ou \enquote{degenerativo} com o critério falsificacionista de preferência entre teorias rivais. Em que sentido a metodologia de Lakatos representa ao mesmo tempo uma continuidade e uma ruptura em relação ao falsificacionismo sofisticado?
+  \item Um programa de pesquisa pode permanecer racionalmente sustentável mesmo enfrentando anomalias que o falsificacionista consideraria refutadoras. Discuta como isso é possível dentro da metodologia de Lakatos e que papel o julgamento histórico, feito \emph{a posteriori}, desempenha na comparação entre programas de pesquisa rivais.
+\end{enumerate}
+
+\section*{Capítulo VIII -- Teorias como Estruturas: os Paradigmas de Kuhn}
+\begin{enumerate}[resume, label=\textbf{\arabic*.}, itemsep=10pt]
+  \item Explique o conceito de paradigma e o papel que ele desempenha na prática da ciência normal. Por que Kuhn descreve a ciência normal como uma atividade fundamentalmente não crítica e, ainda assim, apresenta essa característica como produtiva para o avanço do conhecimento?
+  \item Descreva o processo pelo qual um paradigma entra em crise e é eventualmente substituído por outro em uma revolução científica. Que diferenças fundamentais existem entre esse processo e a rejeição de uma teoria prevista pelo falsificacionismo?
+  \item Kuhn atribui funções distintas à ciência normal e às revoluções científicas no desenvolvimento do conhecimento. Explique essas funções e discuta por que, segundo o autor, nenhuma delas seria suficiente isoladamente para explicar o progresso da ciência.
+\end{enumerate}
+
+\section*{Racionalismo versus Relativismo}
+\begin{enumerate}[resume, label=\textbf{\arabic*.}, itemsep=10pt]
+  \item Defina, nos termos apresentados por Chalmers, as posições do racionalista extremado e do relativista extremado quanto à existência de um critério universal para a avaliação de teorias rivais e para a demarcação entre ciência e não ciência.
+  \item Discuta em que medida Lakatos pode ser caracterizado como racionalista e Kuhn como relativista, considerando as ressalvas que o próprio Chalmers faz a essas classificações.
+  \item Ao final do capítulo, Chalmers propõe uma mudança nos termos do debate entre racionalismo e relativismo. Explique por que ele considera essa dicotomia inadequada e qual direção alternativa sugere para pensar a avaliação de teorias científicas.
+\end{enumerate}
+
+\bibliographystyle{apalike}
+\bibliography{ref}
+\end{document}
