@@ -1,0 +1,245 @@
+\documentclass[10pt]{extarticle}
+
+% ============================================================
+% Pacotes
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+% ============================================================
+% Paleta de cores
+% ============================================================
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{accentorange}{RGB}{230,126,34}
+
+% ============================================================
+% Estilo de títulos
+% ============================================================
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{darkblue}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{accentorange}}
+  {\thesubsection}{1em}{}
+
+% ============================================================
+% Cabeçalho e rodapé
+% ============================================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[L]{\color{darkblue}\small Estudo Dirigido III -- Soluções}
+\fancyhead[R]{\color{darkblue}\small BCC502 - Metodologia Científica}
+\fancyfoot[C]{\thepage}
+
+% ============================================================
+% Estilo da lista de questões
+% ============================================================
+\newlist{questoes}{enumerate}{1}
+\setlist[questoes,1]{label=\textbf{\color{darkblue}\arabic*.},leftmargin=1.5cm,itemsep=0.9em}
+
+% ============================================================
+% Lista compacta para as respostas, em tópicos curtos
+% ============================================================
+\newlist{topicos}{itemize}{2}
+\setlist[topicos,1]{label=\textcolor{accentorange}{\textbullet},leftmargin=1.1cm,nosep,itemsep=0.2em,topsep=0.3em}
+\setlist[topicos,2]{label=\textcolor{darkblue}{\textbullet},leftmargin=1cm,nosep,itemsep=0.15em}
+
+\newcommand{\resposta}[1]{\par\smallskip\noindent #1}
+
+\begin{document}
+
+% ============================================================
+% Cabeçalho do documento
+% ============================================================
+\begin{center}
+    {\LARGE\bfseries\color{darkblue}Estudo Dirigido III -- Soluções}\\[0.3cm]
+    {\large\color{accentorange} BCC502 - Metodologia Científica para Ciência da Computação}\\[0.3cm]
+    {\normalsize\color{darkblue} Capítulos VII, VIII e IX de Chalmers, \enquote{O Que É Ciência Afinal?}}\\[0.5cm]
+\end{center}
+
+\section{Introdução}
+\begin{itemize}
+  
+
+\item Como surge a ideia dos programas de pesquisa como \enquote{solução} para os problemas do falsificacionismo?
+
+\resposta{
+\begin{topicos}
+\item Chalmers abre o Capítulo VII observando que os relatos indutivista e falsificacionista são fragmentários: concentram-se na relação entre uma teoria e proposições de observação isoladas (ou conjuntos delas) e não captam a complexidade das grandes teorias científicas reais, como já sugerido pelo esboço da Revolução Copernicana no capítulo anterior.
+\item Problema 1 -- a culpa numa refutação (Duhem-Quine):
+  \begin{topicos}
+  \item Um teste nunca envolve uma hipótese isolada, mas um emaranhado de suposições: a hipótese principal, hipóteses auxiliares, condições iniciais e teorias dos instrumentos usados na observação.
+  \item Uma \enquote{falsificação} não indica de forma unívoca qual elemento desse emaranhado deve ser rejeitado.
+  \item O falsificacionista carece de um critério estruturado para decidir onde recai a responsabilidade por uma anomalia, abrindo espaço tanto para dogmatismo quanto para arbitrariedade.
+  \end{topicos}
+\item Problema 2 -- distinguir salvamento legítimo de modificação \emph{ad hoc}:
+  \begin{topicos}
+  \item O falsificacionismo proíbe modificações \emph{ad hoc}, mas cientistas frequentemente respondem a anomalias alterando alguma parte periférica da teoria.
+  \item Às vezes isso é claramente produtivo (a hipótese de um planeta desconhecido para explicar a órbita de Urano, que levou à descoberta de Netuno).
+  \item Às vezes não (postular que o movimento anômalo de um planeta é simplesmente o seu movimento \enquote{natural}).
+  \item Falta ao falsificacionismo um critério estrutural para diferenciar os dois casos.
+  \end{topicos}
+\item Problema 3 -- inadequação histórica:
+  \begin{topicos}
+  \item Teorias como a mecânica newtoniana conviveram por longos períodos com anomalias conhecidas (a órbita de Mercúrio) sem serem abandonadas.
+  \item O programa copernicano levou mais de um século para se consolidar, sendo defendido e desenvolvido por sucessivas modificações, não testado e refutado de uma só vez.
+  \item Isso não se encaixa no esquema falsificacionista de conjectura, teste e refutação aplicado a uma teoria isolada.
+  \end{topicos}
+\item Três razões para tratar teorias como estruturas:
+  \begin{topicos}
+  \item Histórica: o estudo da ciência revela que as principais teorias de fato evoluem como programas, não como enunciados isolados.
+  \item Filosófica: conceitos só adquirem sentido preciso dentro de uma teoria coerentemente estruturada (o conceito newtoniano de massa é preciso porque desempenha um papel bem definido na mecânica newtoniana, ao contrário de algo como \enquote{democracia}).
+  \item De crescimento: a ciência avança melhor quando a teoria é uma estrutura aberta que já contém indícios de como deve ser desenvolvida, isto é, um programa de pesquisa (contraste entre a mecânica newtoniana e a sociologia moderna, que é empiricamente comprometida mas carece de um programa coerente).
+  \end{topicos}
+\item A resposta de Lakatos: sua Metodologia dos Programas de Pesquisa Científica é apresentada explicitamente como uma tentativa de \emph{melhorar} o falsificacionismo popperiano e superar essas objeções, não de abandoná-lo.
+  \begin{topicos}
+  \item O núcleo irredutível protegido pela heurística negativa resolve o Problema 1: dá um critério fixo de onde \emph{nunca} recai a culpa por uma anomalia.
+  \item A exigência de que o cinturão protetor só possa ser modificado de forma testável independentemente resolve o Problema 2: distingue a modificação legítima (Netuno) da \emph{ad hoc} pejorativa.
+  \item O deslocamento da unidade de avaliação, da teoria isolada para a trajetória de um programa (progressivo ou degenerativo), resolve o Problema 3: ajusta-se ao modo como a ciência de fato progride historicamente.
+  \end{topicos}
+\end{topicos}
+}
+\end{itemize}
+
+% ============================================================
+% Capítulo VII
+% ============================================================
+\section*{Capítulo VII -- Teorias como Estruturas: Programas de Pesquisa}
+\begin{questoes}
+
+\item Segundo Lakatos, uma teoria isolada não deve ser avaliada isoladamente, mas como parte de uma estrutura mais ampla. Explique os componentes de um programa de pesquisa (núcleo firme, heurística negativa, heurística positiva e cinturão protetor) e mostre como essa estrutura permite lidar com anomalias sem recorrer às modificações \emph{ad hoc} pejorativas criticadas no falsificacionismo.
+
+\resposta{
+\begin{topicos}
+\item Um programa de pesquisa lakatosiano é uma estrutura organizada que orienta a pesquisa futura de forma negativa e positiva, e não uma teoria isolada a ser testada de uma só vez.
+\item Núcleo irredutível: hipótese teórica geral que define o programa (exemplos: as leis do movimento de Newton mais a lei da gravitação; a suposição de que Terra e planetas orbitam um Sol estacionário na astronomia copernicana; a luta de classes no materialismo histórico de Marx). É tornado infalsificável por decisão metodológica dos próprios proponentes do programa.
+\item Heurística negativa: exigência de que o núcleo permaneça intacto durante todo o desenvolvimento do programa. Qualquer discrepância entre o programa e a observação deve ser atribuída a outra parte da estrutura teórica, nunca ao núcleo; quem modifica o núcleo abandona o programa (Tycho Brahe, ao propor que os demais planetas orbitam o Sol mas este orbita uma Terra estacionária, saiu do programa copernicano e iniciou outro).
+\item Cinturão protetor: hipóteses auxiliares, condições iniciais e proposições de observação que absorvem o impacto dos testes, protegendo o núcleo (exemplo: os epiciclos acrescentados às órbitas planetárias copernicanas, ou a mudança na estimativa aceita da distância das estrelas).
+\item Heurística positiva: conjunto de sugestões, mais vago e difícil de caracterizar que a negativa, indicando como suplementar o núcleo para explicar fenômenos conhecidos e prever fenômenos novos (exemplo: o desenvolvimento gradual da teoria gravitacional de Newton, partindo de um Sol e um planeta tratados como pontos até incorporar planetas esféricos, sua rotação e a atração mútua entre eles).
+\item Por essa estrutura, uma anomalia isolada nunca obriga a rejeitar o núcleo: ela pode ser absorvida por uma modificação do cinturão. A diferença em relação ao \emph{ad hoc} pejorativo é que Lakatos exige que essas modificações sejam testáveis de forma independente e abram possibilidade de novas descobertas, e não meras remendos sem consequência empírica adicional; isso evita tanto o dogmatismo cego quanto o caos não metódico de refutações desestruturadas.
+\end{topicos}
+}
+
+\item Compare o critério de avaliação de um programa de pesquisa como \enquote{progressivo} ou \enquote{degenerativo} com o critério falsificacionista de preferência entre teorias rivais. Em que sentido a metodologia de Lakatos representa ao mesmo tempo uma continuidade e uma ruptura em relação ao falsificacionismo sofisticado?
+
+\resposta{
+\begin{topicos}
+\item Falsificacionismo sofisticado: prefere a teoria de maior conteúdo empírico, capaz de prever fatos novos posteriormente corroborados; a comparação é feita, em essência, entre uma teoria e sua sucessora, num confronto relativamente pontual.
+\item Lakatos desloca a unidade de avaliação da teoria isolada para a trajetória de um programa: um programa é \textbf{progressivo} se as sucessivas modificações do cinturão protetor levam, ao menos ocasionalmente, à descoberta de fenômenos novos; é \textbf{degenerativo} se as modificações são puramente defensivas, sem gerar previsões novas corroboradas.
+\item Dois critérios de mérito exigidos de um programa científico: (i) coerência, um programa deve mapear uma agenda definida de pesquisa futura via heurística positiva; (ii) sucesso empírico ao menos ocasional, levando à descoberta de fenômenos novos (Lakatos cita o marxismo e a psicologia freudiana como satisfazendo o primeiro critério mas não o segundo, e a sociologia moderna como satisfazendo talvez o segundo mas não o primeiro).
+\item Continuidade com o falsificacionismo sofisticado: mantém-se a ideia de que conteúdo empírico crescente e previsões novas testáveis são a marca do progresso científico, e modificações puramente \emph{ad hoc} continuam excluídas.
+\item Ruptura: abandona-se a ideia de que um único teste pode falsificar decisivamente uma teoria ou seu núcleo; introduz-se explicitamente a dimensão histórica, pois só é possível julgar se um programa progride ou degenera observando sua trajetória ao longo do tempo, e não o resultado de um confronto isolado entre teoria e observação.
+\end{topicos}
+}
+
+\item Um programa de pesquisa pode permanecer racionalmente sustentável mesmo enfrentando anomalias que o falsificacionista consideraria refutadoras. Discuta como isso é possível dentro da metodologia de Lakatos e que papel o julgamento histórico, feito \emph{a posteriori}, desempenha na comparação entre programas de pesquisa rivais.
+
+\resposta{
+\begin{topicos}
+\item Como o núcleo é protegido pela heurística negativa e o cinturão protetor pode ser ajustado, uma anomalia isolada nunca obriga, por si só, a abandonar o programa: ela pode sempre ser absorvida por uma modificação legítima e testável do cinturão.
+\item Exemplo do livro: a órbita anômala de Urano dentro do programa newtoniano foi resolvida por Leverrier e Adams com a hipótese, testável de forma independente, de um planeta ainda não observado, levando à descoberta de Netuno, sem que as leis de Newton (o núcleo) fossem colocadas em dúvida.
+\item Problema do fator tempo: não há como decidir, num dado momento presente, que um programa \enquote{degenerou para além de toda esperança}, pois é sempre possível que uma modificação futura, engenhosa, reverta o quadro (a parábola de Lakatos sobre a astronomia newtoniana ilustra essa incerteza). Exemplos históricos reais: passaram-se mais de setenta anos até a confirmação das fases de Vênus previstas por Copérnico, e séculos até a confirmação da paralaxe estelar.
+\item Consequência metodológica: julgar um programa como progressivo ou degenerativo é, em larga medida, um julgamento retrospectivo, feito pelo historiador da ciência ao observar a trajetória (quase) completa de um programa, e não um critério que oriente, no presente, a decisão do cientista sobre continuar ou abandonar sua linha de pesquisa.
+\item É essa mesma característica que compromete a pretensão de Lakatos de oferecer um relato racionalista da ciência: sua metodologia funciona melhor como guia retrospectivo para o historiador do que como critério prescritivo para o cientista em atividade, questão retomada por Chalmers no Capítulo IX.
+\end{topicos}
+}
+
+\end{questoes}
+
+% ============================================================
+% Capítulo VIII
+% ============================================================
+\section*{Capítulo VIII -- Teorias como Estruturas: os Paradigmas de Kuhn}
+\begin{questoes}
+
+\item Explique o conceito de paradigma e o papel que ele desempenha na prática da ciência normal. Por que Kuhn descreve a ciência normal como uma atividade fundamentalmente não crítica e, ainda assim, apresenta essa característica como produtiva para o avanço do conhecimento?
+
+\resposta{
+\begin{topicos}
+\item[Paradigma:] conjunto de suposições teóricas gerais, leis e técnicas de aplicação adotadas por uma comunidade científica específica (exemplos: a mecânica newtoniana, a ótica ondulatória, o eletromagnetismo clássico).
+\item[Ciência normal:] atividade de \enquote{solução de charadas} exercida pelos cientistas que trabalham dentro de um paradigma aceito, articulando-o e ajustando-o para explicar e acomodar aspectos relevantes do mundo real.
+\item Para Kuhn, é justamente a existência de um paradigma capaz de sustentar uma tradição de ciência normal, e não algum critério lógico de demarcação, que distingue a ciência da não-ciência e da pré-ciência (esta última caracterizada por desacordo permanente sobre os fundamentos, quase uma teoria por pesquisador, como na ótica antes de Newton).
+\item Não crítica: o cientista normal não questiona os fundamentos do paradigma em que trabalha; um fracasso em resolver um problema é atribuído ao próprio cientista, como um carpinteiro que erra ao usar corretamente suas ferramentas, e não a uma falha do paradigma; dificuldades persistentes são vistas como anomalias, não como falsificações.
+\item Por que isso é produtivo: liberar os cientistas de disputar constantemente os fundamentos permite que concentrem esforços no trabalho esotérico e detalhado necessário para sondar a natureza em profundidade; boa parte desse conhecimento é tácito, adquirido pela resolução de problemas-padrão e pela prática sob supervisão, e não é plenamente redutível a regras explícitas, à maneira do conceito de \enquote{jogo} de Wittgenstein invocado por Kuhn. É essa aceitação disciplinada e não crítica do paradigma que viabiliza o avanço técnico aprofundado, algo impossível na pré-ciência, em que cada pesquisador é obrigado a recomeçar dos fundamentos.
+\end{topicos}
+}
+
+\item Descreva o processo pelo qual um paradigma entra em crise e é eventualmente substituído por outro em uma revolução científica. Que diferenças fundamentais existem entre esse processo e a rejeição de uma teoria prevista pelo falsificacionismo?
+
+\resposta{
+\begin{topicos}
+\item Toda ciência madura convive permanentemente com anomalias; a mera existência de quebra-cabeças não resolvidos não configura, por si só, uma crise.
+\item Uma anomalia torna-se séria quando ataca os fundamentos do paradigma, resiste persistentemente às tentativas de solução da comunidade, e está eventualmente ligada a alguma necessidade social urgente (exemplo dado por Chalmers: os problemas da astronomia ptolemaica à luz da necessidade de reforma do calendário na época de Copérnico); o número de anomalias sérias acumuladas também conta.
+\item[Crise:] período de \enquote{acentuada insegurança profissional}, em que as tentativas de solução tornam-se mais radicais, as regras do paradigma se afrouxam, e os cientistas passam a discutir abertamente fundamentos filosóficos e metafísicos (Kuhn cita a confissão exasperada de Pauli sobre o estado da física por volta de 1924).
+\item[Revolução:] surgimento de um paradigma novo, incompatível com o antigo, muitas vezes de forma súbita, na mente de um pesquisador imerso na crise; consuma-se quando a adesão profissional se desloca progressivamente até incluir a maioria da comunidade científica relevante, deixando poucos dissidentes.
+\item Diferença central com o falsificacionismo: no relato falsificacionista, uma observação incompatível pode, em princípio, falsificar logicamente uma hipótese de forma relativamente direta; no relato de Kuhn não existe um argumento logicamente convincente capaz de forçar um cientista racional a trocar de paradigma, pois não há critério único de julgamento e paradigmas rivais são \enquote{incomensuráveis}, ou seja, divergem em padrões, linguagem observacional e visão de mundo. A mudança de paradigma é melhor descrita como conversão, guiada por persuasão e não por compulsão lógica, e sua explicação exige investigação psicológica e sociológica, não apenas lógica.
+\end{topicos}
+}
+
+\item Kuhn atribui funções distintas à ciência normal e às revoluções científicas no desenvolvimento do conhecimento. Explique essas funções e discuta por que, segundo o autor, nenhuma delas seria suficiente isoladamente para explicar o progresso da ciência.
+
+\resposta{
+\begin{topicos}
+\item Kuhn insiste que seu relato não é meramente descritivo, mas constitui uma teoria da ciência precisamente por atribuir funções necessárias a cada componente do esquema pré-ciência, ciência normal, crise-revolução, nova ciência normal.
+\item[Função da ciência normal:] permitir que os cientistas desenvolvam os detalhes esotéricos de uma teoria com rigor, apoiando-se com confiança nos fundamentos do paradigma; é essa confiança, e a atitude não crítica que a acompanha, que viabiliza o trabalho aprofundado (se todos criticassem os fundamentos o tempo todo, nenhum trabalho detalhado seria realizado).
+\item[Função das revoluções:] nenhum paradigma é, a priori, perfeito ou mesmo o melhor disponível, e não existe procedimento indutivo capaz de garantir paradigmas adequados; a ciência precisa, portanto, de um mecanismo para substituir um paradigma inadequado por outro melhor quando a discrepância com a natureza se torna séria. É essa a alternativa de Kuhn ao progresso cumulativo do relato indutivista.
+\item Função adicional mencionada: como um paradigma não se reduz a um conjunto explícito de regras, cientistas diferentes podem interpretá-lo e aplicá-lo de formas ligeiramente distintas diante do mesmo problema, multiplicando as estratégias tentadas pela comunidade e aumentando as chances de sucesso a longo prazo.
+\item Por que nenhuma função basta sozinha: apenas ciência normal, sem revoluções, prenderia uma disciplina permanentemente a um único paradigma, por mais inadequado que se tornasse, bloqueando o progresso; apenas revoluções constantes, sem períodos consolidados de ciência normal, impediriam o trabalho aprofundado necessário para revelar as próprias anomalias que motivam a revolução seguinte. As duas fases são, portanto, complementares e mutuamente necessárias no esquema de Kuhn.
+\end{topicos}
+}
+
+\end{questoes}
+
+% ============================================================
+% Racionalismo versus Relativismo
+% ============================================================
+\section*{Racionalismo versus Relativismo}
+\begin{questoes}
+
+\item Defina, nos termos apresentados por Chalmers, as posições do racionalista extremado e do relativista extremado quanto à existência de um critério universal para a avaliação de teorias rivais e para a demarcação entre ciência e não ciência.
+
+\resposta{
+\begin{topicos}
+\item[Racionalista extremado:] afirma existir um critério único, atemporal e universal para avaliar os méritos relativos de teorias rivais (exemplos: o grau de corroboração indutiva para o indutivista, o grau de falsificabilidade de teorias não falseadas para o falsificacionista). O critério é aplicável a qualquer confronto histórico entre teorias, e teorias que o satisfazem e sobrevivem ao teste são tidas como verdadeiras, aproximadamente verdadeiras ou provavelmente verdadeiras. A demarcação ciência versus não-ciência é, para o racionalista, direta: é científico o que pode ser avaliado por esse critério e passa no teste (exemplos dados: a astrologia não é ciência para o indutivista, por não derivar indutivamente da observação; o marxismo não é ciência para o falsificacionista, por não ser falsificável).
+\item[Relativista extremado:] nega a existência de um critério universal; os critérios de avaliação de teorias dependem dos valores ou interesses de indivíduos ou comunidades específicas, variando histórica e socialmente. A distinção entre ciência e não-ciência torna-se, portanto, arbitrária e relativa a quem julga (exemplo dado: a teoria das marés baseada na atração lunar era boa ciência para os newtonianos, mas beirava o misticismo ocultista para Galileu). O relativista nega que exista uma categoria única, \enquote{ciência}, intrinsecamente superior a outras formas de conhecimento, ainda que reconheça que indivíduos ou comunidades possam valorizá-la muito; o alto prestígio da ciência numa sociedade deve, para ele, ser explicado analisando essa sociedade, e não a natureza da ciência em si.
+\item O debate entre as duas posições diz respeito, portanto, tanto à avaliação e escolha de teorias rivais quanto ao próprio critério de demarcação entre ciência e pseudociência.
+\end{topicos}
+}
+
+\item Discuta em que medida Lakatos pode ser caracterizado como racionalista e Kuhn como relativista, considerando as ressalvas que o próprio Chalmers apresenta a essas classificações.
+
+\resposta{
+\begin{topicos}
+\item[Lakatos:] pretendia explicitamente defender uma posição racionalista, declarando que o problema central da filosofia da ciência é explicitar condições universais sob as quais uma teoria é científica, problema ligado à racionalidade da aceitação de teorias; via a posição relativista, que atribuía a Kuhn, com horror, associando-a a \enquote{psicologia das multidões} e a uma mudança científica reduzida a mera conversão.
+\item Chalmers argumenta, porém, que Lakatos fracassa como racionalista: sua metodologia (programa progressivo ou degenerativo) só pode, em geral, ser aplicada retrospectivamente pelo historiador, sem oferecer orientação prescritiva ao cientista no presente (\enquote{é antes um guia para o historiador da ciência do que para o cientista}); além disso, Lakatos pressupôs, sem argumentar por isso a partir de seu próprio critério, que a física é o paradigma da racionalidade e superior a outras formas de conhecimento.
+\item[Kuhn:] negou explicitamente pretender uma posição relativista, e menciona critérios de avaliação de teorias (precisão preditiva, equilíbrio entre problemas esotéricos e cotidianos, número de problemas resolvidos, simplicidade, escopo, compatibilidade com outras especialidades).
+\item Chalmers argumenta, ainda assim, que Kuhn acaba por nos oferecer um relato relativista: na ausência de um critério único e diante da incomensurabilidade entre paradigmas rivais, não há argumento logicamente convincente que force um cientista racional a trocar de paradigma; as escolhas dependem do que cientistas individuais e comunidades valorizam, exigindo investigação psicológica e sociológica, o que caracteriza de fato o relativismo, contra a intenção declarada do autor.
+\item Síntese de Chalmers: \enquote{o objetivo de Lakatos era dar um relato racionalista da ciência e ele fracassou, enquanto Kuhn negou que seu objetivo era dar um relato relativista da ciência, mas, contudo, foi isso que nos deu}. Ainda assim, Chalmers julga Lakatos em posição um pouco melhor, pois sua metodologia oferece ao menos alguns meios de criticar decisões da comunidade científica, enquanto o relato de Kuhn, ao tratar o consenso da comunidade como critério último e sem oferecer meios de distinguir formas aceitáveis de inaceitáveis de se alcançar esse consenso, tende a uma postura mais conservadora.
+\end{topicos}
+}
+
+\item Ao final do capítulo, Chalmers propõe uma mudança nos termos do debate entre racionalismo e relativismo. Explique por que ele considera essa dicotomia inadequada e qual direção alternativa sugere para pensar a avaliação de teorias científicas.
+
+\resposta{
+\begin{topicos}
+\item Chalmers observa que a discussão de racionalismo e relativismo, tal como conduzida no capítulo, tratou quase exclusivamente de avaliações e julgamentos feitos por indivíduos ou grupos sobre o conhecimento, isto é, de critérios que habilitam alguém a julgar se uma teoria é melhor que outra ou se um corpo de conhecimento é científico.
+\item Ele propõe então distinguir entre um estado de coisas (uma teoria ser de fato melhor, mais próxima da verdade, melhor na resolução de problemas, melhor instrumento de previsão) e o julgamento que indivíduos ou grupos fazem sobre esse estado de coisas, lembrando que indivíduos e grupos podem, afinal, estar errados em seus julgamentos.
+\item Essa distinção sugere ser possível, e desejável, analisar a ciência, seus objetivos e seu modo de progresso concentrando-se nas características da própria ciência, sem depender do que indivíduos ou grupos pensam sobre ela. Assim, tanto o racionalismo quanto o relativismo, tal como caracterizados no capítulo, permanecem centrados no julgador (no critério universal do racionalista, ou nos valores do indivíduo e da comunidade do relativista), em vez de nas propriedades objetivas do conhecimento avaliado, o que Chalmers considera a raiz da inadequação da dicotomia.
+\item Direção alternativa sugerida, a ser desenvolvida nos capítulos seguintes: o objetivismo, posição que enfatiza que itens de conhecimento, de proposições simples a teorias complexas, possuem propriedades que transcendem as crenças e estados de consciência dos indivíduos que os concebem e contemplam. A partir dela Chalmers buscará, mais adiante, um relato de mudança teórica na física que não dependa do julgamento de indivíduos ou grupos.
+\end{topicos}
+}
+
+\end{questoes}
+
+\end{document}

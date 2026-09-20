@@ -1,0 +1,31 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Recapitulação}{1}{section.1}%
+\contentsline {paragraph}{Duas tentativas de explicar a ciência.}{1}{section*.2}%
+\contentsline {paragraph}{Os limites do indutivismo.}{1}{section*.3}%
+\contentsline {paragraph}{A saída de Popper: a assimetria lógica.}{1}{section*.4}%
+\contentsline {paragraph}{Mas o falsificacionismo também falha.}{1}{section*.5}%
+\contentsline {paragraph}{Rumo às teorias como estruturas.}{1}{section*.6}%
+\contentsline {section}{\numberline {2}Os Programas de Pesquisa de Lakatos (Capítulo VII)}{2}{section.2}%
+\contentsline {paragraph}{O ponto de partida.}{2}{section*.7}%
+\contentsline {paragraph}{Anatomia de um programa.}{2}{section*.8}%
+\contentsline {paragraph}{Por que o núcleo é ``irrefutável''.}{2}{section*.9}%
+\contentsline {paragraph}{A comparação racional exige tempo.}{2}{section*.10}%
+\contentsline {paragraph}{O que Lakatos resolve e o que deixa em aberto.}{2}{section*.11}%
+\contentsline {section}{\numberline {3}Os Paradigmas de Kuhn (Capítulo VIII)}{3}{section.3}%
+\contentsline {paragraph}{O olhar do historiador.}{3}{section*.12}%
+\contentsline {paragraph}{Os dois sentidos de paradigma.}{3}{section*.13}%
+\contentsline {paragraph}{Paradigma versus programa de pesquisa.}{3}{section*.14}%
+\contentsline {paragraph}{O ciclo da ciência.}{3}{section*.15}%
+\contentsline {paragraph}{Pré-ciência.}{3}{section*.16}%
+\contentsline {paragraph}{Ciência normal.}{3}{section*.17}%
+\contentsline {paragraph}{Anomalias.}{3}{section*.18}%
+\contentsline {paragraph}{Crise.}{3}{section*.19}%
+\contentsline {paragraph}{Revolução científica.}{3}{section*.20}%
+\contentsline {paragraph}{Incomensurabilidade.}{4}{section*.21}%
+\contentsline {paragraph}{Como se escolhe entre paradigmas?}{4}{section*.22}%
+\contentsline {paragraph}{Kuhn é relativista?}{4}{section*.23}%
+\contentsline {paragraph}{O que Kuhn resolve e o que deixa em aberto.}{4}{section*.24}%
+\contentsline {section}{\numberline {4}Síntese}{4}{section.4}%
+\contentsline {paragraph}{Lakatos \emph {versus} Kuhn.}{4}{section*.25}%
+\contentsline {paragraph}{Tensão central.}{4}{section*.26}%
+\contentsline {paragraph}{Lição geral.}{5}{section*.27}%
