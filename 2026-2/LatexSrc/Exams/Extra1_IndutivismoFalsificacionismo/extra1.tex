@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[margin=1.5cm, top=2.6cm, headheight=30pt]{geometry}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{pgffor}
+
+\definecolor{azulescuro}{RGB}{20, 50, 100}
+\definecolor{laranja}{RGB}{230, 120, 30}
+
+% Valores das questões (ajuste aqui)
+\newcommand{\valorA}{3,5}
+\newcommand{\valorB}{3,5}
+\newcommand{\valorC}{3,0}
+
+% Linhas para resposta
+\newcommand{\linhas}[1]{%
+  \par\nointerlineskip
+  \foreach \i in {1,...,#1}{%
+    \vspace{0.6cm}\noindent\textcolor{black}{\rule{\linewidth}{0.5pt}}\par\nointerlineskip%
+  }%
+}
+
+% Cabeçalho de questão
+\newcommand{\questao}[2]{%
+  \vspace{0.6em}
+  \begin{tcolorbox}[colback=azulescuro!6, colframe=azulescuro, boxrule=0.6pt,
+    arc=1.5pt, left=6pt, right=6pt, top=3pt, bottom=3pt]
+    \textbf{\textcolor{azulescuro}{Questão #1}} \hfill \textcolor{laranja}{\textbf{(valor: #2)}}
+  \end{tcolorbox}
+  \vspace{0.2em}
+}
+
+\setlist{nosep}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\fancyhead[L]{\small\textbf{BCC502} -- Metodologia Científica para Ciência da Computação}
+\fancyhead[R]{\small DECOM/ICEB/UFOP}
+\fancyfoot[C]{\small Página \thepage\ de \pageref{LastPage}}
+\usepackage{lastpage}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries\textcolor{azulescuro}{Extra 1}}\\[0.3em]
+  {\large \textbf{BCC502} -- Metodologia Científica para Ciência da Computação}
+\end{center}
+
+\vspace{0.3em}
+\begin{tcolorbox}[colback=white, colframe=azulescuro!60, boxrule=0.5pt, arc=1.5pt]
+  \textbf{Nome:} \rule{8.2cm}{0.3pt} \hfill \textbf{Matrícula:} \rule{3cm}{0.3pt}\\[0.9em]
+  \textbf{Data:} \rule{1.6cm}{0.3pt}/\rule{1.6cm}{0.3pt}/\rule{2.2cm}{0.3pt}
+  \hfill \textbf{Nota:} \rule{2.5cm}{0.3pt}
+\end{tcolorbox}
+
+\textbf{Instruções.} Responda a cada questão no espaço reservado, com letra legível e por extenso. Respostas que apenas listem termos, sem articular o raciocínio, receberão nota parcial. Não é permitida a consulta a qualquer material.
+
+% ------------------------------------------------------------
+1. Quais problemas do indutivismo o falsificacionismo resolve? Como ele resolve? O que ainda fica em aberto?
+\linhas{23}
+\newpage
+% ------------------------------------------------------------
+2. Por que o falsificacionismo não explica a ciência e como Lakatos e Kuhn tentam fechar essa lacuna?
+\linhas{15}
+
+% ------------------------------------------------------------
+3. Para que serve o conhecimento sobre filosofia da ciência para não cientistas?
+
+\linhas{15}
+
+\end{document}
