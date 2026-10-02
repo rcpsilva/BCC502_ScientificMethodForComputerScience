@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[margin=1.5cm, top=2.6cm, headheight=30pt]{geometry}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{pgffor}
+\usepackage{lastpage}
+
+\definecolor{azulescuro}{RGB}{20, 50, 100}
+\definecolor{laranja}{RGB}{230, 120, 30}
+
+% Linhas para resposta
+\newcommand{\linhas}[1]{%
+  \par\nointerlineskip
+  \foreach \i in {1,...,#1}{%
+    \vspace{0.5cm}\noindent\textcolor{black}{\rule{\linewidth}{0.5pt}}\par\nointerlineskip%
+  }%
+}
+
+\setlist{nosep}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\fancyhead[L]{\small\textbf{BCC502} -- Metodologia Científica para Ciência da Computação}
+\fancyhead[R]{\small DECOM/ICEB/UFOP}
+\fancyfoot[C]{\small Página \thepage\ de \pageref{LastPage}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries\textcolor{azulescuro}{Prova 1}}\\[0.3em]
+ 
+\end{center}
+
+\vspace{0.3em}
+\begin{tcolorbox}[colback=white, colframe=azulescuro!60, boxrule=0.5pt, arc=1.5pt]
+  \textbf{Nome:} \rule{8.2cm}{0.3pt} \hfill \textbf{Matrícula:} \rule{3cm}{0.3pt}\\[0.9em]
+  \textbf{Data:} \rule{1.6cm}{0.3pt}/\rule{1.6cm}{0.3pt}/\rule{2.2cm}{0.3pt}
+  \hfill \textbf{Nota:} \rule{2.5cm}{0.3pt}
+\end{tcolorbox}
+
+\textbf{Instruções.} Responda a cada questão no espaço reservado, com letra legível e por extenso. Respostas que apenas listem termos, sem articular o raciocínio, receberão nota parcial. \textbf{Não é permitida a consulta a qualquer material}.
+
+Nas questões 1 a 3, cada resposta transcrita foi dada por um aluno em uma avaliação anterior. Aponte o erro (ou os erros) da resposta e indique quais correções a tornariam correta e completa.
+
+% ------------------------------------------------------------
+1. Pergunta: \emph{Quais problemas do indutivismo o falsificacionismo resolve? Como ele resolve? O que ainda fica em aberto?}
+
+Resposta:
+\begin{quote}\small
+Enquanto o indutivista ingênuo sintetiza a ciência como algo que parte da observação para a teoria, sendo feita e definida a partir da acumulação de viés de confirmação, o falsificacionista vê isto como um problema.
+
+Primeiramente, contesta-se a possibilidade de se comprovar que uma teoria seja verdadeira. O que o falsificacionismo defende é que, embora não se possa comprovar que uma teoria seja verdadeira, nós podemos confirmar que ela é falsa.
+
+Em segundo lugar, considera-se um problema deduzir que a observação precede a teoria, pois nenhuma observação parte do zero. Ou seja, todo o conhecimento teórico acumulado pelo observador ao longo da vida influencia sua observação. Logo, o falsificacionismo afirma que o observador deve assumir a sua não neutralidade, tentando desenvolver hipóteses refutáveis por meio da sua experimentação e observação.
+
+Porém, assim como a observação pode ser enviesada ao se conjecturar teorias a partir dela, mesmo que se parta da teoria, ao se tentar falsear uma teoria a própria observação pode estar incorreta e levar a afirmações igualmente incorretas.
+\end{quote}
+\linhas{25}
+
+% ------------------------------------------------------------
+2. Pergunta: \emph{Por que o falsificacionismo não explica a ciência e como Lakatos e Kuhn tentam fechar essa lacuna?}
+
+Resposta:
+\begin{quote}\small
+O falsificacionismo não é suficiente para explicar a ciência porque as falsificações nem sempre são feitas com o embasamento correto para desmistificar uma hipótese. Por exemplo, o caso da teoria de Newton sobre os planetas, que inicialmente foi falsificada porque não era possível visualizar um oitavo planeta, mas depois foi constatado que realmente havia um oitavo planeta, que antes não era possível ver por conta da qualidade dos instrumentos de observação e de erros como a paralaxe. Lakatos e Kuhn tentam fechar essa lacuna deixando as afirmações das falsificações mais vagas ou criando contextos específicos em que elas funcionam.
+\end{quote}
+\linhas{20}
+
+\newpage
+% ------------------------------------------------------------
+3. Pergunta: \emph{Para que serve o conhecimento sobre filosofia da ciência para não cientistas?}
+
+Resposta:
+\begin{quote}\small
+O conhecimento sobre filosofia da ciência serve para que os não cientistas sempre duvidem de teorias, para que nem todos os conhecimentos da ciência sejam considerados como ``a verdade'', pois é possível que, em algum momento, essas teorias sejam falsificadas. Um exemplo disso é a teoria copernicana, que foi falsificada no passado por conta dos conhecimentos da época, mas hoje é considerada consistente por conta das mudanças de certas teorias. Além disso, é importante saber que cada comunidade tem seu ponto de vista, o que pode afetar a elaboração de teorias, como Kuhn cita.
+\end{quote}
+\linhas{30}
+
+\newpage
+% ------------------------------------------------------------
+4. Considere as definições a seguir. \emph{Racionalismo} é a posição segundo a qual existe um critério único, universal e a-histórico para avaliar os méritos relativos de teorias rivais, de modo que a escolha entre elas é decidida por esse critério e não pelas preferências de quem as julga. \emph{Relativismo} é a posição segundo a qual não há tal critério universal: os critérios para julgar teorias variam de indivíduo para indivíduo ou de comunidade para comunidade, e a escolha entre teorias depende dos valores, interesses e do contexto de quem as avalia. Em qual dessas posições você enquadraria Kuhn e em qual enquadraria Lakatos? Justifique com base em elementos da teoria de cada um.
+\linhas{31}
+
+\end{document}
