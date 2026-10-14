@@ -21,4 +21,5 @@
 \contentsline {subsection}{\numberline {4.1}Um segundo caso, em outra subárea}{9}{subsection.4.1}%
 \contentsline {section}{Exercícios de Compreensão}{10}{section*.14}%
 \contentsline {section}{Exercício integrador: o seu TCC em seis slides}{10}{section*.15}%
-\contentsline {paragraph}{Regras de entrega.}{10}{section*.16}%
+\contentsline {paragraph}{Revisão por IA.}{10}{section*.16}%
+\contentsline {paragraph}{Regras de entrega.}{11}{section*.17}%

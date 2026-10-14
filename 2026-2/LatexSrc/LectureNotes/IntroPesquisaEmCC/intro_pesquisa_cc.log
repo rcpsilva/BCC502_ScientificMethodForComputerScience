@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  13 OCT 2026 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.30)  13 OCT 2026 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -920,6 +920,11 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-5.69997pt}.
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
+[][][][][]$\T1/cmtt/m/n/8 https : / / github . com / rcpsilva / BCC502 _ ScientificMethodForComputerScience / blob / main / 2026-[]2 / LatexSrc / Templates /
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -937,18 +942,18 @@ Package rerunfilecheck Info: File `intro_pesquisa_cc.out' has not changed.
 (rerunfilecheck)             Checksum: 2CFFDE2906A8F79DCEF81DA7483D67E0;4021.
  ) 
 Here is how much of TeX's memory you used:
- 32169 strings out of 473577
- 632371 string characters out of 5732224
- 1104120 words of memory out of 5000000
- 54282 multiletter control sequences out of 15000+600000
- 581820 words of font info for 183 fonts, out of 8000000 for 9000
+ 32189 strings out of 473577
+ 632617 string characters out of 5732224
+ 1104126 words of memory out of 5000000
+ 54288 multiletter control sequences out of 15000+600000
+ 583903 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,1453b,999s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on intro_pesquisa_cc.pdf (11 pages, 325186 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on intro_pesquisa_cc.pdf (11 pages, 379238 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 39709 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 44317 words of extra memory for PDF output out of 51595 (max. 10000000)
 
