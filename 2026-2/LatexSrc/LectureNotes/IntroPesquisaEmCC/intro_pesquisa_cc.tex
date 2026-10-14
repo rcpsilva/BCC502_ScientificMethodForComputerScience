@@ -1,0 +1,408 @@
+\documentclass[10pt,a4paper]{extarticle}
+\newcommand{\coursehead}{BCC502 -- Metodologia Científica para Ciência da Computação}
+\newcommand{\chapterhead}{Wazlawick, caps. 5 e 8}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+\definecolor{dblue}{RGB}{16, 42, 92}
+\definecolor{dorange}{RGB}{230, 115, 0}
+
+\hypersetup{colorlinks=true, linkcolor=dblue, citecolor=dorange, urlcolor=dblue}
+
+\setlist{nosep}
+\geometry{margin=2cm, headheight=14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{dblue}\coursehead}
+\fancyhead[R]{\small\color{dblue}\chapterhead}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{dorange}\leaders\hrule height \headrulewidth\hfill}}
+
+\newtcolorbox{keybox}[1][]{colback=dblue!5, colframe=dblue, fonttitle=\bfseries, title={#1}, breakable}
+\newtcolorbox{warnbox}[1][]{colback=dorange!7, colframe=dorange, fonttitle=\bfseries, title={#1}, breakable}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{remark}{Observação}[section]
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\title{Maturidade em Pesquisa e Questões de Pesquisa\\Wazlawick, Capítulos 5 e 8}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação\\Prof.\ Rodrigo C.\ P.\ Silva -- DECOM/UFOP}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+
+\section*{Como ler este handout}
+\addcontentsline{toc}{section}{Como ler este handout}
+
+Este texto é um condensado dos capítulos 5 (Maturidade em Pesquisa) e 8 (Questões de Pesquisa) de \cite{wazlawick2020}, que são a sua fonte. A leitura do livro aprofunda o que aqui aparece condensado. 
+
+Seguindo o exemplo do próprio livro, partimos do exemplo de um aluno de mestrado que começa com uma ideia vaga e precisa transformá-la em pesquisa. Para isso ele precisa decidir sobre dois pontos principais. O primeiro é \emph{que tipo de afirmação} o seu trabalho será capaz de sustentar, e o segundo é \emph{que pergunta} ele vai fazer. O Capítulo 5 trata do primeiro e o Capítulo 8 trata do segundo. 
+
+%==========================================================================
+\section{O ponto de partida: uma ideia que ainda não é pesquisa}\label{sec:partida}
+
+Um aluno de mestrado começa a pesquisa sem saber ao certo o que fazer. Na empresa em que trabalha, o desenvolvimento passou recentemente a ser organizado em equipes ágeis autogerenciadas, isto é, equipes que decidem por conta própria como distribuir e conduzir o trabalho, sem um gerente que o coordene. Houve intercorrências, mas a impressão geral é de que o trabalho flui melhor do que antes. O aluno decide, então, fazer uma pesquisa para comprovar que equipes autogerenciadas são uma opção melhor do que equipes coordenadas por um gerente.
+
+\subsection{Por que isso ainda não é uma questão de pesquisa}
+
+A frase \enquote{equipes autogerenciadas são melhores} parece clara e é, na verdade, vaga em três pontos. Cada ponto vai reaparecer nas seções seguintes como um problema metodológico com nome próprio.
+\begin{itemize}
+  \item \textbf{\enquote{Melhor} não tem medida.} Melhor em produtividade, em qualidade do produto, em satisfação das pessoas, em custo? Sem dizer o que se mede e como, a afirmação não pode ser confirmada nem refutada.
+  \item \textbf{\enquote{Equipe autogerenciada} não tem definição.} Quais condições fazem uma equipe contar como autogerenciada? Existem variações, e elas podem se comportar de modo diferente.
+  \item \textbf{\enquote{Equipe com gerente} também tem variações.} O estilo de gerência vai do ditador, que decide tudo, ao facilitador, que apoia as decisões da equipe, passando pelo coordenador. Comparar autogerenciamento com um gerente facilitador pode dar resultado diferente de compará-lo com um gerente ditador.
+\end{itemize}
+
+Há ainda um quarto problema, mais sutil. O aluno quer \enquote{comprovar} algo que já acredita. Pesquisa começa em uma pergunta cuja resposta não se conhece, e a resposta pode contrariar a crença inicial. Por isso a ideia do aluno ainda é apenas uma convicção.
+
+\subsection{As duas decisões}
+
+Transformar a convicção em pesquisa exige decidir duas coisas. A primeira é o que o trabalho poderá afirmar ao final e que evidência sustentaria essa afirmação. Afirmar \enquote{construí uma ferramenta}, \enquote{esta alternativa tem estas propriedades}, \enquote{esta abordagem é melhor segundo esta métrica} e \enquote{isto é necessariamente verdade} são afirmações de pesos muito diferentes, e a comunidade científica exige mais ou menos evidência conforme a subárea. Esse é o assunto da Seção~\ref{sec:maturidade}. A segunda decisão é qual pergunta o trabalho responde. Perguntar se existe literatura sobre o tema, qual a proporção de equipes autogerenciadas, ou se o autogerenciamento \emph{causa} aumento de produtividade são perguntas distintas, que exigem métodos distintos. Esse é o assunto da Seção~\ref{sec:questoes}. A Seção~\ref{sec:amarracao} mostra como as duas decisões se condicionam uma à outra.
+
+%==========================================================================
+\section{O que o trabalho pode afirmar: maturidade da subárea (Capítulo 5)}\label{sec:maturidade}
+
+\subsection{Por que a exigência varia tanto}
+
+Wazlawick observa que muitas monografias de Computação são escritas com fraco embasamento metodológico e que isso não se justifica apenas dizendo que a área é nova. Ele aponta duas causas. A primeira é, de fato, a juventude da área. A segunda é que a Computação permeia quase todas as atividades humanas e, por isso, se relaciona com muitas outras disciplinas, cada uma com seu estilo de pesquisa.
+
+O próprio surgimento dos cursos brasileiros mostra essa variedade de origens. Alguns nasceram em faculdades de Engenharia, outros em faculdades de Matemática ou de Física, outros ainda em departamentos de processamento de dados criados para prestar serviços e não para ensinar. Até por volta do ano 2000 os nomes dos cursos (Análise de Sistemas, Informática, Engenharia de Informática e outros) não correspondiam ao tipo de formação oferecida. Depois disso, a Comissão de Especialistas de Ensino de Computação e Informática, do Ministério da Educação, definiu cinco denominações: Ciência da Computação, Sistemas de Informação, Licenciatura em Computação, Engenharia de Computação e Engenharia de Software, mantidas nas diretrizes curriculares de 2016. Se até o nome dos cursos era difuso, a pesquisa feita pelos profissionais da área também seria.
+
+Daí vem o conceito central do capítulo: a \emph{maturidade} de uma subárea. Uma subárea madura tem problemas bem definidos, resultados anteriores com os quais comparar, testes aceitos por todos e métricas consensuais. Uma subárea emergente não tem nada disso, e o que se aceita como pesquisa nela é menos exigente. A consequência prática é que a mesma ideia pode ser publicável em uma subárea e rejeitada em outra. Wazlawick declara que sua conjectura de que trabalhos de menor maturidade estão ficando mais raros não se apoia em dados.
+
+\subsection{Cinco degraus, cinco afirmações}
+
+O capítulo organiza os trabalhos em cinco tipos, em ordem crescente de maturidade. Convém ler a lista como uma escada em que cada degrau permite uma afirmação mais forte e, por isso, cobra mais evidência.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L L@{}}
+\toprule
+Degrau & Afirmação que o trabalho faz & Evidência exigida & Fragilidade típica \\
+\midrule
+1. Produto & \enquote{Fiz algo novo} & Descrição do produto & Sem problema relevante nem comparação, é propaganda do produto \\
+2. Algo diferente & \enquote{Esta é outra forma de resolver o problema} & Comparação qualitativa com técnicas existentes e um ou dois estudos de caso & Estudo de caso convence, mas não prova \\
+3. Algo presumivelmente melhor & \enquote{É melhor, segundo esta métrica, nos testes que realizei} & Comparação quantitativa, em testes montados pelo próprio autor & Viés do autor, que também executa as abordagens concorrentes \\
+4. Algo reconhecidamente melhor & \enquote{É melhor em testes que a comunidade reconhece} & Base de dados e métrica aceitas, resultados reproduzíveis por terceiros & A dificuldade passa a ser encontrar uma boa hipótese \\
+5. Prova & \enquote{Isto vale necessariamente} & Demonstração formal & Exige uma teoria com conceitos explícitos \\
+\bottomrule
+\end{tabularx}
+\caption{A escada de maturidade do Capítulo 5.}
+\label{tab:maturidade}
+\end{table}
+
+\subsubsection*{Degrau 1: apresentação de um produto}
+
+Em áreas tão novas que quase não há trabalhos anteriores, é aceitável que a pesquisa simplesmente apresente algo novo, com a forma \enquote{fiz isto, eis o meu produto}. A literatura dessas áreas é, em boa parte, \emph{literatura cinzenta}: relatórios técnicos, rascunhos, páginas web e blogs, que não aparecem nos mecanismos de busca de publicações indexadas. Mesmo ali, Wazlawick considera ingênuo apresentar um produto sem mostrar que ele resolve um problema relevante. Se o problema é relevante, alguém provavelmente já tentou resolvê-lo, e então há com o que comparar. Quem ignora as soluções existentes, como o aluno da catapulta que o livro menciona em outro capítulo, pode refazer o que já foi feito e falhar na pesquisa.
+
+Há um teste simples, que o autor formula como ironia. Se construir uma ferramenta bastasse para merecer o título de mestre, as universidades diplomariam todos os analistas e programadores que criam ferramentas diariamente nas empresas. Portanto, um trabalho científico precisa de algo além da ferramenta. Em particular, a pesquisa de ferramentas deve ser precedida de um \emph{mapeamento sistemático}, isto é, um levantamento organizado da literatura que mostra quais ferramentas existem e o que elas oferecem. Sem ele, a comparação com o que existe fica sem efeito. Artigos do tipo \enquote{manual da ferramenta} devem ser evitados, e o autor completa que a Figura 1 do artigo não deveria ser a tela de login do sistema. Esse trabalho pode ter lugar em sessões de apresentação de ferramentas ou em eventos de aplicação da Computação a outras áreas, como Medicina ou Educação, embora essas áreas também exijam cada vez mais comparação. Em graduação e especialização, desenvolver um sistema pode ser trabalho relevante, desde que fique evidente a aplicação de técnicas aprendidas no curso. No mestrado e no doutorado, inclusive os profissionais, isso dificilmente basta, pois a solução prática deve nascer de ciência e não só de tecnologia.
+
+\emph{No caso do aluno:} construir uma ferramenta de apoio a equipes autogerenciadas e descrevê-la seria um trabalho de degrau 1. Não responderia se equipes autogerenciadas são melhores.
+
+\subsubsection*{Degrau 2: apresentação de algo diferente}
+
+O segundo degrau propõe uma forma diferente de resolver um problema e a compara com outras, em geral de modo qualitativo (existe ou não tal propriedade), não necessariamente com todas as técnicas nem com as melhores, e reforça o argumento com um ou dois estudos de caso. Um \emph{estudo de caso} é a aplicação da proposta a uma situação concreta, descrita em detalhe. Ele raramente prova alguma coisa, porque o fato de o método ter funcionado nos casos A e B não garante que funcionará sempre, e a responsabilidade de generalizar é do autor, não do leitor. O que existe aqui é uma tentativa de convencer, não uma prova. Os artigos desse tipo costumam ser aceitos apenas na falta de outros melhores. Há, porém, um uso forte do estudo de caso: mostrar que um método consagrado falha em certa situação. Isso refuta uma teoria, e o resultado se torna interessante se a causa da falha for identificada e uma solução for proposta e validada.
+
+Para funcionar, esse tipo de trabalho precisa de uma boa hipótese, de uma teoria que a sustente e de argumentação capaz de convencer o leitor sem testes estatísticos. Vale fixar o conceito de hipótese, que atravessa todo o handout.
+
+\begin{definition}[Hipótese]
+Uma hipótese é uma teoria provável, mas ainda não demonstrada, ou uma suposição admissível. Ela norteia o trabalho justamente porque ainda não se sabe se é verdadeira, e será testada ao longo dele.
+\end{definition}
+
+Wazlawick chama a hipótese de coração da monografia. Se for mal escolhida, o trabalho pode não alcançar seus objetivos e, se ela não se confirmar, será preciso recomeçar por outra linha. O risco é do aluno. Propor algo é fácil. Difícil é mostrar que a proposta melhora o que já existe, por exemplo propor um compressor de textos mais eficiente que os atuais: o desafio está em ter uma boa razão para acreditar que ele será mais eficiente.
+
+Uma forma de aumentar a chance de sucesso é estruturar o trabalho como uma tabela comparativa.
+
+\begin{keybox}[Tabela comparativa de artefatos]
+O trabalho começa com um mapeamento bibliográfico para descobrir as formas usuais de resolver o problema (os \emph{artefatos}). Em seguida, listam-se as características relevantes de cada um e marca-se quais artefatos têm quais características. Por fim, define-se um novo artefato que reúna todas as características. Ele é diferente dos demais porque nenhum deles, isoladamente, possui o conjunto completo.
+
+\smallskip
+\begin{center}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & Caract.\ 1 & Caract.\ 2 & Caract.\ 3 & Caract.\ 4 \\
+\midrule
+Artefato A & X & X &  &  \\
+Artefato B & X &  &  & X \\
+Artefato C &  & X & X & X \\
+\midrule
+Novo artefato & X & X & X & X \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\smallskip
+Para a tabela ter valor científico, três condições são fundamentais.
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item Os artefatos vêm de um mapeamento sistemático, não necessariamente feito pelo autor, e são os mais relevantes segundo um critério objetivo, como ser citado em pelo menos dois artigos diferentes.
+  \item As características são relevantes, isto é, respondem a dificuldades reais das ferramentas atuais. Wazlawick cita um estudo de ferramentas para montar \emph{sprint backlogs} (listas de tarefas de um ciclo de trabalho) cujas características eram, por exemplo, poder expandir células, permitir edição compartilhada e funcionar em várias plataformas. Características irrelevantes na prática ficam de fora.
+  \item Cada célula é objetiva e verdadeira. Se o pesquisador não encontra a informação sobre uma característica, declara isso explicitamente em vez de adivinhar.
+\end{enumerate}
+O novo artefato só é útil na medida em que as características sejam relevantes e possam ser verificadas de forma independente. Esse é um método tipicamente qualitativo, que avalia a existência de propriedades, e não a quantidade delas.
+\end{keybox}
+
+\emph{No caso do aluno:} propor um modelo de autogerenciamento que reúna características que os modelos existentes têm separadamente, e compará-lo com eles por uma tabela como a acima, seria um trabalho de degrau 2.
+
+\subsubsection*{Degrau 3: apresentação de algo presumivelmente melhor}
+
+Subáreas um pouco mais maduras exigem comparação \emph{quantitativa}: não basta dizer que a nova abordagem tem uma propriedade, é preciso mostrar com números que ela é melhor. Se não existem bases de teste (\emph{benchmarks}) amplamente aceitas, o próprio autor monta os testes e executa também as abordagens da literatura. Isso gera dois problemas. O primeiro é o volume de trabalho. O segundo é o viés, pois nada garante que o autor aplicou as abordagens concorrentes nas melhores condições, o que torna tais comparações, muitas vezes, temerárias. Por isso o autor deve descrever como aplicou cada técnica e isolar todos os fatores que poderiam afetar os resultados. O degrau cobra quatro cuidados.
+\begin{itemize}
+  \item \textbf{Comparar com o estado da arte.} O \emph{estado da arte} é o que há de melhor e mais recente publicado sobre o problema. Comparar o seu método com outro de 20 anos atrás é, em Computação, muitas vezes inadmissível. A credibilidade só se mantém se o autor mostra que nada avançou nesse período. Melhorar um resultado publicado há um ou dois anos tem muito mais relevância.
+  \item \textbf{Delimitar onde a abordagem é melhor.} Não é preciso ser melhor em toda e qualquer situação. Pode-se mostrar em quais situações a abordagem funciona melhor e por quê, com experimentos que o demonstrem.
+  \item \textbf{Definir a métrica.} Uma \emph{métrica} é o modo definido de medir uma propriedade. \enquote{O sistema X é mais fácil de usar do que o Y} não tem fundamento enquanto \enquote{fácil de usar} não for definido, por exemplo como o número de cliques necessários para executar uma tarefa dada. A métrica pode ser discutida (será que cliques medem facilidade?), mas, dentro da definição, é possível verificar qual sistema é mais fácil.
+  \item \textbf{Declarar como cada técnica foi aplicada}, para que o leitor possa julgar a equidade da comparação.
+\end{itemize}
+
+\emph{No caso do aluno:} medir produtividade e número de defeitos em equipes autogerenciadas e em equipes com gerente, com métricas definidas e dados do próprio aluno, é um trabalho de degrau 3. Aqui a Seção~\ref{sec:questoes} se torna indispensável: sem uma pergunta bem formulada, as métricas e o controle não ficam definidos.
+
+\subsubsection*{Degrau 4: apresentação de algo reconhecidamente melhor}
+
+No degrau mais maduro da pesquisa empírica, o trabalho é avaliado em testes padronizados e internacionalmente aceitos. O autor não precisa executar as outras abordagens, porque os resultados delas já estão publicados para aquela mesma base e aquela mesma métrica. Ele aplica a sua abordagem à base conhecida e compara os números. Como a base e a métrica são públicas, equipes independentes podem reproduzir o experimento, e é essa reprodutibilidade que dá credibilidade ao resultado. Se a superioridade se confirmar, a abordagem passa a ser considerada estado da arte, o que Wazlawick chama de \emph{avançar o estado da arte}. É o padrão das boas teses de doutorado.
+
+O autor faz uma observação que surpreende: é a pesquisa mais fácil de executar, desde que se tenha uma boa hipótese. Os testes e os dados já estão prontos, e basta implementar a abordagem e rodá-la. A dificuldade inerente está em encontrar a hipótese, que faça sentido e seja promissora, o que exige amplo estudo do estado da arte e reflexão sobre como as técnicas resolvem os problemas da área. Problemas em aberto são bons focos. Conhecimento de outras áreas também ajuda, pois técnicas de uma área aplicadas a outra às vezes dão bons resultados, mas há uma advertência: aplicar uma técnica diferente a um problema conhecido, sem boas razões para esperar ganho, devolve o trabalho ao degrau 2, \enquote{algo diferente}.
+
+\emph{Este degrau mostra que a maturidade é da subárea, não do aluno.} Para o caso das equipes, é improvável existir uma base de dados e uma métrica consensuais de produtividade de equipes, portanto o degrau 4 provavelmente não está disponível. Em outras subáreas está. Em compressão de textos, por exemplo, é comum medir novos métodos contra coleções de textos padronizadas, e a Seção~\ref{sec:amarracao} traz um segundo caso, adaptado por nós, que mostra essa diferença. Essa observação sobre as duas subáreas é deste handout, não de Wazlawick.
+
+\subsubsection*{Degrau 5: apresentação de uma prova}
+
+Os quatro degraus anteriores trabalham com evidências empíricas, argumentos ou estudos de caso. Outras subáreas, como métodos formais e compiladores, exigem \emph{provas formais} segundo as regras da Lógica, e dificilmente aceitam trabalhos sem demonstração de correção ou de eficiência. Constrói-se uma teoria que afirma com clareza os conceitos utilizados e mostra que a aplicação deles leva logicamente a certos resultados. Os resultados típicos são três: provar que um algoritmo é o melhor possível para certo tipo de problema, provar que não existe algoritmo para certo tipo de problema, ou provar que a complexidade de qualquer algoritmo para o problema não pode ficar abaixo de um certo polinômio.
+
+\subsection{Os três estilos por trás da escada}
+
+Os cinco degraus se agrupam em três estilos de pesquisa, cada um com a sua ferramenta principal. A \emph{pesquisa formal} elabora uma teoria e prova que ela é correta, e sua ferramenta é a lógica. A \emph{pesquisa empírica} compara uma abordagem com outras por meio de testes aceitos pela comunidade, e sua ferramenta é a estatística (o livro indica Barbetta, 2007, para quem quiser aprofundar). A \emph{pesquisa exploratória} não consegue provar uma teoria nem apresentar resultados estatisticamente aceitos. Enquadram-se aqui os estudos de caso, as análises qualitativas e a pesquisa em áreas emergentes, e a ferramenta é a argumentação. Nossa leitura é que os degraus 1 e 2 são exploratórios, os degraus 3 e 4 são empíricos e o degrau 5 é formal.
+
+Cada estilo tem um limite que o pesquisador precisa conhecer.
+
+\begin{warnbox}[Limites de cada estilo]
+\textbf{Formal.} Parece o mais difícil, mas, quando o resultado é obtido, é o mais difícil de refutar.
+
+\textbf{Empírico.} Pode ser refutado se não tiver uma boa teoria por trás, porque a estatística mostra o que ocorre e não por quê. Wazlawick ilustra com uma anedota. Um pesquisador manda uma aranha pular e, a cada experimento, arranca-lhe uma perna. Com sete pernas arrancadas, a aranha ainda pula com a que resta. Arrancada a última, ela não pula mais, e o pesquisador conclui que a aranha sem pernas fica surda, pois já não ouve a ordem. Os dados estão corretos e a conclusão é absurda, porque a explicação mais simples (sem pernas, ela não consegue pular) nem foi considerada. O livro pergunta se essa teoria resistiria à navalha de Occam, o princípio segundo o qual, entre explicações compatíveis com os dados, deve-se preferir a mais simples.
+
+\textbf{Exploratório.} Parece o mais fácil, pois dispensa lógica formal e experimentos exaustivos, mas é o mais arriscado, porque a aceitação dos argumentos não é universal e trabalhos sem boa teoria ou bom conjunto de testes têm menos chance de publicação em bons veículos. Exemplos e estudos de caso ajudam a convencer, mas não constituem prova.
+\end{warnbox}
+
+%==========================================================================
+\section{Qual pergunta fazer (Capítulo 8)}\label{sec:questoes}
+
+\subsection{Por que a pergunta vem antes do método}
+
+Na Seção~\ref{sec:partida} a ideia do aluno não passou no teste da pergunta. O Capítulo 8 insiste que isso é decisivo, porque nada compensa uma pergunta que não acrescenta nada de relevante. Uma revisão sistemática da literatura impecavelmente planejada e executada, cujas perguntas não avançam o conhecimento, é esforço perdido. E o produto de um trabalho (o sistema, o algoritmo, o processo) não é, por si só, ciência: ciência é o avanço no conhecimento humano que o produto deveria acompanhar.
+
+Dois instrumentos de pesquisa bibliográfica ajudam a distinguir perguntas de panorama e perguntas de conhecimento. O \emph{mapeamento sistemático} faz perguntas mais amplas, como quais técnicas são mais usadas para determinado processo, quais propriedades de um artefato são mais estudadas ou quais procedimentos metodológicos predominam na área. Ele funciona como um mapa: mostra o panorama, mas não extrai dados dos resultados das pesquisas primárias, e por isso, sozinho, não avança o conhecimento. A \emph{revisão bibliográfica sistemática} faz perguntas mais profundas sobre os resultados das pesquisas, como avaliar o efeito de uma tecnologia, a frequência ou a taxa de sucesso de projetos, os fatores de custo e risco, o impacto sobre confiabilidade e modelos de custo, ou a relação custo/benefício, tipos de questão que Kitchenham e Charters (2007) propõem para a Engenharia de Software.
+
+\paragraph{O que faz uma pergunta ser boa.} Ela tem importância para pesquisadores e também para a indústria, e a sua resposta, qualquer que seja, deveria mudar algo. Pode mostrar que uma técnica é melhor que outra e levar empresas e pesquisadores a mudar de prática. Pode mostrar que a técnica dominante é de fato melhor, o que reforça a confiança em seu uso. Pode ainda mostrar que uma crença corrente é incorreta ou incompleta. O livro dá o exemplo de Tolfo e Wazlawick (2008). A literatura sugeria que, para saber se uma empresa tem ambiente favorável à cultura ágil (XP, no caso), bastava observar a sua cultura visível. Os autores estudaram seis empresas que aparentemente reuniam essas condições e que, mesmo assim, falharam em adotar a cultura ágil. Concluíram que também era preciso avaliar níveis mais profundos da cultura organizacional, ou seja, as convicções das pessoas, e não só os fatores técnicos habituais. A pergunta valeu a pena porque a resposta corrigiu uma crença.
+
+\subsection{Estruturando a pergunta}
+
+Segundo Petticrew e Roberts (2005), uma pergunta bem formada tem seis elementos. Apresentá-los de forma abstrata ajuda pouco, e por isso a Tabela~\ref{tab:seis} já os aplica ao caso do aluno, com as escolhas que o texto discutiu.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Elemento & O que define & No caso do aluno (exemplo) \\
+\midrule
+População & Quem ou o que é analisado (pessoas ou artefatos) & Equipes de desenvolvimento de software \\
+Intervenção & A ferramenta, técnica ou abordagem avaliada & Autogerenciamento \\
+Comparação (controle) & Aquilo com que a intervenção é comparada & Equipes com gerente, separadas por estilo (ditador, coordenador, facilitador) \\
+Resultados & O que se quer medir ou melhorar & Produtividade e número de defeitos por entrega, com métricas definidas \\
+Contexto & O recorte de interesse, que exclui o restante & Apenas pequenas e médias empresas \\
+Design do experimento & Restrição pelo tipo de pesquisa dos trabalhos primários & Apenas estudos que aplicam teste estatístico, com cautela \\
+\bottomrule
+\end{tabularx}
+\caption{Os seis elementos da pergunta aplicados ao caso do aluno. Os elementos são de Petticrew e Roberts (2005), e a coluna da direita é um exemplo deste handout.}
+\label{tab:seis}
+\end{table}
+
+Alguns elementos merecem comentário. A \emph{comparação} é o que dá sentido à palavra \enquote{melhor}. Wazlawick sugere chamar o que serve de referência de \emph{controle}, e não de \enquote{tradicional}, termo pouco adequado. O \emph{design do experimento} pode restringir os trabalhos primários, por exemplo eliminando os que não aplicam testes estatísticos para avaliar a confiabilidade dos resultados. Isso pode introduzir viés e deve ser feito com muito cuidado.
+
+\begin{warnbox}[Controle inadequado]
+Evite comparar o uso de uma técnica com o uso de nenhuma técnica. Faz sentido comparar uma ferramenta de análise nova com as ferramentas já existentes no mercado. Não faz sentido comparar quem a usa com quem não usa ferramenta alguma, porque já existem ferramentas e o grupo sem nenhuma parte em desvantagem evidente. O resultado seria uma vitória sem informação.
+\end{warnbox}
+
+\paragraph{Da pergunta à busca.} Uma vez definidos os elementos, a busca na literatura se constrói assim: para cada elemento, uma lista de sinônimos ligados por OR; as listas dos diferentes elementos, ligadas entre si por AND. Sendo $S_e$ o conjunto de sinônimos do elemento $e$,
+\[
+\text{string de busca}\;=\;\bigwedge_{e}\Big(\bigvee_{s\in S_e}s\Big).
+\]
+No caso do aluno, o grupo da intervenção poderia ser (\texttt{"self-managed team"} OR \texttt{"self-organizing team"} OR \texttt{"self-managing team"}), o do controle (\texttt{"manager-led team"} OR \texttt{"team leader"}) e o dos resultados (\texttt{productivity} OR \texttt{defects} OR \texttt{quality}), todos ligados por AND. Os termos são um exemplo deste handout. Por fim, o livro lembra que a pesquisa bibliográfica é um meio e não um fim: perguntas bem estruturadas, mas cuja resposta não produz efeito prático, não compensam o esforço.
+
+\subsection{Quatro famílias de perguntas, em ordem de percurso}
+
+Wazlawick adota a classificação de Easterbrook et al.\ (2008), que por sua vez adapta Meltzoff (1998). Ela distingue quatro famílias, e a ordem em que são apresentadas é também a ordem de um percurso. Primeiro se descobre o que existe, depois se mede com que frequência e como as coisas se relacionam, depois se pergunta por causas, e só então se pergunta como as coisas \emph{poderiam} ser. Pular etapas é arriscado, porque cada família usa o que a anterior estabeleceu.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l l L L@{}}
+\toprule
+Família & Subtipo & Formato & Exemplo (caso do aluno) \\
+\midrule
+\multirow{3}{*}{Exploratória}
+ & Existencial & Existe X? & Existe literatura sobre equipes autogerenciadas? \\
+ & Descritiva e de classificação & Como é X? Quais seus tipos, componentes, propriedades? Como se mede X? & Quais são os tipos de equipes autogerenciadas? \\
+ & Descritivo-comparativa & Como X se diferencia de Y? & O que diferencia equipes autogerenciadas de equipes com gerente? \\
+\midrule
+\multirow{3}{*}{Descritiva}
+ & Frequência e distribuição & Com que frequência X ocorre? Qual a quantidade média de X? & Qual a proporção de equipes autogerenciadas em relação a equipes com gerente? \\
+ & Processo & Como X funciona? Em que sequência seus eventos ocorrem? & Como uma equipe com gerente se transforma em autogerenciada? \\
+ & Relacionamento & X e Y se correlacionam? & O nível de satisfação dos membros é superior nas equipes autogerenciadas? \\
+\midrule
+\multirow{3}{*}{Causalidade}
+ & Causalidade & X causa Y? Que efeito X tem sobre Y? & Que efeitos o estilo de gerência tem sobre a produtividade? \\
+ & Causalidade comparativa & X causa mais Y do que Z? & Equipes que se tornam autogerenciadas produzem produtos com menos bugs? \\
+ & Interação causal comparativa & X ou Z causam mais Y sob certas circunstâncias, mas não em outras? & Equipes autogerenciadas lidam melhor com mudança de requisitos apenas quando formadas por pessoas experientes? \\
+\midrule
+Design & Design & Qual é uma forma efetiva de obter X? & Qual a forma mais efetiva de implantar equipes autogerenciadas? \\
+\bottomrule
+\end{tabularx}
+\caption{Famílias e subtipos de questões (Easterbrook et al., 2008, conforme Wazlawick), com os exemplos do próprio Wazlawick.}
+\label{tab:familias}
+\end{table}
+
+\paragraph{Exploratórias: conhecer o terreno.} São as primeiras e costumam ser respondidas por pesquisa bibliográfica sistemática. Sua função é fazer o pesquisador compreender o universo em que está entrando, para que as perguntas seguintes não esbarrem em fatos básicos da área. O aluno que pulasse esta etapa cairia no erro apontado na Seção~\ref{sec:partida}: comparar autogerenciamento com \enquote{gerente} sem saber que existem estilos de gerência e que os resultados dependem deles. Equipes autogerenciadas recém-implantadas, por exemplo, ainda estão aprendendo e partem em desvantagem diante de equipes experientes com gerente. Atenção a um detalhe de nomenclatura: o subtipo \enquote{descritiva e de classificação} pertence à família exploratória, e não deve ser confundido com a família descritiva.
+
+\paragraph{Descritivas: dar números ao que se diz.} Depois de conhecer o terreno, o pesquisador pergunta pela frequência, pelo processo e pelas relações entre fenômenos. Sem questões de frequência e distribuição, afirmações como \enquote{frequentemente} e \enquote{na maioria dos casos} ficam apoiadas só na intuição. Nesta família passa a ser mais comum a necessidade de experimentos, sobretudo nas perguntas de relacionamento, embora muitas respostas ainda possam sair de revisões bibliográficas ou documentais.
+
+\paragraph{Causalidade: de \enquote{se relacionam} a \enquote{causa}.} O aluno poderia encontrar que equipes autogerenciadas são mais produtivas e concluir que o autogerenciamento aumenta a produtividade. Essa conclusão não decorre do dado. Wazlawick dá quatro razões para desconfiar de inferências desse tipo.
+\begin{itemize}
+  \item \textbf{A causa pode ser inversa.} Talvez equipes que já são muito produtivas optem por se tornar autogerenciadas. Então a produtividade leva à nova forma de organização, e não o contrário.
+  \item \textbf{Séries que crescem juntas se correlacionam sem relação causal.} O livro cita duas séries sem ligação real que cresceram ao longo dos anos junto com a população e a economia. Quem procura bastante por algo que se correlacione com os seus dados acaba encontrando.
+  \item \textbf{A frequência pode vir da base, não da causa.} Quase todas as pessoas comem pão, logo quase todas as que cometeram um crime violento comeram pão nas 24 horas anteriores. O dado é verdadeiro e nada diz sobre causa e efeito.
+  \item \textbf{A correlação pode não se sustentar na população.} Nos estudos sobre jogos violentos e violência real, a associação que parecia óbvia a partir de casos famosos esbarra no grande número de jovens que jogam esses jogos e não são violentos. Os resultados são inconclusivos ou contraditórios.
+\end{itemize}
+Perguntas de causalidade existem justamente para tratar o que a correlação não resolve. Na \emph{causalidade comparativa}, pergunta-se se X causa mais Y do que Z. Na \emph{interação causal comparativa}, que a condição altera o resultado. O livro cita um estudo em que programadores experientes produziram melhor com delegação do que com centralização (a técnica de controle), enquanto os iniciantes foram melhor com centralização. Nenhuma das duas técnicas era melhor em geral. O efeito dependia de quem a usava.
+
+\paragraph{Design: como as coisas poderiam ser.} As famílias anteriores descrevem como as coisas \emph{são}. É comum em Computação, e especialmente em Engenharia de Software, perguntar como atingir um objetivo, ou seja, como as coisas poderiam ou deveriam ser. Uma resposta consistente a perguntas de design depende das anteriores: é preciso conhecer a área, as técnicas existentes e as relações já identificadas. Por isso a pesquisa começa nas exploratórias, passa pelas que explicam a situação atual e só depois chega às de design.
+
+%==========================================================================
+\section{Amarrando as duas decisões}\label{sec:amarracao}
+
+Os dois capítulos tratam do mesmo problema visto de dois lados: o que se pode afirmar com a evidência que se tem. Quanto mais forte a pergunta, mais forte a evidência de que ela precisa. Uma pergunta de causalidade comparativa não se responde com um estudo de caso, e um trabalho que só dispõe de argumentação e estudos de caso (degraus 1 e 2) só consegue responder perguntas exploratórias, descritivas ou de design. A Tabela~\ref{tab:relacao} resume essa relação. O cruzamento entre degraus e famílias é uma proposta deste handout, construída a partir do que cada capítulo diz sobre evidência e sobre tipo de pergunta, e não aparece no livro.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Degrau (Cap.\ 5) & Perguntas compatíveis (Cap.\ 8) & O que sustenta a conclusão \\
+\midrule
+1. Produto & Exploratórias existenciais e descritivas; design sem comparação & Descrição. Não há base para afirmar melhoria \\
+2. Algo diferente & Descritivo-comparativas e de design & Argumentação e estudos de caso \\
+3. Algo presumivelmente melhor & Relacionamento e causalidade comparativa, com métrica definida & Experimentos do próprio autor, com controle explícito \\
+4. Algo reconhecidamente melhor & Causalidade comparativa sobre base padronizada & Resultados reproduzíveis com métrica aceita \\
+5. Prova & O Cap.\ 8 não traz família para trabalhos formais & Demonstração formal \\
+\bottomrule
+\end{tabularx}
+\caption{Leitura conjunta proposta neste handout.}
+\label{tab:relacao}
+\end{table}
+
+Voltemos à ideia do início, \enquote{equipes autogerenciadas são melhores}. A Tabela~\ref{tab:trajetoria} mostra uma trajetória possível: o desejo vago se desdobra em uma sequência de perguntas, cada uma com sua evidência e sua afirmação legítima. A última coluna é a proposta deste handout.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}c L l L@{}}
+\toprule
+Etapa & Pergunta & Família & Afirmação que se torna legítima \\
+\midrule
+1 & Quais tipos de equipe autogerenciada e de gerência existem, e o que diferencia uns dos outros? & Exploratória & \enquote{Sei o que existe e como se classifica} \\
+2 & Qual a proporção de cada tipo? Como a satisfação e a produtividade se relacionam com o tipo? & Descritiva & \enquote{Há associação entre tipo de equipe e resultado} \\
+3 & Equipes que se tornam autogerenciadas melhoram a produtividade e produzem menos defeitos que equipes com gerente? & Causalidade comparativa & \enquote{O autogerenciamento tem este efeito, medido por esta métrica} \\
+4 & O efeito depende da experiência das pessoas? & Interação causal & \enquote{Autogerenciar funciona sob estas condições, e não sob aquelas} \\
+5 & Qual a forma mais efetiva de implantar equipes autogerenciadas? & Design & \enquote{Esta estratégia de implantação é efetiva} \\
+\bottomrule
+\end{tabularx}
+\caption{Do desejo vago a uma sequência de perguntas.}
+\label{tab:trajetoria}
+\end{table}
+
+Um mestrado raramente percorre todas as etapas. A trajetória mostra, porém, onde o trabalho se situa e do que ele depende. O aluno que quiser responder à etapa 3 precisa ter mapeado a etapa 1, pois sem isso não sabe qual é o controle correto. Se tiver evidência apenas do tipo estudo de caso, deve rebaixar a ambição e perguntar o que a etapa 1 ou 2 comporta. O \enquote{melhor} do desejo original só volta a ser legítimo na etapa 3, com a métrica definida na Tabela~\ref{tab:seis}.
+
+\subsection{Um segundo caso, em outra subárea}
+
+Para contrastar, tomemos a ideia que o livro cita como objetivo louvável de monografia: propor um método de compressão de textos mais eficiente que os existentes. A ideia tem os mesmos defeitos do caso das equipes. \enquote{Eficiente} não tem métrica, não há comparador e, sobretudo, falta a hipótese de por que o novo método seria melhor. Uma hipótese possível, de modelo, seria a seguinte: a característica $Z$, ausente dos compressores $A$, $B$ e $C$, melhora a taxa de compressão em textos do domínio $D$ sem aumentar o tempo de execução além de um limite $k$ fixado de antemão. A pergunta resultante é de causalidade comparativa, com população de textos do domínio $D$, intervenção no compressor proposto, controle nos compressores de referência recentes, resultados em taxa de compressão e tempo, e design com procedimento idêntico para todos.
+
+A diferença para o caso das equipes está no degrau alcançável. Se o experimento usa uma coleção de textos padronizada e uma métrica aceita, e compara com resultados já publicados para a mesma coleção, o trabalho é do degrau 4. Se o autor monta a própria coleção e executa os compressores de referência, é do degrau 3, e passa a ser necessário descrever como cada compressor foi aplicado e isolar os fatores que afetam o resultado. Se a característica $Z$ vem de outra área sem boas razões para esperar ganho, o trabalho recai no degrau 2. A mesma pergunta pode, portanto, receber trabalhos de maturidades diferentes, conforme a evidência disponível.
+
+\begin{warnbox}[Erros recorrentes]
+\begin{itemize}
+  \item Apresentar um produto sem problema relevante e sem comparação.
+  \item Comparar com um método muito antigo sem justificar a ausência de avanços.
+  \item Afirmar \enquote{melhor} sem definir a métrica.
+  \item Escolher como controle \enquote{nenhuma técnica}.
+  \item Generalizar a partir de um estudo de caso sem argumentar a generalização.
+  \item Preencher com um palpite a célula de uma tabela comparativa, em vez de declarar que a informação não foi encontrada.
+  \item Concluir causa a partir de correlação.
+  \item Comparar com um controle sem saber que ele tem subtipos.
+\end{itemize}
+\end{warnbox}
+
+%==========================================================================
+\section*{Exercícios de Compreensão}
+\addcontentsline{toc}{section}{Exercícios de Compreensão}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item Classifique cada trabalho hipotético pelos degraus da Tabela~\ref{tab:maturidade} e justifique: (a) um artigo que descreve um sistema web de gestão de laboratório, sem comparação com outros sistemas; (b) uma nova técnica de teste comparada qualitativamente com três técnicas existentes, com dois estudos de caso; (c) um novo classificador avaliado em uma base pública, com a métrica da comunidade, e comparado com resultados publicados; (d) a demonstração de que nenhum algoritmo de certa classe pode executar abaixo de um limite de complexidade.
+  \item Monte uma tabela comparativa com três artefatos e quatro características, de ferramentas à sua escolha. Indique que células você não conseguiria verificar de forma objetiva e como registraria cada uma.
+  \item Reescreva \enquote{o sistema X é mais fácil de usar que o sistema Y} como uma afirmação verificável. Defina a métrica e formule uma objeção a ela.
+  \item Um levantamento mostra que equipes autogerenciadas são mais produtivas que equipes com gerente. Escreva duas explicações causais alternativas e diga que tipo de evidência ajudaria a distingui-las.
+  \item Reescreva \enquote{quero mostrar que o meu novo método de ensino de programação é melhor} como pergunta estruturada pelos seis elementos da Tabela~\ref{tab:seis}. Justifique a escolha do controle e explique por que \enquote{sem método} seria inadequado.
+  \item Monte a string de busca para a pergunta do exercício 5, com ao menos dois sinônimos por elemento e as ligações OR e AND no lugar correto.
+  \item Classifique cada pergunta por família e subtipo: (a) Existem estudos sobre testes automatizados em projetos de software livre? (b) Qual a proporção de projetos ágeis que adotam integração contínua? (c) Programadores experientes produzem melhor com delegação do que com centralização apenas em equipes grandes? (d) Qual a forma mais efetiva de introduzir revisão de código em equipes pequenas?
+  \item Escolha um tema de pesquisa do seu interesse. Diga em que degrau da Tabela~\ref{tab:maturidade} um trabalho sobre ele poderia se situar, dado o que existe de bases e métricas consensuais na subárea, e escreva a pergunta de maior ambição que esse degrau permite, segundo a Tabela~\ref{tab:relacao}.
+\end{enumerate}
+
+%==========================================================================
+\section*{Exercício integrador: o seu TCC em seis slides}
+\addcontentsline{toc}{section}{Exercício integrador: o seu TCC em seis slides}
+
+Este exercício aplica o handout ao seu próprio projeto. O resultado é uma apresentação curta, com uma capa e \textbf{exatamente um slide por etapa} (seis slides de conteúdo), entregue em PDF no Moodle. Cada slide deve caber em uma leitura de poucos segundos: use tabelas e frases curtas, sem parágrafos longos. Se você ainda não tem tema, parta de uma linha de pesquisa do seu orientador ou de um laboratório do departamento. A etapa 2 pede uma amostra da literatura, não uma revisão completa.
+
+\begin{enumerate}[label=\textbf{Slide \arabic*.}, leftmargin=*, itemsep=0.6em]
+  \item \textbf{Ideia crua.} Em uma ou duas frases, o que você pretende fazer, sem polir. Abaixo, três listas curtas, conforme a Seção~\ref{sec:partida}: os termos avaliativos sem métrica (como \enquote{melhor} e \enquote{mais eficiente}), os conceitos sem definição e os comparadores cujos subtipos você ainda não examinou.
+  \item \textbf{Mapa da área.} Uma tabela comparativa, no formato do degrau 2, com 3 a 5 trabalhos ou artefatos existentes e 3 a 5 características. Uma linha dizendo como você escolheu os artefatos e por que as características são relevantes. Células que você não conseguiu verificar levam \enquote{?}, e não um palpite.
+  \item \textbf{Degrau e teto da afirmação.} O degrau da Tabela~\ref{tab:maturidade} em que o seu TCC pode chegar e a afirmação mais forte que a evidência alcançável em um semestre sustenta, em uma frase. Justifique em poucas linhas por que não o degrau acima, apontando que bases de dados, métricas consensuais e trabalhos de referência existem ou faltam na sua subárea.
+  \item \textbf{Pergunta.} Os seis elementos da Tabela~\ref{tab:seis} preenchidos para o seu caso, com a escolha do controle justificada. Ao lado, a família e o subtipo da pergunta (Tabela~\ref{tab:familias}), as perguntas das famílias anteriores que precisam estar respondidas antes e se o seu mapa do slide 2 já responde alguma delas. Por fim, a conferência com a Tabela~\ref{tab:relacao}: a pergunta é compatível com o degrau do slide 3? Se não, qual dos dois você ajustou?
+  \item \textbf{Hipótese e refutação.} A hipótese em uma frase (Definição da Seção~\ref{sec:maturidade}), o resultado que a refutaria e o que você faria nesse caso.
+  \item \textbf{Antes e depois.} A ideia crua do slide 1 ao lado da pergunta final do slide 4. Abaixo, um parágrafo curto com o que você abandonou ou rebaixou e o que mudou da sua ideia inicial.
+\end{enumerate}
+
+\paragraph{Regras de entrega.} Um único arquivo PDF, com a capa e os seis slides, e nenhum além deles. A capa leva o título provisório do trabalho e o seu nome. Nome e matrícula aparecem no rodapé de cada slide de conteúdo. Nome do arquivo no formato \texttt{matricula\_nome.pdf}. A utilização do template é obrigatória. 
+
+\begin{thebibliography}{9}
+\bibitem{wazlawick2020} WAZLAWICK, R.\ S. \emph{Metodologia de Pesquisa para Ciência da Computação}. 3.\ ed. Rio de Janeiro: GEN LTC, 2020.
+\end{thebibliography}
+
+\textbf{Citados em \cite{wazlawick2020} e não consultados diretamente:} Barbetta (2007); Easterbrook et al.\ (2008); Kitchenham e Charters (2007); Meltzoff (1998); Petticrew e Roberts (2005); Tolfo e Wazlawick (2008). As entradas completas devem ser conferidas na lista de referências do livro antes da distribuição.
+
+\end{document}

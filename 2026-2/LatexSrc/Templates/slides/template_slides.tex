@@ -1,0 +1,268 @@
+%==========================================================================
+% BCC502 -- Metodologia Científica para Ciência da Computação
+% Template do exercício integrador: o seu TCC em seis slides
+%
+% Regras:
+%  1. Preencha apenas \titulotrabalho, \nomealuno, \matricula e o conteúdo entre colchetes.
+%  2. Mantenha a capa e os seis slides, na ordem dada. Não crie slide de
+%     sumário nem de referências nem outros slides.
+%  3. Não altere os títulos dos slides, as cores nem o rodapé.
+%  4. Apague todo texto entre colchetes vermelhos antes de entregar.
+%     No slide 2, use de 3 a 5 trabalhos e de 3 a 5 características.
+%  5. Entregue um único PDF, nomeado matricula_nome.pdf.
+%==========================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+%--------------------------------------------------------------------------
+% DADOS DO ALUNO (preencha)
+%--------------------------------------------------------------------------
+\newcommand{\titulotrabalho}{Título provisório do trabalho}
+\newcommand{\nomealuno}{Nome Completo do Aluno}
+\newcommand{\matricula}{00.0.0000}
+
+%--------------------------------------------------------------------------
+% Cores e tema (não alterar)
+%--------------------------------------------------------------------------
+\definecolor{mtext}{RGB}{38, 38, 38}
+\definecolor{mgray}{RGB}{120, 120, 120}
+\definecolor{mlight}{RGB}{215, 215, 215}
+\definecolor{maccent}{HTML}{5D5179}
+\definecolor{mplace}{RGB}{176, 58, 46}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamercolor{normal text}{fg=mtext, bg=white}
+\setbeamercolor{frametitle}{fg=mtext}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mgray}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+\setbeamerfont{captitulo}{series=\bfseries, size=\fontsize{22}{27}}
+
+\setbeamersize{text margin left=1.3cm, text margin right=1.3cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setlength{\parskip}{0pt}
+
+% Título: texto à esquerda e um filete curto de destaque
+\setbeamertemplate{frametitle}{%
+  \vskip 0.15cm
+  {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par}
+  \vskip 0.1cm
+  \textcolor{maccent}{\rule{1.1cm}{1.5pt}}
+  \vskip -0.2cm
+}
+
+% Rodapé discreto
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.8\paperwidth, ht=2.5ex, dp=1.2ex, leftskip=1.3cm]{normal text}%
+      \scriptsize\color{mgray} BCC502 \textperiodcentered{} \nomealuno{} \textperiodcentered{} Matrícula \matricula
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.2\paperwidth, ht=2.5ex, dp=1.2ex, rightskip=1.3cm, right]{normal text}%
+      \scriptsize\color{mgray}\insertframenumber{} / 6
+    \end{beamercolorbox}%
+  }%
+}
+
+% Bloco sem preenchimento, só com traço lateral
+\newtcolorbox{bloco}[1]{%
+  enhanced, frame hidden, boxrule=0pt, arc=0pt,
+  colback=white, colbacktitle=white,
+  borderline west={1.5pt}{0pt}{maccent},
+  left=7pt, right=2pt, top=3pt, bottom=3pt,
+  before skip=5pt, after skip=2pt,
+  before upper={\textcolor{maccent}{\small\bfseries #1}\par\vspace{0.2em}},
+}
+
+% Rótulo de coluna ou de lista
+\newcommand{\rotulo}[1]{\textcolor{maccent}{\small\bfseries #1}}
+
+% Texto a ser substituído pelo aluno
+\newcommand{\preencher}[1]{\textcolor{mplace}{\textit{[#1]}}}
+
+% Tabelas: apenas linhas horizontais finas
+\setlength{\heavyrulewidth}{0.8pt}
+\setlength{\lightrulewidth}{0.4pt}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+%==========================================================================
+% CAPA (não conta como slide de etapa)
+%==========================================================================
+\begin{frame}[plain,c]
+  \relax
+  {\usebeamercolor[fg]{frametitle}\usebeamerfont{captitulo}\titulotrabalho\par}
+  \vskip 0.35cm
+  \textcolor{maccent}{\rule{1.1cm}{1.5pt}}
+  \vskip 0.5cm
+  {\large \nomealuno\par}
+  \vskip 0.15cm
+  {\small\color{mgray} BCC502 \textperiodcentered{} Matrícula \matricula\par}
+\end{frame}
+\setcounter{framenumber}{0}
+
+%==========================================================================
+% SLIDE 1
+%==========================================================================
+\begin{frame}[t]{1. Ideia crua}
+  \begin{bloco}{O que pretendo fazer (uma ou duas frases, sem polir)}
+    \preencher{Escreva a ideia como ela está hoje, mesmo que vaga.}
+  \end{bloco}
+
+  \vspace{0.5cm}
+  \begin{columns}[T]
+    \column{0.31\textwidth}
+      \rotulo{Termos avaliativos sem métrica}
+      \begin{itemize}\small
+        \item \preencher{ex.: \enquote{melhor}}
+        \item \preencher{\dots}
+      \end{itemize}
+    \column{0.31\textwidth}
+      \rotulo{Conceitos sem definição}
+      \begin{itemize}\small
+        \item \preencher{conceito}
+        \item \preencher{\dots}
+      \end{itemize}
+    \column{0.31\textwidth}
+      \rotulo{Comparadores com subtipos não examinados}
+      \begin{itemize}\small
+        \item \preencher{comparador}
+        \item \preencher{\dots}
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+%==========================================================================
+% SLIDE 2
+%==========================================================================
+\begin{frame}[t]{2. Mapa da área}
+  \footnotesize
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth} *{4}{>{\centering\arraybackslash}X}@{}}
+    \toprule
+    \textcolor{mgray}{Trabalho ou artefato} & \preencher{Caract.\ 1} & \preencher{Caract.\ 2} & \preencher{Caract.\ 3} & \preencher{Caract.\ 4} \\
+    \midrule
+    \preencher{Artefato A (referência)} & X & X &   & ? \\
+    \preencher{Artefato B (referência)} & X &   &   & X \\
+    \preencher{Artefato C (referência)} &   & X & X & ? \\
+    \bottomrule
+  \end{tabularx}
+
+  \vspace{0.5cm}
+  \begin{itemize}\small
+    \item \rotulo{Como escolhi os artefatos}\quad \preencher{critério objetivo, ex.: citados em pelo menos dois artigos}
+    \item \rotulo{Por que as características são relevantes}\quad \preencher{que dificuldade dos trabalhos atuais cada uma responde}
+    \item \rotulo{?}\quad informação que não consegui verificar
+  \end{itemize}
+\end{frame}
+
+%==========================================================================
+% SLIDE 3
+%==========================================================================
+\begin{frame}[t]{3. Degrau e teto da afirmação}
+  \begin{bloco}{Degrau que o meu TCC pode alcançar}
+    \preencher{1 a 5, com o nome do degrau (tabela do handout)}
+  \end{bloco}
+
+  \begin{bloco}{A afirmação mais forte que consigo sustentar em um semestre}
+    \preencher{Uma frase.}
+  \end{bloco}
+
+  \begin{bloco}{Por que não o degrau acima}
+    \begin{itemize}\small
+      \item \textbf{Bases de dados e métricas consensuais:} \preencher{existem ou faltam}
+      \item \textbf{Trabalhos de referência recentes:} \preencher{existem ou faltam}
+      \item \textbf{Tempo e recursos:} \preencher{o que limita}
+    \end{itemize}
+  \end{bloco}
+\end{frame}
+
+%==========================================================================
+% SLIDE 4
+%==========================================================================
+\begin{frame}[t]{4. Pergunta}
+  \begin{columns}[T]
+    \column{0.55\textwidth}
+      \footnotesize
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{@{}l L@{}}
+        \toprule
+        \textcolor{mgray}{Elemento} & \textcolor{mgray}{No meu TCC} \\
+        \midrule
+        População & \preencher{\dots} \\
+        Intervenção & \preencher{\dots} \\
+        Comparação (controle) & \preencher{\dots e por que este controle} \\
+        Resultados & \preencher{métricas definidas} \\
+        Contexto & \preencher{\dots} \\
+        Design do experimento & \preencher{\dots} \\
+        \bottomrule
+      \end{tabularx}
+    \column{0.40\textwidth}
+      \footnotesize
+      \begin{itemize}
+        \item \rotulo{Família e subtipo:} \preencher{\dots}
+        \item \rotulo{Perguntas anteriores necessárias:} \preencher{\dots}
+        \item \rotulo{O mapa do slide 2 responde alguma?} \preencher{sim ou não, qual}
+        \item \rotulo{Compatível com o degrau do slide 3?} \preencher{sim ou não. Se não, o que ajustei}
+      \end{itemize}
+  \end{columns}
+
+  \vspace{0cm}
+  \begin{bloco}{Pergunta de pesquisa}
+    \preencher{A pergunta, escrita por extenso.}
+  \end{bloco}
+\end{frame}
+
+%==========================================================================
+% SLIDE 5
+%==========================================================================
+\begin{frame}[t]{5. Hipótese e refutação}
+  \begin{bloco}{Hipótese}
+    \preencher{Uma frase: o que acredito que seja verdade e ainda não está demonstrado.}
+  \end{bloco}
+
+  \begin{bloco}{Resultado que a refutaria}
+    \preencher{Que dado ou resultado me obrigaria a abandonar a hipótese.}
+  \end{bloco}
+
+  \begin{bloco}{O que faço se ela for refutada}
+    \preencher{Plano alternativo e o que ainda seria contribuição.}
+  \end{bloco}
+\end{frame}
+
+%==========================================================================
+% SLIDE 6
+%==========================================================================
+\begin{frame}[t]{6. Antes e depois}
+  \begin{columns}[T]
+    \column{0.47\textwidth}
+      \begin{bloco}{Antes (slide 1)}
+        \small\preencher{Ideia crua.}
+      \end{bloco}
+    \column{0.47\textwidth}
+      \begin{bloco}{Depois (slide 4)}
+        \small\preencher{Pergunta final.}
+      \end{bloco}
+  \end{columns}
+
+  \vspace{0.3cm}
+  \begin{bloco}{O que mudou}
+    \small
+    \preencher{Um parágrafo curto: o que abandonei ou rebaixei, e o que mudou.}
+  \end{bloco}
+\end{frame}
+
+\end{document}

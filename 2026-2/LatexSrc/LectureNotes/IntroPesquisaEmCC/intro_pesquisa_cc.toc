@@ -1,0 +1,24 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{Como ler este handout}{1}{section*.2}%
+\contentsline {section}{\numberline {1}O ponto de partida: uma ideia que ainda não é pesquisa}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Por que isso ainda não é uma questão de pesquisa}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}As duas decisões}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}O que o trabalho pode afirmar: maturidade da subárea (Capítulo 5)}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Por que a exigência varia tanto}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Cinco degraus, cinco afirmações}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Os três estilos por trás da escada}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Qual pergunta fazer (Capítulo 8)}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Por que a pergunta vem antes do método}{6}{subsection.3.1}%
+\contentsline {paragraph}{O que faz uma pergunta ser boa.}{6}{section*.8}%
+\contentsline {subsection}{\numberline {3.2}Estruturando a pergunta}{6}{subsection.3.2}%
+\contentsline {paragraph}{Da pergunta à busca.}{7}{section*.9}%
+\contentsline {subsection}{\numberline {3.3}Quatro famílias de perguntas, em ordem de percurso}{7}{subsection.3.3}%
+\contentsline {paragraph}{Exploratórias: conhecer o terreno.}{7}{section*.10}%
+\contentsline {paragraph}{Descritivas: dar números ao que se diz.}{8}{section*.11}%
+\contentsline {paragraph}{Causalidade: de \enquote {se relacionam} a \enquote {causa}.}{8}{section*.12}%
+\contentsline {paragraph}{Design: como as coisas poderiam ser.}{8}{section*.13}%
+\contentsline {section}{\numberline {4}Amarrando as duas decisões}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Um segundo caso, em outra subárea}{9}{subsection.4.1}%
+\contentsline {section}{Exercícios de Compreensão}{10}{section*.14}%
+\contentsline {section}{Exercício integrador: o seu TCC em seis slides}{10}{section*.15}%
+\contentsline {paragraph}{Regras de entrega.}{10}{section*.16}%
