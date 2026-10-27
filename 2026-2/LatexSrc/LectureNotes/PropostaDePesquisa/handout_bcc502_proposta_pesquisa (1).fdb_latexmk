@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1793114281.26156 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/LectureNotes/PropostaDePesquisa/handout_bcc502_proposta_pesquisa (1).tex" "handout_bcc502_proposta_pesquisa (1).pdf" "handout_bcc502_proposta_pesquisa (1)" 1793114284.12256 0
-  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/LectureNotes/PropostaDePesquisa/handout_bcc502_proposta_pesquisa (1).tex" 1793114280 28585 b4791c60d04d71ae790358cb76dba87a ""
+["pdflatex"] 1793115630.28799 "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/LectureNotes/PropostaDePesquisa/handout_bcc502_proposta_pesquisa (1).tex" "handout_bcc502_proposta_pesquisa (1).pdf" "handout_bcc502_proposta_pesquisa (1)" 1793115632.97421 0
+  "c:/Users/rcpsi/OneDrive/Documents/GitHub/BCC502_ScientificMethodForComputerScience/2026-2/LatexSrc/LectureNotes/PropostaDePesquisa/handout_bcc502_proposta_pesquisa (1).tex" 1793115629 28648 d579bf35e02a76242d1622a32c799ea2 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1730312644 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1730312644 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1730314164 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -225,10 +225,10 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730319856 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1730320026 3325936 6e896a909b476ed009efbfbadbcd5207 ""
   "c:/texlive/2024/texmf.cnf" 1730319826 713 e69b156964470283e0530f5060668171 ""
-  "handout_bcc502_proposta_pesquisa (1).aux" 1793114283 5324 32cc1f83a2d0e34b54ff1974895f54d7 "pdflatex"
-  "handout_bcc502_proposta_pesquisa (1).out" 1793114283 4205 65d0288c6b9559eeb757f32958d0f58d "pdflatex"
-  "handout_bcc502_proposta_pesquisa (1).tex" 1793114280 28585 b4791c60d04d71ae790358cb76dba87a ""
-  "handout_bcc502_proposta_pesquisa (1).toc" 1793114283 1973 0f28dd4399dc0674eafdc3a3cfa9d86b "pdflatex"
+  "handout_bcc502_proposta_pesquisa (1).aux" 1793115632 5324 32cc1f83a2d0e34b54ff1974895f54d7 "pdflatex"
+  "handout_bcc502_proposta_pesquisa (1).out" 1793115632 4205 65d0288c6b9559eeb757f32958d0f58d "pdflatex"
+  "handout_bcc502_proposta_pesquisa (1).tex" 1793115629 28648 d579bf35e02a76242d1622a32c799ea2 ""
+  "handout_bcc502_proposta_pesquisa (1).toc" 1793115632 1973 0f28dd4399dc0674eafdc3a3cfa9d86b "pdflatex"
   (generated)
   "handout_bcc502_proposta_pesquisa (1).aux"
   "handout_bcc502_proposta_pesquisa (1).log"
