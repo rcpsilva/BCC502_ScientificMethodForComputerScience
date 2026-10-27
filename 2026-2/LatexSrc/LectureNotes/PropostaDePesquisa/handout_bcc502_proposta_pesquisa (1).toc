@@ -1,0 +1,23 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{Contexto}{1}{section*.2}%
+\contentsline {section}{\numberline {1}Uma proposta é uma aposta que precisa ser defendida}{2}{section.1}%
+\contentsline {section}{\numberline {2}Contextualização e colocação do problema}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O que esta seção deve fazer}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}O que a seção deve conter}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Principais problemas}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Justificativa da hipótese}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Duas justificativas diferentes}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Que evidência serve}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Estrutura em quatro passos}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}O que a justificativa não é}{5}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Objetivo geral e objetivos específicos}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}O objetivo precisa poder ser verificado}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pesquisa ou técnica}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}O tamanho do objetivo}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Objetivos específicos}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Objetivo, resultado esperado e método}{7}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Os três campos encadeados: um exemplo completo}{8}{section.5}%
+\contentsline {section}{\numberline {6}A tarefa}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}O que fazer}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Orientações}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Entrega}{9}{subsection.6.3}%

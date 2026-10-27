@@ -1,0 +1,180 @@
+%==========================================================================
+% BCC502 -- Metodologia Científica para Ciência da Computação
+% Template da tarefa: proposta de pesquisa (contextualização, justificativa
+% da hipótese e objetivos)
+%
+% Regras:
+%  1. Preencha \titulotrabalho, \nomealuno e \matricula e o conteúdo dos slides.
+%  2. A capa é obrigatória. Entregue de 4 a 6 slides de conteúdo, além da capa.
+%     O conteúdo e os títulos dos slides são livres. Os slides abaixo são
+%     sugestões: você pode apagar, duplicar, fundir ou reordenar.
+%  3. Cada slide deve trazer, no subtítulo (segundo argumento do frame), o
+%     campo que endereça: Campo 1 (Contextualização e problema), Campo 2
+%     (Justificativa da hipótese) ou Campo 3 (Objetivos). Todos os três campos
+%     devem aparecer.
+%  4. Não altere as cores, as fontes nem o rodapé.
+%  5. Apague todo texto entre colchetes vermelhos antes de entregar.
+%  6. Entregue um único PDF, nomeado matricula_nome.pdf.
+%==========================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+%--------------------------------------------------------------------------
+% DADOS DO ALUNO (preencha)
+%--------------------------------------------------------------------------
+\newcommand{\titulotrabalho}{Título provisório do trabalho}
+\newcommand{\nomealuno}{Nome Completo do Aluno}
+\newcommand{\matricula}{00.0.0000}
+
+%--------------------------------------------------------------------------
+% Cores e tema (não alterar)
+%--------------------------------------------------------------------------
+\definecolor{mtext}{RGB}{38, 38, 38}
+\definecolor{mgray}{RGB}{120, 120, 120}
+\definecolor{mlight}{RGB}{215, 215, 215}
+\definecolor{maccent}{HTML}{5D5179}
+\definecolor{mplace}{RGB}{176, 58, 46}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamercolor{normal text}{fg=mtext, bg=white}
+\setbeamercolor{frametitle}{fg=mtext}
+\setbeamercolor{itemize item}{fg=maccent}
+\setbeamercolor{itemize subitem}{fg=mgray}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\large}
+\setbeamerfont{captitulo}{series=\bfseries, size=\fontsize{22}{27}}
+
+\setbeamersize{text margin left=1.3cm, text margin right=1.3cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setlength{\parskip}{0pt}
+
+% Título: texto à esquerda e um filete curto de destaque
+\setbeamertemplate{frametitle}{%
+  \vskip 0.15cm
+  {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\hfill{\footnotesize\bfseries\color{maccent}\insertframesubtitle}\par}
+  \vskip 0.1cm
+  \textcolor{maccent}{\rule{1.1cm}{1.5pt}}
+  \vskip -0.2cm
+}
+
+% Rodapé discreto
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.8\paperwidth, ht=2.5ex, dp=1.2ex, leftskip=1.3cm]{normal text}%
+      \scriptsize\color{mgray} BCC502 \textperiodcentered{} \nomealuno{} \textperiodcentered{} Matrícula \matricula
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.2\paperwidth, ht=2.5ex, dp=1.2ex, rightskip=1.3cm, right]{normal text}%
+      \scriptsize\color{mgray}\insertframenumber{}
+    \end{beamercolorbox}%
+  }%
+}
+
+% Bloco sem preenchimento, só com traço lateral
+\newtcolorbox{bloco}[1]{%
+  enhanced, frame hidden, boxrule=0pt, arc=0pt,
+  colback=white, colbacktitle=white,
+  borderline west={1.5pt}{0pt}{maccent},
+  left=7pt, right=2pt, top=3pt, bottom=3pt,
+  before skip=5pt, after skip=2pt,
+  before upper={\textcolor{maccent}{\small\bfseries #1}\par\vspace{0.2em}},
+}
+
+% Rótulo de coluna ou de lista
+\newcommand{\rotulo}[1]{\textcolor{maccent}{\small\bfseries #1}}
+
+% Texto a ser substituído pelo aluno
+\newcommand{\preencher}[1]{\textcolor{mplace}{\textit{[#1]}}}
+
+% Tabelas: apenas linhas horizontais finas
+\setlength{\heavyrulewidth}{0.8pt}
+\setlength{\lightrulewidth}{0.4pt}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+%==========================================================================
+% CAPA (obrigatória; não conta como slide de conteúdo)
+%==========================================================================
+\begin{frame}[plain,c]
+  \relax
+  {\usebeamercolor[fg]{frametitle}\usebeamerfont{captitulo}\titulotrabalho\par}
+  \vskip 0.35cm
+  \textcolor{maccent}{\rule{1.1cm}{1.5pt}}
+  \vskip 0.5cm
+  {\large \nomealuno\par}
+  \vskip 0.15cm
+  {\small\color{mgray} BCC502 \textperiodcentered{} Matrícula \matricula\par}
+\end{frame}
+\setcounter{framenumber}{0}
+
+%==========================================================================
+% SLIDES DE CONTEÚDO (sugestões; conteúdo livre)
+% O subtítulo (segundo argumento) indica o campo endereçado.
+%==========================================================================
+
+\begin{frame}[t]{Contextualização}{Campo 1 \textperiodcentered{} Contextualização e problema}
+  \begin{bloco}{A área e o que se faz hoje}
+    \preencher{A área e o objeto em uma ou duas frases acessíveis, e as abordagens existentes mais próximas, com fonte (autor, ano).}
+  \end{bloco}
+
+  \begin{bloco}{Onde as abordagens atuais falham}
+    \preencher{A limitação concreta, de preferência como custo e benefício, e a evidência de que ela existe.}
+  \end{bloco}
+\end{frame}
+
+\begin{frame}[t]{O problema de pesquisa}{Campo 1 \textperiodcentered{} Contextualização e problema}
+  \begin{bloco}{O problema}
+    \preencher{O problema em uma ou duas frases, que um leitor de fora da área consiga repetir.}
+  \end{bloco}
+
+  \begin{bloco}{Por que pede pesquisa e não apenas implantação}
+    \preencher{Que conhecimento novo está em jogo. Se for propor algo novo, o que existe de mais parecido e em que difere.}
+  \end{bloco}
+\end{frame}
+
+\begin{frame}[t]{Hipótese}{Campo 2 \textperiodcentered{} Justificativa da hipótese}
+  \begin{bloco}{Hipótese}
+    \preencher{Uma frase: o que acredito que seja verdade e ainda não está demonstrado.}
+  \end{bloco}
+
+  \begin{bloco}{Que limitação ela ataca}
+    \preencher{Qual limitação apontada no slide anterior e por que esta abordagem deveria superá-la.}
+  \end{bloco}
+\end{frame}
+
+\begin{frame}[t]{Por que acredito na hipótese}{Campo 2 \textperiodcentered{} Justificativa da hipótese}
+  \begin{bloco}{Evidências}
+    \begin{itemize}\small
+      \item \rotulo{Trabalhos que apontam viabilidade:} \preencher{autor, ano, o que mostraram}
+      \item \rotulo{Dados preliminares meus:} \preencher{o que testei e o que observei}
+      \item \rotulo{Estudo de caso:} \preencher{se houver}
+    \end{itemize}
+  \end{bloco}
+\end{frame}
+
+\begin{frame}[t]{Objetivos}{Campo 3 \textperiodcentered{} Objetivos}
+  \begin{bloco}{Objetivo geral}
+    \preencher{Verbo não trivial, o que se obtém, a medida e o valor de referência com o qual se compara.}
+  \end{bloco}
+
+  \begin{bloco}{Objetivos específicos}
+    \begin{itemize}\small
+      \item \preencher{Resultado verificável que detalha o geral, com verbo}
+      \item \preencher{Outro resultado verificável, e não um passo do método}
+    \end{itemize}
+  \end{bloco}
+\end{frame}
+
+\end{document}

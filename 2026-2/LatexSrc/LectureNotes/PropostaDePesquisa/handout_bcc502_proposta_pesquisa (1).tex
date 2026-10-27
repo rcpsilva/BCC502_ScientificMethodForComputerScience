@@ -1,0 +1,392 @@
+%==========================================================================
+% Handout: Proposta de Pesquisa (contextualização, justificativa da hipótese
+% e objetivos). BCC502.
+%
+% PARA O PROFESSOR: preencha os dois campos abaixo antes de distribuir.
+%  \linklivro  : link do livro (troque por \url{...} ou \href{...}{...}).
+%  \prazo      : data de entrega na tarefa.
+%==========================================================================
+\documentclass[10pt,a4paper]{extarticle}
+\newcommand{\coursehead}{BCC502 -- Metodologia Científica para Ciência da Computação}
+\newcommand{\chapterhead}{Wazlawick, cap. 9}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+\definecolor{dblue}{RGB}{16, 42, 92}
+\definecolor{dorange}{RGB}{230, 115, 0}
+
+\hypersetup{colorlinks=true, linkcolor=dblue, citecolor=dorange, urlcolor=dblue}
+
+% Campos a preencher pelo professor
+\newcommand{\linklivro}{\textcolor{red!70!black}{[inserir aqui o link do livro]}}
+\newcommand{\prazo}{\textcolor{red!70!black}{[inserir a data de entrega]}}
+
+\setlist{nosep}
+\geometry{margin=2cm, headheight=14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{dblue}\coursehead}
+\fancyhead[R]{\small\color{dblue}\chapterhead}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{dorange}\leaders\hrule height \headrulewidth\hfill}}
+
+\newtcolorbox{keybox}[1][]{colback=dblue!5, colframe=dblue, fonttitle=\bfseries, title={#1}, breakable}
+\newtcolorbox{warnbox}[1][]{colback=dorange!7, colframe=dorange, fonttitle=\bfseries, title={#1}, breakable}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{remark}{Observação}[section]
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\title{Proposta de Pesquisa: Problema, Hipótese Justificada e Objetivos\\Wazlawick, Capítulo 9}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação\\Prof.\ Rodrigo C.\ P.\ Silva -- DECOM/UFOP}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+
+\section*{Contexto}
+\addcontentsline{toc}{section}{Contexto}
+
+Na última tarefa vocês começaram a pensar sobre os temas de pesquisa e quais hipóteses podem ser interessantes. Agora, começaremos a definir as propostas de pesquisa de fato. A pergunta e a hipótese que você refinou na última tarefa são o ponto de partida natural desta tarefa.
+
+Este handout explica o que se escreve em cada um dos três campos de uma proposta de pesquisa e termina com a descrição da tarefa. Ele se baseia no livro \emph{Metodologia de Pesquisa para Ciência da Computação}, de Raul Sidnei Wazlawick \cite{wazlawick2020}, e foi escrito para ser lido sem o livro: as ideias do autor e os exemplos que usamos são explicados aqui. A leitura do Capítulo 9 é recomendada, e o link está na seção da tarefa. Os trechos marcados como síntese deste handout são nossos e não aparecem no livro com esta forma.
+
+%==========================================================================
+\section{Uma proposta é uma aposta que precisa ser defendida}\label{sec:aposta}
+
+Antes de fazer o trabalho, você precisa convencer um leitor, que pode ser o orientador ou uma banca, de três coisas. A primeira é que existe um problema que vale a pena resolver e que ainda não foi resolvido. A segunda é que a sua forma de atacá-lo tem razão para funcionar, apesar de você ainda não tê-la testado. A terceira é que, ao final, será possível dizer sem discussão se você conseguiu ou não. Cada convicção corresponde a um campo da proposta, e a Tabela~\ref{tab:campos} mostra, para cada campo, a pergunta que o leitor faz e o erro mais comum.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Campo & Pergunta que o leitor faz & Erro mais comum \\
+\midrule
+Contextualização e colocação do problema & Isso é mesmo um problema de pesquisa? & Apresentar um tema, uma oportunidade ou uma ferramenta no lugar do problema \\
+Justificativa da hipótese & Por que isso deveria funcionar? & Justificar a importância do tema, ou a ausência de algo, em vez de justificar a hipótese \\
+Objetivo geral e objetivos específicos & Como saberemos ao final que deu certo? & Verbos triviais ou técnicos, ou etapas do trabalho no lugar de resultados verificáveis \\
+\bottomrule
+\end{tabularx}
+\caption{Os três campos e o que cada um precisa responder.}
+\label{tab:campos}
+\end{table}
+
+Wazlawick cita Chinneck (1988) para mostrar o que a banca procura: uma monografia deve trazer uma contribuição original ao conhecimento, e o avaliador tenta responder a quatro perguntas.
+
+\begin{itemize}
+  \item Qual é a questão de pesquisa?
+  \item É uma boa questão, ou seja, ainda não foi respondida e vale a pena respondê-la? 
+  \item O autor convenceu de que ela foi respondida adequadamente?
+  \item A contribuição ao conhecimento foi adequada?
+\end{itemize}
+
+Falhar em responder alguma delas pode levar a banca a exigir revisões extensas ou até a reprovar o trabalho.
+
+Os três campos não são independentes. O problema do primeiro campo gera a hipótese do segundo, e o objetivo do terceiro é a condição que testa essa hipótese. Se um dos três muda, os outros dois precisam mudar com ele.
+
+%==========================================================================
+
+\pagebreak
+\section{Contextualização e colocação do problema}\label{sec:contexto}
+
+\subsection{O que esta seção deve fazer}
+
+Esta seção responde à pergunta que o leitor faz primeiro (Tabela~\ref{tab:campos}): isso é mesmo um problema de pesquisa? Ela situa o leitor na área e coloca, de forma explícita, o problema que o trabalho se propõe a atacar. Ao terminar de ler, alguém de fora da área deve conseguir dizer qual é o problema, por que ele é um problema e por que vale a pena tratá-lo, mesmo sem saber como resolvê-lo. Dois critérios guiam a avaliação desta seção: o que foi colocado é, de fato, um problema de pesquisa, e está claro. Ela pode ser curta, porque o que conta é a clareza e o fundamento, e não a extensão.
+
+\subsection{O que a seção deve conter}
+
+A Tabela~\ref{tab:conteudo} lista as seis partes da seção. A coluna do meio traz a pergunta que cada parte responde. Ao final do texto, o leitor deve poder responder às seis perguntas. As três primeiras situam o leitor, e as três últimas colocam o problema.
+
+\begin{table}[!ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Parte & Pergunta que responde & O que escrever \\
+\midrule
+1. A área e o objeto & De que assunto se trata? & Em uma ou duas frases acessíveis a quem é de fora da área: o que é o objeto de estudo e para que serve \\
+2. A importância & Por que isso merece atenção? & Por que o assunto é relevante, para quem e em que situações. É a justificativa do tema \\
+3. O estado atual & O que se faz hoje? & As abordagens, técnicas ou soluções existentes mais próximas do seu assunto, cada uma com sua fonte (autor e ano) \\
+4. A limitação & Onde o que existe falha? & Um ponto concreto em que as abordagens atuais não atendem, de preferência como custo e benefício (ganha-se uma coisa e perde-se outra) \\
+5. A evidência & Como se sabe que essa falha existe? & Uma referência ou um estudo seu que mostre a limitação, e não apenas opinião ou uma observação local \\
+6. O problema & O que ainda não se sabe? & O problema de pesquisa enunciado de forma explícita: que conhecimento novo falta e por que resolvê-lo exige pesquisa, e não só aplicar algo que já existe \\
+\bottomrule
+\end{tabularx}
+\caption{Conteúdo da contextualização e as perguntas que cada parte responde.}
+\label{tab:conteudo}
+\end{table}
+
+\begin{keybox}[Estrutura-modelo (síntese deste handout)]
+Um esqueleto para as seis partes da Tabela~\ref{tab:conteudo}, não uma fórmula obrigatória:
+
+\smallskip
+\enquote{[Área ou objeto] é usado para [finalidade] e importa porque [relevância]. Hoje isso é feito por [abordagens existentes] [fontes]. Essas abordagens falham em [limitação concreta] [evidência]. Assim, ainda não se sabe [conhecimento novo], e resolver isso exige pesquisa porque [razão].}
+\end{keybox}
+
+\subsection{Principais problemas}
+
+A Tabela~\ref{tab:confusoes} reúne, de forma genérica, os erros mais comuns nesta seção. Eles aparecem nas análises de propostas reais de alunos feitas por Wazlawick, e todos têm a mesma raiz: o texto não chega a colocar um problema de pesquisa, e fica no tema, na oportunidade, na solução ou na necessidade.
+
+Nos nove casos da Tabela~\ref{tab:confusoes} falta, no fundo, a mesma peça: a \emph{limitação concreta} de algo que já existe. Um problema de pesquisa quase sempre tem a forma \enquote{o que se faz hoje falha neste ponto, por esta razão}.
+
+\begin{table}[!ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Problema & Como aparece & Como corrigir \\
+\midrule
+Tema no lugar do problema & Apresenta o assunto, e até o interesse crescente por ele, mas não diz o que não funciona & Acrescentar a limitação concreta do que existe (partes 3 e 4 da Tabela~\ref{tab:conteudo}) \\
+Oportunidade no lugar do problema & Destaca um recurso disponível, como muitos dados ou muitas máquinas, sem dizer o que se quer descobrir & Dizer que pergunta o recurso permite responder e que conhecimento novo traria \\
+Solução antes do problema & A ferramenta ou a técnica já foi escolhida, e o problema é descrito para justificá-la & Descrever o problema sem referência à solução, e deixar a solução para a hipótese \\
+Problema local ou técnico & Uma dificuldade de uma organização, curso ou pessoa, que se resolve aplicando um método conhecido & Mostrar que a dificuldade é geral e que os métodos existentes não a resolvem. Se não for, o trabalho é técnico \\
+Solução existente descrita como problema & Descreve trabalhos que já resolvem a questão & Apontar onde essas soluções falham \\
+Objetivo no lugar do problema & \enquote{O problema é maximizar X} diz o que se quer obter, não o que impede de obtê-lo & Explicar por que os métodos atuais não chegam lá \\
+Necessidade sem limitações & Afirma que algo é necessário ou desejável, sem dizer como é atendido hoje & Dizer como é atendido hoje e onde essa forma falha \\
+Afirmações sem fonte & Gravidade, frequência ou abrangência afirmadas sem referência, ou generalizadas a partir de uma observação local & Citar a fonte ou apresentar estudo próprio, e verificar se a observação vale além do seu caso \\
+Afirmar que nada existe & \enquote{Não existe método para\dots} passa a impressão de busca insuficiente & Mostrar o que existe de mais parecido e as diferenças em relação ao que você pretende fazer \\
+\bottomrule
+\end{tabularx}
+\caption{Principais problemas da contextualização, de forma genérica.}
+\label{tab:confusoes}
+\end{table}
+
+%==========================================================================
+
+\pagebreak
+
+\section{Justificativa da hipótese}\label{sec:justificativa}
+
+\subsection{Duas justificativas diferentes}
+
+Uma \emph{hipótese} é uma teoria provável, mas ainda não demonstrada, ou uma suposição admissível, que norteia o trabalho porque ainda será testada. Wazlawick adverte que uma hipótese sem apoio é muito arriscada, e pergunta quem, em sã consciência, passaria dois anos tentando provar algo para o qual não tem nenhuma razão para esperar sucesso. Por isso uma boa hipótese precisa ser justificável.
+
+Em uma monografia existem duas justificativas. A \emph{justificativa do tema} mostra que o assunto importa, e é o que a contextualização já faz. A \emph{justificativa da hipótese} mostra que a linha que você escolheu tem chance de dar bons resultados, e é a mais importante e a mais difícil, porque exige evidência de que algo funcionará antes de você tê-lo testado. Wazlawick ilustra a diferença com o exemplo de um trabalho sobre compactação de textos, resumido na Tabela~\ref{tab:duasjust}. Vamos reutilizar esse exemplo ao longo do handout.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L@{}}
+\toprule
+Item & No exemplo da compactação de textos \\
+\midrule
+Tema & Compactação de textos \\
+Objetivo & Obter um algoritmo com maior grau de compactação do que os algoritmos comerciais \\
+Hipótese & Um determinado modelo de rede neural, usado para compactar, produz esse resultado \\
+Justificativa do tema & É necessário obter algoritmos de compactação melhores \\
+Justificativa da hipótese & Evidências de que o modelo de rede neural escolhido pode produzir resultados melhores do que os algoritmos comerciais \\
+\bottomrule
+\end{tabularx}
+\caption{As duas justificativas no exemplo de Wazlawick.}
+\label{tab:duasjust}
+\end{table}
+
+Observe na Tabela~\ref{tab:duasjust} que as duas justificativas respondem a perguntas diferentes. A primeira responde por que o tema merece esforço, e dificilmente alguém discordará. A segunda responde por que esse modelo específico de rede neural, e não outro método qualquer, deveria superar os algoritmos comerciais, e é aí que o leitor exigirá evidência.
+
+\subsection{Que evidência serve}
+
+Wazlawick indica três fontes de evidência, todas obtidas \emph{antes} do trabalho principal.
+\begin{itemize}
+  \item \textbf{Referências a outros trabalhos} que mostraram algum resultado apontando para a viabilidade da sua hipótese.
+  \item \textbf{Dados preliminares colhidos por você}, por exemplo um teste pequeno com a abordagem proposta.
+  \item \textbf{Um estudo de caso} que sugira que a linha escolhida pode dar certo.
+\end{itemize}
+A evidência não precisa provar a hipótese, porque então não haveria o que pesquisar. Precisa tornar plausível que vale a pena tentar.
+
+\subsection{Estrutura em quatro passos}
+
+Wazlawick orienta que, a partir da identificação do problema, fique claro quais tentativas de solução já foram feitas e onde elas falharam, e que a justificativa explique por que você acredita que a abordagem proposta pode ter sucesso. Em quatro passos, que também são uma síntese deste handout:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item Enuncie a hipótese em uma frase.
+  \item Diga qual limitação do que existe (já apontada na contextualização) a hipótese ataca.
+  \item Explique por que a abordagem escolhida deveria superar essa limitação.
+  \item Apresente a evidência que sustenta a explicação do passo 3.
+\end{enumerate}
+
+\subsection{O que a justificativa não é}
+
+\begin{warnbox}[Erros frequentes, com exemplos adaptados de Wazlawick]
+\begin{itemize}
+  \item \textbf{Prometer uma vantagem sem justificá-la.} \enquote{O método proposto auxiliará no plano amostral e identificará estratos mais precisos} diz o que se espera, mas não por que o método conseguiria.
+  \item \textbf{Comparar com o vazio.} \enquote{Atualmente não existe um método para acompanhar esses projetos} é discutível e passa a impressão de busca insuficiente. Mostre o que existe de mais parecido e trabalhe nas diferenças entre o existente e o desejado.
+  \item \textbf{Repetir a importância do tema.} \enquote{O raciocínio baseado em casos é usado com sucesso em medicina e em finanças} é contexto, não justificativa da hipótese.
+  \item \textbf{Justificar pela falta de algo.} \enquote{Falta um software que permita modelar o processo hospitalar} é verdade em muitas áreas, e construir um software nem sempre é pesquisa.
+\end{itemize}
+\end{warnbox}
+
+Um exemplo que funciona, também de Wazlawick: métodos atuais de replicação de dados geram muito tráfego e reduzem o paralelismo; se o serviço não precisar de paralelismo, a replicação pode ser feita de forma bem mais rápida e com menos carga na rede. A justificativa aponta uma limitação dos métodos existentes e explica por que uma solução específica seria adequada.
+
+Por fim, uma ponte com o handout anterior, que apresentou uma escala de maturidade de cinco degraus, do trabalho que apenas apresenta um produto (degrau 1) até o que apresenta uma prova (degrau 5). Aplicar a um problema conhecido uma técnica de outra área, sem boas razões para esperar ganho, deixa o trabalho no degrau 2, o de apresentar algo apenas diferente. A justificativa da hipótese é justamente o lugar em que você mostra a razão que impede essa queda.
+
+%==========================================================================
+\pagebreak
+\section{Objetivo geral e objetivos específicos}\label{sec:objetivos}
+
+\subsection{O objetivo precisa poder ser verificado}
+
+Wazlawick define a regra central: o objetivo deve ser verificável ao final do trabalho. Ele deve ser expresso como uma condição não trivial cujo sucesso se possa constatar, e um bom objetivo em geral demonstrará que alguma hipótese é ou não verdadeira. Disso decorre a atenção ao verbo, e a Tabela~\ref{tab:verbos} resume, a partir da análise do autor, quais verbos costumam funcionar e quais devem ser evitados.
+
+\begin{table}[!ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Verbo & Situação & Por quê \\
+\midrule
+Demonstrar, provar, melhorar (conforme métrica definida) & Em geral adequados & Descrevem uma condição que se confirma ou não \\
+Propor, apresentar & Triviais, a não ser que o objeto seja original & Basta propor ou apresentar algo para o objetivo ser cumprido, sem dizer nada sobre a qualidade \\
+Estudar & Inadequado como objetivo de pesquisa & Estudar costuma ser objetivo do aluno, não do trabalho. Ficou estudado, mesmo que nada novo tenha sido aprendido \\
+Elaborar, desenvolver, implantar, implementar, portar, gerar & Técnicos & Descrevem uma atividade ou um produto. O sistema pode servir para demonstrar algo, mas em si não é objetivo de pesquisa \\
+Identificar, avaliar & Adequados apenas se o que se identifica ou avalia estiver claro & \enquote{Mais relevantes}, \enquote{impacto} e \enquote{performance} são subjetivos sem uma medida \\
+\bottomrule
+\end{tabularx}
+\caption{Verbos de objetivo, segundo a análise de Wazlawick.}
+\label{tab:verbos}
+\end{table}
+
+Mudar o verbo, porém, não basta, e nenhum verbo da Tabela~\ref{tab:verbos} salva um objetivo sem medida. \enquote{Obter confiabilidade} só é verificável se a confiabilidade tiver uma medida, e \enquote{melhorar a completude e a acurácia} só é completo se o texto disser o quanto os métodos atuais obtêm, para que ao final se saiba se houve melhora. Um objetivo verificável nomeia três coisas: o \emph{que} se quer obter, a \emph{medida} que o define e o \emph{valor de referência} com o qual se compara.
+
+\subsection{Pesquisa ou técnica}
+
+Wazlawick aceita que um trabalho de graduação ou de especialização tenha objetivo técnico, no sentido de demonstrar que o aluno aprendeu conceitos e sabe aplicá-los, por exemplo desenvolvendo um sistema. Para o mestrado e o doutorado isso não é aceitável, porque se espera contribuição ao conhecimento. Nesta tarefa, mesmo que o seu TCC tenha natureza técnica, escreva o objetivo no formato verificável: diga o que o sistema ou o resultado deverá atingir, medido de que forma e comparado com o quê. Quem decide o tipo de trabalho adequado ao seu caso é o orientador.
+
+\subsection{O tamanho do objetivo}
+
+Um objetivo trivial é atingido depressa e dificilmente se sustenta diante de uma banca, porque a cada grau se espera trabalho e não só uma boa ideia. Um objetivo complexo demais não será atingido no tempo regulamentar do curso, e alegar falta de tempo não costuma ser uma boa desculpa. Objetivos grandes são projetos de longo prazo de pesquisadores com décadas e equipes. A calibragem é tarefa do aluno com o orientador, e Wazlawick observa que um orientador mais experiente ajuda mais a escolher um objetivo adequado.
+
+\subsection{Objetivos específicos}
+
+Os objetivos específicos seguem as mesmas regras do geral: devem ser não triviais e verificáveis. Além disso, são \emph{detalhamentos ou subprodutos} do objetivo geral. Se o geral é provar uma hipótese, os específicos podem estabelecer a prova de condições associadas a ela.
+
+O erro mais comum é listar passos do trabalho. Implementar um protótipo ou coletar dados são etapas do método, não objetivos. Uma lista como analisar, desenvolver, implantar, coletar e propor melhorias é um cronograma, o que Wazlawick descreve como a confusão entre objetivos específicos, metodologia e cronograma. Outros problemas recorrentes: itens sem verbo; verbos como \enquote{utilizar} e \enquote{aplicar}, que não indicam conhecimento novo; e características sem critério de medida, como \enquote{interface amigável}.
+
+\begin{keybox}[Três testes para um objetivo específico (síntese deste handout)]
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item Ao final do trabalho, alguém pode constatar com dados ou argumento se ele foi atingido?
+  \item Ele descreve um resultado, e não uma atividade que você vai executar?
+  \item Ele continuaria valendo se você trocasse o método ou a ferramenta de implementação?
+\end{enumerate}
+Se a resposta a qualquer um for não, o item provavelmente é método, cronograma ou resultado esperado.
+\end{keybox}
+
+\subsection{Objetivo, resultado esperado e método}
+
+Convém não misturar. O \emph{objetivo} é o que você vai mostrar. O \emph{método} é como você vai mostrar, e a revisão bibliográfica não é parte dele, embora possa aparecer no cronograma. Os \emph{resultados esperados} são as consequências de o objetivo ser atingido. Wazlawick comenta, por exemplo, uma proposta que incluía entre seus objetivos \enquote{auxiliar na tomada de decisões} dos gestores das instituições de ensino: isso depende de terceiros e é efeito possível do trabalho, não algo que o autor vá fazer, então não é objetivo. O mesmo vale para \enquote{oferecer solução}, que está melhor como resultado esperado, pois há muitas formas de oferecer uma solução.
+
+%==========================================================================
+\pagebreak
+\section{Os três campos encadeados: um exemplo completo}\label{sec:exemplo}
+
+A Tabela~\ref{tab:completo} mostra os três campos encadeados em um único exemplo. Ele é uma adaptação deste handout a partir do caso da compactação de textos da Tabela~\ref{tab:duasjust}, com símbolos no lugar dos detalhes técnicos. Substitua cada símbolo por conteúdo concreto no seu trabalho.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L@{}}
+\toprule
+Campo & Texto-modelo \\
+\midrule
+Contextualização & Compressores comerciais de texto, como $A$, $B$ e $C$, atingem taxa de compressão próxima de $T$ em textos do domínio $D$ [referência]. Essa taxa não melhora porque eles não exploram a característica $Z$ dos textos de $D$ [referência ou estudo próprio]. Em consequência, o ganho de compressão que $Z$ permitiria fica sem obter, o que pede pesquisa e não apenas uso de um compressor existente \\
+Justificativa da hipótese & \textbf{Hipótese:} um modelo $M$ de rede neural, por capturar $Z$, atinge taxa de compressão maior que a de $A$, $B$ e $C$ em $D$. \textbf{Por quê:} trabalhos [referências] mostram que $M$ captura características como $Z$ em tarefas semelhantes, e um teste preliminar do autor em uma amostra de $D$ indicou ganho de [valor] \\
+Objetivo geral & Demonstrar que $M$ atinge taxa de compressão maior que a de $A$, $B$ e $C$ em textos de $D$, medida pela razão entre o tamanho original e o comprimido na coleção $K$ \\
+Objetivos específicos & (a) Determinar em que tipos de texto de $D$ o ganho de $M$ é maior. (b) Quantificar o custo adicional de tempo de $M$ em relação a $A$, $B$ e $C$. (c) Identificar a partir de que tamanho de texto o ganho compensa o custo \\
+\bottomrule
+\end{tabularx}
+\caption{Do problema ao objetivo, com símbolos no lugar do conteúdo.}
+\label{tab:completo}
+\end{table}
+
+Observe o encadeamento da Tabela~\ref{tab:completo}. A limitação do que existe (a falta de $Z$ nos compressores) aparece na contextualização, é atacada pela hipótese, e a justificativa explica por que $M$ resolveria essa limitação. O objetivo geral usa a mesma medida e os mesmos comparadores da hipótese, e os específicos são resultados mensuráveis que detalham o geral, sem etapas como implementar $M$ ou coletar a coleção $K$.
+
+%==========================================================================
+\pagebreak
+\section{A tarefa}\label{sec:tarefa}
+
+\begin{keybox}[Recomendação]
+
+Antes de realizar a tarefa leia o capítulo 9 do livro Wazlawick, R.\ S. \emph{Metodologia de Pesquisa para Ciência da Computação}.
+
+Lá você vai encontrar vários exemplos comentados de propostas boas e ruins. 
+\end{keybox}
+
+\subsection{O que fazer}
+
+Escreva os três campos da proposta de pesquisa do seu TCC, na forma de uma apresentação curta em slides.
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Contextualização e colocação do problema} (Seção~\ref{sec:contexto}).
+  \item \textbf{Justificativa da hipótese} (Seção~\ref{sec:justificativa}). Enuncie a hipótese, porque a justificativa se refere a ela.
+  \item \textbf{Objetivo geral e objetivos específicos} (Seção~\ref{sec:objetivos}).
+\end{enumerate}
+
+O conteúdo de cada slide é livre. A única exigência é que os três campos estejam endereçados e que o leitor consiga identificar em quais slides cada um aparece. Um campo pode ocupar mais de um slide, e um slide pode tratar de mais de um campo. Para facilitar, o template tem um subtítulo em cada slide onde você indica o campo que ele endereça.
+
+\subsection{Orientações}
+
+\begin{itemize}
+  \item Parta, se possível, da pergunta e da hipótese do exercício anterior. Você pode e deve ajustá-las se o que aprendeu aqui mostrar um problema nelas.
+  \item Indique a fonte das afirmações sobre o estado da área e sobre a importância ou a limitação das soluções atuais. Autor e ano bastam.
+  \item Escreva o objetivo geral no formato verificável: o que se obtém, a medida e o valor de referência.
+  \item Método, resultados esperados e cronograma não fazem parte desta tarefa.
+\end{itemize}
+
+\subsection{Entrega}
+
+Entregue pelo Moodle um único arquivo PDF, nomeado \texttt{matricula\_nome.pdf}, seguindo o template fornecido (arquivo \texttt{template\_slides\_proposta.tex}). Prazo: \prazo.
+
+\begin{keybox}[Autoverificação antes de entregar]
+\textbf{Contextualização.}
+\begin{itemize}
+  \item Um leitor de fora da área entende qual é o problema?
+  \item O problema é uma limitação concreta de algo que existe, e não um tema, uma oportunidade, uma ferramenta ou um objetivo (Tabela~\ref{tab:confusoes})?
+  \item Cada afirmação sobre a área ou a gravidade do problema tem fonte?
+\end{itemize}
+\textbf{Justificativa da hipótese.}
+\begin{itemize}
+  \item A hipótese está enunciada em uma frase?
+  \item A justificativa explica por que ela deveria funcionar, com evidência (trabalhos, dado preliminar ou estudo de caso), e não só por que o tema importa (Tabela~\ref{tab:duasjust})?
+  \item Você mostrou o que existe de mais parecido em vez de afirmar que nada existe?
+\end{itemize}
+\textbf{Objetivos.}
+\begin{itemize}
+  \item O objetivo geral nomeia o que se obtém, a medida e a referência de comparação?
+  \item O verbo não é trivial nem técnico (Tabela~\ref{tab:verbos})?
+  \item Cada específico é um resultado verificável, e não um passo do método?
+\end{itemize}
+Para ver os três campos encadeados em um exemplo, consulte a Tabela~\ref{tab:completo}.
+\end{keybox}
+
+\begin{thebibliography}{9}
+\bibitem{wazlawick2020} WAZLAWICK, R.\ S. \emph{Metodologia de Pesquisa para Ciência da Computação}. 3.\ ed. Rio de Janeiro: GEN LTC, 2020.
+\end{thebibliography}
+
+\textbf{Citado em \cite{wazlawick2020} e não consultado diretamente:} Chinneck (1988). A entrada completa deve ser conferida na lista de referências do livro antes da distribuição.
+
+\end{document}
