@@ -1,0 +1,438 @@
+%==========================================================================
+% BCC502 -- Metodologia Científica para Ciência da Computação
+% Handout: Método de pesquisa e o texto do projeto final
+%
+% PARA O PROFESSOR: preencha os campos abaixo antes de distribuir.
+%  \linklivro  : link do livro (troque por \url{...} ou \href{...}{...}).
+%  \prazo      : data de entrega dos slides.
+%  \dataaula   : data da aula de discussão.
+%  \tempoapres : tempo de apresentação por aluno (há uma sugestão em vermelho).
+%==========================================================================
+\documentclass[10pt,a4paper]{extarticle}
+\newcommand{\coursehead}{BCC502 -- Metodologia Científica para Ciência da Computação}
+\newcommand{\chapterhead}{Método de pesquisa}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+\definecolor{dblue}{RGB}{16, 42, 92}
+\definecolor{dorange}{RGB}{230, 115, 0}
+
+\hypersetup{colorlinks=true, linkcolor=dblue, citecolor=dorange, urlcolor=dblue}
+
+% Campos a preencher pelo professor
+\newcommand{\linklivro}{\textcolor{red!70!black}{https://integrada.minhabiblioteca.com.br/reader/books/9788595157712/}}
+\newcommand{\prazo}{\textcolor{red!70!black}{23/11/2026}}
+\newcommand{\dataaula}{\textcolor{red!70!black}{23/11/2026}}
+\newcommand{\tempoapres}{\textcolor{red!70!black}{[5 a 10 minutos de apresentação e 10 de discussão]}}
+
+\setlist{nosep}
+\geometry{margin=2cm, headheight=14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{dblue}\coursehead}
+\fancyhead[R]{\small\color{dblue}\chapterhead}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{dorange}\leaders\hrule height \headrulewidth\hfill}}
+
+\newtcolorbox{keybox}[1][]{colback=dblue!5, colframe=dblue, fonttitle=\bfseries, title={#1}, breakable}
+\newtcolorbox{warnbox}[1][]{colback=dorange!7, colframe=dorange, fonttitle=\bfseries, title={#1}, breakable}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{remark}{Observação}[section]
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\title{Método de Pesquisa}
+\author{BCC502 -- Metodologia Científica para Ciência da Computação\\Prof.\ Rodrigo C.\ P.\ Silva -- DECOM/UFOP}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+
+\section*{Contexto}
+\addcontentsline{toc}{section}{Contexto}
+
+Nas duas últimas tarefas vocês transformaram uma ideia em pergunta de pesquisa e, depois, escreveram em slides o problema, a hipótese com a sua justificativa e os objetivos. Falta a peça que diz como a hipótese será posta à prova: o método. Com ele, a proposta fica completa. Antes de escrever o texto final, cada um vai apresentar a hipótese, os objetivos e o método em uma aula dedicada a discutir métodos, para que os problemas apareçam quando ainda é barato corrigi-los.
+
+Este handout explica o que a seção de metodologia de um projeto precisa conter, mostra os erros mais frequentes, descreve o que o texto final vai exigir e termina com a tarefa: a apresentação para a aula de discussão. Ele se baseia no livro \emph{Metodologia de Pesquisa para Ciência da Computação}, de Raul Sidnei Wazlawick \cite{wazlawick2020}, e foi escrito para ser lido sem o livro: as ideias e os exemplos do autor estão explicados aqui. Os trechos marcados como síntese deste handout são nossos e não aparecem no livro com esta forma.
+
+%==========================================================================
+\section{O que a seção de metodologia precisa fazer}\label{sec:funcao}
+
+\subsection{Método e metodologia}
+
+Quase todo projeto tem uma seção chamada \enquote{Metodologia}, e vamos manter esse nome no trabalho final porque é o que vocês vão encontrar em editais, modelos de TCC e artigos. Wazlawick observa, porém, que o nome é impreciso. \emph{Metodologia} é o estudo dos métodos: comparar métodos, avaliar suas capacidades e limitações, criticar seus pressupostos. Um trabalho individual raramente faz isso. O que ele tem é um \emph{método}, escolhido conforme o tipo de problema e seguido até confirmar ou refutar a hipótese. O nome da seção é convenção; o conteúdo é o método.
+
+\begin{definition}[Método de pesquisa]
+O método é a sequência de passos necessários para demonstrar que o objetivo foi atingido. Se os passos forem executados, os resultados obtidos devem ser convincentes, a favor ou contra a hipótese.
+\end{definition}
+
+Dessa definição saem três consequências práticas.
+
+A primeira é que o método só pode ser escrito depois do objetivo. Ele é o caminho até um destino, e sem destino não há caminho a descrever. Se o seu objetivo ainda está vago, o método também ficará.
+
+A segunda é que a revisão bibliográfica não faz parte do método. Ela é o estudo que permite propor um objetivo válido, ou seja, um pré-requisito. Pode aparecer no cronograma, mas um método que começa com \enquote{levantamento bibliográfico} indica, segundo Wazlawick, que o aluno ainda não domina o tema a ponto de saber o que vai fazer.
+
+A terceira é que o método é julgado pela hipótese. A pergunta que o leitor faz ao ler a sua metodologia é uma só: \emph{se este aluno executar exatamente o que está escrito, ao final será possível dizer se a hipótese é verdadeira ou falsa?} Tudo o que não ajuda a responder isso é cronograma, ferramenta ou detalhe de implementação.
+
+\begin{keybox}[O teste do leitor independente (síntese deste handout)]
+Entregue a sua metodologia a um colega que não conhece o seu trabalho e peça que ele responda, sem perguntar nada a você:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item O que será medido ou demonstrado, e como?
+  \item Com o que o resultado será comparado?
+  \item Que resultado faria o autor concluir que a hipótese é falsa?
+\end{enumerate}
+Se ele não conseguir responder às três, a metodologia ainda é um plano de atividades.
+\end{keybox}
+
+\subsection{O que um método indica}
+
+Wazlawick lista o que o método deve deixar claro, conforme o tipo de trabalho: se protótipos serão desenvolvidos, se modelos teóricos serão construídos, quais experimentos serão realizados, como os dados serão organizados e comparados. Note que \enquote{desenvolver um protótipo} só entra no método quando se diz para que o protótipo servirá no teste da hipótese. O protótipo é instrumento, não resultado.
+
+%==========================================================================
+\section{O que o método precisa produzir depende do degrau}\label{sec:degrau}
+
+No handout sobre maturidade em pesquisa vimos cinco degraus: apresentar um produto, apresentar algo diferente, algo presumivelmente melhor, algo reconhecidamente melhor e uma prova. Cada degrau promete um tipo de afirmação, e o método é o que entrega a evidência dessa afirmação. Wazlawick resume as formas de obter evidência em três: construir uma teoria que, a partir de fatos aceitos e deduções válidas, prove a hipótese; realizar experimentos controlados que a comprovem estatisticamente; ou realizar estudos de caso, comparações, argumentações e questionários, que dificilmente constituem prova mas podem ser evidência. Os trabalhos podem combinar mais de uma.
+
+A Tabela~\ref{tab:degraus} cruza os degraus com essas formas de evidência e mostra o que a metodologia precisa descrever em cada caso. Use-a para conferir se o seu método está à altura do que o seu objetivo promete. Um objetivo do degrau 4 com um método do degrau 2 é o desencontro mais comum que encontramos nas propostas.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}p{3.1cm} L L@{}}
+\toprule
+Degrau & Evidência que o método precisa produzir & O que a metodologia descreve \\
+\midrule
+1. Produto & Que o produto existe e cumpre requisitos & Requisitos verificáveis e como cada um será verificado. Em geral é trabalho técnico, aceito na graduação, mas não produz conhecimento novo \\
+2. Algo diferente & Em que características o artefato difere dos existentes & A tabela comparativa: quais artefatos, quais características, como cada célula será verificada \\
+3. Presumivelmente melhor & Que o artefato supera outros em uma métrica, em condições escolhidas pelo autor & Métrica, comparadores, dados de teste e por que eles não favorecem o seu artefato \\
+4. Reconhecidamente melhor & O mesmo, em condições aceitas pela comunidade & Benchmark ou protocolo reconhecido, comparação com o estado da arte e teste estatístico \\
+5. Prova & Que a afirmação vale em todos os casos cobertos & Enunciado formal, hipóteses assumidas e estratégia da demonstração \\
+\bottomrule
+\end{tabularx}
+\caption{O que o método precisa entregar em cada degrau de maturidade. Os degraus e as três formas de evidência são de Wazlawick; o cruzamento é síntese deste handout.}
+\label{tab:degraus}
+\end{table}
+
+A maior parte dos TCCs fica nos degraus 2 a 4 e, portanto, depende de evidência empírica. Por isso a próxima seção trata do método empírico com mais detalhe. Se o seu trabalho é teórico (degrau 5), a metodologia descreve o que será provado, a partir de quais pressupostos e com que estratégia, e a Seção~\ref{sec:construcao} serve apenas para as partes empíricas, se houver.
+
+%==========================================================================
+\section{Construindo um método empírico}\label{sec:construcao}
+
+\subsection{Definir objetivamente o que se observa}
+
+Wazlawick cita Kerlinger (1980): a condição principal para a objetividade é que quaisquer observadores com um mínimo de competência concordem com os resultados. Opiniões não passam nesse teste. Um desenvolvedor pode achar a orientação a objetos mais fácil que a programação estruturada, e um programador experiente em Cobol pode achar o contrário. Os dois têm argumentos, e nenhum deles tem uma conclusão a que chegaria qualquer observador independente.
+
+A saída é definir a grandeza de forma que a leitura não dependa de quem a faz. O exemplo do livro: um sistema é \enquote{fácil de usar} se um conjunto predefinido de tarefas pode ser executado por um usuário com determinado treinamento dentro de um tempo predeterminado. Ou, em versão graduada, o grau de dificuldade é o tempo médio que usuários com determinado treinamento levam para realizar esse conjunto de tarefas. Diferentes pesquisadores que repetirem a medição chegarão a valores comparáveis.
+
+Ter uma definição objetiva, no entanto, não basta. A definição também precisa ser aceita como uma boa representação do conceito. Se alguém definisse \enquote{fácil de usar} como \enquote{acessível pela Internet}, a definição seria objetiva e inútil, porque se afasta do que todos entendem por facilidade de uso. Na metodologia, portanto, cada termo avaliativo da sua hipótese (\enquote{melhor}, \enquote{mais eficiente}, \enquote{mais preciso}) precisa virar uma medida, e você precisa convencer o leitor de que essa medida é razoável.
+
+\subsection{Variáveis}
+
+Uma variável é um fenômeno que pode ser medido e que varia de uma medição para outra. Ela tem um domínio: contínuo (tempo de execução), discreto (número de participantes de uma videoconferência) ou categórico (conceitos A, B, C, E). Wazlawick distingue dois papéis. A variável \emph{manipulada}, ou independente, é a que o pesquisador altera deliberadamente. A variável \emph{medida}, ou dependente, é a que ele observa para ver se mudou.
+
+O exemplo do livro: o pesquisador entrega a usuários tarefas com 5, 10 e 15 passos (variável independente) e conta quantas vezes cada um consulta o manual da ferramenta (variável dependente). A hipótese pode ser que tarefas mais longas levam a mais consultas.
+
+Duas observações completam o quadro. Primeiro, testar a dependência entre duas variáveis só faz sentido se houver uma teoria que a explique. Seria possível medir se programas rodam mais rápido às sextas-feiras, mas nada na teoria sobre programas sugere essa relação. Segundo, há variáveis que você não estuda mas que podem afetar o resultado, como a experiência dos usuários ou o hardware usado nos testes. A metodologia deve dizer como elas serão mantidas fixas ou registradas. Essa segunda observação é síntese deste handout.
+
+\subsection{Comparação}
+
+Toda hipótese que use \enquote{melhor} exige um comparador, e é aqui que a Comparação da sua pergunta estruturada (os seis elementos de Petticrew e Roberts, vistos no handout sobre questões de pesquisa) vira procedimento. A metodologia diz com que comparadores o seu artefato será confrontado e por que eles representam o estado da arte. Comparar com \enquote{nenhuma técnica} raramente convence, porque mostra apenas que fazer algo é melhor do que não fazer nada.
+
+Wazlawick comenta um padrão comum e válido nas propostas: implementar algo compatível com o estado da arte e depois inserir nele uma característica nova, para avaliar se ela melhora o resultado. Ele aponta a fraqueza do padrão, a ausência de um benchmark mais universal, e o que falta para que seja claro: especificar a característica que corresponde à hipótese e definir a métrica que compara as duas versões.
+
+\subsection{Dados, participantes e casos de teste}
+
+A metodologia diz de onde virão os dados e por que eles permitem a conclusão pretendida. Wazlawick discute uma proposta que aplicaria ferramentas em dois hospitais \enquote{para coleta de dados estatísticos}, sem dizer que dados nem que análise. Se os dois hospitais fossem especializados em cirurgia cardíaca, a maioria dos pacientes internados teria problema cardíaco, e esse fato não poderia ser generalizado para outros hospitais. Ele vale apenas naquela realidade. A lição é dizer, na metodologia, que dados serão coletados, de que fonte, quantos, e como foram escolhidos, e não usar a palavra \enquote{estatístico} sem esse cuidado.
+
+Se o seu trabalho usa um benchmark (um conjunto público de dados ou de instâncias com resultados de referência conhecidos), diga qual e por que ele é adequado. Se você vai construir o conjunto de teste, diga como evitará escolher casos que favorecem o seu artefato.
+
+\subsection{Análise: por que a média não basta}
+
+Wazlawick dá um exemplo simples. Os conjuntos de tempos $\{10, 12, 14, 9\}$, $\{1, 20, 2, 22\}$ e $\{11, 11, 11, 12\}$ têm a mesma média, 11,25 minutos, e são muito diferentes. O que os distingue é a \emph{variância}, que mede o quanto os valores se afastam da média:
+\[
+S_X^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2 ,
+\]
+com desvio-padrão $S_X=\sqrt{S_X^2}$. Os três conjuntos têm variâncias de aproximadamente 4,92, 127,58 e 0,25. Uma média relatada sem a dispersão esconde exatamente essa diferença.
+
+A dispersão importa porque leva à pergunta central da análise. Wazlawick a formula assim: se você trabalha com dois grupos, um com a ferramenta e outro sem, e a diferença entre as médias é de 0,5 ponto percentual, um grupo foi melhor que o outro, ou foi obra do acaso? E se a diferença for de cinco pontos? A resposta depende da variância e do número de observações, e é para isso que existem os testes estatísticos. Em geral se aceita uma hipótese comprovada com 95\% de certeza.
+
+O livro ilustra o risco das amostras pequenas com um método arbitrário de estimar tempo, que atribui valores sem relação com os casos analisados. Com poucos casos, coincidências fizeram esse método parecer razoável; com dois casos apenas, ele daria o mesmo resultado que um método bom. Por isso a metodologia deve dizer quantas observações serão feitas e que teste será aplicado, e não apenas \enquote{os resultados serão comparados}.
+
+\begin{keybox}[Cuidados comuns em Computação (síntese deste handout)]
+\begin{itemize}
+  \item \textbf{Algoritmos com aleatoriedade} (aprendizado de máquina, metaheurísticas, simulações): uma execução não é um resultado. Diga quantas execuções independentes serão feitas, com que sementes, e relate média e desvio-padrão.
+  \item \textbf{Comparação nas mesmas instâncias}: quando dois métodos são avaliados nos mesmos casos de teste, as medidas são pareadas, e o teste estatístico deve levar isso em conta. Discuta a escolha do teste com o orientador e diga qual será usado.
+  \item \textbf{Ajuste justo}: se você ajusta os parâmetros do seu método, os comparadores devem receber o mesmo esforço de ajuste, e o ajuste não pode usar os dados de teste.
+\end{itemize}
+\end{keybox}
+
+\subsection{Correlação não é causa}
+
+Muitas hipóteses perguntam se duas variáveis se relacionam. A medida mais usada é o coeficiente de correlação de Pearson, que varia entre $-1$ e $1$: perto de $1$ indica correlação positiva forte, perto de $-1$ negativa forte, perto de $0$ ausência de correlação. Como no caso das médias, um coeficiente obtido com poucos dados pode ser coincidência. Wazlawick mostra que, com 10 observações e 95\% de certeza, só um coeficiente acima de 0,6319 (ou abaixo de $-0{,}6319$) pode ser considerado significativo.
+
+Mesmo uma correlação significativa não prova causa. O livro conta o caso de uma empresa que passou a servir café da manhã saudável e viu a produtividade subir em quase todas as filiais. Quando retirou o café, a produtividade subiu de novo. A causa não era a alimentação, e sim a mudança em si: os funcionários associavam mudanças na empresa a demissões e trabalhavam mais para serem notados. Se a sua hipótese é causal, a metodologia precisa dizer como o desenho afasta explicações alternativas, e a teoria que justifica a hipótese precisa explicar por que a causa produziria o efeito.
+
+\subsection{Pesquisa experimental e não experimental}
+
+Na pesquisa \emph{não experimental} o pesquisador observa o fenômeno sem intervir, por exemplo acompanhando o dia a dia de uma empresa de software para identificar práticas já catalogadas. Na pesquisa \emph{experimental} ele provoca alterações sistemáticas no ambiente e observa se cada intervenção produz o efeito esperado. A metodologia deve deixar claro qual dos dois é o seu caso, porque isso determina o que você pode concluir. Observação permite descrever e relacionar; afirmar causa exige, em geral, intervenção controlada.
+
+\subsection{Dados não são conclusões}
+
+Wazlawick insiste que o método não consiste apenas em coletar dados que apoiem a hipótese. Trabalhos que se limitam a aplicar questionários, tabular respostas e apresentar gráficos não têm validade se não trazem informação nova. Ele recomenda não distribuir questionários sem saber de antemão que informação se busca, ou seja, qual hipótese se quer testar. E respostas diretas, interpretadas de forma simplista, podem enganar: pessoas relatam mal o próprio comportamento, e médias de autorrelato podem ser incompatíveis entre si. Se o seu método usa questionário, diga que pergunta da sua pesquisa cada item ajuda a responder e como as respostas serão analisadas.
+
+\subsection{Critério de decisão}
+
+O último elemento de um método empírico é dizer, antes de ver os dados, que resultado confirma a hipótese, que resultado a refuta e que resultado deixa a questão em aberto. Sem isso, qualquer resultado pode ser interpretado como sucesso. Wazlawick lembra que uma hipótese bem justificada que acaba refutada também produz conhecimento, porque mostra que algo intuitivamente aceito não resistiu ao teste. Para que isso aconteça, porém, a refutação precisa ter sido possível desde o início. A formulação em três resultados é síntese deste handout.
+
+%==========================================================================
+\section{Limitações e ameaças à validade}\label{sec:limites}
+
+Nenhum trabalho de graduação resolve todos os problemas de uma área, o que Wazlawick chama de \enquote{síndrome do Prêmio Nobel}. Em vez de demonstrar que uma hipótese vale sempre, pode-se demonstrar que ela vale em condições específicas, nas quais foi possível fazer testes convincentes. O exemplo do livro é um método de estimativa de esforço testado apenas em sistemas web. O método pode ser válido para outros tipos de sistema, mas o trabalho não mostrou isso, e essa é uma limitação. As limitações devem ser declaradas desde o início: evitam que o autor se perca em aspectos que extrapolam os objetivos e que o leitor crie expectativas que depois serão frustradas.
+
+Na engenharia de software experimental, as razões pelas quais uma conclusão pode estar errada são organizadas em quatro tipos de ameaça à validade \cite{wohlin2012}. A Tabela~\ref{tab:validade} resume cada tipo com uma pergunta e um exemplo. Ela não vem de Wazlawick, mas é um bom roteiro para escrever a seção de limitações da sua metodologia.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l L L@{}}
+\toprule
+Ameaça & Pergunta & Exemplo \\
+\midrule
+Validade de conclusão & A relação observada é real ou pode ser acaso? & Poucas execuções, nenhum teste estatístico \\
+Validade interna & O efeito vem da intervenção ou de outro fator? & O grupo que usou a ferramenta nova era mais experiente \\
+Validade de construto & A medida representa o conceito da hipótese? & Medir \enquote{qualidade do código} só pelo número de linhas \\
+Validade externa & O resultado vale fora das condições do estudo? & Testes apenas com sistemas web, ou apenas com alunos \\
+\bottomrule
+\end{tabularx}
+\caption{Os quatro tipos de ameaça à validade, segundo Wohlin et al.\ (2012). Exemplos deste handout.}
+\label{tab:validade}
+\end{table}
+
+Para cada ameaça que se aplica ao seu trabalho, diga o que o método faz para reduzi-la e o que fica como limitação declarada.
+
+%==========================================================================
+\section{Erros frequentes}\label{sec:erros}
+
+Wazlawick analisa métodos apresentados por alunos em seminários de proposta. A Tabela~\ref{tab:erros} reúne os problemas que ele aponta e os que aparecem com frequência nas nossas turmas, com o que falta em cada caso. Releia a sua metodologia procurando cada um deles.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}p{3.6cm} L L@{}}
+\toprule
+Problema & Como aparece & O que falta \\
+\midrule
+Revisão como primeiro passo & \enquote{a) Levantamento bibliográfico sobre os tópicos abordados} & A revisão é pré-requisito. O método começa quando o objetivo já está definido \\
+Passos genéricos & \enquote{Elaboração da ferramenta; testes do sistema} & Que testes, com que dados, medindo o quê, para testar qual hipótese \\
+Método que serve para qualquer trabalho & \enquote{Levantamento; criação do método; aplicação; avaliação; conclusão} & Instanciar cada passo em atividades concretas ligadas ao objetivo. Do jeito que está é um modelo de cronograma \\
+Coleta sem análise & \enquote{Aplicação em dois hospitais para coleta de dados estatísticos} & Que dados, de que fonte, se são representativos e que análise será feita \\
+Comparação sem critério & \enquote{Trabalhar com dois grupos, um com a ferramenta e outro sem} & Tamanho dos grupos, métrica, teste estatístico, e um controle melhor que \enquote{sem ferramenta} \\
+Hipótese implícita & \enquote{Desenvolver o mecanismo; adicionar conhecimento; experimentos} & Dizer o que é \enquote{adicionar conhecimento} e qual métrica compara as duas versões \\
+Métrica sem definição & \enquote{Avaliar a eficiência da solução} & Uma definição operacional da eficiência, com unidade e instrumento \\
+Sem critério de decisão & \enquote{Os resultados serão analisados e discutidos} & Que resultado confirma, refuta ou deixa inconclusiva a hipótese \\
+\bottomrule
+\end{tabularx}
+\caption{Problemas frequentes em métodos de pesquisa. As seis primeiras linhas vêm das análises de Wazlawick; as duas últimas são síntese deste handout.}
+\label{tab:erros}
+\end{table}
+
+O livro também registra um mérito que vale imitar. Uma das propostas, embora deixasse muito subentendido, listava explicitamente as métricas dos testes comparativos: tamanho de código, tempo de execução das tarefas, energia gasta e vazão da rede. Só isso já a tornava mais avaliável que as demais.
+
+%==========================================================================
+\section{Um exemplo completo}\label{sec:exemplo}
+
+Vamos construir uma metodologia a partir de um exemplo que Wazlawick usa para explicar variância e correlação: estimar o tempo de programação de casos de uso. O enredo é do livro; a organização em proposta e as escolhas de detalhe são deste handout.
+
+\subsection{O ponto de partida}
+
+O tempo para programar um caso de uso varia de minutos a semanas, então uma média única é péssima para prever o tempo de um caso específico. A literatura propõe classificar os casos de uso em simples, médios e complexos, com pesos 1, 2 e 3, para obter grupos mais previsíveis. Não se sabe, porém, se uma regra de classificação realmente coloca no grupo \enquote{simples} os casos mais rápidos de programar. Suponha que o aluno tenha uma regra nova, que chamaremos de M, e uma razão para achar que ela classifica melhor que a regra mais usada na literatura, que chamaremos de R. O quadro a seguir resume a introdução e os objetivos desse projeto, já escritos segundo o handout anterior.
+
+\begin{keybox}[Introdução e objetivos do exemplo (resumidos)]
+\textbf{Problema.} Estimativas de tempo baseadas em classificação de casos de uso dependem de a classificação separar casos rápidos de casos lentos, e a regra R, a mais usada, não foi validada para [o tipo de sistema escolhido].
+
+\textbf{Hipótese.} A regra M produz pontos mais correlacionados com o tempo real de programação do que a regra R. \emph{Justificativa:} M considera [a característica que R ignora], e [trabalhos ou dado preliminar] indicam que essa característica explica boa parte do tempo.
+
+\textbf{Objetivo geral.} Mostrar que, em casos de uso de sistemas web, a correlação entre os pontos de M e o tempo real de programação é significativa a 95\% e maior que a obtida com R.
+
+\textbf{Objetivos específicos.} (1) A correlação de M com o tempo real é significativa a 95\%. (2) Essa correlação é maior que a de R nos mesmos casos. (3) Dois avaliadores independentes aplicando M chegam à mesma classificação na maioria dos casos, ou seja, M é objetiva.
+\end{keybox}
+
+\subsection{A versão ingênua}
+
+Uma primeira versão da metodologia, típica das propostas que recebemos, seria:
+
+\begin{quote}
+a) Revisão bibliográfica sobre estimativa de esforço; b) desenvolvimento de uma ferramenta que classifica casos de uso pela regra M; c) testes da ferramenta; d) análise dos resultados.
+\end{quote}
+
+Pela Tabela~\ref{tab:erros}, ela tem quatro problemas: começa pela revisão, os testes não dizem com que dados nem medindo o quê, não há comparação com R, e não há critério de decisão. Além disso, a ferramenta do passo (b) não testa a hipótese. A regra M pode ser aplicada à mão, e a ferramenta só é necessária se o volume de casos exigir.
+
+\subsection{A versão defensável}
+
+A Tabela~\ref{tab:exemplo} mostra a mesma metodologia reescrita, elemento por elemento, com a função de cada um. No texto final, cada linha vira um ou dois parágrafos.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}p{2.9cm} L@{}}
+\toprule
+Elemento & No exemplo \\
+\midrule
+Tipo de pesquisa & Não experimental sobre dados históricos, no degrau 3 ou 4 conforme exista ou não um benchmark aceito \\
+Definições operacionais & Tempo de programação: horas registradas no sistema de tarefas do projeto, da abertura ao fechamento da tarefa do caso de uso. Pontos: 1, 2 ou 3, atribuídos segundo as regras escritas de M e de R \\
+Variáveis & Independente: pontos atribuídos (por M ou por R). Dependente: tempo de programação \\
+Dados & Casos de uso de três projetos web com tempos registrados, sorteados entre todos os disponíveis, com o número de casos justificado pela análise abaixo \\
+Procedimento & Dois avaliadores aplicam M e R a cada caso sem ver os tempos. As divergências são registradas antes de qualquer consenso \\
+Análise & Correlação entre pontos e tempo para M e para R, com teste de significância a 95\%. Comparação entre as duas correlações com teste adequado a medidas nos mesmos casos. Concordância entre os avaliadores \\
+Critério de decisão & Confirma: correlação de M significativa e maior que a de R. Refuta: correlação de M não maior que a de R com amostra suficiente. Inconclusivo: correlações não significativas por amostra pequena \\
+Limitações & Apenas sistemas web; os pesos 1, 2 e 3 são tomados da literatura e não são questionados; tempos registrados podem conter erros de apontamento \\
+\bottomrule
+\end{tabularx}
+\caption{Metodologia do exemplo, elemento por elemento. Síntese deste handout a partir do exemplo de Wazlawick.}
+\label{tab:exemplo}
+\end{table}
+
+Dois detalhes da Tabela~\ref{tab:exemplo} merecem comentário. A limitação sobre os pesos 1, 2 e 3 é do próprio Wazlawick: ao apresentar o exemplo, ele observa que se poderia perguntar se a escala correta não seria 1, 2 e 5, e que, num projeto de pesquisa, não examinar essa alternativa seria uma limitação declarada. E o terceiro objetivo específico, a concordância entre avaliadores, aparece na metodologia como procedimento e análise: é o critério de objetividade de Kerlinger aplicado à própria regra M.
+
+%==========================================================================
+\section{Próxima etapa: os três textos do trabalho final}\label{sec:textos}
+
+Depois da aula de discussão, vocês escreverão o projeto em texto. Esta seção antecipa o que ele vai exigir, para que a apresentação já seja preparada pensando nele. O trabalho final reúne, em texto corrido, o que vocês construíram nas últimas tarefas e o que este handout acrescentou. A Tabela~\ref{tab:textos} mostra o que cada seção precisa conter e onde cada conteúdo foi discutido.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}p{2.6cm} L p{3.6cm}@{}}
+\toprule
+Seção & Conteúdo obrigatório & Onde foi discutido \\
+\midrule
+1. Introdução & O problema de pesquisa definido com clareza; a sua importância (contextualização); o que já foi feito sobre ele; a lacuna de conhecimento que o trabalho pretende preencher; a hipótese e a sua justificativa & Handouts sobre questões de pesquisa e sobre proposta de pesquisa \\
+2. Objetivos & Objetivo geral verificável e objetivos específicos como resultados, não etapas & Handout sobre proposta de pesquisa \\
+3. Metodologia & O método que testa a hipótese: tipo de pesquisa, definições, variáveis, comparação, dados, procedimento, análise, critério de decisão e limitações & Este handout \\
+\bottomrule
+\end{tabularx}
+\caption{As três seções do trabalho final.}
+\label{tab:textos}
+\end{table}
+
+\subsection{Introdução}
+
+A introdução é um argumento em sequência, e a ordem dos elementos na Tabela~\ref{tab:textos} é a ordem em que o leitor precisa deles. Primeiro, o leitor precisa saber de que problema se trata e por que ele importa. Depois, o que já se fez sobre ele: aqui entra a amostra de trabalhos que vocês organizaram na tabela comparativa, agora em texto, com autor e ano. Do confronto entre o problema e o que existe sai a lacuna, que deve ser demonstrada e não apenas afirmada. Como lembra Wazlawick, \enquote{não encontrei nada parecido} leva a banca a pensar que o aluno não pesquisou direito ou que o problema interessa pouco. Mostre o que existe de mais próximo e diga o que falta nele. A introdução termina com a hipótese, enunciada em uma frase, e com a justificativa de por que ela deveria funcionar.
+
+\subsection{Objetivos}
+
+Retome o objetivo geral e os específicos da tarefa anterior e confira se ainda correspondem à hipótese, que pode ter mudado. O objetivo geral nomeia o que se obtém, a medida e a referência de comparação. Os específicos são subprodutos verificáveis do geral. Se algum deles for uma etapa (\enquote{implementar}, \enquote{coletar}, \enquote{levantar}), ele pertence à metodologia.
+
+\subsection{Metodologia}
+
+Escreva em texto corrido, não em lista de passos. Uma ordem que funciona para a maioria dos trabalhos empíricos é a da Tabela~\ref{tab:exemplo}: tipo de pesquisa e degrau, definições operacionais, variáveis, comparadores, dados, procedimento, análise, critério de decisão e limitações. Use o tempo futuro, porque se trata de um projeto. Cada objetivo específico deve ter, na metodologia, pelo menos um procedimento e uma análise que digam como será verificado. Essa correspondência é a melhor forma de conferir a coerência entre as seções 2 e 3.
+
+\begin{warnbox}[Coerência entre as três seções]
+O problema da introdução gera a hipótese; a hipótese define o objetivo geral; o objetivo define o que o método precisa demonstrar. Se você mudar uma das peças, revise as outras. A incoerência mais comum é uma hipótese comparativa (\enquote{M é melhor que R}) com uma metodologia que só avalia M.
+\end{warnbox}
+
+%==========================================================================
+\section*{Exercícios de compreensão}
+\addcontentsline{toc}{section}{Exercícios de compreensão}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.4em]
+  \item Explique por que a revisão bibliográfica não faz parte do método, segundo Wazlawick, e onde ela pode aparecer em um projeto.
+  \item Reescreva \enquote{a ferramenta será avaliada quanto à usabilidade} como uma definição operacional. Diga que objeção alguém poderia fazer à sua definição.
+  \item Um aluno compara dois algoritmos de agrupamento em um único conjunto de dados, com uma execução de cada, e conclui que o seu é melhor porque obteve 0,82 contra 0,80 numa métrica de qualidade. Aponte os problemas de validade, usando a Tabela~\ref{tab:validade}, e proponha uma metodologia que permitiria a conclusão.
+  \item Para um objetivo do degrau 2 e para um do degrau 4, à sua escolha, diga o que a metodologia de cada um precisaria descrever, segundo a Tabela~\ref{tab:degraus}.
+\end{enumerate}
+
+%==========================================================================
+\section{A tarefa: apresentação para a aula de discussão}\label{sec:tarefa}
+
+\begin{keybox}[Leitura recomendada]
+Wazlawick, R.\ S. \emph{Metodologia de Pesquisa para Ciência da Computação}, seções sobre método de pesquisa, resultados esperados e limitações do trabalho, e sobre a análise crítica de métodos em propostas.
+
+Link do livro: \linklivro
+\end{keybox}
+
+\subsection{O que fazer}
+
+Prepare uma apresentação curta, em slides, com três campos da sua proposta:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Hipótese}, enunciada em uma frase.
+  \item \textbf{Objetivo geral e objetivos específicos} (Seção~\ref{sec:textos}).
+  \item \textbf{Método} proposto para testar a hipótese, com os elementos da Tabela~\ref{tab:exemplo} que se aplicam ao seu trabalho.
+\end{enumerate}
+
+O método é o centro da apresentação e deve ocupar a maior parte dela. Contextualização, revisão e justificativa ficam de fora: o problema pode aparecer, no máximo, em uma linha antes da hipótese, para situar quem assiste.
+
+\subsection{Como será a aula de discussão}
+
+Cada aluno apresenta e, em seguida, a turma discute o método. Tempo por aluno: \tempoapres. A discussão segue o teste do leitor independente da Seção~\ref{sec:funcao}: depois de cada apresentação, os colegas tentam responder às três perguntas do teste e apontam, com a Tabela~\ref{tab:erros}, os problemas que encontraram. Para participar da discussão, leia o handout antes da aula.
+
+Anote as críticas que receber. Elas são a matéria-prima da revisão que você fará antes de escrever o texto final.
+
+\subsection{Orientações}
+
+\begin{itemize}
+  \item Parta da hipótese e dos objetivos da tarefa anterior, com as correções que recebeu. Eles podem mudar se, ao escrever o método, você perceber que não consegue testá-los.
+  \item Mostre o método como você o executaria, não como uma lista de etapas genéricas. Um slide com a sua versão da Tabela~\ref{tab:exemplo} costuma funcionar bem.
+  \item Deixe explícito o critério de decisão: que resultado refutaria a sua hipótese.
+  \item Mostre, para cada objetivo específico, que parte do método o verifica.
+\end{itemize}
+
+\subsection{Entrega}
+
+Entregue pelo Moodle um único arquivo PDF, nomeado \texttt{matricula\_nome.pdf}, com a capa e de 4 a 6 slides de conteúdo, seguindo o template da tarefa anterior (\texttt{template\_slides\_proposta.tex}), com o subtítulo de cada slide indicando o campo que ele endereça (hipótese, objetivos ou método). Prazo: \prazo. Aula de discussão: \dataaula.
+
+\begin{keybox}[Autoverificação antes de entregar]
+\textbf{Hipótese e objetivos.}
+\begin{itemize}
+  \item A hipótese está em uma frase e pode ser refutada?
+  \item O objetivo geral nomeia o que se obtém, a medida e a referência de comparação?
+  \item Cada específico é um resultado verificável, e não uma etapa?
+\end{itemize}
+\textbf{Método.}
+\begin{itemize}
+  \item Ele começa depois da revisão, e não com ela?
+  \item O tipo de evidência corresponde ao degrau do objetivo (Tabela~\ref{tab:degraus})?
+  \item Cada termo avaliativo da hipótese tem definição operacional?
+  \item Os comparadores representam o estado da arte?
+  \item Estão ditos os dados, a quantidade, a origem e como foram escolhidos?
+  \item Estão ditos a análise e o teste, e não apenas \enquote{os resultados serão analisados}?
+  \item Há um critério que diga que resultado refuta a hipótese?
+  \item Cada objetivo específico tem um procedimento que o verifica?
+  \item As limitações e as principais ameaças à validade estão declaradas?
+\end{itemize}
+\end{keybox}
+
+\begin{thebibliography}{9}
+\bibitem{wazlawick2020} WAZLAWICK, R.\ S. \emph{Metodologia de Pesquisa para Ciência da Computação}. 3.\ ed. Rio de Janeiro: GEN LTC, 2020.
+\bibitem{wohlin2012} WOHLIN, C.; RUNESON, P.; HÖST, M.; OHLSSON, M.\ C.; REGNELL, B.; WESSLÉN, A. \emph{Experimentation in Software Engineering}. Berlin: Springer, 2012.
+\end{thebibliography}
+
+\textbf{Citados em \cite{wazlawick2020} e não consultados diretamente:} Kerlinger (1980); Petticrew e Roberts (2005). As entradas completas devem ser conferidas na lista de referências do livro antes da distribuição.
+
+\end{document}
